@@ -26,8 +26,8 @@
   const sectorLabelEl = document.getElementById('sectorLabel');
   const toastEl = document.getElementById('toast');
 
-  const WORLD_W = 7600;
-  const WORLD_H = 7600;
+  const WORLD_W = 8200;
+  const WORLD_H = 8200;
   const STATION = { x: WORLD_W / 2, y: WORLD_H / 2, radius: 90 };
 
   const SECTOR_DEFS = [
@@ -39,26 +39,26 @@
   const BOSS_DEFS = [
     {
       id: 'sector1', sector: 1, name: '유성체 대왕 크라겐', tag: '가벼운 보스',
-      color: '#6bff9e', glow: 'rgba(107,255,158,0.35)',
-      radius: 130, hitRadius: 90, hp: 140, contactDamage: 12,
-      speed: 70, aggroRange: 480, canShoot: false,
-      reward: 250, respawnTime: 60,
+      color: '#5dffa0', core: '#0b1f13', glow: 'rgba(93,255,160,0.45)',
+      eyeCount: 2, radius: 175, hitRadius: 115, hp: 170, contactDamage: 16,
+      speed: 75, aggroRange: 540, canShoot: false,
+      reward: 280, respawnTime: 60,
     },
     {
       id: 'sector2', sector: 2, name: '심연 촉수왕 바슬로스', tag: '중간 보스',
-      color: '#c26bff', glow: 'rgba(194,107,255,0.35)',
-      radius: 190, hitRadius: 130, hp: 320, contactDamage: 20,
-      speed: 110, aggroRange: 560, canShoot: true,
-      fireRate: 1.6, projectileSpeed: 220, projectileDamage: 14,
-      reward: 600, respawnTime: 90,
+      color: '#caa0ff', core: '#170b28', glow: 'rgba(202,160,255,0.45)',
+      eyeCount: 4, radius: 245, hitRadius: 160, hp: 400, contactDamage: 24,
+      speed: 115, aggroRange: 640, canShoot: true,
+      fireRate: 1.5, projectileSpeed: 230, projectileDamage: 16,
+      reward: 650, respawnTime: 90,
     },
     {
       id: 'sector3', sector: 3, name: '차원포식자 오메가바이스', tag: '최종 보스',
-      color: '#ff4b6b', glow: 'rgba(255,75,107,0.4)',
-      radius: 260, hitRadius: 180, hp: 620, contactDamage: 30,
-      speed: 150, aggroRange: 650, canShoot: true,
-      fireRate: 1.0, projectileSpeed: 260, projectileDamage: 20,
-      reward: 1500, respawnTime: 150,
+      color: '#ff3355', core: '#1a0407', glow: 'rgba(255,51,85,0.5)',
+      eyeCount: 6, radius: 340, hitRadius: 220, hp: 780, contactDamage: 38,
+      speed: 155, aggroRange: 760, canShoot: true,
+      fireRate: 0.9, projectileSpeed: 270, projectileDamage: 22,
+      reward: 1600, respawnTime: 150,
     },
   ];
 
@@ -155,6 +155,19 @@
     return BOSS_DEFS.map((def) => spawnBoss(def));
   }
 
+  function makeMonsterBody() {
+    const n = 13;
+    const verts = [];
+    for (let i = 0; i < n; i++) {
+      verts.push({
+        angle: (i / n) * Math.PI * 2,
+        rMul: rand(0.8, 1.28),
+        phase: rand(0, Math.PI * 2),
+      });
+    }
+    return verts;
+  }
+
   function spawnBoss(def) {
     const sectorDef = SECTOR_DEFS.find((s) => s.sector === def.sector);
     const angle = rand(0, Math.PI * 2);
@@ -173,6 +186,9 @@
       wanderTimer: rand(2, 5),
       fireTimer: rand(0.5, def.fireRate || 1.5),
       facing: 0,
+      aggroed: false,
+      spawnFlash: 1.4,
+      bodyVerts: makeMonsterBody(),
     };
   }
 
@@ -202,7 +218,13 @@
     camera: { x: 0, y: 0 },
     invuln: 2,
     toastTimer: 0,
+    shake: 0,
+    hitFlash: 0,
   };
+
+  function addShake(amount) {
+    state.shake = Math.min(36, state.shake + amount);
+  }
 
   function maxFuel() { return 100 + state.levels.fuel * UPGRADES.fuel.step; }
   function maxHull() { return 100 + state.levels.hull * UPGRADES.hull.step; }
@@ -370,6 +392,8 @@
 
   function update(dt) {
     if (state.invuln > 0) state.invuln -= dt;
+    if (state.shake > 0) state.shake = Math.max(0, state.shake - dt * 50);
+    if (state.hitFlash > 0) state.hitFlash = Math.max(0, state.hitFlash - dt);
     const ship = state.ship;
     const keys = state.keys;
 
@@ -502,15 +526,10 @@
     for (const a of state.asteroids) {
       const d = dist(ship.x, ship.y, a.x, a.y);
       if (d < a.radius + 12) {
-        const dmg = 18;
-        state.hull = Math.max(0, state.hull - dmg);
-        state.invuln = 1.2;
+        applyShipDamage(18);
         const angle = Math.atan2(ship.y - a.y, ship.x - a.x);
         ship.vx += Math.cos(angle) * 180;
         ship.vy += Math.sin(angle) * 180;
-        if (state.hull <= 0) {
-          triggerGameOver();
-        }
         break;
       }
     }
@@ -573,6 +592,8 @@
   function applyShipDamage(dmg) {
     state.hull = Math.max(0, state.hull - dmg);
     state.invuln = 1.2;
+    addShake(dmg * 0.8);
+    state.hitFlash = 0.35;
     if (state.hull <= 0) {
       triggerGameOver();
     }
@@ -589,8 +610,14 @@
         return;
       }
 
+      if (boss.spawnFlash > 0) boss.spawnFlash = Math.max(0, boss.spawnFlash - dt);
+
       const distToShip = dist(ship.x, ship.y, boss.x, boss.y);
       const aggro = distToShip < boss.aggroRange && !state.docked;
+      if (aggro && !boss.aggroed) {
+        addShake(6);
+      }
+      boss.aggroed = aggro;
 
       let targetX, targetY;
       if (aggro) {
@@ -649,6 +676,7 @@
     boss.alive = false;
     boss.respawnTimer = boss.respawnTime;
     state.credits += boss.reward;
+    addShake(10 + boss.sector * 6);
     if (boss.sector === 3 && !boss.defeatedOnce) {
       showToast(`최종 보스 '${boss.name}'를 물리쳤습니다! 우주가 잠시 평화를 되찾았습니다. (+${boss.reward} 크레딧)`, 5000);
     } else {
@@ -724,12 +752,14 @@
   function render() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const cam = state.camera;
+    const shakeX = state.shake > 0 ? rand(-state.shake, state.shake) : 0;
+    const shakeY = state.shake > 0 ? rand(-state.shake, state.shake) : 0;
 
     drawStars(state.farStars, 0.4);
     drawStars(state.nearStars, 0.7);
 
     ctx.save();
-    ctx.translate(-cam.x, -cam.y);
+    ctx.translate(-cam.x + shakeX, -cam.y + shakeY);
 
     drawStation();
     state.planets.forEach(drawPlanet);
@@ -740,6 +770,21 @@
     state.bullets.forEach(drawPlayerBullet);
 
     ctx.restore();
+
+    if (state.hitFlash > 0) {
+      ctx.save();
+      const grad = ctx.createRadialGradient(
+        canvas.width / 2, canvas.height / 2, canvas.height * 0.25,
+        canvas.width / 2, canvas.height / 2, canvas.height * 0.75
+      );
+      const a = clamp(state.hitFlash / 0.35, 0, 1) * 0.55;
+      grad.addColorStop(0, 'rgba(255,30,50,0)');
+      grad.addColorStop(1, `rgba(255,30,50,${a})`);
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.restore();
+    }
+
     drawMinimap();
   }
 
@@ -845,76 +890,173 @@
     ctx.restore();
   }
 
+  function drawBlobPath(points) {
+    const n = points.length;
+    const p0 = points[n - 1];
+    const p1 = points[0];
+    ctx.beginPath();
+    ctx.moveTo((p0.x + p1.x) / 2, (p0.y + p1.y) / 2);
+    for (let i = 0; i < n; i++) {
+      const a = points[i];
+      const b = points[(i + 1) % n];
+      ctx.quadraticCurveTo(a.x, a.y, (a.x + b.x) / 2, (a.y + b.y) / 2);
+    }
+    ctx.closePath();
+  }
+
   function drawBoss(boss) {
     if (!boss.alive) return;
     const t = performance.now() / 1000;
+    const windup = boss.canShoot && boss.aggroed && boss.fireTimer < 0.35;
+    const strobe = Math.sin(performance.now() / 45) > 0;
     ctx.save();
     ctx.translate(boss.x, boss.y);
 
-    const auraR = boss.radius * 1.6;
-    const grad = ctx.createRadialGradient(0, 0, boss.radius * 0.3, 0, 0, auraR);
-    grad.addColorStop(0, boss.glow);
-    grad.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = grad;
+    // far, low dread aura -- makes the creature loom even from a distance
+    const dreadR = boss.radius * 2.6;
+    const dreadGrad = ctx.createRadialGradient(0, 0, boss.radius * 0.6, 0, 0, dreadR);
+    dreadGrad.addColorStop(0, boss.glow);
+    dreadGrad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = dreadGrad;
     ctx.beginPath();
-    ctx.arc(0, 0, auraR, 0, Math.PI * 2);
+    ctx.arc(0, 0, dreadR, 0, Math.PI * 2);
     ctx.fill();
 
-    const tentCount = 6 + boss.sector * 2;
-    ctx.strokeStyle = boss.color;
-    ctx.lineWidth = Math.max(4, boss.radius * 0.06);
+    if (boss.spawnFlash > 0) {
+      const p = 1 - boss.spawnFlash / 1.4;
+      ctx.strokeStyle = boss.color;
+      ctx.globalAlpha = 1 - p;
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.arc(0, 0, boss.radius * (0.5 + p * 2.2), 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+
+    const baseR = boss.radius * 0.72;
+    const tentCount = 7 + boss.sector * 3;
     for (let i = 0; i < tentCount; i++) {
       const baseAngle = (i / tentCount) * Math.PI * 2;
-      const wig = Math.sin(t * 1.5 + i) * 0.4;
-      const len = boss.radius * (1.1 + 0.3 * Math.sin(t + i * 1.3));
-      const sx = Math.cos(baseAngle) * boss.radius * 0.7;
-      const sy = Math.sin(baseAngle) * boss.radius * 0.7;
-      const mx = Math.cos(baseAngle + wig) * (boss.radius + len * 0.6);
-      const my = Math.sin(baseAngle + wig) * (boss.radius + len * 0.6);
-      const ex = Math.cos(baseAngle + wig * 1.6) * (boss.radius + len);
-      const ey = Math.sin(baseAngle + wig * 1.6) * (boss.radius + len);
+      const wig = Math.sin(t * (1.3 + boss.sector * 0.2) + i * 1.7) * 0.45;
+      const len = boss.radius * (1.0 + 0.35 * Math.sin(t * 0.9 + i * 1.3));
+      const sx = Math.cos(baseAngle) * baseR * 0.9;
+      const sy = Math.sin(baseAngle) * baseR * 0.9;
+      const mx = Math.cos(baseAngle + wig) * (baseR + len * 0.6);
+      const my = Math.sin(baseAngle + wig) * (baseR + len * 0.6);
+      const ex = Math.cos(baseAngle + wig * 1.7) * (baseR + len);
+      const ey = Math.sin(baseAngle + wig * 1.7) * (baseR + len);
+      const tGrad = ctx.createLinearGradient(sx, sy, ex, ey);
+      tGrad.addColorStop(0, boss.core);
+      tGrad.addColorStop(1, boss.color);
+      ctx.strokeStyle = tGrad;
+      ctx.lineWidth = Math.max(3, boss.radius * 0.05) * (1 - (i % 3) * 0.15);
       ctx.beginPath();
       ctx.moveTo(sx, sy);
       ctx.quadraticCurveTo(mx, my, ex, ey);
       ctx.stroke();
     }
 
-    ctx.globalAlpha = 0.9;
-    ctx.fillStyle = boss.color;
-    ctx.beginPath();
-    ctx.arc(0, 0, boss.radius * 0.75, 0, Math.PI * 2);
+    // organic, breathing body silhouette
+    const bodyPoints = boss.bodyVerts.map((v) => {
+      const r = baseR * v.rMul * (1 + 0.045 * Math.sin(t * 0.8 + v.phase));
+      return { x: Math.cos(v.angle) * r, y: Math.sin(v.angle) * r };
+    });
+    drawBlobPath(bodyPoints);
+    ctx.fillStyle = boss.core;
     ctx.fill();
-    ctx.globalAlpha = 1;
-    ctx.strokeStyle = 'rgba(255,255,255,0.4)';
-    ctx.lineWidth = 3;
+    ctx.strokeStyle = boss.color;
+    ctx.lineWidth = 2.5;
+    ctx.globalAlpha = 0.8;
     ctx.stroke();
+    ctx.globalAlpha = 1;
+
+    // pulsing veins/cracks running through the body
+    ctx.strokeStyle = boss.color;
+    boss.bodyVerts.forEach((v, i) => {
+      if (i % 2 !== 0) return;
+      const glowPulse = 0.25 + 0.35 * Math.abs(Math.sin(t * 1.6 + v.phase));
+      ctx.globalAlpha = glowPulse;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(Math.cos(v.angle) * baseR * 0.85, Math.sin(v.angle) * baseR * 0.85);
+      ctx.stroke();
+    });
+    ctx.globalAlpha = 1;
 
     const fx = Math.cos(boss.facing);
     const fy = Math.sin(boss.facing);
     const perpx = -fy;
     const perpy = fx;
-    const eyeOffset = boss.radius * 0.3;
-    [-1, 1].forEach((side) => {
-      const ex2 = fx * eyeOffset + perpx * side * eyeOffset * 0.6;
-      const ey2 = fy * eyeOffset + perpy * side * eyeOffset * 0.6;
-      ctx.fillStyle = '#ffffff';
+
+    // gaping maw with jagged teeth, facing the direction of travel/attack
+    const mouthDist = baseR * 0.8;
+    const mouthOpen = 0.35 + (boss.aggroed ? 0.3 : 0) + 0.06 * Math.sin(t * 5);
+    const mx0 = fx * mouthDist;
+    const my0 = fy * mouthDist;
+    ctx.fillStyle = '#0a0002';
+    ctx.beginPath();
+    ctx.arc(mx0, my0, baseR * 0.32, boss.facing - mouthOpen, boss.facing + mouthOpen);
+    ctx.arc(mx0, my0, baseR * 0.08, boss.facing + mouthOpen, boss.facing - mouthOpen, true);
+    ctx.closePath();
+    ctx.fill();
+    const teeth = 5;
+    ctx.fillStyle = '#e9e2d4';
+    for (let i = 0; i <= teeth; i++) {
+      const ta = boss.facing - mouthOpen + (i / teeth) * mouthOpen * 2;
+      const tipX = mx0 + Math.cos(ta) * baseR * 0.32;
+      const tipY = my0 + Math.sin(ta) * baseR * 0.32;
+      const baseX1 = mx0 + Math.cos(ta - 0.05) * baseR * 0.14;
+      const baseY1 = my0 + Math.sin(ta - 0.05) * baseR * 0.14;
+      const baseX2 = mx0 + Math.cos(ta + 0.05) * baseR * 0.14;
+      const baseY2 = my0 + Math.sin(ta + 0.05) * baseR * 0.14;
       ctx.beginPath();
-      ctx.arc(ex2, ey2, boss.radius * 0.09, 0, Math.PI * 2);
+      ctx.moveTo(baseX1, baseY1);
+      ctx.lineTo(tipX, tipY);
+      ctx.lineTo(baseX2, baseY2);
+      ctx.closePath();
       ctx.fill();
+    }
+
+    // multiple glowing eyes clustered toward the face -- more eyes on tougher bosses
+    const eyeCount = boss.eyeCount || 2;
+    const spread = Math.PI * 0.85;
+    for (let i = 0; i < eyeCount; i++) {
+      const tt = eyeCount > 1 ? i / (eyeCount - 1) : 0.5;
+      const eyeAngle = boss.facing - spread / 2 + tt * spread;
+      const eyeDist = baseR * (0.5 + (i % 2) * 0.12);
+      const ex2 = Math.cos(eyeAngle) * eyeDist;
+      const ey2 = Math.sin(eyeAngle) * eyeDist;
+      const eyeSize = boss.radius * (0.07 + (i % 2) * 0.02);
+
+      ctx.fillStyle = windup && strobe ? '#ffffff' : boss.color;
+      ctx.shadowColor = boss.color;
+      ctx.shadowBlur = windup ? 18 : 8;
+      ctx.beginPath();
+      ctx.arc(ex2, ey2, eyeSize, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
       ctx.fillStyle = '#000000';
       ctx.beginPath();
-      ctx.arc(ex2 + fx * boss.radius * 0.03, ey2 + fy * boss.radius * 0.03, boss.radius * 0.045, 0, Math.PI * 2);
+      ctx.arc(ex2 + fx * eyeSize * 0.3, ey2 + fy * eyeSize * 0.3, eyeSize * 0.45, 0, Math.PI * 2);
       ctx.fill();
-    });
+    }
 
     ctx.fillStyle = '#ffffff';
-    ctx.font = `bold ${Math.max(12, boss.radius * 0.11)}px sans-serif`;
+    ctx.font = `bold ${Math.max(13, boss.radius * 0.1)}px sans-serif`;
     ctx.textAlign = 'center';
-    ctx.fillText(boss.name, 0, -boss.radius * 1.85);
+    ctx.shadowColor = 'rgba(0,0,0,0.9)';
+    ctx.shadowBlur = 6;
+    ctx.fillText(boss.name, 0, -boss.radius * 1.95);
+    ctx.font = `${Math.max(10, boss.radius * 0.07)}px sans-serif`;
+    ctx.fillStyle = boss.color;
+    ctx.fillText(boss.tag, 0, -boss.radius * 1.95 + 16);
+    ctx.shadowBlur = 0;
 
-    const barW = boss.radius * 1.6;
-    const barH = 6;
-    ctx.fillStyle = 'rgba(0,0,0,0.5)';
+    const barW = boss.radius * 1.7;
+    const barH = 7;
+    ctx.fillStyle = 'rgba(0,0,0,0.6)';
     ctx.fillRect(-barW / 2, -boss.radius * 1.65, barW, barH);
     ctx.fillStyle = boss.color;
     ctx.fillRect(-barW / 2, -boss.radius * 1.65, barW * clamp(boss.hp / boss.hpMax, 0, 1), barH);
