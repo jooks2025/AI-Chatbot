@@ -107,6 +107,12 @@ h1 .sub {
 }
 
 .bar-fill.fuel { background: linear-gradient(90deg, #35d0ff, #1e7fd8); }
+.bar-fill.fuel.empty { background: #ff3d54; animation: fuelDanger 0.7s infinite; }
+
+@keyframes fuelDanger {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
 .bar-fill.hull { background: linear-gradient(90deg, #6dff8a, #1fb554); }
 .bar-fill.cargo { background: linear-gradient(90deg, #ffce54, #ff8a3d); }
 
@@ -371,6 +377,12 @@ h1 .sub {
 
 .controls p {
   margin: 4px 0;
+}
+
+.controls .tip {
+  color: #ffe08a;
+  font-weight: 600;
+  font-size: 1.05em;
 }
 
 .back-link {

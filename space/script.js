@@ -27,14 +27,15 @@
   const toastEl = document.getElementById('toast');
   const muteBtn = document.getElementById('muteBtn');
 
-  const WORLD_W = 8200;
-  const WORLD_H = 8200;
+  const WORLD_W = 9600;
+  const WORLD_H = 9600;
   const STATION = { x: WORLD_W / 2, y: WORLD_H / 2, radius: 90 };
 
   const SECTOR_DEFS = [
     { sector: 1, bandMin: 900, bandMax: 1700 },
     { sector: 2, bandMin: 1900, bandMax: 2500 },
     { sector: 3, bandMin: 2700, bandMax: 3200 },
+    { sector: 4, bandMin: 3500, bandMax: 3850 },
   ];
 
   const BOSS_DEFS = [
@@ -63,6 +64,17 @@
     },
   ];
 
+  const DIMENSIONAL_BOSS_DEF = {
+    id: 'dimensional', sector: 4, name: '무한궤도의 지배자 인피니타스', tag: '차원 보스',
+    color: '#c9b6ff', core: '#05030a', glow: 'rgba(201,182,255,0.5)',
+    radius: 380, hitRadius: 240, hp: 1200, contactDamage: 42,
+    speed: 130, aggroRange: 820, canShoot: true,
+    fireRate: 0.8, projectileSpeed: 300, projectileDamage: 24,
+    reward: 3000, respawnTime: 200,
+  };
+
+  const ALL_BOSS_DEFS = BOSS_DEFS.concat([DIMENSIONAL_BOSS_DEF]);
+
   const RESOURCE_TYPES = {
     iron:    { name: '철광석',   color: '#c7c7c7', price: 4 },
     gold:    { name: '금',       color: '#ffd24a', price: 11 },
@@ -82,7 +94,10 @@
   const BULLET_SPEED = 520;
   const BULLET_LIFE = 1.1;
   const FUEL_BURN_RATE = 4.6;
-  const SHIP_DRAG = 0.48;
+  const SHIP_DRAG = 0.95;
+  const PREDATOR_WARN_DELAY = 8;
+  const PREDATOR_SPEED = 150;
+  const PREDATOR_CATCH_RADIUS = 45;
 
   function rand(min, max) { return Math.random() * (max - min) + min; }
   function dist(ax, ay, bx, by) { return Math.hypot(ax - bx, ay - by); }
@@ -223,6 +238,51 @@
     };
   }
 
+  function spawnDimensionalBoss() {
+    const sectorDef = SECTOR_DEFS.find((s) => s.sector === 4);
+    const angle = rand(0, Math.PI * 2);
+    const d = rand(sectorDef.bandMin, sectorDef.bandMax);
+    const x = clamp(STATION.x + Math.cos(angle) * d, 200, WORLD_W - 200);
+    const y = clamp(STATION.y + Math.sin(angle) * d, 200, WORLD_H - 200);
+    const shards = [];
+    for (let i = 0; i < 7; i++) {
+      shards.push({
+        orbitR: rand(0.85, 1.6),
+        speed: rand(0.6, 1.4) * (Math.random() < 0.5 ? 1 : -1),
+        phase: rand(0, Math.PI * 2),
+        size: rand(8, 16),
+      });
+    }
+    return {
+      ...DIMENSIONAL_BOSS_DEF,
+      x, y,
+      anchor: { x, y },
+      hpMax: DIMENSIONAL_BOSS_DEF.hp,
+      alive: true,
+      respawnTimer: 0,
+      defeatedOnce: false,
+      wanderTarget: { x, y },
+      wanderTimer: rand(2, 5),
+      fireTimer: rand(0.5, DIMENSIONAL_BOSS_DEF.fireRate),
+      facing: 0,
+      aggroed: false,
+      spawnFlash: 1.4,
+      shards,
+    };
+  }
+
+  function makePredator() {
+    const ship = state.ship;
+    const angle = rand(0, Math.PI * 2);
+    const dSpawn = rand(450, 650);
+    return {
+      x: clamp(ship.x + Math.cos(angle) * dSpawn, 50, WORLD_W - 50),
+      y: clamp(ship.y + Math.sin(angle) * dSpawn, 50, WORLD_H - 50),
+      facing: 0,
+      bodyVerts: makeMonsterBody(),
+    };
+  }
+
   const state = {
     ship: {
       x: STATION.x, y: STATION.y - 140,
@@ -235,8 +295,8 @@
     bosses: makeBosses(),
     bullets: [],
     bossBullets: [],
-    farStars: makeStars(320, WORLD_W, WORLD_H),
-    nearStars: makeStars(200, WORLD_W, WORLD_H),
+    farStars: makeStars(380, WORLD_W, WORLD_H),
+    nearStars: makeStars(240, WORLD_W, WORLD_H),
     credits: 0,
     cargo: { iron: 0, gold: 0, crystal: 0 },
     fuel: 0,
@@ -252,6 +312,9 @@
     shake: 0,
     hitFlash: 0,
     muted: false,
+    chapter: 1,
+    predator: null,
+    fuelEmptyTimer: 0,
   };
 
   function addShake(amount) {
@@ -392,6 +455,15 @@
   function sfxBossAggro() { playTone({ type: 'sawtooth', startFreq: 160, endFreq: 45, duration: 0.5, volume: 0.14 }); }
   function sfxBossDefeat() { playSequence([440, 550, 660, 880], { gap: 0.1, duration: 0.22, volume: 0.17 }); }
   function sfxGameOver() { playSequence([392, 349.23, 293.66, 220], { gap: 0.18, duration: 0.35, volume: 0.16, type: 'triangle' }); }
+  function sfxPredatorWarn() { playTone({ type: 'sine', freq: 85, duration: 0.4, volume: 0.14 }); }
+  function sfxEaten() {
+    playNoise({ duration: 0.45, volume: 0.3, filterFreq: 280 });
+    playTone({ type: 'sine', startFreq: 200, endFreq: 28, duration: 0.65, volume: 0.22 });
+  }
+  function sfxDimensionalRift() {
+    playTone({ type: 'sawtooth', startFreq: 80, endFreq: 900, duration: 1.1, volume: 0.15 });
+    playSequence([660, 880, 1320, 1760], { gap: 0.12, duration: 0.5, volume: 0.12, type: 'triangle' });
+  }
 
   function updateLoopSounds() {
     if (!audioCtx) return;
@@ -410,6 +482,7 @@
     resetShip();
     bindInput();
     buildUpgradePanel();
+    showToast('💡 정거장(맵 중앙)에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!', 7000);
     requestAnimationFrame(loop);
   }
 
@@ -496,6 +569,8 @@
     state.ship.vy = 0;
     state.fuel = maxFuel();
     state.hull = maxHull();
+    state.predator = null;
+    state.fuelEmptyTimer = 0;
     dockPanel.classList.remove('hidden');
     refreshUpgradePanel();
     sfxDock();
@@ -534,10 +609,14 @@
     state.mining = null;
     state.invuln = 2;
     state.toastTimer = 0;
+    state.chapter = 1;
+    state.predator = null;
+    state.fuelEmptyTimer = 0;
     resetShip();
     hideMessage();
     toastEl.classList.add('hidden');
     bossBar.classList.add('hidden');
+    showToast('💡 정거장(맵 중앙)에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!', 7000);
   }
 
   let lastTime = performance.now();
@@ -593,6 +672,8 @@
 
       updateMining(dt);
       updateAsteroids(dt);
+      updateStranding(dt);
+      updatePredator(dt);
     }
 
     updateBullets(dt);
@@ -697,6 +778,49 @@
     }
   }
 
+  function updateStranding(dt) {
+    if (state.docked || state.fuel > 0) {
+      state.fuelEmptyTimer = 0;
+      return;
+    }
+    state.fuelEmptyTimer += dt;
+    if (state.fuelEmptyTimer > PREDATOR_WARN_DELAY && !state.predator) {
+      state.predator = makePredator();
+      sfxPredatorWarn();
+      showToast('⚠️ 연료가 바닥나 표류하는 당신을 어둠 속의 무언가가 감지했습니다...', 4500);
+    }
+  }
+
+  function updatePredator(dt) {
+    if (!state.predator) return;
+    const p = state.predator;
+    const ship = state.ship;
+    const dx = ship.x - p.x;
+    const dy = ship.y - p.y;
+    const d = Math.hypot(dx, dy);
+    if (d > 2) {
+      p.x += (dx / d) * PREDATOR_SPEED * dt;
+      p.y += (dy / d) * PREDATOR_SPEED * dt;
+      p.facing = Math.atan2(dy, dx);
+    }
+    if (d < PREDATOR_CATCH_RADIUS) {
+      triggerEatenEnding();
+    }
+  }
+
+  function triggerEatenEnding() {
+    if (state.gameOver) return;
+    state.gameOver = true;
+    addShake(34);
+    sfxEaten();
+    showMessage(`
+      <div>연료가 바닥난 채 표류하던 당신을, 어둠 속에서 나타난 거대한 무언가가 통째로 삼켜버렸습니다.</div>
+      <div style="margin-top:6px;color:#ffe08a;">최종 크레딧: ${state.credits}</div>
+      <button id="restartBtn">다시 시작</button>
+    `);
+    document.getElementById('restartBtn').addEventListener('click', restart);
+  }
+
   function triggerGameOver() {
     state.gameOver = true;
     sfxGameOver();
@@ -771,7 +895,11 @@
       if (!boss.alive) {
         boss.respawnTimer -= dt;
         if (boss.respawnTimer <= 0) {
-          Object.assign(boss, spawnBoss(BOSS_DEFS.find((d) => d.id === boss.id)));
+          if (boss.id === 'dimensional') {
+            Object.assign(boss, spawnDimensionalBoss());
+          } else {
+            Object.assign(boss, spawnBoss(BOSS_DEFS.find((d) => d.id === boss.id)));
+          }
         }
         return;
       }
@@ -845,13 +973,29 @@
     state.credits += boss.reward;
     addShake(10 + boss.sector * 6);
     sfxBossDefeat();
-    if (boss.sector === 3 && !boss.defeatedOnce) {
+    const firstKill = !boss.defeatedOnce;
+    if (boss.id === 'dimensional' && firstKill) {
+      showToast(`무한궤도의 지배자를 물리쳤습니다! 균열 너머에도 평화가 찾아왔습니다. (+${boss.reward} 크레딧)`, 6000);
+    } else if (boss.sector === 3 && firstKill) {
       showToast(`최종 보스 '${boss.name}'를 물리쳤습니다! 우주가 잠시 평화를 되찾았습니다. (+${boss.reward} 크레딧)`, 5000);
     } else {
       showToast(`${boss.tag} '${boss.name}' 격파! +${boss.reward} 크레딧`, 3500);
     }
     boss.defeatedOnce = true;
     refreshUpgradePanel();
+
+    if (state.chapter === 1 && boss.sector !== 4) {
+      const allDefeated = state.bosses.filter((b) => b.sector !== 4).every((b) => b.defeatedOnce);
+      if (allDefeated) triggerChapterTwo();
+    }
+  }
+
+  function triggerChapterTwo() {
+    state.chapter = 2;
+    addShake(30);
+    sfxDimensionalRift();
+    state.bosses.push(spawnDimensionalBoss());
+    showToast('🌌 세 우주 괴물을 모두 물리쳤습니다! 균열이 열리며 은하 너머 미지의 차원으로 진입합니다...', 7000);
   }
 
   function showToast(text, ms) {
@@ -865,7 +1009,8 @@
     if (d < 600) return 0;
     if (d < 1800) return 1;
     if (d < 2600) return 2;
-    return 3;
+    if (d < 3350) return 3;
+    return 4;
   }
 
   function updateSectorHud(dt) {
@@ -873,8 +1018,15 @@
     const sector = sectorAt(d);
     if (sector === 0) {
       sectorLabelEl.textContent = '구역: 안전지대';
+    } else if (sector === 4) {
+      if (state.chapter < 2) {
+        sectorLabelEl.textContent = '구역: 미지의 균열 (아직 열리지 않음)';
+      } else {
+        const def = ALL_BOSS_DEFS.find((b) => b.sector === 4);
+        sectorLabelEl.textContent = `구역: 차원 균열 · ${def.name}의 영역`;
+      }
     } else {
-      const def = BOSS_DEFS.find((b) => b.sector === sector);
+      const def = ALL_BOSS_DEFS.find((b) => b.sector === sector);
       sectorLabelEl.textContent = `구역: ${sector}섹터 · ${def.name}의 영역`;
     }
 
@@ -911,6 +1063,7 @@
 
   function updateHud() {
     fuelBar.style.width = `${(state.fuel / maxFuel()) * 100}%`;
+    fuelBar.classList.toggle('empty', state.fuel <= 0 && !state.docked);
     hullBar.style.width = `${(state.hull / maxHull()) * 100}%`;
     cargoBar.style.width = `${(cargoTotal() / maxCargo()) * 100}%`;
     cargoText.textContent = `${Math.floor(cargoTotal())} / ${maxCargo()}`;
@@ -932,8 +1085,9 @@
     drawStation();
     state.planets.forEach(drawPlanet);
     state.asteroids.forEach(drawAsteroid);
-    state.bosses.forEach(drawBoss);
+    state.bosses.forEach((boss) => (boss.id === 'dimensional' ? drawDimensionalBoss(boss) : drawBoss(boss)));
     state.bossBullets.forEach(drawBossBullet);
+    drawPredator(state.predator);
     drawShip();
     state.bullets.forEach(drawPlayerBullet);
 
@@ -1430,6 +1584,12 @@
       ctx.fill();
     }
 
+    drawBossLabelAndBar(boss, boss.color);
+
+    ctx.restore();
+  }
+
+  function drawBossLabelAndBar(boss, labelColor) {
     ctx.fillStyle = '#ffffff';
     ctx.font = `bold ${Math.max(13, boss.radius * 0.1)}px sans-serif`;
     ctx.textAlign = 'center';
@@ -1437,7 +1597,7 @@
     ctx.shadowBlur = 6;
     ctx.fillText(boss.name, 0, -boss.radius * 1.95);
     ctx.font = `${Math.max(10, boss.radius * 0.07)}px sans-serif`;
-    ctx.fillStyle = boss.color;
+    ctx.fillStyle = labelColor;
     ctx.fillText(boss.tag, 0, -boss.radius * 1.95 + 16);
     ctx.shadowBlur = 0;
 
@@ -1445,8 +1605,176 @@
     const barH = 7;
     ctx.fillStyle = 'rgba(0,0,0,0.6)';
     ctx.fillRect(-barW / 2, -boss.radius * 1.65, barW, barH);
-    ctx.fillStyle = boss.color;
+    ctx.fillStyle = labelColor;
     ctx.fillRect(-barW / 2, -boss.radius * 1.65, barW * clamp(boss.hp / boss.hpMax, 0, 1), barH);
+  }
+
+  function drawDimensionalBoss(boss) {
+    if (!boss.alive) return;
+    const t = performance.now() / 1000;
+    const hue = (t * 40) % 360;
+    const iridescent = `hsl(${hue}, 85%, 72%)`;
+    const windup = boss.canShoot && boss.aggroed && boss.fireTimer < 0.35;
+    const strobe = Math.sin(performance.now() / 45) > 0;
+
+    ctx.save();
+    ctx.translate(boss.x, boss.y);
+
+    const dreadR = boss.radius * 2.8;
+    const dreadGrad = ctx.createRadialGradient(0, 0, boss.radius * 0.5, 0, 0, dreadR);
+    dreadGrad.addColorStop(0, `hsla(${hue}, 80%, 65%, 0.4)`);
+    dreadGrad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = dreadGrad;
+    ctx.beginPath();
+    ctx.arc(0, 0, dreadR, 0, Math.PI * 2);
+    ctx.fill();
+
+    if (boss.spawnFlash > 0) {
+      const p = 1 - boss.spawnFlash / 1.4;
+      ctx.strokeStyle = iridescent;
+      ctx.globalAlpha = 1 - p;
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.arc(0, 0, boss.radius * (0.5 + p * 2.2), 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+
+    const baseR = boss.radius * 0.6;
+
+    // debris shards caught in orbit around the singularity
+    boss.shards.forEach((s) => {
+      const a = t * s.speed + s.phase;
+      const sx = Math.cos(a) * baseR * s.orbitR;
+      const sy = Math.sin(a) * baseR * s.orbitR * 0.6;
+      ctx.save();
+      ctx.translate(sx, sy);
+      ctx.rotate(a * 2);
+      ctx.fillStyle = `hsl(${(hue + s.phase * 40) % 360}, 75%, 65%)`;
+      ctx.beginPath();
+      ctx.moveTo(0, -s.size);
+      ctx.lineTo(s.size, s.size);
+      ctx.lineTo(-s.size, s.size);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    });
+
+    // fractal, reality-tearing tendrils (jagged instead of smooth)
+    const tendrilCount = 9;
+    for (let i = 0; i < tendrilCount; i++) {
+      const baseAngle = (i / tendrilCount) * Math.PI * 2 + t * 0.05;
+      ctx.strokeStyle = `hsla(${(hue + i * 20) % 360}, 80%, 70%, 0.75)`;
+      ctx.lineWidth = 2;
+      let ang = baseAngle;
+      let x = Math.cos(ang) * baseR;
+      let y = Math.sin(ang) * baseR;
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      for (let s = 1; s <= 4; s++) {
+        ang += Math.sin(t * 3 + i * 2.3 + s) * 0.6;
+        x += Math.cos(ang) * baseR * 0.32;
+        y += Math.sin(ang) * baseR * 0.32;
+        ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+
+    // singularity core with a swirling event-horizon
+    ctx.beginPath();
+    ctx.arc(0, 0, baseR, 0, Math.PI * 2);
+    ctx.fillStyle = boss.core;
+    ctx.fill();
+    for (let r = 0; r < 3; r++) {
+      ctx.strokeStyle = `hsla(${(hue + r * 40) % 360}, 85%, 70%, ${0.5 - r * 0.12})`;
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.arc(0, 0, baseR * (0.7 + r * 0.15), t * (1 + r * 0.3), t * (1 + r * 0.3) + Math.PI * 1.4);
+      ctx.stroke();
+    }
+
+    // one giant iridescent eye, always watching the ship
+    const fx = Math.cos(boss.facing);
+    const fy = Math.sin(boss.facing);
+    const eyeSize = baseR * 0.42;
+    const eyeX = fx * baseR * 0.15;
+    const eyeY = fy * baseR * 0.15;
+    ctx.fillStyle = windup && strobe ? '#ffffff' : iridescent;
+    ctx.shadowColor = iridescent;
+    ctx.shadowBlur = windup ? 26 : 12;
+    ctx.beginPath();
+    ctx.arc(eyeX, eyeY, eyeSize, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = '#000000';
+    ctx.beginPath();
+    ctx.arc(eyeX + fx * eyeSize * 0.35, eyeY + fy * eyeSize * 0.35, eyeSize * 0.4, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,0.8)';
+    ctx.beginPath();
+    ctx.arc(eyeX - eyeSize * 0.15, eyeY - eyeSize * 0.15, eyeSize * 0.12, 0, Math.PI * 2);
+    ctx.fill();
+
+    drawBossLabelAndBar(boss, iridescent);
+
+    ctx.restore();
+  }
+
+  function drawPredator(p) {
+    if (!p) return;
+    const t = performance.now() / 1000;
+    const r = 70;
+    ctx.save();
+    ctx.translate(p.x, p.y);
+
+    const grad = ctx.createRadialGradient(0, 0, r * 0.3, 0, 0, r * 2.4);
+    grad.addColorStop(0, 'rgba(90,0,20,0.55)');
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(0, 0, r * 2.4, 0, Math.PI * 2);
+    ctx.fill();
+
+    for (let i = 0; i < 6; i++) {
+      const a = (i / 6) * Math.PI * 2;
+      const wig = Math.sin(t * 2 + i) * 0.3;
+      ctx.strokeStyle = 'rgba(20,4,8,0.9)';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(Math.cos(a) * r * 0.6, Math.sin(a) * r * 0.6);
+      ctx.quadraticCurveTo(
+        Math.cos(a + wig) * r * 1.3, Math.sin(a + wig) * r * 1.3,
+        Math.cos(a + wig * 1.6) * r * 1.8, Math.sin(a + wig * 1.6) * r * 1.8
+      );
+      ctx.stroke();
+    }
+
+    const pts = p.bodyVerts.map((v) => {
+      const rr = r * v.rMul * (1 + 0.05 * Math.sin(t + v.phase));
+      return { x: Math.cos(v.angle) * rr, y: Math.sin(v.angle) * rr };
+    });
+    drawBlobPath(pts);
+    ctx.fillStyle = '#0a0006';
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(120,10,30,0.6)';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    const fx = Math.cos(p.facing);
+    const fy = Math.sin(p.facing);
+    const perpx = -fy;
+    const perpy = fx;
+    [-1, 1].forEach((side) => {
+      const ex = fx * r * 0.4 + perpx * side * r * 0.25;
+      const ey = fy * r * 0.4 + perpy * side * r * 0.25;
+      ctx.fillStyle = 'rgba(255,40,50,0.9)';
+      ctx.shadowColor = '#ff2832';
+      ctx.shadowBlur = 12;
+      ctx.beginPath();
+      ctx.arc(ex, ey, 5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    });
 
     ctx.restore();
   }
