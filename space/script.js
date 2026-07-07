@@ -315,10 +315,51 @@
     chapter: 1,
     predator: null,
     fuelEmptyTimer: 0,
+    damagePopups: [],
+    particles: [],
   };
 
   function addShake(amount) {
     state.shake = Math.min(36, state.shake + amount);
+  }
+
+  function spawnDamagePopup(x, y, amount, color) {
+    state.damagePopups.push({ x, y, vy: -42, life: 0.75, maxLife: 0.75, text: Math.round(amount), color });
+  }
+
+  function spawnExplosion(x, y, color, count, power) {
+    for (let i = 0; i < count; i++) {
+      const angle = rand(0, Math.PI * 2);
+      const speed = rand(power * 0.3, power);
+      state.particles.push({
+        x, y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        life: rand(0.4, 0.9),
+        maxLife: 0.9,
+        color,
+        size: rand(2, 5),
+      });
+    }
+  }
+
+  function updateDamagePopups(dt) {
+    state.damagePopups = state.damagePopups.filter((p) => {
+      p.y += p.vy * dt;
+      p.life -= dt;
+      return p.life > 0;
+    });
+  }
+
+  function updateParticles(dt) {
+    state.particles = state.particles.filter((p) => {
+      p.x += p.vx * dt;
+      p.y += p.vy * dt;
+      p.vx *= 0.94;
+      p.vy *= 0.94;
+      p.life -= dt;
+      return p.life > 0;
+    });
   }
 
   function maxFuel() { return 100 + state.levels.fuel * UPGRADES.fuel.step; }
@@ -344,12 +385,47 @@
     return Math.round(u.base * Math.pow(u.growth, lvl));
   }
 
+  // ---- save / load (localStorage; keeps credits, upgrades and chapter progress) ----
+  const SAVE_KEY = 'starMinerSave_v1';
+
+  function saveGame() {
+    try {
+      localStorage.setItem(SAVE_KEY, JSON.stringify({
+        credits: state.credits,
+        levels: state.levels,
+        chapter: state.chapter,
+        muted: state.muted,
+      }));
+    } catch (e) {
+      // storage unavailable (private browsing, quota, etc.) -- fail silently
+    }
+  }
+
+  function loadGame() {
+    try {
+      const raw = localStorage.getItem(SAVE_KEY);
+      if (!raw) return false;
+      const data = JSON.parse(raw);
+      state.credits = typeof data.credits === 'number' ? data.credits : 0;
+      state.levels = Object.assign(
+        { cargo: 0, fuel: 0, engine: 0, mining: 0, hull: 0, weapon: 0 },
+        data.levels || {}
+      );
+      state.chapter = data.chapter === 2 ? 2 : 1;
+      state.muted = !!data.muted;
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   // ---- sound (synthesized via Web Audio API, no asset files needed) ----
   let audioCtx = null;
   let engineOsc = null;
   let engineGain = null;
   let miningOsc = null;
   let miningGain = null;
+  let ambientGain = null;
 
   function setupAudio() {
     if (audioCtx) return;
@@ -375,6 +451,33 @@
     miningGain.gain.value = 0;
     miningOsc.connect(miningGain).connect(audioCtx.destination);
     miningOsc.start();
+
+    // faint ambient deep-space pad, always on at very low volume for atmosphere
+    ambientGain = audioCtx.createGain();
+    ambientGain.gain.value = 0;
+    const ambientFilter = audioCtx.createBiquadFilter();
+    ambientFilter.type = 'lowpass';
+    ambientFilter.frequency.value = 500;
+    ambientFilter.Q.value = 0.6;
+    ambientFilter.connect(ambientGain).connect(audioCtx.destination);
+
+    [55, 82.41, 110.5].forEach((freq) => {
+      const osc = audioCtx.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+      const oscGain = audioCtx.createGain();
+      oscGain.gain.value = 0.33;
+      osc.connect(oscGain).connect(ambientFilter);
+      osc.start();
+    });
+
+    const lfo = audioCtx.createOscillator();
+    lfo.type = 'sine';
+    lfo.frequency.value = 0.06;
+    const lfoGain = audioCtx.createGain();
+    lfoGain.gain.value = 220;
+    lfo.connect(lfoGain).connect(ambientFilter.frequency);
+    lfo.start();
   }
 
   function unlockAudio() {
@@ -386,6 +489,7 @@
     state.muted = !state.muted;
     muteBtn.textContent = state.muted ? '🔇' : '🔊';
     unlockAudio();
+    saveGame();
   }
 
   function playTone({ freq = 440, duration = 0.15, type = 'sine', startFreq, endFreq, volume = 0.18, attack = 0.005 }) {
@@ -476,13 +580,33 @@
       const target = !state.muted && state.mining ? 0.05 : 0;
       miningGain.gain.setTargetAtTime(target, now, 0.06);
     }
+    if (ambientGain) {
+      const target = !state.muted ? 0.03 : 0;
+      ambientGain.gain.setTargetAtTime(target, now, 1.2);
+    }
   }
 
   function init() {
+    const hadSave = loadGame();
     resetShip();
     bindInput();
     buildUpgradePanel();
-    showToast('💡 정거장(맵 중앙)에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!', 7000);
+    muteBtn.textContent = state.muted ? '🔇' : '🔊';
+
+    if (hadSave && state.chapter === 2 && !state.bosses.some((b) => b.id === 'dimensional')) {
+      state.bosses.forEach((b) => { b.defeatedOnce = true; });
+      state.bosses.push(spawnDimensionalBoss());
+    }
+
+    if (hadSave) {
+      showToast(`돌아오신 것을 환영합니다! 보유 크레딧 ${state.credits} · 업그레이드 진행상황을 불러왔습니다.`, 6000);
+    } else {
+      showToast('💡 정거장(맵 중앙)에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!', 7000);
+    }
+
+    window.addEventListener('beforeunload', saveGame);
+    window.addEventListener('pagehide', saveGame);
+
     requestAnimationFrame(loop);
   }
 
@@ -551,6 +675,7 @@
     state.levels[key]++;
     sfxUpgrade();
     refreshUpgradePanel();
+    saveGame();
   }
 
   function sellCargo() {
@@ -561,6 +686,7 @@
     });
     state.credits += Math.round(total);
     refreshUpgradePanel();
+    saveGame();
   }
 
   function dock() {
@@ -592,31 +718,27 @@
   }
 
   function restart() {
+    // Credits, upgrades, and chapter progress persist through death (see saveGame) --
+    // dying costs you your current cargo and sends you back to the station, not your whole save.
     state.ship.x = STATION.x;
     state.ship.y = STATION.y - 140;
     state.ship.vx = 0;
     state.ship.vy = 0;
     state.ship.angle = -Math.PI / 2;
-    state.credits = 0;
     state.cargo = { iron: 0, gold: 0, crystal: 0 };
-    state.levels = { cargo: 0, fuel: 0, engine: 0, mining: 0, hull: 0, weapon: 0 };
-    state.planets = makePlanets();
-    state.asteroids = makeAsteroids();
-    state.bosses = makeBosses();
     state.bullets = [];
     state.bossBullets = [];
     state.gameOver = false;
     state.mining = null;
     state.invuln = 2;
     state.toastTimer = 0;
-    state.chapter = 1;
     state.predator = null;
     state.fuelEmptyTimer = 0;
     resetShip();
     hideMessage();
     toastEl.classList.add('hidden');
     bossBar.classList.add('hidden');
-    showToast('💡 정거장(맵 중앙)에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!', 7000);
+    showToast('정거장으로 귀환했습니다. 화물칸은 비었지만 선박 업그레이드는 그대로 남아있어요.', 5000);
   }
 
   let lastTime = performance.now();
@@ -679,6 +801,8 @@
     updateBullets(dt);
     updateBosses(dt);
     updatePlanetRegen(dt);
+    updateDamagePopups(dt);
+    updateParticles(dt);
     updateSectorHud(dt);
     updateBossHud();
     updateLoopSounds();
@@ -813,6 +937,7 @@
     state.gameOver = true;
     addShake(34);
     sfxEaten();
+    spawnExplosion(state.ship.x, state.ship.y, '#8a0018', 26, 50);
     showMessage(`
       <div>연료가 바닥난 채 표류하던 당신을, 어둠 속에서 나타난 거대한 무언가가 통째로 삼켜버렸습니다.</div>
       <div style="margin-top:6px;color:#ffe08a;">최종 크레딧: ${state.credits}</div>
@@ -822,8 +947,10 @@
   }
 
   function triggerGameOver() {
+    if (state.gameOver) return;
     state.gameOver = true;
     sfxGameOver();
+    spawnExplosion(state.ship.x, state.ship.y, '#ffb366', 30, 70);
     showMessage(`
       <div>선체가 파괴되었습니다.</div>
       <div style="margin-top:6px;color:#ffe08a;">최종 크레딧: ${state.credits}</div>
@@ -856,6 +983,7 @@
         if (!boss.alive) continue;
         if (dist(b.x, b.y, boss.x, boss.y) < boss.hitRadius) {
           boss.hp -= b.damage;
+          spawnDamagePopup(b.x, b.y, b.damage, '#8be9ff');
           if (boss.hp <= 0) defeatBoss(boss);
           else sfxLaserHit();
           return false;
@@ -884,6 +1012,7 @@
     addShake(dmg * 0.8);
     state.hitFlash = 0.35;
     sfxHit();
+    spawnDamagePopup(state.ship.x, state.ship.y - 22, dmg, '#ff6b6b');
     if (state.hull <= 0) {
       triggerGameOver();
     }
@@ -973,6 +1102,7 @@
     state.credits += boss.reward;
     addShake(10 + boss.sector * 6);
     sfxBossDefeat();
+    spawnExplosion(boss.x, boss.y, boss.color, boss.id === 'dimensional' ? 70 : 40, boss.radius * 0.9);
     const firstKill = !boss.defeatedOnce;
     if (boss.id === 'dimensional' && firstKill) {
       showToast(`무한궤도의 지배자를 물리쳤습니다! 균열 너머에도 평화가 찾아왔습니다. (+${boss.reward} 크레딧)`, 6000);
@@ -988,6 +1118,7 @@
       const allDefeated = state.bosses.filter((b) => b.sector !== 4).every((b) => b.defeatedOnce);
       if (allDefeated) triggerChapterTwo();
     }
+    saveGame();
   }
 
   function triggerChapterTwo() {
@@ -1090,6 +1221,8 @@
     drawPredator(state.predator);
     drawShip();
     state.bullets.forEach(drawPlayerBullet);
+    drawParticles();
+    drawDamagePopups();
 
     ctx.restore();
 
@@ -1776,6 +1909,30 @@
       ctx.shadowBlur = 0;
     });
 
+    ctx.restore();
+  }
+
+  function drawParticles() {
+    ctx.save();
+    state.particles.forEach((p) => {
+      ctx.globalAlpha = clamp(p.life / p.maxLife, 0, 1);
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    ctx.restore();
+  }
+
+  function drawDamagePopups() {
+    ctx.save();
+    ctx.font = 'bold 14px sans-serif';
+    ctx.textAlign = 'center';
+    state.damagePopups.forEach((p) => {
+      ctx.globalAlpha = clamp(p.life / p.maxLife, 0, 1);
+      ctx.fillStyle = p.color;
+      ctx.fillText(String(p.text), p.x, p.y);
+    });
     ctx.restore();
   }
 
