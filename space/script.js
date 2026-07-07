@@ -289,6 +289,7 @@
       vx: 0, vy: 0, angle: -Math.PI / 2,
       thrusting: false,
       fireCooldown: 0,
+      muzzleFlash: 0,
     },
     planets: makePlanets(),
     asteroids: makeAsteroids(),
@@ -369,6 +370,24 @@
   function turnSpeed() { return 3.4; }
   function miningRate() { return 8 + state.levels.mining * 5; }
   function weaponDamage() { return 14 + state.levels.weapon * 6; }
+  function weaponVisualTier() {
+    const lvl = state.levels.weapon;
+    if (lvl >= 6) return 3;
+    if (lvl >= 4) return 2;
+    if (lvl >= 1) return 1;
+    return 0;
+  }
+  function hasSideShots() { return state.levels.weapon >= 2; }
+  function fireCooldownFor() { return state.levels.weapon >= 3 ? FIRE_COOLDOWN * 0.7 : FIRE_COOLDOWN; }
+  function weaponPierce() { return state.levels.weapon >= 6 ? 1 : 0; }
+
+  function weaponUpgradeNote(nextLevel) {
+    if (nextLevel === 2) return ' · 사이드 샷 해금';
+    if (nextLevel === 3) return ' · 연사 속도 증가';
+    if (nextLevel === 4) return ' · 강화 빔';
+    if (nextLevel === 6) return ' · 관통 + 프리즘 샷';
+    return '';
+  }
 
   function cargoTotal() {
     return state.cargo.iron + state.cargo.gold + state.cargo.crystal;
@@ -550,8 +569,28 @@
     });
   }
 
-  function sfxLaser() { playTone({ type: 'sawtooth', startFreq: 880, endFreq: 180, duration: 0.1, volume: 0.1 }); }
-  function sfxLaserHit() { playTone({ type: 'square', freq: 1200, duration: 0.045, volume: 0.05 }); }
+  function sfxLaser(tier = 0) {
+    if (tier >= 3) {
+      playTone({ type: 'sawtooth', startFreq: 1300, endFreq: 220, duration: 0.13, volume: 0.13 });
+      playTone({ type: 'sine', startFreq: 320, endFreq: 55, duration: 0.16, volume: 0.1 });
+    } else if (tier === 2) {
+      playTone({ type: 'sawtooth', startFreq: 1050, endFreq: 200, duration: 0.11, volume: 0.11 });
+    } else if (tier === 1) {
+      playTone({ type: 'sawtooth', startFreq: 940, endFreq: 190, duration: 0.1, volume: 0.1 });
+    } else {
+      playTone({ type: 'sawtooth', startFreq: 880, endFreq: 180, duration: 0.1, volume: 0.1 });
+    }
+  }
+  function sfxLaserHit(tier = 0) {
+    if (tier >= 3) {
+      playTone({ type: 'square', freq: 1500, duration: 0.06, volume: 0.08 });
+      playNoise({ duration: 0.09, volume: 0.12, filterFreq: 2200 });
+    } else if (tier >= 1) {
+      playTone({ type: 'square', freq: 1300, duration: 0.05, volume: 0.06 });
+    } else {
+      playTone({ type: 'square', freq: 1200, duration: 0.045, volume: 0.05 });
+    }
+  }
   function sfxHit() { playNoise({ duration: 0.18, volume: 0.22, filterFreq: 900 }); }
   function sfxDock() { playSequence([523.25, 659.25], { volume: 0.14 }); }
   function sfxUndock() { playSequence([659.25, 523.25], { volume: 0.12 }); }
@@ -657,7 +696,8 @@
         btn.disabled = true;
       } else {
         const cost = upgradeCost(key);
-        lvlEl.textContent = `레벨 ${lvl} → ${lvl + 1}`;
+        const note = key === 'weapon' ? weaponUpgradeNote(lvl + 1) : '';
+        lvlEl.textContent = `레벨 ${lvl} → ${lvl + 1}${note}`;
         btn.textContent = `${cost} 크레딧`;
         btn.disabled = state.credits < cost;
       }
@@ -787,9 +827,10 @@
       ship.y = clamp(ship.y + ship.vy * dt, 0, WORLD_H);
 
       if (ship.fireCooldown > 0) ship.fireCooldown -= dt;
+      if (ship.muzzleFlash > 0) ship.muzzleFlash = Math.max(0, ship.muzzleFlash - dt);
       if (keys['KeyF'] && ship.fireCooldown <= 0) {
         fireBullet();
-        ship.fireCooldown = FIRE_COOLDOWN;
+        ship.fireCooldown = fireCooldownFor();
       }
 
       updateMining(dt);
@@ -962,15 +1003,35 @@
   function fireBullet() {
     const ship = state.ship;
     const nose = 18;
-    state.bullets.push({
-      x: ship.x + Math.cos(ship.angle) * nose,
-      y: ship.y + Math.sin(ship.angle) * nose,
-      vx: Math.cos(ship.angle) * BULLET_SPEED,
-      vy: Math.sin(ship.angle) * BULLET_SPEED,
-      life: BULLET_LIFE,
-      damage: weaponDamage(),
-    });
-    sfxLaser();
+    const tier = weaponVisualTier();
+    const dmg = weaponDamage();
+    const pierce = weaponPierce();
+
+    const spawnBolt = (angleOffset, dmgMul, sideOffset) => {
+      const angle = ship.angle + angleOffset;
+      const perpAngle = ship.angle + Math.PI / 2;
+      const ox = Math.cos(perpAngle) * sideOffset;
+      const oy = Math.sin(perpAngle) * sideOffset;
+      state.bullets.push({
+        x: ship.x + Math.cos(ship.angle) * nose + ox,
+        y: ship.y + Math.sin(ship.angle) * nose + oy,
+        vx: Math.cos(angle) * BULLET_SPEED,
+        vy: Math.sin(angle) * BULLET_SPEED,
+        life: BULLET_LIFE,
+        damage: dmg * dmgMul,
+        pierce,
+        tier,
+      });
+    };
+
+    spawnBolt(0, 1, 0);
+    if (hasSideShots()) {
+      spawnBolt(0.14, 0.65, 11);
+      spawnBolt(-0.14, 0.65, -11);
+    }
+
+    ship.muzzleFlash = 0.08;
+    sfxLaser(tier);
   }
 
   function updateBullets(dt) {
@@ -981,11 +1042,18 @@
       if (b.life <= 0) return false;
       for (const boss of state.bosses) {
         if (!boss.alive) continue;
+        if (b.hitIds && b.hitIds.has(boss.id)) continue;
         if (dist(b.x, b.y, boss.x, boss.y) < boss.hitRadius) {
           boss.hp -= b.damage;
           spawnDamagePopup(b.x, b.y, b.damage, '#8be9ff');
           if (boss.hp <= 0) defeatBoss(boss);
-          else sfxLaserHit();
+          else sfxLaserHit(b.tier);
+          if (b.pierce > 0) {
+            b.pierce -= 1;
+            if (!b.hitIds) b.hitIds = new Set();
+            b.hitIds.add(boss.id);
+            continue;
+          }
           return false;
         }
       }
@@ -1937,13 +2005,57 @@
   }
 
   function drawPlayerBullet(b) {
+    const tier = b.tier || 0;
     ctx.save();
-    ctx.fillStyle = '#8be9ff';
-    ctx.shadowColor = '#8be9ff';
-    ctx.shadowBlur = 6;
+
+    if (tier === 0) {
+      ctx.fillStyle = '#8be9ff';
+      ctx.shadowColor = '#8be9ff';
+      ctx.shadowBlur = 6;
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, 4, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+      return;
+    }
+
+    const angle = Math.atan2(b.vy, b.vx);
+    const length = tier === 1 ? 14 : tier === 2 ? 20 : 27;
+    const width = tier === 1 ? 3 : tier === 2 ? 4.2 : 5.5;
+    const tailX = b.x - Math.cos(angle) * length;
+    const tailY = b.y - Math.sin(angle) * length;
+
+    const grad = ctx.createLinearGradient(b.x, b.y, tailX, tailY);
+    if (tier >= 3) {
+      const hue = (performance.now() / 6) % 360;
+      grad.addColorStop(0, '#ffffff');
+      grad.addColorStop(0.4, `hsl(${hue}, 90%, 68%)`);
+      grad.addColorStop(1, 'rgba(255,255,255,0)');
+    } else if (tier === 2) {
+      grad.addColorStop(0, '#ffffff');
+      grad.addColorStop(0.5, '#5fd4ff');
+      grad.addColorStop(1, 'rgba(95,212,255,0)');
+    } else {
+      grad.addColorStop(0, '#c8f4ff');
+      grad.addColorStop(1, 'rgba(139,233,255,0)');
+    }
+
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = width;
+    ctx.lineCap = 'round';
+    ctx.shadowColor = tier >= 3 ? `hsl(${(performance.now() / 6) % 360}, 90%, 65%)` : '#8be9ff';
+    ctx.shadowBlur = 8 + tier * 3;
     ctx.beginPath();
-    ctx.arc(b.x, b.y, 4, 0, Math.PI * 2);
+    ctx.moveTo(b.x, b.y);
+    ctx.lineTo(tailX, tailY);
+    ctx.stroke();
+
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.arc(b.x, b.y, width * 0.55, 0, Math.PI * 2);
     ctx.fill();
+
     ctx.restore();
   }
 
@@ -2044,6 +2156,21 @@
     ctx.strokeStyle = '#1c3d75';
     ctx.lineWidth = 1;
     ctx.stroke();
+
+    if (ship.muzzleFlash > 0) {
+      const tier = weaponVisualTier();
+      const flashR = 7 + tier * 3.5;
+      const flashAlpha = ship.muzzleFlash / 0.08;
+      const flashGrad = ctx.createRadialGradient(21, 0, 0, 21, 0, flashR);
+      const flashColor = tier >= 3 ? `hsl(${(performance.now() / 6) % 360}, 90%, 70%)` : '#8be9ff';
+      flashGrad.addColorStop(0, `rgba(255,255,255,${flashAlpha})`);
+      flashGrad.addColorStop(0.5, flashColor);
+      flashGrad.addColorStop(1, 'rgba(139,233,255,0)');
+      ctx.fillStyle = flashGrad;
+      ctx.beginPath();
+      ctx.arc(21, 0, flashR, 0, Math.PI * 2);
+      ctx.fill();
+    }
 
     ctx.restore();
   }
