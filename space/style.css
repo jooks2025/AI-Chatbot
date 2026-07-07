@@ -58,6 +58,26 @@ h1 .sub {
   min-width: 100px;
 }
 
+.hud-box.sound {
+  justify-content: center;
+  min-width: auto;
+}
+
+.mute-btn {
+  background: rgba(30, 40, 75, 0.6);
+  border: 1px solid #33447a;
+  border-radius: 8px;
+  color: #dfe6ff;
+  font-size: 1.15em;
+  line-height: 1;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.mute-btn:hover {
+  background: rgba(58, 99, 200, 0.4);
+}
+
 .label {
   font-size: 0.75em;
   color: #8ea2d8;

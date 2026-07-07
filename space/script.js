@@ -25,6 +25,7 @@
   const bossHpFill = document.getElementById('bossHpFill');
   const sectorLabelEl = document.getElementById('sectorLabel');
   const toastEl = document.getElementById('toast');
+  const muteBtn = document.getElementById('muteBtn');
 
   const WORLD_W = 8200;
   const WORLD_H = 8200;
@@ -80,6 +81,8 @@
   const FIRE_COOLDOWN = 0.25;
   const BULLET_SPEED = 520;
   const BULLET_LIFE = 1.1;
+  const FUEL_BURN_RATE = 4.6;
+  const SHIP_DRAG = 0.48;
 
   function rand(min, max) { return Math.random() * (max - min) + min; }
   function dist(ax, ay, bx, by) { return Math.hypot(ax - bx, ay - by); }
@@ -104,9 +107,37 @@
         maxAmount,
         amount: maxAmount,
         regenTimer: 0,
+        detail: makeDepositDetail(type, radius),
       });
     }
     return planets;
+  }
+
+  function makeDepositDetail(type, radius) {
+    if (type === 'iron') {
+      const verts = [];
+      const n = 9;
+      for (let i = 0; i < n; i++) {
+        verts.push({ angle: (i / n) * Math.PI * 2, r: radius * rand(0.78, 1.05) });
+      }
+      return { verts };
+    }
+    if (type === 'gold') {
+      const blobs = [];
+      const n = 3;
+      for (let i = 0; i < n; i++) {
+        const a = (i / n) * Math.PI * 2 + rand(-0.3, 0.3);
+        const d = radius * rand(0.12, 0.32);
+        blobs.push({ x: Math.cos(a) * d, y: Math.sin(a) * d, r: radius * rand(0.55, 0.72) });
+      }
+      return { blobs };
+    }
+    const facetCount = 7;
+    const sparkles = [];
+    for (let i = 0; i < 4; i++) {
+      sparkles.push({ angle: rand(0, Math.PI * 2), dist: rand(0.35, 1.2), phase: rand(0, Math.PI * 2) });
+    }
+    return { facetCount, sparkles, rotOffset: rand(0, Math.PI * 2) };
   }
 
   function makeAsteroids() {
@@ -220,6 +251,7 @@
     toastTimer: 0,
     shake: 0,
     hitFlash: 0,
+    muted: false,
   };
 
   function addShake(amount) {
@@ -249,6 +281,131 @@
     return Math.round(u.base * Math.pow(u.growth, lvl));
   }
 
+  // ---- sound (synthesized via Web Audio API, no asset files needed) ----
+  let audioCtx = null;
+  let engineOsc = null;
+  let engineGain = null;
+  let miningOsc = null;
+  let miningGain = null;
+
+  function setupAudio() {
+    if (audioCtx) return;
+    const Ctor = window.AudioContext || window.webkitAudioContext;
+    if (!Ctor) return;
+    audioCtx = new Ctor();
+
+    engineOsc = audioCtx.createOscillator();
+    engineOsc.type = 'sawtooth';
+    engineOsc.frequency.value = 65;
+    const engineFilter = audioCtx.createBiquadFilter();
+    engineFilter.type = 'lowpass';
+    engineFilter.frequency.value = 240;
+    engineGain = audioCtx.createGain();
+    engineGain.gain.value = 0;
+    engineOsc.connect(engineFilter).connect(engineGain).connect(audioCtx.destination);
+    engineOsc.start();
+
+    miningOsc = audioCtx.createOscillator();
+    miningOsc.type = 'triangle';
+    miningOsc.frequency.value = 210;
+    miningGain = audioCtx.createGain();
+    miningGain.gain.value = 0;
+    miningOsc.connect(miningGain).connect(audioCtx.destination);
+    miningOsc.start();
+  }
+
+  function unlockAudio() {
+    setupAudio();
+    if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+  }
+
+  function toggleMute() {
+    state.muted = !state.muted;
+    muteBtn.textContent = state.muted ? '🔇' : '🔊';
+    unlockAudio();
+  }
+
+  function playTone({ freq = 440, duration = 0.15, type = 'sine', startFreq, endFreq, volume = 0.18, attack = 0.005 }) {
+    if (state.muted || !audioCtx) return;
+    const now = audioCtx.currentTime;
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = type;
+    if (startFreq != null && endFreq != null) {
+      osc.frequency.setValueAtTime(startFreq, now);
+      osc.frequency.exponentialRampToValueAtTime(Math.max(1, endFreq), now + duration);
+    } else {
+      osc.frequency.setValueAtTime(freq, now);
+    }
+    gain.gain.setValueAtTime(0, now);
+    gain.gain.linearRampToValueAtTime(volume, now + attack);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+    osc.connect(gain).connect(audioCtx.destination);
+    osc.start(now);
+    osc.stop(now + duration + 0.05);
+  }
+
+  function playNoise({ duration = 0.2, volume = 0.2, filterFreq = 1200 }) {
+    if (state.muted || !audioCtx) return;
+    const now = audioCtx.currentTime;
+    const bufferSize = Math.max(1, Math.floor(audioCtx.sampleRate * duration));
+    const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+    const noise = audioCtx.createBufferSource();
+    noise.buffer = buffer;
+    const filter = audioCtx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = filterFreq;
+    const gain = audioCtx.createGain();
+    gain.gain.setValueAtTime(volume, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+    noise.connect(filter).connect(gain).connect(audioCtx.destination);
+    noise.start(now);
+    noise.stop(now + duration + 0.05);
+  }
+
+  function playSequence(notes, { gap = 0.09, duration = 0.14, volume = 0.15, type = 'sine' } = {}) {
+    if (state.muted || !audioCtx) return;
+    const now = audioCtx.currentTime;
+    notes.forEach((freq, i) => {
+      const startAt = now + i * gap;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, startAt);
+      gain.gain.setValueAtTime(0, startAt);
+      gain.gain.linearRampToValueAtTime(volume, startAt + 0.005);
+      gain.gain.exponentialRampToValueAtTime(0.001, startAt + duration);
+      osc.connect(gain).connect(audioCtx.destination);
+      osc.start(startAt);
+      osc.stop(startAt + duration + 0.05);
+    });
+  }
+
+  function sfxLaser() { playTone({ type: 'sawtooth', startFreq: 880, endFreq: 180, duration: 0.1, volume: 0.1 }); }
+  function sfxLaserHit() { playTone({ type: 'square', freq: 1200, duration: 0.045, volume: 0.05 }); }
+  function sfxHit() { playNoise({ duration: 0.18, volume: 0.22, filterFreq: 900 }); }
+  function sfxDock() { playSequence([523.25, 659.25], { volume: 0.14 }); }
+  function sfxUndock() { playSequence([659.25, 523.25], { volume: 0.12 }); }
+  function sfxUpgrade() { playSequence([659.25, 880, 1046.5], { gap: 0.08, volume: 0.15 }); }
+  function sfxBossAggro() { playTone({ type: 'sawtooth', startFreq: 160, endFreq: 45, duration: 0.5, volume: 0.14 }); }
+  function sfxBossDefeat() { playSequence([440, 550, 660, 880], { gap: 0.1, duration: 0.22, volume: 0.17 }); }
+  function sfxGameOver() { playSequence([392, 349.23, 293.66, 220], { gap: 0.18, duration: 0.35, volume: 0.16, type: 'triangle' }); }
+
+  function updateLoopSounds() {
+    if (!audioCtx) return;
+    const now = audioCtx.currentTime;
+    if (engineGain) {
+      const target = !state.muted && state.ship.thrusting && !state.docked ? 0.05 : 0;
+      engineGain.gain.setTargetAtTime(target, now, 0.06);
+    }
+    if (miningGain) {
+      const target = !state.muted && state.mining ? 0.05 : 0;
+      miningGain.gain.setTargetAtTime(target, now, 0.06);
+    }
+  }
+
   function init() {
     resetShip();
     bindInput();
@@ -258,6 +415,7 @@
 
   function bindInput() {
     window.addEventListener('keydown', (e) => {
+      unlockAudio();
       state.keys[e.code] = true;
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space', 'KeyF'].includes(e.code)) {
         e.preventDefault();
@@ -268,6 +426,7 @@
     });
     sellBtn.addEventListener('click', sellCargo);
     closeDockBtn.addEventListener('click', undock);
+    muteBtn.addEventListener('click', toggleMute);
   }
 
   function buildUpgradePanel() {
@@ -317,6 +476,7 @@
     if (state.credits < cost) return;
     state.credits -= cost;
     state.levels[key]++;
+    sfxUpgrade();
     refreshUpgradePanel();
   }
 
@@ -338,11 +498,13 @@
     state.hull = maxHull();
     dockPanel.classList.remove('hidden');
     refreshUpgradePanel();
+    sfxDock();
   }
 
   function undock() {
     state.docked = false;
     dockPanel.classList.add('hidden');
+    sfxUndock();
   }
 
   function showMessage(html) {
@@ -406,13 +568,12 @@
       if (wantsThrust) {
         ship.vx += Math.cos(ship.angle) * thrustPower() * dt;
         ship.vy += Math.sin(ship.angle) * thrustPower() * dt;
-        state.fuel = Math.max(0, state.fuel - 14 * dt);
+        state.fuel = Math.max(0, state.fuel - FUEL_BURN_RATE * dt);
       }
 
       // slight drag so the game stays controllable
-      const drag = 0.35;
-      ship.vx -= ship.vx * drag * dt;
-      ship.vy -= ship.vy * drag * dt;
+      ship.vx -= ship.vx * SHIP_DRAG * dt;
+      ship.vy -= ship.vy * SHIP_DRAG * dt;
 
       const speed = Math.hypot(ship.vx, ship.vy);
       const maxSpeed = 340;
@@ -439,6 +600,7 @@
     updatePlanetRegen(dt);
     updateSectorHud(dt);
     updateBossHud();
+    updateLoopSounds();
 
     if (keys['Space'] || keys['KeyE']) {
       if (!state.docked && dist(ship.x, ship.y, STATION.x, STATION.y) < STATION.radius + 40) {
@@ -537,6 +699,7 @@
 
   function triggerGameOver() {
     state.gameOver = true;
+    sfxGameOver();
     showMessage(`
       <div>선체가 파괴되었습니다.</div>
       <div style="margin-top:6px;color:#ffe08a;">최종 크레딧: ${state.credits}</div>
@@ -556,6 +719,7 @@
       life: BULLET_LIFE,
       damage: weaponDamage(),
     });
+    sfxLaser();
   }
 
   function updateBullets(dt) {
@@ -569,6 +733,7 @@
         if (dist(b.x, b.y, boss.x, boss.y) < boss.hitRadius) {
           boss.hp -= b.damage;
           if (boss.hp <= 0) defeatBoss(boss);
+          else sfxLaserHit();
           return false;
         }
       }
@@ -594,6 +759,7 @@
     state.invuln = 1.2;
     addShake(dmg * 0.8);
     state.hitFlash = 0.35;
+    sfxHit();
     if (state.hull <= 0) {
       triggerGameOver();
     }
@@ -616,6 +782,7 @@
       const aggro = distToShip < boss.aggroRange && !state.docked;
       if (aggro && !boss.aggroed) {
         addShake(6);
+        sfxBossAggro();
       }
       boss.aggroed = aggro;
 
@@ -677,6 +844,7 @@
     boss.respawnTimer = boss.respawnTime;
     state.credits += boss.reward;
     addShake(10 + boss.sector * 6);
+    sfxBossDefeat();
     if (boss.sector === 3 && !boss.defeatedOnce) {
       showToast(`최종 보스 '${boss.name}'를 물리쳤습니다! 우주가 잠시 평화를 되찾았습니다. (+${boss.reward} 크레딧)`, 5000);
     } else {
@@ -805,41 +973,125 @@
   }
 
   function drawStation() {
+    const t = performance.now() / 1000;
+    const hubR = STATION.radius * 0.55;
+    const ringR = STATION.radius + 46;
+    const rotation = t * 0.15;
+
     ctx.save();
     ctx.translate(STATION.x, STATION.y);
-    const grad = ctx.createRadialGradient(0, 0, 10, 0, 0, STATION.radius + 30);
-    grad.addColorStop(0, 'rgba(120,180,255,0.35)');
+
+    const grad = ctx.createRadialGradient(0, 0, hubR * 0.4, 0, 0, ringR + 44);
+    grad.addColorStop(0, 'rgba(120,180,255,0.3)');
     grad.addColorStop(1, 'rgba(120,180,255,0)');
     ctx.fillStyle = grad;
     ctx.beginPath();
-    ctx.arc(0, 0, STATION.radius + 30, 0, Math.PI * 2);
+    ctx.arc(0, 0, ringR + 44, 0, Math.PI * 2);
     ctx.fill();
 
-    ctx.strokeStyle = '#7fb2ff';
-    ctx.lineWidth = 3;
-    ctx.beginPath();
-    ctx.arc(0, 0, STATION.radius, 0, Math.PI * 2);
-    ctx.stroke();
+    // solar panel arrays on two opposite struts
+    const drawPanel = (angle, distance) => {
+      ctx.save();
+      ctx.rotate(angle);
+      ctx.translate(distance, 0);
+      ctx.fillStyle = '#122c58';
+      ctx.fillRect(-4, -24, 8, 48);
+      ctx.strokeStyle = '#4a75e0';
+      ctx.lineWidth = 1;
+      for (let k = -3; k <= 3; k++) {
+        ctx.beginPath();
+        ctx.moveTo(-4, k * 7);
+        ctx.lineTo(4, k * 7);
+        ctx.stroke();
+      }
+      ctx.strokeStyle = '#7fb2ff';
+      ctx.lineWidth = 1.4;
+      ctx.strokeRect(-4, -24, 8, 48);
+      ctx.restore();
+    };
+    drawPanel(Math.PI * 0.25, hubR * 1.55);
+    drawPanel(Math.PI * 1.25, hubR * 1.55);
 
-    ctx.fillStyle = '#1c2a55';
-    ctx.beginPath();
-    ctx.arc(0, 0, STATION.radius - 10, 0, Math.PI * 2);
-    ctx.fill();
-
-    ctx.strokeStyle = '#9fd4ff';
-    ctx.lineWidth = 2;
-    for (let i = 0; i < 4; i++) {
-      const a = (i / 4) * Math.PI * 2 + performance.now() / 4000;
+    // rigid struts connecting hub to the outer ring
+    const strutCount = 4;
+    ctx.strokeStyle = '#3b4d85';
+    ctx.lineWidth = 6;
+    for (let i = 0; i < strutCount; i++) {
+      const a = (i / strutCount) * Math.PI * 2 + Math.PI / 4;
       ctx.beginPath();
-      ctx.moveTo(Math.cos(a) * (STATION.radius - 10), Math.sin(a) * (STATION.radius - 10));
-      ctx.lineTo(Math.cos(a) * (STATION.radius + 22), Math.sin(a) * (STATION.radius + 22));
+      ctx.moveTo(Math.cos(a) * hubR, Math.sin(a) * hubR);
+      ctx.lineTo(Math.cos(a) * (ringR - 8), Math.sin(a) * (ringR - 8));
       ctx.stroke();
     }
+
+    // rotating outer habitat ring with segment dividers and beacon lights
+    ctx.strokeStyle = '#26325c';
+    ctx.lineWidth = 15;
+    ctx.beginPath();
+    ctx.arc(0, 0, ringR, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.strokeStyle = '#7fb2ff';
+    ctx.lineWidth = 1.6;
+    ctx.beginPath();
+    ctx.arc(0, 0, ringR - 7.5, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(0, 0, ringR + 7.5, 0, Math.PI * 2);
+    ctx.stroke();
+
+    const segments = 16;
+    for (let i = 0; i < segments; i++) {
+      const a = rotation + (i / segments) * Math.PI * 2;
+      ctx.strokeStyle = 'rgba(6,9,20,0.7)';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.moveTo(Math.cos(a) * (ringR - 7.5), Math.sin(a) * (ringR - 7.5));
+      ctx.lineTo(Math.cos(a) * (ringR + 7.5), Math.sin(a) * (ringR + 7.5));
+      ctx.stroke();
+
+      if (i % 4 === 0) {
+        const blink = Math.sin(t * 2.4 + i) > 0.5;
+        ctx.fillStyle = blink ? '#ffdd6a' : 'rgba(255,221,106,0.2)';
+        ctx.beginPath();
+        ctx.arc(Math.cos(a) * ringR, Math.sin(a) * ringR, 2.6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    // central hub with lit windows
+    ctx.fillStyle = '#1c2a55';
+    ctx.beginPath();
+    ctx.arc(0, 0, hubR, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = '#9fd4ff';
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+
+    for (let i = 0; i < 8; i++) {
+      const a = (i / 8) * Math.PI * 2;
+      const wx = Math.cos(a) * hubR * 0.6;
+      const wy = Math.sin(a) * hubR * 0.6;
+      const glow = 0.45 + 0.4 * Math.abs(Math.sin(t * 1.1 + i * 1.7));
+      ctx.fillStyle = `rgba(255,224,140,${glow})`;
+      ctx.fillRect(wx - 2, wy - 2, 4, 4);
+    }
+
+    // pulsing docking-pad glow at the hub center
+    const dockPulse = 0.5 + 0.5 * Math.sin(t * 2);
+    ctx.fillStyle = `rgba(159,212,255,${0.1 + 0.08 * dockPulse})`;
+    ctx.beginPath();
+    ctx.arc(0, 0, hubR * 0.55, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = `rgba(159,212,255,${0.45 + 0.3 * dockPulse})`;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(0, 0, hubR * 0.55, 0, Math.PI * 2);
+    ctx.stroke();
 
     ctx.fillStyle = '#d7e6ff';
     ctx.font = 'bold 13px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('정거장', 0, STATION.radius + 46);
+    ctx.fillText('정거장', 0, ringR + 24);
     ctx.restore();
   }
 
@@ -848,29 +1100,164 @@
     const depleted = p.amount <= 0.5;
     ctx.save();
     ctx.translate(p.x, p.y);
-    ctx.fillStyle = depleted ? '#31384f' : info.color;
-    ctx.globalAlpha = depleted ? 0.4 : 1;
-    ctx.beginPath();
-    ctx.arc(0, 0, p.radius, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.globalAlpha = 1;
-    ctx.strokeStyle = 'rgba(255,255,255,0.25)';
-    ctx.lineWidth = 2;
-    ctx.stroke();
+
+    if (p.type === 'crystal' && !depleted) {
+      const glowR = p.radius * 2.1;
+      const glow = ctx.createRadialGradient(0, 0, p.radius * 0.3, 0, 0, glowR);
+      glow.addColorStop(0, 'rgba(126,247,224,0.28)');
+      glow.addColorStop(1, 'rgba(126,247,224,0)');
+      ctx.fillStyle = glow;
+      ctx.beginPath();
+      ctx.arc(0, 0, glowR, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (p.type === 'iron') drawIronDeposit(p, depleted);
+    else if (p.type === 'gold') drawGoldDeposit(p, depleted);
+    else drawCrystalDeposit(p, depleted);
 
     // resource gauge ring
     const pct = p.amount / p.maxAmount;
     ctx.strokeStyle = info.color;
     ctx.lineWidth = 4;
     ctx.beginPath();
-    ctx.arc(0, 0, p.radius + 8, -Math.PI / 2, -Math.PI / 2 + pct * Math.PI * 2);
+    ctx.arc(0, 0, p.radius + 10, -Math.PI / 2, -Math.PI / 2 + pct * Math.PI * 2);
     ctx.stroke();
 
     ctx.fillStyle = '#cfd8f5';
     ctx.font = '11px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(info.name, 0, p.radius + 24);
+    ctx.fillText(info.name, 0, p.radius + 26);
     ctx.restore();
+  }
+
+  function drawIronDeposit(p, depleted) {
+    ctx.beginPath();
+    p.detail.verts.forEach((v, i) => {
+      const x = Math.cos(v.angle) * v.r;
+      const y = Math.sin(v.angle) * v.r;
+      if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    });
+    ctx.closePath();
+    const grad = ctx.createLinearGradient(-p.radius, -p.radius, p.radius, p.radius);
+    if (depleted) {
+      grad.addColorStop(0, '#3a3f4d');
+      grad.addColorStop(1, '#20232b');
+    } else {
+      grad.addColorStop(0, '#eef2fa');
+      grad.addColorStop(0.45, '#9aa4bd');
+      grad.addColorStop(1, '#454c60');
+    }
+    ctx.fillStyle = grad;
+    ctx.fill();
+    ctx.strokeStyle = depleted ? 'rgba(255,255,255,0.12)' : 'rgba(255,255,255,0.4)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    if (!depleted) {
+      ctx.strokeStyle = 'rgba(255,255,255,0.6)';
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      ctx.moveTo(-p.radius * 0.35, -p.radius * 0.55);
+      ctx.lineTo(p.radius * 0.05, -p.radius * 0.05);
+      ctx.stroke();
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.moveTo(p.radius * 0.15, p.radius * 0.1);
+      ctx.lineTo(p.radius * 0.4, p.radius * 0.35);
+      ctx.stroke();
+    }
+  }
+
+  function drawGoldDeposit(p, depleted) {
+    p.detail.blobs.forEach((b) => {
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+      const grad = ctx.createRadialGradient(b.x - b.r * 0.35, b.y - b.r * 0.35, b.r * 0.1, b.x, b.y, b.r);
+      if (depleted) {
+        grad.addColorStop(0, '#4a4536');
+        grad.addColorStop(1, '#28261e');
+      } else {
+        grad.addColorStop(0, '#fff8dc');
+        grad.addColorStop(0.45, '#ffd24a');
+        grad.addColorStop(1, '#9c690c');
+      }
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.strokeStyle = depleted ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.55)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    });
+
+    if (!depleted) {
+      const t = performance.now() / 1000;
+      const glint = 0.35 + 0.55 * Math.abs(Math.sin(t * 2.3));
+      ctx.fillStyle = `rgba(255,255,255,${glint})`;
+      ctx.beginPath();
+      ctx.arc(-p.radius * 0.18, -p.radius * 0.22, p.radius * 0.1, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function drawCrystalDeposit(p, depleted) {
+    const n = p.detail.facetCount;
+    const rot = p.detail.rotOffset;
+    const pts = [];
+    for (let i = 0; i < n; i++) {
+      const a = rot + (i / n) * Math.PI * 2;
+      const r = p.radius * (i % 2 === 0 ? 1 : 0.62);
+      pts.push({ x: Math.cos(a) * r, y: Math.sin(a) * r * 1.15 });
+    }
+    ctx.beginPath();
+    pts.forEach((pt, i) => (i === 0 ? ctx.moveTo(pt.x, pt.y) : ctx.lineTo(pt.x, pt.y)));
+    ctx.closePath();
+
+    const info = RESOURCE_TYPES.crystal;
+    const grad = ctx.createLinearGradient(0, -p.radius * 1.15, 0, p.radius * 1.15);
+    if (depleted) {
+      grad.addColorStop(0, '#2c3a38');
+      grad.addColorStop(1, '#161e1c');
+    } else {
+      grad.addColorStop(0, '#eafffa');
+      grad.addColorStop(0.45, info.color);
+      grad.addColorStop(1, '#0d5c4c');
+    }
+    ctx.fillStyle = grad;
+    ctx.fill();
+    ctx.strokeStyle = depleted ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.7)';
+    ctx.lineWidth = 1.4;
+    ctx.stroke();
+
+    if (!depleted) {
+      // internal facet lines for a cut-gem look
+      ctx.strokeStyle = 'rgba(255,255,255,0.35)';
+      ctx.lineWidth = 1;
+      pts.forEach((pt, i) => {
+        if (i % 2 === 0) {
+          ctx.beginPath();
+          ctx.moveTo(0, 0);
+          ctx.lineTo(pt.x, pt.y);
+          ctx.stroke();
+        }
+      });
+
+      const t = performance.now() / 1000;
+      p.detail.sparkles.forEach((s) => {
+        const tw = Math.max(0, Math.sin(t * 1.8 + s.phase));
+        if (tw < 0.6) return;
+        const sx = Math.cos(s.angle) * p.radius * s.dist;
+        const sy = Math.sin(s.angle) * p.radius * s.dist;
+        const size = 3 + tw * 3;
+        ctx.strokeStyle = `rgba(255,255,255,${tw})`;
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.moveTo(sx - size, sy);
+        ctx.lineTo(sx + size, sy);
+        ctx.moveTo(sx, sy - size);
+        ctx.lineTo(sx, sy + size);
+        ctx.stroke();
+      });
+    }
   }
 
   function drawAsteroid(a) {
@@ -1088,6 +1475,7 @@
 
   function drawShip() {
     const ship = state.ship;
+    const t = performance.now() / 1000;
     ctx.save();
     ctx.translate(ship.x, ship.y);
     ctx.rotate(ship.angle);
@@ -1096,27 +1484,82 @@
       ctx.globalAlpha = 0.4;
     }
 
-    if (ship.thrusting) {
-      ctx.fillStyle = '#ff9d3d';
+    // engine exhaust -- idle blue flicker at rest, hot flare under thrust
+    const flareLen = ship.thrusting ? rand(16, 26) : 5 + Math.sin(t * 6) * 1.5;
+    const flareGrad = ctx.createLinearGradient(-17, 0, -17 - flareLen, 0);
+    flareGrad.addColorStop(0, ship.thrusting ? '#fff3c4' : '#bfe8ff');
+    flareGrad.addColorStop(0.5, ship.thrusting ? '#ff9d3d' : '#4ab5ff');
+    flareGrad.addColorStop(1, 'rgba(255,120,40,0)');
+    ctx.fillStyle = flareGrad;
+    [-5.5, 5.5].forEach((oy) => {
       ctx.beginPath();
-      ctx.moveTo(-14, 0);
-      ctx.lineTo(-14 - rand(8, 18), rand(-4, 4));
-      ctx.lineTo(-14, 6);
+      ctx.moveTo(-16, oy - 2.2);
+      ctx.lineTo(-16 - flareLen, oy + rand(-1, 1));
+      ctx.lineTo(-16, oy + 2.2);
       ctx.closePath();
       ctx.fill();
-    }
+    });
 
-    ctx.fillStyle = '#cfe0ff';
-    ctx.strokeStyle = '#4a75e0';
-    ctx.lineWidth = 2;
+    // delta-wing fighter hull
     ctx.beginPath();
-    ctx.moveTo(18, 0);
-    ctx.lineTo(-12, 10);
-    ctx.lineTo(-6, 0);
-    ctx.lineTo(-12, -10);
+    ctx.moveTo(22, 0);
+    ctx.quadraticCurveTo(14, -3, 6, -4.5);
+    ctx.lineTo(-4, -15.5);
+    ctx.lineTo(-13, -11.5);
+    ctx.lineTo(-8, -4.5);
+    ctx.lineTo(-17, -5.5);
+    ctx.lineTo(-17, 5.5);
+    ctx.lineTo(-8, 4.5);
+    ctx.lineTo(-13, 11.5);
+    ctx.lineTo(-4, 15.5);
+    ctx.lineTo(6, 4.5);
+    ctx.quadraticCurveTo(14, 3, 22, 0);
     ctx.closePath();
+
+    const hullGrad = ctx.createLinearGradient(22, 0, -17, 0);
+    hullGrad.addColorStop(0, '#eef4ff');
+    hullGrad.addColorStop(0.45, '#a9c3ff');
+    hullGrad.addColorStop(1, '#5673c9');
+    ctx.fillStyle = hullGrad;
     ctx.fill();
+    ctx.strokeStyle = '#2f4590';
+    ctx.lineWidth = 1.6;
     ctx.stroke();
+
+    // wing accent stripes
+    ctx.strokeStyle = 'rgba(58,99,200,0.55)';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(4, -5);
+    ctx.lineTo(-9, -9.5);
+    ctx.moveTo(4, 5);
+    ctx.lineTo(-9, 9.5);
+    ctx.stroke();
+
+    // wingtip nav lights (blink slowly)
+    const blink = Math.sin(t * 3) > 0.4;
+    ctx.fillStyle = blink ? '#ff5b5b' : 'rgba(255,91,91,0.25)';
+    ctx.beginPath();
+    ctx.arc(-11.5, -11.5, 1.6, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = blink ? '#5bff8f' : 'rgba(91,255,143,0.25)';
+    ctx.beginPath();
+    ctx.arc(-11.5, 11.5, 1.6, 0, Math.PI * 2);
+    ctx.fill();
+
+    // cockpit canopy
+    const canopyGrad = ctx.createRadialGradient(11, -1.5, 0.5, 10, 0, 6);
+    canopyGrad.addColorStop(0, '#eafcff');
+    canopyGrad.addColorStop(0.5, '#5fd4ff');
+    canopyGrad.addColorStop(1, '#1c6fb0');
+    ctx.fillStyle = canopyGrad;
+    ctx.beginPath();
+    ctx.ellipse(10, 0, 6, 3.1, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = '#1c3d75';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
     ctx.restore();
   }
 
