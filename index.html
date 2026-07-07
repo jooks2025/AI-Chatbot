@@ -3,43 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>테트리스</title>
-<link rel="stylesheet" href="style.css">
+<title>미니 게임 모음</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at top, #10152b 0%, #05060f 70%);
+    color: #e7ecff;
+    font-family: "Segoe UI", "Malgun Gothic", sans-serif;
+    line-height: 1.4;
+  }
+  .wrap { text-align: center; padding: 20px; }
+  h1 { color: #9fd4ff; text-shadow: 0 0 14px rgba(90,160,255,0.6); }
+  .cards { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 24px; }
+  .card {
+    display: block;
+    width: 220px;
+    padding: 24px 18px;
+    background: rgba(20, 26, 51, 0.75);
+    border: 1px solid #2c3b66;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #e7ecff;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: #4a75e0; }
+  .card .emoji { font-size: 2.4em; }
+  .card h2 { margin: 10px 0 6px; font-size: 1.1em; color: #9fd4ff; }
+  .card p { margin: 0; font-size: 0.85em; color: #a9b7e0; }
+</style>
 </head>
 <body>
-  <div class="game-container">
-    <h1>테트리스</h1>
-    <div class="game-area">
-      <canvas id="board" width="240" height="480"></canvas>
-      <div class="side-panel">
-        <div class="panel-box">
-          <h2>다음 블록</h2>
-          <canvas id="next" width="96" height="96"></canvas>
-        </div>
-        <div class="panel-box">
-          <h2>점수</h2>
-          <p id="score">0</p>
-        </div>
-        <div class="panel-box">
-          <h2>레벨</h2>
-          <p id="level">1</p>
-        </div>
-        <div class="panel-box">
-          <h2>줄</h2>
-          <p id="lines">0</p>
-        </div>
-        <button id="startBtn">시작</button>
-        <div class="controls">
-          <p>← → : 이동</p>
-          <p>↑ : 회전</p>
-          <p>↓ : 빠르게 내리기</p>
-          <p>Space : 즉시 낙하</p>
-          <p>P : 일시정지</p>
-        </div>
-      </div>
+  <div class="wrap">
+    <h1>미니 게임 모음</h1>
+    <div class="cards">
+      <a class="card" href="space/index.html">
+        <div class="emoji">🚀</div>
+        <h2>우주 채굴선</h2>
+        <p>행성을 탐사하며 자원을 채굴하고 선박을 개조하는 우주 테마 게임</p>
+      </a>
+      <a class="card" href="tetris/index.html">
+        <div class="emoji">🧱</div>
+        <h2>테트리스</h2>
+        <p>블록을 쌓아 줄을 지우는 클래식 테트리스</p>
+      </a>
     </div>
-    <div id="message"></div>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>우주 채굴선</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrap">
+    <h1>우주 채굴선 <span class="sub">Star Miner</span></h1>
+
+    <div class="hud">
+      <div class="hud-box">
+        <span class="label">연료</span>
+        <div class="bar"><div id="fuelBar" class="bar-fill fuel"></div></div>
+      </div>
+      <div class="hud-box">
+        <span class="label">선체</span>
+        <div class="bar"><div id="hullBar" class="bar-fill hull"></div></div>
+      </div>
+      <div class="hud-box">
+        <span class="label">화물칸</span>
+        <div class="bar"><div id="cargoBar" class="bar-fill cargo"></div></div>
+        <span id="cargoText" class="mini-text">0 / 0</span>
+      </div>
+      <div class="hud-box credits">
+        <span class="label">크레딧</span>
+        <span id="creditsText" class="value">0</span>
+      </div>
+    </div>
+
+    <div class="stage">
+      <canvas id="game" width="900" height="560"></canvas>
+      <canvas id="minimap" width="140" height="140"></canvas>
+      <div id="mineProgressWrap" class="mine-progress-wrap hidden">
+        <div id="mineProgress" class="mine-progress-fill"></div>
+      </div>
+      <div id="message" class="message hidden"></div>
+      <div id="dockPanel" class="dock-panel hidden">
+        <h2>우주 정거장</h2>
+        <p>채굴한 자원을 판매하고 선박을 개조하세요.</p>
+        <div class="dock-row">
+          <button id="sellBtn">화물 전량 판매</button>
+          <span id="dockCredits" class="value"></span>
+        </div>
+        <div class="upgrade-list" id="upgradeList"></div>
+        <button id="closeDockBtn">출항하기</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <p><b>↑ / W</b> 추진&nbsp;&nbsp;<b>← →  / A D</b> 회전&nbsp;&nbsp;<b>Space / E</b> 채굴 · 정거장 도킹</p>
+      <p>행성에 가까이, 천천히 접근한 뒤 Space(또는 E)를 눌러 채굴하세요. 연료가 떨어지면 추진할 수 없으니 정거장(중앙)으로 복귀해 보급하세요.</p>
+    </div>
+    <p class="back-link"><a href="../index.html">&larr; 게임 목록으로</a></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
