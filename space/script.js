@@ -19,10 +19,48 @@
   const upgradeListEl = document.getElementById('upgradeList');
   const mineProgressWrap = document.getElementById('mineProgressWrap');
   const mineProgressFill = document.getElementById('mineProgress');
+  const bossBar = document.getElementById('bossBar');
+  const bossNameEl = document.getElementById('bossName');
+  const bossTagEl = document.getElementById('bossTag');
+  const bossHpFill = document.getElementById('bossHpFill');
+  const sectorLabelEl = document.getElementById('sectorLabel');
+  const toastEl = document.getElementById('toast');
 
-  const WORLD_W = 4200;
-  const WORLD_H = 4200;
+  const WORLD_W = 7600;
+  const WORLD_H = 7600;
   const STATION = { x: WORLD_W / 2, y: WORLD_H / 2, radius: 90 };
+
+  const SECTOR_DEFS = [
+    { sector: 1, bandMin: 900, bandMax: 1700 },
+    { sector: 2, bandMin: 1900, bandMax: 2500 },
+    { sector: 3, bandMin: 2700, bandMax: 3200 },
+  ];
+
+  const BOSS_DEFS = [
+    {
+      id: 'sector1', sector: 1, name: '유성체 대왕 크라겐', tag: '가벼운 보스',
+      color: '#6bff9e', glow: 'rgba(107,255,158,0.35)',
+      radius: 130, hitRadius: 90, hp: 140, contactDamage: 12,
+      speed: 70, aggroRange: 480, canShoot: false,
+      reward: 250, respawnTime: 60,
+    },
+    {
+      id: 'sector2', sector: 2, name: '심연 촉수왕 바슬로스', tag: '중간 보스',
+      color: '#c26bff', glow: 'rgba(194,107,255,0.35)',
+      radius: 190, hitRadius: 130, hp: 320, contactDamage: 20,
+      speed: 110, aggroRange: 560, canShoot: true,
+      fireRate: 1.6, projectileSpeed: 220, projectileDamage: 14,
+      reward: 600, respawnTime: 90,
+    },
+    {
+      id: 'sector3', sector: 3, name: '차원포식자 오메가바이스', tag: '최종 보스',
+      color: '#ff4b6b', glow: 'rgba(255,75,107,0.4)',
+      radius: 260, hitRadius: 180, hp: 620, contactDamage: 30,
+      speed: 150, aggroRange: 650, canShoot: true,
+      fireRate: 1.0, projectileSpeed: 260, projectileDamage: 20,
+      reward: 1500, respawnTime: 150,
+    },
+  ];
 
   const RESOURCE_TYPES = {
     iron:    { name: '철광석',   color: '#c7c7c7', price: 4 },
@@ -36,7 +74,12 @@
     engine: { label: '엔진 출력 강화', base: 55, growth: 1.6, max: 6, step: 0 },
     mining: { label: '채굴 레이저 강화', base: 50, growth: 1.6, max: 6, step: 0 },
     hull:   { label: '선체 장갑 강화', base: 45, growth: 1.55, max: 6, step: 20 },
+    weapon: { label: '레이저 캐논 강화', base: 60, growth: 1.55, max: 6, step: 0 },
   };
+
+  const FIRE_COOLDOWN = 0.25;
+  const BULLET_SPEED = 520;
+  const BULLET_LIFE = 1.1;
 
   function rand(min, max) { return Math.random() * (max - min) + min; }
   function dist(ax, ay, bx, by) { return Math.hypot(ax - bx, ay - by); }
@@ -44,7 +87,7 @@
 
   function makePlanets() {
     const planets = [];
-    const count = 12;
+    const count = 18;
     const types = Object.keys(RESOURCE_TYPES);
     let attempts = 0;
     while (planets.length < count && attempts < 2000) {
@@ -68,7 +111,7 @@
 
   function makeAsteroids() {
     const asteroids = [];
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 24; i++) {
       let x, y;
       do {
         x = rand(100, WORLD_W - 100);
@@ -108,27 +151,57 @@
     return stars;
   }
 
+  function makeBosses() {
+    return BOSS_DEFS.map((def) => spawnBoss(def));
+  }
+
+  function spawnBoss(def) {
+    const sectorDef = SECTOR_DEFS.find((s) => s.sector === def.sector);
+    const angle = rand(0, Math.PI * 2);
+    const d = rand(sectorDef.bandMin, sectorDef.bandMax);
+    const x = clamp(STATION.x + Math.cos(angle) * d, 200, WORLD_W - 200);
+    const y = clamp(STATION.y + Math.sin(angle) * d, 200, WORLD_H - 200);
+    return {
+      ...def,
+      x, y,
+      anchor: { x, y },
+      hpMax: def.hp,
+      alive: true,
+      respawnTimer: 0,
+      defeatedOnce: false,
+      wanderTarget: { x, y },
+      wanderTimer: rand(2, 5),
+      fireTimer: rand(0.5, def.fireRate || 1.5),
+      facing: 0,
+    };
+  }
+
   const state = {
     ship: {
       x: STATION.x, y: STATION.y - 140,
       vx: 0, vy: 0, angle: -Math.PI / 2,
       thrusting: false,
+      fireCooldown: 0,
     },
     planets: makePlanets(),
     asteroids: makeAsteroids(),
-    farStars: makeStars(220, WORLD_W, WORLD_H),
-    nearStars: makeStars(140, WORLD_W, WORLD_H),
+    bosses: makeBosses(),
+    bullets: [],
+    bossBullets: [],
+    farStars: makeStars(320, WORLD_W, WORLD_H),
+    nearStars: makeStars(200, WORLD_W, WORLD_H),
     credits: 0,
     cargo: { iron: 0, gold: 0, crystal: 0 },
     fuel: 0,
     hull: 0,
-    levels: { cargo: 0, fuel: 0, engine: 0, mining: 0, hull: 0 },
+    levels: { cargo: 0, fuel: 0, engine: 0, mining: 0, hull: 0, weapon: 0 },
     mining: null,
     docked: false,
     gameOver: false,
     keys: {},
     camera: { x: 0, y: 0 },
     invuln: 2,
+    toastTimer: 0,
   };
 
   function maxFuel() { return 100 + state.levels.fuel * UPGRADES.fuel.step; }
@@ -137,6 +210,7 @@
   function thrustPower() { return 220 + state.levels.engine * 55; }
   function turnSpeed() { return 3.4; }
   function miningRate() { return 8 + state.levels.mining * 5; }
+  function weaponDamage() { return 14 + state.levels.weapon * 6; }
 
   function cargoTotal() {
     return state.cargo.iron + state.cargo.gold + state.cargo.crystal;
@@ -163,7 +237,7 @@
   function bindInput() {
     window.addEventListener('keydown', (e) => {
       state.keys[e.code] = true;
-      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space'].includes(e.code)) {
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space', 'KeyF'].includes(e.code)) {
         e.preventDefault();
       }
     });
@@ -266,14 +340,20 @@
     state.ship.angle = -Math.PI / 2;
     state.credits = 0;
     state.cargo = { iron: 0, gold: 0, crystal: 0 };
-    state.levels = { cargo: 0, fuel: 0, engine: 0, mining: 0, hull: 0 };
+    state.levels = { cargo: 0, fuel: 0, engine: 0, mining: 0, hull: 0, weapon: 0 };
     state.planets = makePlanets();
     state.asteroids = makeAsteroids();
+    state.bosses = makeBosses();
+    state.bullets = [];
+    state.bossBullets = [];
     state.gameOver = false;
     state.mining = null;
     state.invuln = 2;
+    state.toastTimer = 0;
     resetShip();
     hideMessage();
+    toastEl.classList.add('hidden');
+    bossBar.classList.add('hidden');
   }
 
   let lastTime = performance.now();
@@ -320,11 +400,21 @@
       ship.x = clamp(ship.x + ship.vx * dt, 0, WORLD_W);
       ship.y = clamp(ship.y + ship.vy * dt, 0, WORLD_H);
 
+      if (ship.fireCooldown > 0) ship.fireCooldown -= dt;
+      if (keys['KeyF'] && ship.fireCooldown <= 0) {
+        fireBullet();
+        ship.fireCooldown = FIRE_COOLDOWN;
+      }
+
       updateMining(dt);
       updateAsteroids(dt);
     }
 
+    updateBullets(dt);
+    updateBosses(dt);
     updatePlanetRegen(dt);
+    updateSectorHud(dt);
+    updateBossHud();
 
     if (keys['Space'] || keys['KeyE']) {
       if (!state.docked && dist(ship.x, ship.y, STATION.x, STATION.y) < STATION.radius + 40) {
@@ -436,6 +526,193 @@
     document.getElementById('restartBtn').addEventListener('click', restart);
   }
 
+  function fireBullet() {
+    const ship = state.ship;
+    const nose = 18;
+    state.bullets.push({
+      x: ship.x + Math.cos(ship.angle) * nose,
+      y: ship.y + Math.sin(ship.angle) * nose,
+      vx: Math.cos(ship.angle) * BULLET_SPEED,
+      vy: Math.sin(ship.angle) * BULLET_SPEED,
+      life: BULLET_LIFE,
+      damage: weaponDamage(),
+    });
+  }
+
+  function updateBullets(dt) {
+    state.bullets = state.bullets.filter((b) => {
+      b.x += b.vx * dt;
+      b.y += b.vy * dt;
+      b.life -= dt;
+      if (b.life <= 0) return false;
+      for (const boss of state.bosses) {
+        if (!boss.alive) continue;
+        if (dist(b.x, b.y, boss.x, boss.y) < boss.hitRadius) {
+          boss.hp -= b.damage;
+          if (boss.hp <= 0) defeatBoss(boss);
+          return false;
+        }
+      }
+      return true;
+    });
+
+    const ship = state.ship;
+    state.bossBullets = state.bossBullets.filter((b) => {
+      b.x += b.vx * dt;
+      b.y += b.vy * dt;
+      b.life -= dt;
+      if (b.life <= 0) return false;
+      if (state.invuln <= 0 && dist(b.x, b.y, ship.x, ship.y) < 16) {
+        applyShipDamage(b.damage);
+        return false;
+      }
+      return true;
+    });
+  }
+
+  function applyShipDamage(dmg) {
+    state.hull = Math.max(0, state.hull - dmg);
+    state.invuln = 1.2;
+    if (state.hull <= 0) {
+      triggerGameOver();
+    }
+  }
+
+  function updateBosses(dt) {
+    const ship = state.ship;
+    state.bosses.forEach((boss) => {
+      if (!boss.alive) {
+        boss.respawnTimer -= dt;
+        if (boss.respawnTimer <= 0) {
+          Object.assign(boss, spawnBoss(BOSS_DEFS.find((d) => d.id === boss.id)));
+        }
+        return;
+      }
+
+      const distToShip = dist(ship.x, ship.y, boss.x, boss.y);
+      const aggro = distToShip < boss.aggroRange && !state.docked;
+
+      let targetX, targetY;
+      if (aggro) {
+        targetX = ship.x;
+        targetY = ship.y;
+      } else {
+        boss.wanderTimer -= dt;
+        if (boss.wanderTimer <= 0) {
+          boss.wanderTarget = {
+            x: boss.anchor.x + rand(-300, 300),
+            y: boss.anchor.y + rand(-300, 300),
+          };
+          boss.wanderTimer = rand(3, 6);
+        }
+        targetX = boss.wanderTarget.x;
+        targetY = boss.wanderTarget.y;
+      }
+
+      const dx = targetX - boss.x;
+      const dy = targetY - boss.y;
+      const d = Math.hypot(dx, dy);
+      if (d > 4) {
+        boss.x += (dx / d) * boss.speed * dt;
+        boss.y += (dy / d) * boss.speed * dt;
+        boss.facing = Math.atan2(dy, dx);
+      }
+      boss.x = clamp(boss.x, 150, WORLD_W - 150);
+      boss.y = clamp(boss.y, 150, WORLD_H - 150);
+
+      if (aggro && boss.canShoot) {
+        boss.fireTimer -= dt;
+        if (boss.fireTimer <= 0) {
+          const angle = Math.atan2(ship.y - boss.y, ship.x - boss.x);
+          state.bossBullets.push({
+            x: boss.x + Math.cos(angle) * boss.radius,
+            y: boss.y + Math.sin(angle) * boss.radius,
+            vx: Math.cos(angle) * boss.projectileSpeed,
+            vy: Math.sin(angle) * boss.projectileSpeed,
+            life: 3,
+            damage: boss.projectileDamage,
+          });
+          boss.fireTimer = boss.fireRate;
+        }
+      }
+
+      if (!state.docked && state.invuln <= 0 && distToShip < boss.hitRadius * 0.55 + 16) {
+        applyShipDamage(boss.contactDamage);
+        const angle = Math.atan2(ship.y - boss.y, ship.x - boss.x);
+        ship.vx += Math.cos(angle) * 220;
+        ship.vy += Math.sin(angle) * 220;
+      }
+    });
+  }
+
+  function defeatBoss(boss) {
+    boss.alive = false;
+    boss.respawnTimer = boss.respawnTime;
+    state.credits += boss.reward;
+    if (boss.sector === 3 && !boss.defeatedOnce) {
+      showToast(`최종 보스 '${boss.name}'를 물리쳤습니다! 우주가 잠시 평화를 되찾았습니다. (+${boss.reward} 크레딧)`, 5000);
+    } else {
+      showToast(`${boss.tag} '${boss.name}' 격파! +${boss.reward} 크레딧`, 3500);
+    }
+    boss.defeatedOnce = true;
+    refreshUpgradePanel();
+  }
+
+  function showToast(text, ms) {
+    toastEl.textContent = text;
+    toastEl.classList.remove('hidden');
+    toastEl.classList.remove('fade');
+    state.toastTimer = ms / 1000;
+  }
+
+  function sectorAt(d) {
+    if (d < 600) return 0;
+    if (d < 1800) return 1;
+    if (d < 2600) return 2;
+    return 3;
+  }
+
+  function updateSectorHud(dt) {
+    const d = dist(state.ship.x, state.ship.y, STATION.x, STATION.y);
+    const sector = sectorAt(d);
+    if (sector === 0) {
+      sectorLabelEl.textContent = '구역: 안전지대';
+    } else {
+      const def = BOSS_DEFS.find((b) => b.sector === sector);
+      sectorLabelEl.textContent = `구역: ${sector}섹터 · ${def.name}의 영역`;
+    }
+
+    if (state.toastTimer > 0) {
+      state.toastTimer -= dt;
+      if (state.toastTimer <= 0) {
+        toastEl.classList.add('fade');
+      }
+    }
+  }
+
+  function updateBossHud() {
+    const ship = state.ship;
+    let nearest = null;
+    let nearestDist = Infinity;
+    state.bosses.forEach((boss) => {
+      if (!boss.alive) return;
+      const d = dist(ship.x, ship.y, boss.x, boss.y);
+      if (d < boss.aggroRange && d < nearestDist) {
+        nearest = boss;
+        nearestDist = d;
+      }
+    });
+
+    if (!nearest) {
+      bossBar.classList.add('hidden');
+      return;
+    }
+    bossBar.classList.remove('hidden');
+    bossNameEl.textContent = nearest.name;
+    bossTagEl.textContent = nearest.tag;
+    bossHpFill.style.width = `${clamp((nearest.hp / nearest.hpMax) * 100, 0, 100)}%`;
+  }
+
   function updateHud() {
     fuelBar.style.width = `${(state.fuel / maxFuel()) * 100}%`;
     hullBar.style.width = `${(state.hull / maxHull()) * 100}%`;
@@ -457,7 +734,10 @@
     drawStation();
     state.planets.forEach(drawPlanet);
     state.asteroids.forEach(drawAsteroid);
+    state.bosses.forEach(drawBoss);
+    state.bossBullets.forEach(drawBossBullet);
     drawShip();
+    state.bullets.forEach(drawPlayerBullet);
 
     ctx.restore();
     drawMinimap();
@@ -565,6 +845,105 @@
     ctx.restore();
   }
 
+  function drawBoss(boss) {
+    if (!boss.alive) return;
+    const t = performance.now() / 1000;
+    ctx.save();
+    ctx.translate(boss.x, boss.y);
+
+    const auraR = boss.radius * 1.6;
+    const grad = ctx.createRadialGradient(0, 0, boss.radius * 0.3, 0, 0, auraR);
+    grad.addColorStop(0, boss.glow);
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(0, 0, auraR, 0, Math.PI * 2);
+    ctx.fill();
+
+    const tentCount = 6 + boss.sector * 2;
+    ctx.strokeStyle = boss.color;
+    ctx.lineWidth = Math.max(4, boss.radius * 0.06);
+    for (let i = 0; i < tentCount; i++) {
+      const baseAngle = (i / tentCount) * Math.PI * 2;
+      const wig = Math.sin(t * 1.5 + i) * 0.4;
+      const len = boss.radius * (1.1 + 0.3 * Math.sin(t + i * 1.3));
+      const sx = Math.cos(baseAngle) * boss.radius * 0.7;
+      const sy = Math.sin(baseAngle) * boss.radius * 0.7;
+      const mx = Math.cos(baseAngle + wig) * (boss.radius + len * 0.6);
+      const my = Math.sin(baseAngle + wig) * (boss.radius + len * 0.6);
+      const ex = Math.cos(baseAngle + wig * 1.6) * (boss.radius + len);
+      const ey = Math.sin(baseAngle + wig * 1.6) * (boss.radius + len);
+      ctx.beginPath();
+      ctx.moveTo(sx, sy);
+      ctx.quadraticCurveTo(mx, my, ex, ey);
+      ctx.stroke();
+    }
+
+    ctx.globalAlpha = 0.9;
+    ctx.fillStyle = boss.color;
+    ctx.beginPath();
+    ctx.arc(0, 0, boss.radius * 0.75, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.strokeStyle = 'rgba(255,255,255,0.4)';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    const fx = Math.cos(boss.facing);
+    const fy = Math.sin(boss.facing);
+    const perpx = -fy;
+    const perpy = fx;
+    const eyeOffset = boss.radius * 0.3;
+    [-1, 1].forEach((side) => {
+      const ex2 = fx * eyeOffset + perpx * side * eyeOffset * 0.6;
+      const ey2 = fy * eyeOffset + perpy * side * eyeOffset * 0.6;
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.arc(ex2, ey2, boss.radius * 0.09, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#000000';
+      ctx.beginPath();
+      ctx.arc(ex2 + fx * boss.radius * 0.03, ey2 + fy * boss.radius * 0.03, boss.radius * 0.045, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = `bold ${Math.max(12, boss.radius * 0.11)}px sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.fillText(boss.name, 0, -boss.radius * 1.85);
+
+    const barW = boss.radius * 1.6;
+    const barH = 6;
+    ctx.fillStyle = 'rgba(0,0,0,0.5)';
+    ctx.fillRect(-barW / 2, -boss.radius * 1.65, barW, barH);
+    ctx.fillStyle = boss.color;
+    ctx.fillRect(-barW / 2, -boss.radius * 1.65, barW * clamp(boss.hp / boss.hpMax, 0, 1), barH);
+
+    ctx.restore();
+  }
+
+  function drawPlayerBullet(b) {
+    ctx.save();
+    ctx.fillStyle = '#8be9ff';
+    ctx.shadowColor = '#8be9ff';
+    ctx.shadowBlur = 6;
+    ctx.beginPath();
+    ctx.arc(b.x, b.y, 4, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function drawBossBullet(b) {
+    ctx.save();
+    ctx.fillStyle = '#ff8a5b';
+    ctx.shadowColor = '#ff8a5b';
+    ctx.shadowBlur = 8;
+    ctx.beginPath();
+    ctx.arc(b.x, b.y, 6, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+
   function drawShip() {
     const ship = state.ship;
     ctx.save();
@@ -602,6 +981,15 @@
   function drawMinimap() {
     mapCtx.clearRect(0, 0, mapCanvas.width, mapCanvas.height);
     const scale = mapCanvas.width / WORLD_W;
+
+    mapCtx.strokeStyle = 'rgba(159,212,255,0.25)';
+    mapCtx.lineWidth = 1;
+    SECTOR_DEFS.forEach((s) => {
+      mapCtx.beginPath();
+      mapCtx.arc(STATION.x * scale, STATION.y * scale, s.bandMax * scale, 0, Math.PI * 2);
+      mapCtx.stroke();
+    });
+
     mapCtx.fillStyle = 'rgba(127,178,255,0.9)';
     mapCtx.beginPath();
     mapCtx.arc(STATION.x * scale, STATION.y * scale, 4, 0, Math.PI * 2);
@@ -611,6 +999,15 @@
       mapCtx.fillStyle = p.amount > 0.5 ? RESOURCE_TYPES[p.type].color : '#444b63';
       mapCtx.beginPath();
       mapCtx.arc(p.x * scale, p.y * scale, 2.5, 0, Math.PI * 2);
+      mapCtx.fill();
+    });
+
+    state.bosses.forEach((boss) => {
+      if (!boss.alive) return;
+      const pulse = 2.5 + Math.sin(performance.now() / 200) * 1;
+      mapCtx.fillStyle = boss.color;
+      mapCtx.beginPath();
+      mapCtx.arc(boss.x * scale, boss.y * scale, pulse + 1.5, 0, Math.PI * 2);
       mapCtx.fill();
     });
 
