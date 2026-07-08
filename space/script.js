@@ -30,6 +30,11 @@
   const langModal = document.getElementById('langModal');
   const langKoBtn = document.getElementById('langKoBtn');
   const langEnBtn = document.getElementById('langEnBtn');
+  const fullscreenBtn = document.getElementById('fullscreenBtn');
+  const touchStick = document.getElementById('touchStick');
+  const touchStickKnob = document.getElementById('touchStickKnob');
+  const touchFireBtn = document.getElementById('touchFire');
+  const touchActionBtn = document.getElementById('touchAction');
 
   const WORLD_W = 9600;
   const WORLD_H = 9600;
@@ -106,6 +111,7 @@
       labelCredits: '크레딧',
       muteTitle: '소리 켜기/끄기',
       langTitle: '언어 변경',
+      fullscreenTitle: '전체화면',
       dockTitle: '우주 정거장',
       dockDesc: '채굴한 자원을 판매하고 선박을 개조하세요.',
       sellBtn: '화물 전량 판매',
@@ -172,6 +178,7 @@
       labelCredits: 'Credits',
       muteTitle: 'Toggle sound',
       langTitle: 'Change language',
+      fullscreenTitle: 'Fullscreen',
       dockTitle: 'Space Station',
       dockDesc: 'Sell what you’ve mined and upgrade your ship.',
       sellBtn: 'Sell All Cargo',
@@ -256,12 +263,23 @@
   function makePlanets() {
     const planets = [];
     const count = 18;
+    const nearCount = 5;
     const types = Object.keys(RESOURCE_TYPES);
     let attempts = 0;
-    while (planets.length < count && attempts < 2000) {
+    while (planets.length < count && attempts < 4000) {
       attempts++;
-      const x = rand(200, WORLD_W - 200);
-      const y = rand(200, WORLD_H - 200);
+      let x, y;
+      if (planets.length < nearCount) {
+        // guarantee a handful of deposits close to the station so the first
+        // few minutes of play don't require a long blind flight
+        const angle = rand(0, Math.PI * 2);
+        const d = rand(480, 950);
+        x = clamp(STATION.x + Math.cos(angle) * d, 200, WORLD_W - 200);
+        y = clamp(STATION.y + Math.sin(angle) * d, 200, WORLD_H - 200);
+      } else {
+        x = rand(200, WORLD_W - 200);
+        y = rand(200, WORLD_H - 200);
+      }
       if (dist(x, y, STATION.x, STATION.y) < 420) continue;
       if (planets.some(p => dist(p.x, p.y, x, y) < 320)) continue;
       const type = types[Math.floor(rand(0, types.length))];
@@ -464,11 +482,13 @@
     hitFlash: 0,
     muted: false,
     lang: 'ko',
+    touchStick: { active: false, angle: 0, magnitude: 0 },
     chapter: 1,
     predator: null,
     fuelEmptyTimer: 0,
     damagePopups: [],
     particles: [],
+    riftTransition: null,
   };
 
   function addShake(amount) {
@@ -598,6 +618,9 @@
   let miningOsc = null;
   let miningGain = null;
   let ambientGain = null;
+  let riftGain = null;
+  let ambientBus = null;
+  let twinkleTimer = rand(4, 8);
 
   function setupAudio() {
     if (audioCtx) return;
@@ -624,14 +647,25 @@
     miningOsc.connect(miningGain).connect(audioCtx.destination);
     miningOsc.start();
 
-    // faint ambient deep-space pad, always on at very low volume for atmosphere
+    // shared ambient bus with a long echo tail -- sells "vast, empty space"
+    ambientBus = audioCtx.createGain();
+    ambientBus.gain.value = 1;
+    ambientBus.connect(audioCtx.destination);
+    const delay = audioCtx.createDelay(1.2);
+    delay.delayTime.value = 0.45;
+    const feedback = audioCtx.createGain();
+    feedback.gain.value = 0.32;
+    delay.connect(feedback).connect(delay);
+    ambientBus.connect(delay).connect(audioCtx.destination);
+
+    // bed 1: the "normal space" drone (chapter 1)
     ambientGain = audioCtx.createGain();
     ambientGain.gain.value = 0;
     const ambientFilter = audioCtx.createBiquadFilter();
     ambientFilter.type = 'lowpass';
     ambientFilter.frequency.value = 500;
     ambientFilter.Q.value = 0.6;
-    ambientFilter.connect(ambientGain).connect(audioCtx.destination);
+    ambientFilter.connect(ambientGain).connect(ambientBus);
 
     [55, 82.41, 110.5].forEach((freq) => {
       const osc = audioCtx.createOscillator();
@@ -650,6 +684,33 @@
     lfoGain.gain.value = 220;
     lfo.connect(lfoGain).connect(ambientFilter.frequency);
     lfo.start();
+
+    // bed 2: an unsettled, dissonant drone for the dimensional rift (chapter 2)
+    riftGain = audioCtx.createGain();
+    riftGain.gain.value = 0;
+    const riftFilter = audioCtx.createBiquadFilter();
+    riftFilter.type = 'lowpass';
+    riftFilter.frequency.value = 620;
+    riftFilter.Q.value = 1.4;
+    riftFilter.connect(riftGain).connect(ambientBus);
+
+    [59, 91, 149].forEach((freq, i) => {
+      const osc = audioCtx.createOscillator();
+      osc.type = i === 1 ? 'sawtooth' : 'sine';
+      osc.frequency.value = freq;
+      const oscGain = audioCtx.createGain();
+      oscGain.gain.value = 0.3;
+      osc.connect(oscGain).connect(riftFilter);
+      osc.start();
+    });
+
+    const riftLfo = audioCtx.createOscillator();
+    riftLfo.type = 'sine';
+    riftLfo.frequency.value = 0.13;
+    const riftLfoGain = audioCtx.createGain();
+    riftLfoGain.gain.value = 340;
+    riftLfo.connect(riftLfoGain).connect(riftFilter.frequency);
+    riftLfo.start();
   }
 
   function unlockAudio() {
@@ -690,7 +751,7 @@
     saveGame();
   }
 
-  function playTone({ freq = 440, duration = 0.15, type = 'sine', startFreq, endFreq, volume = 0.18, attack = 0.005 }) {
+  function playTone({ freq = 440, duration = 0.15, type = 'sine', startFreq, endFreq, volume = 0.18, attack = 0.005, destination }) {
     if (state.muted || !audioCtx) return;
     const now = audioCtx.currentTime;
     const osc = audioCtx.createOscillator();
@@ -705,7 +766,7 @@
     gain.gain.setValueAtTime(0, now);
     gain.gain.linearRampToValueAtTime(volume, now + attack);
     gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
-    osc.connect(gain).connect(audioCtx.destination);
+    osc.connect(gain).connect(destination || audioCtx.destination);
     osc.start(now);
     osc.stop(now + duration + 0.05);
   }
@@ -799,9 +860,29 @@
       miningGain.gain.setTargetAtTime(target, now, 0.06);
     }
     if (ambientGain) {
-      const target = !state.muted ? 0.03 : 0;
-      ambientGain.gain.setTargetAtTime(target, now, 1.2);
+      const target = !state.muted ? (state.chapter === 2 ? 0.012 : 0.03) : 0;
+      ambientGain.gain.setTargetAtTime(target, now, 1.4);
     }
+    if (riftGain) {
+      const target = !state.muted && state.chapter === 2 ? 0.032 : 0;
+      riftGain.gain.setTargetAtTime(target, now, 1.6);
+    }
+  }
+
+  function updateAmbientTwinkle(dt) {
+    if (!audioCtx || state.muted) return;
+    twinkleTimer -= dt;
+    if (twinkleTimer > 0) return;
+    const scale = state.chapter === 2
+      ? [369.99, 415.3, 493.88, 554.37, 622.25]
+      : [440, 523.25, 659.25, 783.99];
+    const base = scale[Math.floor(rand(0, scale.length))];
+    const freq = Math.random() < 0.5 ? base : base * 2;
+    playTone({
+      type: 'sine', freq, duration: 1.8, volume: 0.035, attack: 0.3,
+      destination: ambientBus || undefined,
+    });
+    twinkleTimer = state.chapter === 2 ? rand(2.5, 5) : rand(5, 10);
   }
 
   function init() {
@@ -850,6 +931,72 @@
     langBtn.addEventListener('click', openLangModal);
     langKoBtn.addEventListener('click', () => setLanguage('ko'));
     langEnBtn.addEventListener('click', () => setLanguage('en'));
+    fullscreenBtn.addEventListener('click', toggleFullscreen);
+    bindTouchControls();
+  }
+
+  function toggleFullscreen() {
+    const el = document.querySelector('.game-wrap');
+    const isFull = document.fullscreenElement || document.webkitFullscreenElement;
+    if (!isFull) {
+      const req = el.requestFullscreen || el.webkitRequestFullscreen;
+      if (req) req.call(el).catch(() => {});
+    } else {
+      const exit = document.exitFullscreen || document.webkitExitFullscreen;
+      if (exit) exit.call(document).catch(() => {});
+    }
+  }
+
+  function bindTouchControls() {
+    const STICK_RADIUS = 42;
+
+    function updateStickFromEvent(e) {
+      const rect = touchStick.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = e.clientX - cx;
+      const dy = e.clientY - cy;
+      const dist_ = Math.hypot(dx, dy);
+      const clampedDist = Math.min(dist_, STICK_RADIUS);
+      const angle = Math.atan2(dy, dx);
+      state.touchStick.active = true;
+      state.touchStick.angle = angle;
+      state.touchStick.magnitude = clampedDist / STICK_RADIUS;
+      touchStickKnob.style.transform = `translate(${Math.cos(angle) * clampedDist}px, ${Math.sin(angle) * clampedDist}px)`;
+      touchStick.classList.add('active');
+    }
+
+    function resetStick() {
+      state.touchStick.active = false;
+      state.touchStick.magnitude = 0;
+      touchStickKnob.style.transform = 'translate(0, 0)';
+      touchStick.classList.remove('active');
+    }
+
+    touchStick.addEventListener('pointerdown', (e) => {
+      unlockAudio();
+      touchStick.setPointerCapture(e.pointerId);
+      updateStickFromEvent(e);
+    });
+    touchStick.addEventListener('pointermove', (e) => {
+      if (state.touchStick.active) updateStickFromEvent(e);
+    });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach((evt) => {
+      touchStick.addEventListener(evt, resetStick);
+    });
+
+    const bindHoldButton = (btn, code) => {
+      btn.addEventListener('pointerdown', (e) => {
+        unlockAudio();
+        btn.setPointerCapture(e.pointerId);
+        state.keys[code] = true;
+      });
+      ['pointerup', 'pointercancel', 'pointerleave'].forEach((evt) => {
+        btn.addEventListener(evt, () => { state.keys[code] = false; });
+      });
+    };
+    bindHoldButton(touchFireBtn, 'KeyF');
+    bindHoldButton(touchActionBtn, 'Space');
   }
 
   function buildUpgradePanel() {
@@ -960,6 +1107,7 @@
     state.toastTimer = 0;
     state.predator = null;
     state.fuelEmptyTimer = 0;
+    state.riftTransition = null;
     resetShip();
     hideMessage();
     toastEl.classList.add('hidden');
@@ -983,14 +1131,27 @@
     if (state.invuln > 0) state.invuln -= dt;
     if (state.shake > 0) state.shake = Math.max(0, state.shake - dt * 50);
     if (state.hitFlash > 0) state.hitFlash = Math.max(0, state.hitFlash - dt);
+    if (state.riftTransition) {
+      state.riftTransition.t += dt;
+      addShake(3);
+      if (state.riftTransition.t >= state.riftTransition.duration) state.riftTransition = null;
+    }
     const ship = state.ship;
     const keys = state.keys;
 
     if (!state.docked) {
-      const turning = (keys['ArrowLeft'] || keys['KeyA'] ? -1 : 0) + (keys['ArrowRight'] || keys['KeyD'] ? 1 : 0);
-      ship.angle += turning * turnSpeed() * dt;
+      const stick = state.touchStick;
+      if (stick.active) {
+        let diff = stick.angle - ship.angle;
+        diff = ((diff + Math.PI) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2) - Math.PI;
+        const maxTurn = turnSpeed() * dt;
+        ship.angle += clamp(diff, -maxTurn, maxTurn);
+      } else {
+        const turning = (keys['ArrowLeft'] || keys['KeyA'] ? -1 : 0) + (keys['ArrowRight'] || keys['KeyD'] ? 1 : 0);
+        ship.angle += turning * turnSpeed() * dt;
+      }
 
-      const wantsThrust = (keys['ArrowUp'] || keys['KeyW']) && state.fuel > 0;
+      const wantsThrust = ((keys['ArrowUp'] || keys['KeyW']) || (stick.active && stick.magnitude > 0.25)) && state.fuel > 0;
       ship.thrusting = wantsThrust;
       if (wantsThrust) {
         ship.vx += Math.cos(ship.angle) * thrustPower() * dt;
@@ -1033,6 +1194,7 @@
     updateSectorHud(dt);
     updateBossHud();
     updateLoopSounds();
+    updateAmbientTwinkle(dt);
 
     if (keys['Space'] || keys['KeyE']) {
       if (!state.docked && dist(ship.x, ship.y, STATION.x, STATION.y) < STATION.radius + 40) {
@@ -1381,6 +1543,7 @@
     sfxDimensionalRift();
     state.bosses.push(spawnDimensionalBoss());
     showToast(tr('chapter2Toast'), 7000);
+    state.riftTransition = { t: 0, duration: 2.8 };
   }
 
   function showToast(text, ms) {
@@ -1494,7 +1657,74 @@
       ctx.restore();
     }
 
+    drawRiftTransition();
     drawMinimap();
+  }
+
+  function drawRiftTransition() {
+    const rt = state.riftTransition;
+    if (!rt) return;
+    const p = clamp(rt.t / rt.duration, 0, 1);
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+    const hue = (performance.now() / 4) % 360;
+    const maxR = Math.max(canvas.width, canvas.height);
+
+    ctx.save();
+
+    // expanding vortex rings racing outward
+    for (let i = 0; i < 6; i++) {
+      const ringP = clamp(p * 1.5 - i * 0.09, 0, 1);
+      if (ringP <= 0 || ringP >= 1) continue;
+      const r = ringP * maxR * 0.8;
+      ctx.strokeStyle = `hsla(${(hue + i * 30) % 360}, 85%, 65%, ${(1 - ringP) * 0.6})`;
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    // jagged cracks tearing outward from the center
+    const crackLen = p * maxR * 0.75;
+    for (let i = 0; i < 14; i++) {
+      ctx.strokeStyle = `hsla(${(hue + i * 15) % 360}, 90%, 75%, ${(1 - p) * 0.85})`;
+      ctx.lineWidth = 2;
+      let x = cx;
+      let y = cy;
+      let ang = (i / 14) * Math.PI * 2 + i * 0.7;
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      for (let s = 0; s < 5; s++) {
+        ang += Math.sin(i * 3 + s * 1.7) * 0.5;
+        const segLen = crackLen / 5;
+        x += Math.cos(ang) * segLen;
+        y += Math.sin(ang) * segLen;
+        ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+
+    // bright iridescent core flash, peaking early then fading
+    const flashAlpha = p < 0.3 ? p / 0.3 : Math.max(0, 1 - (p - 0.3) / 0.45);
+    const flashGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, maxR * 0.65);
+    flashGrad.addColorStop(0, `rgba(255,255,255,${flashAlpha * 0.9})`);
+    flashGrad.addColorStop(0.4, `hsla(${hue}, 85%, 70%, ${flashAlpha * 0.5})`);
+    flashGrad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = flashGrad;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // vignette that eases off as the transition completes
+    const vignetteAlpha = (1 - p) * 0.5;
+    const vGrad = ctx.createRadialGradient(
+      cx, cy, Math.min(canvas.width, canvas.height) * 0.3,
+      cx, cy, maxR * 0.7
+    );
+    vGrad.addColorStop(0, 'rgba(0,0,0,0)');
+    vGrad.addColorStop(1, `rgba(0,0,0,${vignetteAlpha})`);
+    ctx.fillStyle = vGrad;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.restore();
   }
 
   function drawStars(stars, parallax) {
