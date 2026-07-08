@@ -123,6 +123,26 @@ h1 .sub {
   color: #a9b7e0;
 }
 
+.cargo-breakdown {
+  display: flex;
+  gap: 8px;
+  font-size: 0.7em;
+  color: #c4cdec;
+}
+
+.cargo-breakdown .res {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.cargo-breakdown .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
 .stage {
   position: relative;
   line-height: 0;
@@ -376,6 +396,28 @@ h1 .sub {
   margin-top: 0;
 }
 
+.resource-prices {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 0.78em;
+  color: #c4cdec;
+}
+
+.resource-prices .res {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.resource-prices .dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
 .upgrade-list {
   display: flex;
   flex-direction: column;
@@ -552,13 +594,18 @@ h1 .sub {
 .game-wrap:-webkit-full-screen .stage {
   flex: 1;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .game-wrap:fullscreen #game,
 .game-wrap:-webkit-full-screen #game {
-  height: 100%;
   width: auto;
+  height: auto;
   max-width: 100%;
+  max-height: 100%;
   margin: 0 auto;
 }
 
