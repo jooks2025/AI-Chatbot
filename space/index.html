@@ -8,28 +8,29 @@
 </head>
 <body>
   <div class="game-wrap">
-    <h1>우주 채굴선 <span class="sub">Star Miner</span></h1>
+    <h1><span data-i18n="h1Main">우주 채굴선</span> <span class="sub" data-i18n="h1Sub">Star Miner</span></h1>
 
     <div class="hud">
       <div class="hud-box">
-        <span class="label">연료</span>
+        <span class="label" data-i18n="labelFuel">연료</span>
         <div class="bar"><div id="fuelBar" class="bar-fill fuel"></div></div>
       </div>
       <div class="hud-box">
-        <span class="label">선체</span>
+        <span class="label" data-i18n="labelHull">선체</span>
         <div class="bar"><div id="hullBar" class="bar-fill hull"></div></div>
       </div>
       <div class="hud-box">
-        <span class="label">화물칸</span>
+        <span class="label" data-i18n="labelCargo">화물칸</span>
         <div class="bar"><div id="cargoBar" class="bar-fill cargo"></div></div>
         <span id="cargoText" class="mini-text">0 / 0</span>
       </div>
       <div class="hud-box credits">
-        <span class="label">크레딧</span>
+        <span class="label" data-i18n="labelCredits">크레딧</span>
         <span id="creditsText" class="value">0</span>
       </div>
       <div class="hud-box sound">
-        <button id="muteBtn" class="mute-btn" type="button" title="소리 켜기/끄기">🔊</button>
+        <button id="muteBtn" class="mute-btn" type="button" data-i18n-title="muteTitle" title="소리 켜기/끄기">🔊</button>
+        <button id="langBtn" class="mute-btn" type="button" data-i18n-title="langTitle" title="언어 변경">🌐</button>
       </div>
     </div>
 
@@ -50,24 +51,33 @@
       <div id="sectorLabel" class="sector-label"></div>
       <div id="toast" class="toast hidden"></div>
       <div id="dockPanel" class="dock-panel hidden">
-        <h2>우주 정거장</h2>
-        <p>채굴한 자원을 판매하고 선박을 개조하세요.</p>
+        <h2 data-i18n="dockTitle">우주 정거장</h2>
+        <p data-i18n="dockDesc">채굴한 자원을 판매하고 선박을 개조하세요.</p>
         <div class="dock-row">
-          <button id="sellBtn">화물 전량 판매</button>
+          <button id="sellBtn" data-i18n="sellBtn">화물 전량 판매</button>
           <span id="dockCredits" class="value"></span>
         </div>
         <div class="upgrade-list" id="upgradeList"></div>
-        <button id="closeDockBtn">출항하기</button>
+        <button id="closeDockBtn" data-i18n="closeDockBtn">출항하기</button>
+      </div>
+      <div id="langModal" class="lang-modal hidden">
+        <div class="lang-box">
+          <h2>언어 선택 / Select Language</h2>
+          <div class="lang-buttons">
+            <button id="langKoBtn">한국어</button>
+            <button id="langEnBtn">English</button>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="controls">
-      <p class="tip">🛠️ <b>정거장(맵 중앙)</b>에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!</p>
-      <p><b>↑ / W</b> 추진&nbsp;&nbsp;<b>← →  / A D</b> 회전&nbsp;&nbsp;<b>Space / E</b> 채굴 · 정거장 도킹&nbsp;&nbsp;<b>F</b> 레이저 발사</p>
-      <p>행성에 가까이, 천천히 접근한 뒤 Space(또는 E)를 눌러 채굴하세요. 연료가 떨어지면 추진할 수 없고, 표류가 길어지면 어둠 속에서 무언가가 다가옵니다 — 정거장으로 서둘러 복귀하세요.</p>
-      <p>정거장에서 멀어질수록 1 → 2 → 3섹터 순으로 위험한 거대 우주 괴물이 도사리고 있습니다. F로 레이저를 쏴 격퇴하면 큰 크레딧 보상을 받습니다. 세 보스를 모두 물리치면 미지의 차원이 열립니다.</p>
+      <p class="tip" data-i18n-html="tipHtml">🛠️ <b>정거장(맵 중앙)</b>에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!</p>
+      <p data-i18n-html="controlsKeysHtml"><b>↑ / W</b> 추진&nbsp;&nbsp;<b>← →  / A D</b> 회전&nbsp;&nbsp;<b>Space / E</b> 채굴 · 정거장 도킹&nbsp;&nbsp;<b>F</b> 레이저 발사</p>
+      <p data-i18n="controlsMining">행성에 가까이, 천천히 접근한 뒤 Space(또는 E)를 눌러 채굴하세요. 연료가 떨어지면 추진할 수 없고, 표류가 길어지면 어둠 속에서 무언가가 다가옵니다 — 정거장으로 서둘러 복귀하세요.</p>
+      <p data-i18n="controlsSector">정거장에서 멀어질수록 1 → 2 → 3섹터 순으로 위험한 거대 우주 괴물이 도사리고 있습니다. F로 레이저를 쏴 격퇴하면 큰 크레딧 보상을 받습니다. 세 보스를 모두 물리치면 미지의 차원이 열립니다.</p>
     </div>
-    <p class="back-link"><a href="../index.html">&larr; 게임 목록으로</a></p>
+    <p class="back-link"><a href="../index.html" data-i18n="backLink">&larr; 게임 목록으로</a></p>
   </div>
   <script src="script.js"></script>
 </body>

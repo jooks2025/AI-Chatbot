@@ -26,6 +26,10 @@
   const sectorLabelEl = document.getElementById('sectorLabel');
   const toastEl = document.getElementById('toast');
   const muteBtn = document.getElementById('muteBtn');
+  const langBtn = document.getElementById('langBtn');
+  const langModal = document.getElementById('langModal');
+  const langKoBtn = document.getElementById('langKoBtn');
+  const langEnBtn = document.getElementById('langEnBtn');
 
   const WORLD_W = 9600;
   const WORLD_H = 9600;
@@ -40,14 +44,14 @@
 
   const BOSS_DEFS = [
     {
-      id: 'sector1', sector: 1, name: '유성체 대왕 크라겐', tag: '가벼운 보스',
+      id: 'sector1', sector: 1,
       color: '#5dffa0', core: '#0b1f13', glow: 'rgba(93,255,160,0.45)',
       eyeCount: 2, radius: 175, hitRadius: 115, hp: 170, contactDamage: 16,
       speed: 75, aggroRange: 540, canShoot: false,
       reward: 280, respawnTime: 60,
     },
     {
-      id: 'sector2', sector: 2, name: '심연 촉수왕 바슬로스', tag: '중간 보스',
+      id: 'sector2', sector: 2,
       color: '#caa0ff', core: '#170b28', glow: 'rgba(202,160,255,0.45)',
       eyeCount: 4, radius: 245, hitRadius: 160, hp: 400, contactDamage: 24,
       speed: 115, aggroRange: 640, canShoot: true,
@@ -55,7 +59,7 @@
       reward: 650, respawnTime: 90,
     },
     {
-      id: 'sector3', sector: 3, name: '차원포식자 오메가바이스', tag: '최종 보스',
+      id: 'sector3', sector: 3,
       color: '#ff3355', core: '#1a0407', glow: 'rgba(255,51,85,0.5)',
       eyeCount: 6, radius: 340, hitRadius: 220, hp: 780, contactDamage: 38,
       speed: 155, aggroRange: 760, canShoot: true,
@@ -65,7 +69,7 @@
   ];
 
   const DIMENSIONAL_BOSS_DEF = {
-    id: 'dimensional', sector: 4, name: '무한궤도의 지배자 인피니타스', tag: '차원 보스',
+    id: 'dimensional', sector: 4,
     color: '#c9b6ff', core: '#05030a', glow: 'rgba(201,182,255,0.5)',
     radius: 380, hitRadius: 240, hp: 1200, contactDamage: 42,
     speed: 130, aggroRange: 820, canShoot: true,
@@ -76,19 +80,165 @@
   const ALL_BOSS_DEFS = BOSS_DEFS.concat([DIMENSIONAL_BOSS_DEF]);
 
   const RESOURCE_TYPES = {
-    iron:    { name: '철광석',   color: '#c7c7c7', price: 4 },
-    gold:    { name: '금',       color: '#ffd24a', price: 11 },
-    crystal: { name: '결정체',   color: '#7ef7e0', price: 26 },
+    iron:    { color: '#c7c7c7', price: 4 },
+    gold:    { color: '#ffd24a', price: 11 },
+    crystal: { color: '#7ef7e0', price: 26 },
   };
 
   const UPGRADES = {
-    cargo:  { label: '화물칸 확장',  base: 40,  growth: 1.5, max: 8, step: 20 },
-    fuel:   { label: '연료 탱크 확장', base: 40, growth: 1.5, max: 8, step: 25 },
-    engine: { label: '엔진 출력 강화', base: 55, growth: 1.6, max: 6, step: 0 },
-    mining: { label: '채굴 레이저 강화', base: 50, growth: 1.6, max: 6, step: 0 },
-    hull:   { label: '선체 장갑 강화', base: 45, growth: 1.55, max: 6, step: 20 },
-    weapon: { label: '레이저 캐논 강화', base: 60, growth: 1.55, max: 6, step: 0 },
+    cargo:  { base: 40,  growth: 1.5, max: 8, step: 20 },
+    fuel:   { base: 40, growth: 1.5, max: 8, step: 25 },
+    engine: { base: 55, growth: 1.6, max: 6, step: 0 },
+    mining: { base: 50, growth: 1.6, max: 6, step: 0 },
+    hull:   { base: 45, growth: 1.55, max: 6, step: 20 },
+    weapon: { base: 60, growth: 1.55, max: 6, step: 0 },
   };
+
+  // ---- localization ----
+  const STRINGS = {
+    ko: {
+      pageTitle: '우주 채굴선',
+      h1Main: '우주 채굴선',
+      h1Sub: 'Star Miner',
+      labelFuel: '연료',
+      labelHull: '선체',
+      labelCargo: '화물칸',
+      labelCredits: '크레딧',
+      muteTitle: '소리 켜기/끄기',
+      langTitle: '언어 변경',
+      dockTitle: '우주 정거장',
+      dockDesc: '채굴한 자원을 판매하고 선박을 개조하세요.',
+      sellBtn: '화물 전량 판매',
+      closeDockBtn: '출항하기',
+      tipHtml: '🛠️ <b>정거장(맵 중앙)</b>에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!',
+      controlsKeysHtml: '<b>↑ / W</b> 추진&nbsp;&nbsp;<b>← →  / A D</b> 회전&nbsp;&nbsp;<b>Space / E</b> 채굴 · 정거장 도킹&nbsp;&nbsp;<b>F</b> 레이저 발사',
+      controlsMining: '행성에 가까이, 천천히 접근한 뒤 Space(또는 E)를 눌러 채굴하세요. 연료가 떨어지면 추진할 수 없고, 표류가 길어지면 어둠 속에서 무언가가 다가옵니다 — 정거장으로 서둘러 복귀하세요.',
+      controlsSector: '정거장에서 멀어질수록 1 → 2 → 3섹터 순으로 위험한 거대 우주 괴물이 도사리고 있습니다. F로 레이저를 쏴 격퇴하면 큰 크레딧 보상을 받습니다. 세 보스를 모두 물리치면 미지의 차원이 열립니다.',
+      backLink: '← 게임 목록으로',
+      langModalTitle: '언어 선택 / Select Language',
+      langKoBtn: '한국어',
+      langEnBtn: 'English',
+      welcomeBack: (credits) => `돌아오신 것을 환영합니다! 보유 크레딧 ${credits} · 업그레이드 진행상황을 불러왔습니다.`,
+      firstVisitTip: '💡 정거장(맵 중앙)에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!',
+      restartToast: '정거장으로 귀환했습니다. 화물칸은 비었지만 선박 업그레이드는 그대로 남아있어요.',
+      predatorWarn: '⚠️ 연료가 바닥나 표류하는 당신을 어둠 속의 무언가가 감지했습니다...',
+      eatenMessage: '연료가 바닥난 채 표류하던 당신을, 어둠 속에서 나타난 거대한 무언가가 통째로 삼켜버렸습니다.',
+      hullDestroyed: '선체가 파괴되었습니다.',
+      finalCredits: (credits) => `최종 크레딧: ${credits}`,
+      restartBtn: '다시 시작',
+      dimensionalDefeat: (reward) => `무한궤도의 지배자를 물리쳤습니다! 균열 너머에도 평화가 찾아왔습니다. (+${reward} 크레딧)`,
+      finalBossDefeat: (name, reward) => `최종 보스 '${name}'를 물리쳤습니다! 우주가 잠시 평화를 되찾았습니다. (+${reward} 크레딧)`,
+      bossDefeat: (tag, name, reward) => `${tag} '${name}' 격파! +${reward} 크레딧`,
+      chapter2Toast: '🌌 세 우주 괴물을 모두 물리쳤습니다! 균열이 열리며 은하 너머 미지의 차원으로 진입합니다...',
+      sectorSafe: '구역: 안전지대',
+      sectorLocked: '구역: 미지의 균열 (아직 열리지 않음)',
+      sectorRift: (name) => `구역: 차원 균열 · ${name}의 영역`,
+      sectorN: (n, name) => `구역: ${n}섹터 · ${name}의 영역`,
+      stationLabel: '정거장',
+      levelMax: (lvl) => `레벨 ${lvl} (최대)`,
+      maxBtn: '최대',
+      levelUp: (lvl, next, note) => `레벨 ${lvl} → ${next}${note}`,
+      costCredits: (cost) => `${cost} 크레딧`,
+      dockCredits: (credits) => `${credits} 크레딧`,
+      weaponNoteSide: ' · 사이드 샷 해금',
+      weaponNoteFireRate: ' · 연사 속도 증가',
+      weaponNoteBeam: ' · 강화 빔',
+      weaponNotePierce: ' · 관통 + 프리즘 샷',
+      resource_iron: '철광석',
+      resource_gold: '금',
+      resource_crystal: '결정체',
+      upgrade_cargo: '화물칸 확장',
+      upgrade_fuel: '연료 탱크 확장',
+      upgrade_engine: '엔진 출력 강화',
+      upgrade_mining: '채굴 레이저 강화',
+      upgrade_hull: '선체 장갑 강화',
+      upgrade_weapon: '레이저 캐논 강화',
+      boss_sector1_name: '유성체 대왕 크라겐',
+      boss_sector1_tag: '가벼운 보스',
+      boss_sector2_name: '심연 촉수왕 바슬로스',
+      boss_sector2_tag: '중간 보스',
+      boss_sector3_name: '차원포식자 오메가바이스',
+      boss_sector3_tag: '최종 보스',
+      boss_dimensional_name: '무한궤도의 지배자 인피니타스',
+      boss_dimensional_tag: '차원 보스',
+    },
+    en: {
+      pageTitle: 'Star Miner',
+      h1Main: 'Star Miner',
+      h1Sub: 'Deep Space Mining',
+      labelFuel: 'Fuel',
+      labelHull: 'Hull',
+      labelCargo: 'Cargo',
+      labelCredits: 'Credits',
+      muteTitle: 'Toggle sound',
+      langTitle: 'Change language',
+      dockTitle: 'Space Station',
+      dockDesc: 'Sell what you’ve mined and upgrade your ship.',
+      sellBtn: 'Sell All Cargo',
+      closeDockBtn: 'Depart',
+      tipHtml: '🛠️ Sell cargo and upgrade your fuel, cargo bay, engine, weapon and more at the <b>station (map center)</b>!',
+      controlsKeysHtml: '<b>Up / W</b> Thrust&nbsp;&nbsp;<b>Left Right / A D</b> Turn&nbsp;&nbsp;<b>Space / E</b> Mine · Dock&nbsp;&nbsp;<b>F</b> Fire Laser',
+      controlsMining: 'Approach a planet slowly and press Space (or E) to mine. Run out of fuel and you can’t thrust — drift too long and something will come for you out of the dark. Hurry back to the station.',
+      controlsSector: 'The farther you travel from the station, the more dangerous the space monsters get across Sectors 1 → 2 → 3. Fire your laser with F to fight them off for a big credit reward. Defeat all three bosses to open an unknown dimension.',
+      backLink: '← Back to game list',
+      langModalTitle: '언어 선택 / Select Language',
+      langKoBtn: '한국어',
+      langEnBtn: 'English',
+      welcomeBack: (credits) => `Welcome back! You have ${credits} credits · your upgrade progress has been restored.`,
+      firstVisitTip: '💡 Sell cargo and upgrade your fuel, cargo bay, engine, weapon and more at the station (map center)!',
+      restartToast: 'You’ve returned to the station. Your cargo is empty, but your ship upgrades remain.',
+      predatorWarn: '⚠️ Something in the dark has noticed you drifting, out of fuel...',
+      eatenMessage: 'Adrift and out of fuel, something enormous emerged from the dark and swallowed your ship whole.',
+      hullDestroyed: 'Your hull has been destroyed.',
+      finalCredits: (credits) => `Final Credits: ${credits}`,
+      restartBtn: 'Try Again',
+      dimensionalDefeat: (reward) => `You defeated the Ruler of the Infinite Orbit! Peace has come even beyond the rift. (+${reward} credits)`,
+      finalBossDefeat: (name, reward) => `You defeated the final boss '${name}'! The universe has found peace, for now. (+${reward} credits)`,
+      bossDefeat: (tag, name, reward) => `${tag} '${name}' defeated! +${reward} credits`,
+      chapter2Toast: '🌌 You have defeated all three space monsters! A rift tears open, leading beyond the galaxy into an unknown dimension...',
+      sectorSafe: 'Zone: Safe Area',
+      sectorLocked: 'Zone: Unknown Rift (not yet open)',
+      sectorRift: (name) => `Zone: Dimensional Rift · Territory of ${name}`,
+      sectorN: (n, name) => `Zone: Sector ${n} · Territory of ${name}`,
+      stationLabel: 'Station',
+      levelMax: (lvl) => `Level ${lvl} (Max)`,
+      maxBtn: 'Max',
+      levelUp: (lvl, next, note) => `Level ${lvl} → ${next}${note}`,
+      costCredits: (cost) => `${cost} Credits`,
+      dockCredits: (credits) => `${credits} Credits`,
+      weaponNoteSide: ' · Side shots unlocked',
+      weaponNoteFireRate: ' · Faster fire rate',
+      weaponNoteBeam: ' · Charged beam',
+      weaponNotePierce: ' · Piercing + prism shot',
+      resource_iron: 'Iron Ore',
+      resource_gold: 'Gold',
+      resource_crystal: 'Crystal',
+      upgrade_cargo: 'Cargo Bay Expansion',
+      upgrade_fuel: 'Fuel Tank Expansion',
+      upgrade_engine: 'Engine Boost',
+      upgrade_mining: 'Mining Laser Upgrade',
+      upgrade_hull: 'Hull Armor Upgrade',
+      upgrade_weapon: 'Laser Cannon Upgrade',
+      boss_sector1_name: 'Kragen, the Meteor King',
+      boss_sector1_tag: 'Light Boss',
+      boss_sector2_name: 'Vathros, Tentacle King of the Abyss',
+      boss_sector2_tag: 'Mid Boss',
+      boss_sector3_name: 'Omegavice, the Dimension Devourer',
+      boss_sector3_tag: 'Final Boss',
+      boss_dimensional_name: 'Infinitas, Ruler of the Infinite Orbit',
+      boss_dimensional_tag: 'Dimensional Boss',
+    },
+  };
+
+  function tr(key, ...args) {
+    const entry = (STRINGS[state.lang] && STRINGS[state.lang][key]) ?? STRINGS.ko[key];
+    return typeof entry === 'function' ? entry(...args) : entry;
+  }
+
+  function resourceName(type) { return tr(`resource_${type}`); }
+  function upgradeLabel(key) { return tr(`upgrade_${key}`); }
+  function bossName(idOrBoss) { return tr(`boss_${typeof idOrBoss === 'string' ? idOrBoss : idOrBoss.id}_name`); }
+  function bossTag(idOrBoss) { return tr(`boss_${typeof idOrBoss === 'string' ? idOrBoss : idOrBoss.id}_tag`); }
 
   const FIRE_COOLDOWN = 0.25;
   const BULLET_SPEED = 520;
@@ -313,6 +463,7 @@
     shake: 0,
     hitFlash: 0,
     muted: false,
+    lang: 'ko',
     chapter: 1,
     predator: null,
     fuelEmptyTimer: 0,
@@ -382,10 +533,10 @@
   function weaponPierce() { return state.levels.weapon >= 6 ? 1 : 0; }
 
   function weaponUpgradeNote(nextLevel) {
-    if (nextLevel === 2) return ' · 사이드 샷 해금';
-    if (nextLevel === 3) return ' · 연사 속도 증가';
-    if (nextLevel === 4) return ' · 강화 빔';
-    if (nextLevel === 6) return ' · 관통 + 프리즘 샷';
+    if (nextLevel === 2) return tr('weaponNoteSide');
+    if (nextLevel === 3) return tr('weaponNoteFireRate');
+    if (nextLevel === 4) return tr('weaponNoteBeam');
+    if (nextLevel === 6) return tr('weaponNotePierce');
     return '';
   }
 
@@ -414,6 +565,7 @@
         levels: state.levels,
         chapter: state.chapter,
         muted: state.muted,
+        lang: state.lang,
       }));
     } catch (e) {
       // storage unavailable (private browsing, quota, etc.) -- fail silently
@@ -432,6 +584,7 @@
       );
       state.chapter = data.chapter === 2 ? 2 : 1;
       state.muted = !!data.muted;
+      state.lang = data.lang === 'en' ? 'en' : 'ko';
       return true;
     } catch (e) {
       return false;
@@ -508,6 +661,32 @@
     state.muted = !state.muted;
     muteBtn.textContent = state.muted ? '🔇' : '🔊';
     unlockAudio();
+    saveGame();
+  }
+
+  function applyStaticTranslations() {
+    document.title = tr('pageTitle');
+    document.documentElement.lang = state.lang;
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      el.textContent = tr(el.dataset.i18n);
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+      el.innerHTML = tr(el.dataset.i18nHtml);
+    });
+    document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+      el.title = tr(el.dataset.i18nTitle);
+    });
+  }
+
+  function openLangModal() {
+    langModal.classList.remove('hidden');
+  }
+
+  function setLanguage(lang) {
+    state.lang = lang === 'en' ? 'en' : 'ko';
+    applyStaticTranslations();
+    buildUpgradePanel();
+    langModal.classList.add('hidden');
     saveGame();
   }
 
@@ -630,6 +809,7 @@
     resetShip();
     bindInput();
     buildUpgradePanel();
+    applyStaticTranslations();
     muteBtn.textContent = state.muted ? '🔇' : '🔊';
 
     if (hadSave && state.chapter === 2 && !state.bosses.some((b) => b.id === 'dimensional')) {
@@ -637,10 +817,14 @@
       state.bosses.push(spawnDimensionalBoss());
     }
 
+    if (!hadSave) {
+      openLangModal();
+    }
+
     if (hadSave) {
-      showToast(`돌아오신 것을 환영합니다! 보유 크레딧 ${state.credits} · 업그레이드 진행상황을 불러왔습니다.`, 6000);
+      showToast(tr('welcomeBack', state.credits), 6000);
     } else {
-      showToast('💡 정거장(맵 중앙)에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!', 7000);
+      showToast(tr('firstVisitTip'), 7000);
     }
 
     window.addEventListener('beforeunload', saveGame);
@@ -663,6 +847,9 @@
     sellBtn.addEventListener('click', sellCargo);
     closeDockBtn.addEventListener('click', undock);
     muteBtn.addEventListener('click', toggleMute);
+    langBtn.addEventListener('click', openLangModal);
+    langKoBtn.addEventListener('click', () => setLanguage('ko'));
+    langEnBtn.addEventListener('click', () => setLanguage('en'));
   }
 
   function buildUpgradePanel() {
@@ -672,8 +859,7 @@
       row.className = 'upgrade-row';
       const info = document.createElement('div');
       info.className = 'info';
-      const u = UPGRADES[key];
-      info.innerHTML = `<b>${u.label}</b><small id="lvl-${key}"></small>`;
+      info.innerHTML = `<b>${upgradeLabel(key)}</b><small id="lvl-${key}"></small>`;
       const btn = document.createElement('button');
       btn.id = `btn-${key}`;
       btn.addEventListener('click', () => buyUpgrade(key));
@@ -691,18 +877,18 @@
       const lvlEl = document.getElementById(`lvl-${key}`);
       const btn = document.getElementById(`btn-${key}`);
       if (lvl >= u.max) {
-        lvlEl.textContent = `레벨 ${lvl} (최대)`;
-        btn.textContent = '최대';
+        lvlEl.textContent = tr('levelMax', lvl);
+        btn.textContent = tr('maxBtn');
         btn.disabled = true;
       } else {
         const cost = upgradeCost(key);
         const note = key === 'weapon' ? weaponUpgradeNote(lvl + 1) : '';
-        lvlEl.textContent = `레벨 ${lvl} → ${lvl + 1}${note}`;
-        btn.textContent = `${cost} 크레딧`;
+        lvlEl.textContent = tr('levelUp', lvl, lvl + 1, note);
+        btn.textContent = tr('costCredits', cost);
         btn.disabled = state.credits < cost;
       }
     });
-    dockCreditsEl.textContent = `${state.credits} 크레딧`;
+    dockCreditsEl.textContent = tr('dockCredits', state.credits);
   }
 
   function buyUpgrade(key) {
@@ -778,7 +964,7 @@
     hideMessage();
     toastEl.classList.add('hidden');
     bossBar.classList.add('hidden');
-    showToast('정거장으로 귀환했습니다. 화물칸은 비었지만 선박 업그레이드는 그대로 남아있어요.', 5000);
+    showToast(tr('restartToast'), 5000);
   }
 
   let lastTime = performance.now();
@@ -952,7 +1138,7 @@
     if (state.fuelEmptyTimer > PREDATOR_WARN_DELAY && !state.predator) {
       state.predator = makePredator();
       sfxPredatorWarn();
-      showToast('⚠️ 연료가 바닥나 표류하는 당신을 어둠 속의 무언가가 감지했습니다...', 4500);
+      showToast(tr('predatorWarn'), 4500);
     }
   }
 
@@ -980,9 +1166,9 @@
     sfxEaten();
     spawnExplosion(state.ship.x, state.ship.y, '#8a0018', 26, 50);
     showMessage(`
-      <div>연료가 바닥난 채 표류하던 당신을, 어둠 속에서 나타난 거대한 무언가가 통째로 삼켜버렸습니다.</div>
-      <div style="margin-top:6px;color:#ffe08a;">최종 크레딧: ${state.credits}</div>
-      <button id="restartBtn">다시 시작</button>
+      <div>${tr('eatenMessage')}</div>
+      <div style="margin-top:6px;color:#ffe08a;">${tr('finalCredits', state.credits)}</div>
+      <button id="restartBtn">${tr('restartBtn')}</button>
     `);
     document.getElementById('restartBtn').addEventListener('click', restart);
   }
@@ -993,9 +1179,9 @@
     sfxGameOver();
     spawnExplosion(state.ship.x, state.ship.y, '#ffb366', 30, 70);
     showMessage(`
-      <div>선체가 파괴되었습니다.</div>
-      <div style="margin-top:6px;color:#ffe08a;">최종 크레딧: ${state.credits}</div>
-      <button id="restartBtn">다시 시작</button>
+      <div>${tr('hullDestroyed')}</div>
+      <div style="margin-top:6px;color:#ffe08a;">${tr('finalCredits', state.credits)}</div>
+      <button id="restartBtn">${tr('restartBtn')}</button>
     `);
     document.getElementById('restartBtn').addEventListener('click', restart);
   }
@@ -1173,11 +1359,11 @@
     spawnExplosion(boss.x, boss.y, boss.color, boss.id === 'dimensional' ? 70 : 40, boss.radius * 0.9);
     const firstKill = !boss.defeatedOnce;
     if (boss.id === 'dimensional' && firstKill) {
-      showToast(`무한궤도의 지배자를 물리쳤습니다! 균열 너머에도 평화가 찾아왔습니다. (+${boss.reward} 크레딧)`, 6000);
+      showToast(tr('dimensionalDefeat', boss.reward), 6000);
     } else if (boss.sector === 3 && firstKill) {
-      showToast(`최종 보스 '${boss.name}'를 물리쳤습니다! 우주가 잠시 평화를 되찾았습니다. (+${boss.reward} 크레딧)`, 5000);
+      showToast(tr('finalBossDefeat', bossName(boss), boss.reward), 5000);
     } else {
-      showToast(`${boss.tag} '${boss.name}' 격파! +${boss.reward} 크레딧`, 3500);
+      showToast(tr('bossDefeat', bossTag(boss), bossName(boss), boss.reward), 3500);
     }
     boss.defeatedOnce = true;
     refreshUpgradePanel();
@@ -1194,7 +1380,7 @@
     addShake(30);
     sfxDimensionalRift();
     state.bosses.push(spawnDimensionalBoss());
-    showToast('🌌 세 우주 괴물을 모두 물리쳤습니다! 균열이 열리며 은하 너머 미지의 차원으로 진입합니다...', 7000);
+    showToast(tr('chapter2Toast'), 7000);
   }
 
   function showToast(text, ms) {
@@ -1216,17 +1402,17 @@
     const d = dist(state.ship.x, state.ship.y, STATION.x, STATION.y);
     const sector = sectorAt(d);
     if (sector === 0) {
-      sectorLabelEl.textContent = '구역: 안전지대';
+      sectorLabelEl.textContent = tr('sectorSafe');
     } else if (sector === 4) {
       if (state.chapter < 2) {
-        sectorLabelEl.textContent = '구역: 미지의 균열 (아직 열리지 않음)';
+        sectorLabelEl.textContent = tr('sectorLocked');
       } else {
         const def = ALL_BOSS_DEFS.find((b) => b.sector === 4);
-        sectorLabelEl.textContent = `구역: 차원 균열 · ${def.name}의 영역`;
+        sectorLabelEl.textContent = tr('sectorRift', bossName(def));
       }
     } else {
       const def = ALL_BOSS_DEFS.find((b) => b.sector === sector);
-      sectorLabelEl.textContent = `구역: ${sector}섹터 · ${def.name}의 영역`;
+      sectorLabelEl.textContent = tr('sectorN', sector, bossName(def));
     }
 
     if (state.toastTimer > 0) {
@@ -1255,8 +1441,8 @@
       return;
     }
     bossBar.classList.remove('hidden');
-    bossNameEl.textContent = nearest.name;
-    bossTagEl.textContent = nearest.tag;
+    bossNameEl.textContent = bossName(nearest);
+    bossTagEl.textContent = bossTag(nearest);
     bossHpFill.style.width = `${clamp((nearest.hp / nearest.hpMax) * 100, 0, 100)}%`;
   }
 
@@ -1446,7 +1632,7 @@
     ctx.fillStyle = '#d7e6ff';
     ctx.font = 'bold 13px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('정거장', 0, ringR + 24);
+    ctx.fillText(tr('stationLabel'), 0, ringR + 24);
     ctx.restore();
   }
 
@@ -1482,7 +1668,7 @@
     ctx.fillStyle = '#cfd8f5';
     ctx.font = '11px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(info.name, 0, p.radius + 26);
+    ctx.fillText(resourceName(p.type), 0, p.radius + 26);
     ctx.restore();
   }
 
@@ -1796,10 +1982,10 @@
     ctx.textAlign = 'center';
     ctx.shadowColor = 'rgba(0,0,0,0.9)';
     ctx.shadowBlur = 6;
-    ctx.fillText(boss.name, 0, -boss.radius * 1.95);
+    ctx.fillText(bossName(boss), 0, -boss.radius * 1.95);
     ctx.font = `${Math.max(10, boss.radius * 0.07)}px sans-serif`;
     ctx.fillStyle = labelColor;
-    ctx.fillText(boss.tag, 0, -boss.radius * 1.95 + 16);
+    ctx.fillText(bossTag(boss), 0, -boss.radius * 1.95 + 16);
     ctx.shadowBlur = 0;
 
     const barW = boss.radius * 1.7;

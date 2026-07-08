@@ -59,6 +59,8 @@ h1 .sub {
 }
 
 .hud-box.sound {
+  flex-direction: row;
+  gap: 8px;
   justify-content: center;
   min-width: auto;
 }
@@ -207,6 +209,54 @@ h1 .sub {
   border: 1px solid #4a5ea6;
   padding: 20px 24px;
   border-radius: 12px;
+}
+
+.lang-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 6, 15, 0.75);
+  z-index: 20;
+}
+
+.lang-box {
+  background: rgba(8, 10, 24, 0.96);
+  border: 1px solid #4a5ea6;
+  padding: 24px 28px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.lang-box h2 {
+  margin: 0 0 16px;
+  color: #9fd4ff;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+.lang-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.lang-buttons button {
+  padding: 10px 20px;
+  background: #3a63c8;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.lang-buttons button:hover {
+  background: #4a75e0;
 }
 
 .dock-panel h2 {
