@@ -163,7 +163,8 @@
       hullDestroyed: '선체가 파괴되었습니다.',
       finalCredits: (credits) => `최종 크레딧: ${credits}`,
       restartBtn: '다시 시작',
-      dimensionalDefeat: (reward) => `무한궤도의 지배자를 물리쳤습니다! 균열 너머에도 평화가 찾아왔습니다. (+${reward} 크레딧)`,
+      missionSuccessTitle: '🎉 미션 성공!',
+      missionSuccessDesc: '우주를 지켜주셔서 감사합니다!',
       finalBossDefeat: (name, reward) => `최종 보스 '${name}'를 물리쳤습니다! 우주가 잠시 평화를 되찾았습니다. (+${reward} 크레딧)`,
       bossDefeat: (tag, name, reward) => `${tag} '${name}' 격파! +${reward} 크레딧`,
       chapter2Toast: '🌌 세 우주 괴물을 모두 물리쳤습니다! 균열이 열리며 은하 너머 미지의 차원으로 진입합니다...',
@@ -237,7 +238,8 @@
       hullDestroyed: 'Your hull has been destroyed.',
       finalCredits: (credits) => `Final Credits: ${credits}`,
       restartBtn: 'Try Again',
-      dimensionalDefeat: (reward) => `You defeated the Ruler of the Infinite Orbit! Peace has come even beyond the rift. (+${reward} credits)`,
+      missionSuccessTitle: '🎉 Mission Success!',
+      missionSuccessDesc: 'Thank you for protecting the universe!',
       finalBossDefeat: (name, reward) => `You defeated the final boss '${name}'! The universe has found peace, for now. (+${reward} credits)`,
       bossDefeat: (tag, name, reward) => `${tag} '${name}' defeated! +${reward} credits`,
       chapter2Toast: '🌌 You have defeated all three space monsters! A rift tears open, leading beyond the galaxy into an unknown dimension...',
@@ -1477,6 +1479,23 @@
     document.getElementById('restartBtn').addEventListener('click', restart);
   }
 
+  function triggerMissionSuccess() {
+    if (state.gameOver) return;
+    state.gameOver = true;
+    addShake(20);
+    showMessage(`
+      <div style="font-size:1.15em;color:#9fd4ff;">${tr('missionSuccessTitle')}</div>
+      <div style="margin-top:6px;">${tr('missionSuccessDesc')}</div>
+      <div style="margin-top:6px;color:#ffe08a;">${tr('finalCredits', state.credits)}</div>
+      <div style="margin-top:14px;display:flex;gap:10px;justify-content:center;">
+        <button id="missionSaveBtn" class="save-btn">${tr('saveBtn')}</button>
+        <button id="missionRestartBtn">${tr('restartBtn')}</button>
+      </div>
+    `);
+    document.getElementById('missionSaveBtn').addEventListener('click', manualSave);
+    document.getElementById('missionRestartBtn').addEventListener('click', restart);
+  }
+
   function triggerGameOver() {
     if (state.gameOver) return;
     state.gameOver = true;
@@ -1745,7 +1764,7 @@
     spawnExplosion(boss.x, boss.y, boss.color, boss.id === 'dimensional' ? 70 : 40, boss.radius * 0.9);
     const firstKill = !boss.defeatedOnce;
     if (boss.id === 'dimensional' && firstKill) {
-      showToast(tr('dimensionalDefeat', boss.reward), 6000);
+      triggerMissionSuccess();
     } else if (boss.sector === 3 && firstKill) {
       showToast(tr('finalBossDefeat', bossName(boss), boss.reward), 5000);
     } else {
