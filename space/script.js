@@ -15,6 +15,7 @@
   const dockPanel = document.getElementById('dockPanel');
   const dockCreditsEl = document.getElementById('dockCredits');
   const sellBtn = document.getElementById('sellBtn');
+  const saveBtn = document.getElementById('saveBtn');
   const closeDockBtn = document.getElementById('closeDockBtn');
   const upgradeListEl = document.getElementById('upgradeList');
   const mineProgressWrap = document.getElementById('mineProgressWrap');
@@ -115,6 +116,7 @@
       dockTitle: '우주 정거장',
       dockDesc: '채굴한 자원을 판매하고 선박을 개조하세요.',
       sellBtn: '화물 전량 판매',
+      saveBtn: '게임 저장',
       closeDockBtn: '출항하기',
       tipHtml: '🛠️ <b>정거장(맵 중앙)</b>에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!',
       controlsKeysHtml: '<b>↑ / W</b> 추진&nbsp;&nbsp;<b>← →  / A D</b> 회전&nbsp;&nbsp;<b>Space / E</b> 채굴 · 정거장 도킹&nbsp;&nbsp;<b>F</b> 레이저 발사',
@@ -124,7 +126,12 @@
       langModalTitle: '언어 선택 / Select Language',
       langKoBtn: '한국어',
       langEnBtn: 'English',
-      welcomeBack: (credits) => `돌아오신 것을 환영합니다! 보유 크레딧 ${credits} · 업그레이드 진행상황을 불러왔습니다.`,
+      continueTitle: '저장된 게임을 발견했습니다',
+      continueDesc: '이어서 진행하시겠어요? 새로 시작해도 이전 저장은 다시 저장하기 전까지 남아있어요.',
+      continueYes: '이어하기',
+      continueNo: '새로 시작',
+      loadedToast: (credits) => `저장된 게임을 불러왔습니다! 보유 크레딧 ${credits}`,
+      savedToast: '💾 게임이 저장되었습니다!',
       firstVisitTip: '💡 정거장(맵 중앙)에서 화물을 팔고 연료·화물칸·엔진·무기 등 선박 성능을 업그레이드할 수 있어요!',
       restartToast: '정거장으로 귀환했습니다. 화물칸은 비었지만 선박 업그레이드는 그대로 남아있어요.',
       predatorWarn: '⚠️ 연료가 바닥나 표류하는 당신을 어둠 속의 무언가가 감지했습니다...',
@@ -182,6 +189,7 @@
       dockTitle: 'Space Station',
       dockDesc: 'Sell what you’ve mined and upgrade your ship.',
       sellBtn: 'Sell All Cargo',
+      saveBtn: 'Save Game',
       closeDockBtn: 'Depart',
       tipHtml: '🛠️ Sell cargo and upgrade your fuel, cargo bay, engine, weapon and more at the <b>station (map center)</b>!',
       controlsKeysHtml: '<b>Up / W</b> Thrust&nbsp;&nbsp;<b>Left Right / A D</b> Turn&nbsp;&nbsp;<b>Space / E</b> Mine · Dock&nbsp;&nbsp;<b>F</b> Fire Laser',
@@ -191,7 +199,12 @@
       langModalTitle: '언어 선택 / Select Language',
       langKoBtn: '한국어',
       langEnBtn: 'English',
-      welcomeBack: (credits) => `Welcome back! You have ${credits} credits · your upgrade progress has been restored.`,
+      continueTitle: 'Saved game found',
+      continueDesc: 'Continue where you left off? Starting fresh keeps your old save until you save again.',
+      continueYes: 'Continue',
+      continueNo: 'Start Fresh',
+      loadedToast: (credits) => `Loaded your saved game! Credits: ${credits}`,
+      savedToast: '💾 Game saved!',
       firstVisitTip: '💡 Sell cargo and upgrade your fuel, cargo bay, engine, weapon and more at the station (map center)!',
       restartToast: 'You’ve returned to the station. Your cargo is empty, but your ship upgrades remain.',
       predatorWarn: '⚠️ Something in the dark has noticed you drifting, out of fuel...',
@@ -575,15 +588,12 @@
     return Math.round(u.base * Math.pow(u.growth, lvl));
   }
 
-  // ---- save / load (localStorage; keeps credits, upgrades and chapter progress) ----
-  const SAVE_KEY = 'starMinerSave_v1';
+  // ---- settings (localStorage; language + mute, applied automatically every visit) ----
+  const SETTINGS_KEY = 'starMinerSettings_v1';
 
-  function saveGame() {
+  function saveSettings() {
     try {
-      localStorage.setItem(SAVE_KEY, JSON.stringify({
-        credits: state.credits,
-        levels: state.levels,
-        chapter: state.chapter,
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify({
         muted: state.muted,
         lang: state.lang,
       }));
@@ -592,7 +602,46 @@
     }
   }
 
-  function loadGame() {
+  function loadSettings() {
+    try {
+      const raw = localStorage.getItem(SETTINGS_KEY);
+      if (!raw) return false;
+      const data = JSON.parse(raw);
+      state.muted = !!data.muted;
+      state.lang = data.lang === 'en' ? 'en' : 'ko';
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // ---- game save (localStorage; credits/upgrades/chapter -- manual only, via the
+  // station's "Save Game" button. Reopening the page always starts a fresh run;
+  // players opt in to continuing a save through the prompt shown at startup.) ----
+  const SAVE_KEY = 'starMinerSave_v1';
+
+  function hasSavedProgress() {
+    try {
+      return !!localStorage.getItem(SAVE_KEY);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function saveGame() {
+    try {
+      localStorage.setItem(SAVE_KEY, JSON.stringify({
+        credits: state.credits,
+        levels: state.levels,
+        chapter: state.chapter,
+      }));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function loadGameProgress() {
     try {
       const raw = localStorage.getItem(SAVE_KEY);
       if (!raw) return false;
@@ -603,11 +652,40 @@
         data.levels || {}
       );
       state.chapter = data.chapter === 2 ? 2 : 1;
-      state.muted = !!data.muted;
-      state.lang = data.lang === 'en' ? 'en' : 'ko';
       return true;
     } catch (e) {
       return false;
+    }
+  }
+
+  function promptContinue() {
+    showMessage(`
+      <div>${tr('continueTitle')}</div>
+      <div style="margin-top:6px;color:#a9b7e0;font-size:0.85em;">${tr('continueDesc')}</div>
+      <div style="margin-top:14px;display:flex;gap:10px;justify-content:center;">
+        <button id="continueYesBtn">${tr('continueYes')}</button>
+        <button id="continueNoBtn">${tr('continueNo')}</button>
+      </div>
+    `);
+    document.getElementById('continueYesBtn').addEventListener('click', () => {
+      loadGameProgress();
+      refreshUpgradePanel();
+      if (state.chapter === 2 && !state.bosses.some((b) => b.id === 'dimensional')) {
+        state.bosses.forEach((b) => { b.defeatedOnce = true; });
+        state.bosses.push(spawnDimensionalBoss());
+      }
+      hideMessage();
+      showToast(tr('loadedToast', state.credits), 5000);
+    });
+    document.getElementById('continueNoBtn').addEventListener('click', () => {
+      hideMessage();
+      showToast(tr('firstVisitTip'), 7000);
+    });
+  }
+
+  function manualSave() {
+    if (saveGame()) {
+      showToast(tr('savedToast'), 3000);
     }
   }
 
@@ -722,7 +800,7 @@
     state.muted = !state.muted;
     muteBtn.textContent = state.muted ? '🔇' : '🔊';
     unlockAudio();
-    saveGame();
+    saveSettings();
   }
 
   function applyStaticTranslations() {
@@ -748,7 +826,7 @@
     applyStaticTranslations();
     buildUpgradePanel();
     langModal.classList.add('hidden');
-    saveGame();
+    saveSettings();
   }
 
   function playTone({ freq = 440, duration = 0.15, type = 'sine', startFreq, endFreq, volume = 0.18, attack = 0.005, destination }) {
@@ -886,30 +964,22 @@
   }
 
   function init() {
-    const hadSave = loadGame();
+    const hasSettings = loadSettings();
     resetShip();
     bindInput();
     buildUpgradePanel();
     applyStaticTranslations();
     muteBtn.textContent = state.muted ? '🔇' : '🔊';
 
-    if (hadSave && state.chapter === 2 && !state.bosses.some((b) => b.id === 'dimensional')) {
-      state.bosses.forEach((b) => { b.defeatedOnce = true; });
-      state.bosses.push(spawnDimensionalBoss());
-    }
-
-    if (!hadSave) {
+    if (!hasSettings) {
       openLangModal();
     }
 
-    if (hadSave) {
-      showToast(tr('welcomeBack', state.credits), 6000);
+    if (hasSavedProgress()) {
+      promptContinue();
     } else {
       showToast(tr('firstVisitTip'), 7000);
     }
-
-    window.addEventListener('beforeunload', saveGame);
-    window.addEventListener('pagehide', saveGame);
 
     requestAnimationFrame(loop);
   }
@@ -926,6 +996,7 @@
       state.keys[e.code] = false;
     });
     sellBtn.addEventListener('click', sellCargo);
+    saveBtn.addEventListener('click', manualSave);
     closeDockBtn.addEventListener('click', undock);
     muteBtn.addEventListener('click', toggleMute);
     langBtn.addEventListener('click', openLangModal);
@@ -1048,7 +1119,6 @@
     state.levels[key]++;
     sfxUpgrade();
     refreshUpgradePanel();
-    saveGame();
   }
 
   function sellCargo() {
@@ -1059,7 +1129,6 @@
     });
     state.credits += Math.round(total);
     refreshUpgradePanel();
-    saveGame();
   }
 
   function dock() {
@@ -1534,7 +1603,6 @@
       const allDefeated = state.bosses.filter((b) => b.sector !== 4).every((b) => b.defeatedOnce);
       if (allDefeated) triggerChapterTwo();
     }
-    saveGame();
   }
 
   function triggerChapterTwo() {
