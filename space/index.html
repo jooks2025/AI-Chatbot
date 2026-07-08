@@ -53,15 +53,17 @@
       <div id="sectorLabel" class="sector-label"></div>
       <div id="toast" class="toast hidden"></div>
       <div id="dockPanel" class="dock-panel hidden">
-        <h2 data-i18n="dockTitle">우주 정거장</h2>
-        <p data-i18n="dockDesc">채굴한 자원을 판매하고 선박을 개조하세요.</p>
-        <div class="dock-row">
-          <button id="sellBtn" data-i18n="sellBtn">화물 전량 판매</button>
-          <span id="dockCredits" class="value"></span>
+        <div class="dock-scroll">
+          <h2 data-i18n="dockTitle">우주 정거장</h2>
+          <p data-i18n="dockDesc">채굴한 자원을 판매하고 선박을 개조하세요.</p>
+          <div class="dock-row">
+            <button id="sellBtn" data-i18n="sellBtn">화물 전량 판매</button>
+            <span id="dockCredits" class="value"></span>
+          </div>
+          <div class="resource-prices" id="resourcePrices"></div>
+          <div class="upgrade-list" id="upgradeList"></div>
         </div>
-        <div class="resource-prices" id="resourcePrices"></div>
-        <div class="upgrade-list" id="upgradeList"></div>
-        <div class="dock-row">
+        <div class="dock-row dock-footer">
           <button id="saveBtn" class="save-btn" data-i18n="saveBtn">게임 저장</button>
           <button id="closeDockBtn" data-i18n="closeDockBtn">출항하기</button>
         </div>

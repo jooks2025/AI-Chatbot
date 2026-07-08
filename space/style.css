@@ -187,10 +187,13 @@ h1 .sub {
 }
 
 .message {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: min(92vw, 420px);
+  max-height: 88vh;
+  overflow-y: auto;
   background: rgba(8, 10, 24, 0.92);
   border: 1px solid #4a5ea6;
   padding: 22px 30px;
@@ -220,23 +223,37 @@ h1 .sub {
 }
 
 .dock-panel {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: min(90%, 460px);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
   background: rgba(8, 10, 24, 0.96);
   border: 1px solid #4a5ea6;
   padding: 20px 24px;
   border-radius: 12px;
 }
 
+.dock-panel .dock-scroll {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.dock-panel .dock-footer {
+  flex-shrink: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+}
+
 .lang-modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -515,6 +532,12 @@ h1 .sub {
   .touch-controls {
     display: block;
   }
+}
+
+/* hidden while the dock/message/language overlay is open so the touch
+   buttons can't sit on top of and block their buttons */
+.touch-controls.overlay-open {
+  display: none;
 }
 
 .touch-stick {

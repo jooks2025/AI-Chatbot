@@ -34,6 +34,7 @@
   const langKoBtn = document.getElementById('langKoBtn');
   const langEnBtn = document.getElementById('langEnBtn');
   const fullscreenBtn = document.getElementById('fullscreenBtn');
+  const touchControlsEl = document.getElementById('touchControls');
   const touchStick = document.getElementById('touchStick');
   const touchStickKnob = document.getElementById('touchStickKnob');
   const touchFireBtn = document.getElementById('touchFire');
@@ -880,6 +881,7 @@
 
   function openLangModal() {
     langModal.classList.remove('hidden');
+    updateTouchControlsVisibility();
   }
 
   function setLanguage(lang) {
@@ -888,6 +890,7 @@
     buildUpgradePanel();
     langModal.classList.add('hidden');
     saveSettings();
+    updateTouchControlsVisibility();
   }
 
   function playTone({ freq = 440, duration = 0.15, type = 'sine', startFreq, endFreq, volume = 0.18, attack = 0.005, destination }) {
@@ -1205,6 +1208,15 @@
     }
   }
 
+  // touch buttons sit at the same corners as the dock/message overlays --
+  // hide them whenever an overlay is open so they can't cover its buttons
+  function updateTouchControlsVisibility() {
+    const overlayOpen = !dockPanel.classList.contains('hidden')
+      || !messageEl.classList.contains('hidden')
+      || !langModal.classList.contains('hidden');
+    touchControlsEl.classList.toggle('overlay-open', overlayOpen);
+  }
+
   function dock() {
     state.docked = true;
     state.ship.vx = 0;
@@ -1216,21 +1228,25 @@
     dockPanel.classList.remove('hidden');
     refreshUpgradePanel();
     sfxDock();
+    updateTouchControlsVisibility();
   }
 
   function undock() {
     state.docked = false;
     dockPanel.classList.add('hidden');
     sfxUndock();
+    updateTouchControlsVisibility();
   }
 
   function showMessage(html) {
     messageEl.innerHTML = html;
     messageEl.classList.remove('hidden');
+    updateTouchControlsVisibility();
   }
 
   function hideMessage() {
     messageEl.classList.add('hidden');
+    updateTouchControlsVisibility();
   }
 
   function restart() {
