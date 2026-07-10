@@ -137,6 +137,7 @@
       muteTitle: '소리 켜기/끄기',
       langTitle: '언어 변경',
       fullscreenTitle: '전체화면',
+      rotateHintText: '더 편한 조작을 위해 화면을 가로로 돌려주세요',
       dockTitle: '우주 정거장',
       dockDesc: '채굴한 자원을 판매하고 선박을 개조하세요.',
       sellBtn: '화물 전량 판매',
@@ -212,6 +213,7 @@
       muteTitle: 'Toggle sound',
       langTitle: 'Change language',
       fullscreenTitle: 'Fullscreen',
+      rotateHintText: 'Rotate your device to landscape for easier controls',
       dockTitle: 'Space Station',
       dockDesc: 'Sell what you’ve mined and upgrade your ship.',
       sellBtn: 'Sell All Cargo',
@@ -1076,10 +1078,20 @@
     const isFull = document.fullscreenElement || document.webkitFullscreenElement;
     if (!isFull) {
       const req = el.requestFullscreen || el.webkitRequestFullscreen;
-      if (req) req.call(el).catch(() => {});
+      if (!req) return;
+      Promise.resolve(req.call(el)).then(() => {
+        // best-effort landscape lock -- unsupported on iOS Safari, where the
+        // rotate-hint overlay (CSS) covers the fallback instead
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock('landscape').catch(() => {});
+        }
+      }).catch(() => {});
     } else {
       const exit = document.exitFullscreen || document.webkitExitFullscreen;
       if (exit) exit.call(document).catch(() => {});
+      if (screen.orientation && screen.orientation.unlock) {
+        screen.orientation.unlock();
+      }
     }
   }
 

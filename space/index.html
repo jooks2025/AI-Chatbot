@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>우주 채굴선</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -38,7 +38,7 @@
 
     <div class="stage">
       <canvas id="game" width="900" height="560"></canvas>
-      <canvas id="minimap" width="140" height="140"></canvas>
+      <canvas id="minimap" width="104" height="104"></canvas>
       <div id="mineProgressWrap" class="mine-progress-wrap hidden">
         <div id="mineProgress" class="mine-progress-fill"></div>
       </div>
@@ -85,6 +85,10 @@
           <button id="touchFire" class="touch-btn fire" type="button" aria-label="fire">🔫</button>
           <button id="touchAction" class="touch-btn action" type="button" aria-label="mine-dock">⛏️</button>
         </div>
+      </div>
+      <div id="rotateHint" class="rotate-hint">
+        <div class="rotate-hint-icon">🔄</div>
+        <div data-i18n="rotateHintText">더 편한 조작을 위해 화면을 가로로 돌려주세요</div>
       </div>
     </div>
 
