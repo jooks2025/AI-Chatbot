@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>왕국 디펜스: 중세 전쟁</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
+</head>
+<body>
+  <div class="game-wrap">
+    <header class="hud">
+      <div class="hud-item gold">
+        <span class="icon">🪙</span>
+        <span id="goldValue">0</span>
+      </div>
+      <div class="hud-item wave">
+        <span class="icon">⚔️</span>
+        웨이브 <span id="waveValue">1</span>
+      </div>
+      <div class="hud-item castle-hp">
+        <span class="icon">🏰</span>
+        <div class="hp-bar"><div id="hpFill" class="hp-fill"></div></div>
+        <span id="hpValue">100</span>
+      </div>
+    </header>
+
+    <div class="main-area">
+      <canvas id="battlefield" width="690" height="300"></canvas>
+
+      <aside class="side-panel">
+        <div class="panel-block">
+          <h2>병력 소환</h2>
+          <div class="tower-shop" id="towerShop">
+            <button class="tower-btn" data-tower="archer">
+              <span class="t-icon">🏹</span>
+              <span class="t-name">궁수탑</span>
+              <span class="t-cost">50 🪙</span>
+            </button>
+            <button class="tower-btn" data-tower="mage">
+              <span class="t-icon">🔮</span>
+              <span class="t-name">마법사탑</span>
+              <span class="t-cost">120 🪙</span>
+            </button>
+            <button class="tower-btn" data-tower="catapult">
+              <span class="t-icon">🪨</span>
+              <span class="t-name">투석기</span>
+              <span class="t-cost">200 🪙</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="panel-block">
+          <h2>왕국 경영</h2>
+          <button id="mineBtn" class="mine-btn">
+            <span class="t-icon">⛏️</span>
+            <span class="t-name">금광 건설 (<span id="mineCount">0</span>개)</span>
+            <span class="t-cost" id="mineCost">80 🪙</span>
+          </button>
+          <p class="mine-info">초당 <span id="mineIncome">0</span> 🪙 자동 수입</p>
+        </div>
+      </aside>
+    </div>
+
+    <p class="hint" id="hint">병력을 선택한 뒤 전장을 클릭해 배치하세요.</p>
+  </div>
+
+  <!-- 시작 화면 -->
+  <div id="startOverlay" class="overlay">
+    <div class="overlay-box">
+      <h1>🏰 왕국 디펜스: 중세 전쟁</h1>
+      <p>몰려오는 고블린과 오크로부터 성을 지키고,<br>금광으로 왕국을 번영시키세요.</p>
+      <button id="startBtn" class="primary-btn">전투 시작</button>
+    </div>
+  </div>
+
+  <!-- 웨이브 클리어 화면 -->
+  <div id="waveClearOverlay" class="overlay hidden">
+    <div class="overlay-box">
+      <h2>웨이브 <span id="clearedWave">1</span> 격퇴!</h2>
+      <p>기본 보상: <span id="baseReward">0</span> 🪙</p>
+      <button id="doubleAdBtn" class="ad-btn">📺 광고 보고 보상 2배 받기</button>
+      <button id="nextWaveBtn" class="primary-btn">다음 웨이브 (<span id="nextWaveCountdown">5</span>)</button>
+    </div>
+  </div>
+
+  <!-- 게임 오버 화면 -->
+  <div id="gameOverOverlay" class="overlay hidden">
+    <div class="overlay-box">
+      <h2>성이 함락되었습니다...</h2>
+      <p>도달 웨이브: <span id="finalWave">1</span> · 획득 골드: <span id="finalGold">0</span></p>
+      <button id="reviveAdBtn" class="ad-btn">📺 광고 보고 부활하기</button>
+      <button id="restartBtn" class="primary-btn">다시 시작</button>
+    </div>
+  </div>
+
+  <script src="sdk.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
