@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: daily-market
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest

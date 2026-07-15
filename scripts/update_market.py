@@ -6,6 +6,7 @@ GitHub Actions에서 실행되며 외부 의존성 없이 표준 라이브러리
 """
 import json
 import os
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone, timedelta
@@ -25,12 +26,25 @@ OUT = os.path.join(ROOT, "data", "market.json")
 KST = timezone(timedelta(hours=9))
 
 
+def _download(url, attempts=3):
+    """네트워크 흔들림에 대비해 몇 번 재시도하며 본문을 받아온다."""
+    last_err = None
+    for i in range(attempts):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return resp.read().decode("utf-8", "replace").strip()
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            last_err = e
+            if i < attempts - 1:
+                time.sleep(2 * (i + 1))
+    raise last_err
+
+
 def fetch_last_two(symbol):
     """Stooq 일봉 CSV에서 (date, close, prev_close)를 반환. 실패 시 None."""
     url = f"https://stooq.com/q/d/l/?s={symbol}&i=d"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        text = resp.read().decode("utf-8", "replace").strip()
+    text = _download(url)
     lines = [ln for ln in text.splitlines() if ln.strip()]
     if len(lines) < 3 or not lines[0].lower().startswith("date"):
         return None
@@ -89,16 +103,20 @@ def notify(summary):
         "message": summary,
         "tags": ["chart_with_upwards_trend"],
     }).encode("utf-8")
-    req = urllib.request.Request(
-        "https://ntfy.sh",
-        data=payload,
-        headers={"Content-Type": "application/json"},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            print(f"[ok] ntfy 전송 완료 ({resp.status})")
-    except (urllib.error.URLError, OSError) as e:
-        print(f"[warn] ntfy 전송 실패: {e}")
+    for i in range(3):
+        try:
+            req = urllib.request.Request(
+                "https://ntfy.sh",
+                data=payload,
+                headers={"Content-Type": "application/json"},
+            )
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                print(f"[ok] ntfy 전송 완료 ({resp.status})")
+            return
+        except (urllib.error.URLError, OSError) as e:
+            print(f"[warn] ntfy 전송 실패({i + 1}/3): {e}")
+            if i < 2:
+                time.sleep(2 * (i + 1))
 
 
 def main():
