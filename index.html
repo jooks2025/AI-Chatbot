@@ -21,6 +21,7 @@
       </div>
       <nav class="tabs" role="tablist">
         <button class="tab-btn active" data-tab="news" role="tab" aria-selected="true">뉴스 &amp; 리스크</button>
+        <button class="tab-btn" data-tab="sectors" role="tab" aria-selected="false">산업 뉴스</button>
         <button class="tab-btn" data-tab="heatmap" role="tab" aria-selected="false">히트맵</button>
         <button class="tab-btn" data-tab="fundamentals" role="tab" aria-selected="false">펀더멘탈</button>
       </nav>
@@ -47,11 +48,26 @@
           <option value="환율">환율</option>
           <option value="지정학 리스크">지정학 리스크</option>
           <option value="AI·기술">AI·기술</option>
+          <option value="반도체">반도체</option>
+          <option value="조선">조선</option>
+          <option value="건설">건설</option>
+          <option value="에너지">에너지</option>
+          <option value="금융">금융</option>
+          <option value="헬스케어">헬스케어</option>
           <option value="기업">기업</option>
         </select>
       </div>
       <div id="newsList" class="card-list"></div>
       <p id="newsEmpty" class="empty-msg" hidden>표시할 글이 없어요.</p>
+    </section>
+
+    <!-- 산업 뉴스 -->
+    <section id="sectors" class="tab-panel">
+      <div class="section-head">
+        <h2>산업별 최신 뉴스</h2>
+        <p id="sectorsUpdated" class="section-sub"></p>
+      </div>
+      <div id="sectorGrid" class="sector-grid"></div>
     </section>
 
     <!-- 히트맵 -->

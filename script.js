@@ -66,6 +66,27 @@ function renderNews() {
   `).join('');
 }
 
+// ---------- Sector news ----------
+function renderSectorNews(data) {
+  const grid = document.getElementById('sectorGrid');
+  const updated = document.getElementById('sectorsUpdated');
+  if (!data || !data.sectors) return;
+  updated.textContent = data.updatedAt && data.updatedAt !== 'seed'
+    ? `자동 업데이트 ${data.updatedAt} · 매일 07:00 KST 갱신`
+    : '매일 07:00 KST 자동 갱신 (첫 수집 전이라 일부 섹터는 비어 있어요)';
+
+  grid.innerHTML = Object.entries(data.sectors).map(([sector, items]) => {
+    const body = (items && items.length)
+      ? `<ul class="sector-news-list">${items.map((n) => `
+          <li>
+            <a href="${escapeHtml(n.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a>
+            <span class="sector-news-meta">${escapeHtml(n.source || '')}${n.date ? ` · ${escapeHtml(n.date)}` : ''}</span>
+          </li>`).join('')}</ul>`
+      : '<p class="sector-empty">자동 수집 대기 중 — 다음 갱신에서 채워집니다.</p>';
+    return `<div class="sector-card"><h3>${escapeHtml(sector)}</h3>${body}</div>`;
+  }).join('');
+}
+
 // ---------- Market board ----------
 function fmtClose(v) {
   const n = Number(v);
@@ -228,6 +249,14 @@ async function init() {
     if (marketRes.ok) renderMarket(await marketRes.json());
   } catch (e) {
     console.warn('market.json 로드 실패:', e);
+  }
+
+  // 산업별 뉴스 (없어도 나머지는 정상 동작)
+  try {
+    const sectorRes = await fetch('data/sector_news.json');
+    if (sectorRes.ok) renderSectorNews(await sectorRes.json());
+  } catch (e) {
+    console.warn('sector_news.json 로드 실패:', e);
   }
 }
 

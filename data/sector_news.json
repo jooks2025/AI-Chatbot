@@ -1,0 +1,32 @@
+{
+  "updatedAt": "seed",
+  "sectors": {
+    "조선": [
+      {
+        "title": "HD현대·삼성중공업 연간 수주 목표 70% 돌파… 조선업 '훨훨'",
+        "source": "한국일보",
+        "link": "https://www.hankookilbo.com/news/article/A2026071315340005359",
+        "date": "2026-07-13"
+      },
+      {
+        "title": "3.5년치 일감 쌓인 조선업… LNG·방산으로 슈퍼사이클 2막",
+        "source": "다음 금융",
+        "link": "https://m.finance.daum.net/quotes/A439260/news/stock/20260103060218106",
+        "date": "2026-01-03"
+      }
+    ],
+    "건설": [],
+    "반도체": [
+      {
+        "title": "삼성전자·SK하이닉스, 월가 반도체 매도세 확산에 9% 넘게 급락",
+        "source": "CNBC",
+        "link": "https://www.cnbc.com/2026/07/02/samsung-sk-hynix-shares-slide-kospi-tech-selloff-nasdaq.html",
+        "date": "2026-07-02"
+      }
+    ],
+    "AI": [],
+    "에너지": [],
+    "금융": [],
+    "헬스케어": []
+  }
+}
