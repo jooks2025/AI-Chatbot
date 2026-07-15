@@ -65,7 +65,7 @@
     <section id="fundamentals" class="tab-panel">
       <div class="section-head">
         <h2>기업 펀더멘탈</h2>
-        <p class="section-sub">PER·영업이익률·시가총액·등락률 등 재무 지표 (기준일 표기, 스냅샷 · 미확인 값은 —)</p>
+        <p class="section-sub">PER·PBR·영업이익률·시가총액·등락률 등 재무 지표 (기준일 표기, 스냅샷 · 미확인 값은 —)</p>
       </div>
       <div class="table-wrap">
         <table id="companyTable" class="data-table">
@@ -74,6 +74,7 @@
               <th>종목</th>
               <th>그룹</th>
               <th class="num">PER</th>
+              <th class="num">PBR</th>
               <th class="num">영업이익률</th>
               <th class="num">시가총액</th>
               <th class="num">YTD</th>
@@ -83,6 +84,13 @@
           <tbody id="companyBody"></tbody>
         </table>
       </div>
+
+      <div class="section-head" style="margin-top:2rem">
+        <h2>환율</h2>
+        <p class="section-sub">원/달러·엔/달러·유로/달러·달러인덱스 (같은 지표는 최신순, 이전값 대비 등락 표시)</p>
+      </div>
+      <div id="fxList" class="indicator-list"></div>
+      <p id="fxEmpty" class="empty-msg" hidden>등록된 환율 지표가 없어요.</p>
 
       <div class="section-head" style="margin-top:2rem">
         <h2>거시 지표</h2>

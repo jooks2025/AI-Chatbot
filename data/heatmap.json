@@ -15,11 +15,20 @@
       ]
     },
     {
+      "name": "반도체",
+      "items": [
+        { "ticker": "TSM", "name": "TSMC", "change": 46.0, "weight": 2 },
+        { "ticker": "MU", "name": "마이크론", "change": 260.0, "weight": 1 },
+        { "ticker": "AVGO", "name": "브로드컴", "change": 14.1, "weight": 1 }
+      ]
+    },
+    {
       "name": "주요 ETF",
       "items": [
         { "ticker": "IWM", "name": "러셀2000", "change": 21.4, "weight": 1 },
         { "ticker": "QQQ", "name": "나스닥100", "change": 17.6, "weight": 1 },
-        { "ticker": "SPY", "name": "S&P500", "change": 9.8, "weight": 1 }
+        { "ticker": "SPY", "name": "S&P500", "change": 9.8, "weight": 1 },
+        { "ticker": "XLE", "name": "에너지섹터", "change": 21.6, "weight": 1 }
       ]
     },
     {

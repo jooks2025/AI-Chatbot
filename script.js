@@ -115,6 +115,8 @@ function renderCompanies(companies, asOf) {
     const per = c.per !== null && c.per !== undefined
       ? `${c.per}<span class="per-tag">${c.perType ? escapeHtml(c.perType) : ''}</span>`
       : '<span class="muted">—</span>';
+    const pbr = c.pbr !== null && c.pbr !== undefined
+      ? `${c.pbr}` : '<span class="muted">—</span>';
     const op = c.opMargin !== null && c.opMargin !== undefined
       ? `${c.opMargin}%` : '<span class="muted">—</span>';
     const cap = c.mktcap ? escapeHtml(c.mktcap) : '<span class="muted">—</span>';
@@ -127,6 +129,7 @@ function renderCompanies(companies, asOf) {
       <td><span class="tk">${escapeHtml(c.ticker)}</span><span class="tk-name">${escapeHtml(c.name || '')}</span></td>
       <td><span class="grp-tag">${escapeHtml(c.group || '')}</span></td>
       <td class="num">${per}</td>
+      <td class="num">${pbr}</td>
       <td class="num">${op}</td>
       <td class="num">${cap}</td>
       <td class="num">${ytd}</td>
@@ -135,10 +138,8 @@ function renderCompanies(companies, asOf) {
   }).join('');
 }
 
-// ---------- Macro indicators ----------
-function renderMacro(items) {
-  const listEl = document.getElementById('macroList');
-  const emptyEl = document.getElementById('macroEmpty');
+// ---------- Indicator list (macro / fx) ----------
+function renderIndicatorList(items, listEl, emptyEl) {
   const sorted = [...items].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
   emptyEl.hidden = sorted.length > 0;
 
@@ -193,7 +194,8 @@ async function init() {
   renderNews();
   renderHeatmap(heatmap);
   renderCompanies(indicators.companies || [], indicators.asOf);
-  renderMacro(indicators.macro || []);
+  renderIndicatorList(indicators.macro || [], document.getElementById('macroList'), document.getElementById('macroEmpty'));
+  renderIndicatorList(indicators.fx || [], document.getElementById('fxList'), document.getElementById('fxEmpty'));
 }
 
 init();
