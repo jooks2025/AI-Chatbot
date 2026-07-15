@@ -1,0 +1,37 @@
+name: Daily market update
+
+on:
+  schedule:
+    # 22:00 UTC = 07:00 KST (매일). 예약 실행은 저장소 기본 브랜치에서만 동작함.
+    - cron: "0 22 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update market snapshot and notify
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python scripts/update_market.py
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/market.json
+          if git diff --staged --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "Auto-update market snapshot"
+            git push
+          fi

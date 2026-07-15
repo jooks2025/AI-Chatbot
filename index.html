@@ -30,6 +30,13 @@
   <main class="container">
     <!-- 뉴스 & 리스크 -->
     <section id="news" class="tab-panel active">
+      <div class="market-board">
+        <div class="market-head">
+          <span class="market-title">오늘의 시장</span>
+          <span id="marketUpdated" class="market-updated"></span>
+        </div>
+        <div id="marketStrip" class="market-strip"></div>
+      </div>
       <div class="toolbar">
         <input type="search" id="newsSearch" placeholder="제목·내용 검색...">
         <select id="newsFilter" aria-label="카테고리 필터">

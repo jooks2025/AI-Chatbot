@@ -66,6 +66,31 @@ function renderNews() {
   `).join('');
 }
 
+// ---------- Market board ----------
+function fmtClose(v) {
+  const n = Number(v);
+  return n >= 10000 ? n.toLocaleString('en-US', { maximumFractionDigits: 0 })
+                    : n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function renderMarket(data) {
+  const strip = document.getElementById('marketStrip');
+  const updated = document.getElementById('marketUpdated');
+  if (!data || !Array.isArray(data.items)) return;
+  updated.textContent = data.updatedAt && data.updatedAt !== 'seed'
+    ? `업데이트 ${data.updatedAt}`
+    : `기준 ${data.asOf || ''}`;
+  strip.innerHTML = data.items.map((it) => {
+    const cls = Number(it.change) >= 0 ? 'pos' : 'neg';
+    const chg = fmtPct(it.change) ?? '';
+    return `<div class="market-item">
+      <div class="mi-name">${escapeHtml(it.name)}</div>
+      <div class="mi-close">${fmtClose(it.close)}</div>
+      <div class="mi-change ${cls}">${chg}</div>
+    </div>`;
+  }).join('');
+}
+
 // ---------- Heatmap ----------
 function mix(a, b, t) {
   return [
@@ -196,6 +221,14 @@ async function init() {
   renderCompanies(indicators.companies || [], indicators.asOf);
   renderIndicatorList(indicators.macro || [], document.getElementById('macroList'), document.getElementById('macroEmpty'));
   renderIndicatorList(indicators.fx || [], document.getElementById('fxList'), document.getElementById('fxEmpty'));
+
+  // 오늘의 시장 (없어도 나머지는 정상 동작)
+  try {
+    const marketRes = await fetch('data/market.json');
+    if (marketRes.ok) renderMarket(await marketRes.json());
+  } catch (e) {
+    console.warn('market.json 로드 실패:', e);
+  }
 }
 
 init();
