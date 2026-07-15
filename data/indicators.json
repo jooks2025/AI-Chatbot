@@ -1,4 +1,5 @@
 {
+  "asOf": "2026-07-14",
   "macro": [
     {
       "name": "CPI(소비자물가지수, 전년동월비)",
@@ -23,7 +24,37 @@
       "unit": "%",
       "date": "2026-06-30",
       "note": "식품·에너지 제외, 전월비 보합(0%)"
+    },
+    {
+      "name": "브렌트유",
+      "region": "국제유가",
+      "value": 78.19,
+      "unit": "$/배럴",
+      "date": "2026-07-13",
+      "note": "호르무즈 리스크로 +5.43%"
+    },
+    {
+      "name": "WTI",
+      "region": "국제유가",
+      "value": 73.52,
+      "unit": "$/배럴",
+      "date": "2026-07-13",
+      "note": "+4.37%"
     }
   ],
-  "company": []
+  "companies": [
+    { "ticker": "NVDA", "name": "엔비디아", "group": "Magnificent 7", "per": null, "perType": "", "opMargin": 65.6, "mktcap": "$4.74T", "ytd": -2.0, "note": "Mag7 최대 시총, 분기 영업이익률 65%대" },
+    { "ticker": "GOOGL", "name": "알파벳", "group": "Magnificent 7", "per": 23.3, "perType": "선행", "opMargin": null, "mktcap": "$4.34T", "ytd": -2.3, "note": "2026년 Mag7 중 상대적 강세" },
+    { "ticker": "AAPL", "name": "애플", "group": "Magnificent 7", "per": 31.4, "perType": "선행", "opMargin": null, "mktcap": "$4.30T", "ytd": -5.9, "note": "" },
+    { "ticker": "MSFT", "name": "마이크로소프트", "group": "Magnificent 7", "per": 19.5, "perType": "선행", "opMargin": null, "mktcap": "$2.83T", "ytd": -17.0, "note": "AI 설비투자 부담 부각" },
+    { "ticker": "AMZN", "name": "아마존", "group": "Magnificent 7", "per": 19.5, "perType": "선행", "opMargin": null, "mktcap": "$2.57T", "ytd": -13.9, "note": "" },
+    { "ticker": "META", "name": "메타", "group": "Magnificent 7", "per": 18.4, "perType": "선행", "opMargin": null, "mktcap": "$1.70T", "ytd": -3.1, "note": "Mag7 중 최저 선행 PER" },
+    { "ticker": "TSLA", "name": "테슬라", "group": "Magnificent 7", "per": 195, "perType": "후행", "opMargin": null, "mktcap": "$1.40T", "ytd": -7.2, "note": "높은 밸류에이션(후행 PER 195배)" },
+    { "ticker": "PLTR", "name": "팔란티어", "group": "화제주(AI·SW)", "per": 94, "perType": "선행", "opMargin": null, "mktcap": "$301B", "ytd": null, "note": "매출 +70%, 후행 PER 154배로 고밸류" },
+    { "ticker": "AMD", "name": "AMD", "group": "화제주(반도체)", "per": 149, "perType": "후행", "opMargin": null, "mktcap": null, "ytd": null, "note": "1Q26 데이터센터 매출 +57%, FCF +253%" },
+    { "ticker": "CBOE", "name": "Cboe Global Markets", "group": "러셀2000 주목주", "per": null, "perType": "", "opMargin": null, "mktcap": null, "ytd": null, "note": "1Q26 순매출 $729M(+29%), 조정 EPS +48%" },
+    { "ticker": "MRAM", "name": "에버스핀", "group": "러셀2000 주목주", "per": null, "perType": "", "opMargin": null, "mktcap": null, "ytd": null, "note": "흑자 전환, 1Q26 매출 $14.9M(+14%)" },
+    { "ticker": "FRPT", "name": "프레시펫", "group": "러셀2000 주목주", "per": null, "perType": "", "opMargin": null, "mktcap": null, "ytd": null, "note": "신제품 사이클, 월가 매수 의견(목표 $80)" },
+    { "ticker": "OMCL", "name": "옴니셀", "group": "러셀2000 주목주", "per": null, "perType": "", "opMargin": null, "mktcap": null, "ytd": null, "note": "약국 자동화 사이클, 목표 $70" }
+  ]
 }

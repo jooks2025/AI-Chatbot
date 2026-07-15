@@ -1,0 +1,32 @@
+{
+  "asOf": "2026-07-14",
+  "basis": "2026 연초 대비(YTD) 등락률 · 스냅샷/대략치 · 타일 크기는 시가총액 기준",
+  "groups": [
+    {
+      "name": "Magnificent 7",
+      "items": [
+        { "ticker": "NVDA", "name": "엔비디아", "change": -2.0, "weight": 2 },
+        { "ticker": "GOOGL", "name": "알파벳", "change": -2.3, "weight": 2 },
+        { "ticker": "AAPL", "name": "애플", "change": -5.9, "weight": 2 },
+        { "ticker": "MSFT", "name": "MS", "change": -17.0, "weight": 1 },
+        { "ticker": "AMZN", "name": "아마존", "change": -13.9, "weight": 1 },
+        { "ticker": "META", "name": "메타", "change": -3.1, "weight": 1 },
+        { "ticker": "TSLA", "name": "테슬라", "change": -7.2, "weight": 1 }
+      ]
+    },
+    {
+      "name": "주요 ETF",
+      "items": [
+        { "ticker": "IWM", "name": "러셀2000", "change": 21.4, "weight": 1 },
+        { "ticker": "QQQ", "name": "나스닥100", "change": 17.6, "weight": 1 },
+        { "ticker": "SPY", "name": "S&P500", "change": 9.8, "weight": 1 }
+      ]
+    },
+    {
+      "name": "화제주 (참고)",
+      "items": [
+        { "ticker": "PLTR", "name": "팔란티어", "change": -30.0, "weight": 1 }
+      ]
+    }
+  ]
+}

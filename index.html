@@ -4,63 +4,99 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>나의 경제 브리핑</title>
-<meta name="description" content="경제 기사 요약과 거시·기업 펀더멘탈 지표를 정리하는 개인 블로그">
+<meta name="description" content="팩트 기반으로 경제 기사·리스크·펀더멘탈 수치를 정리하는 개인 경제 브리핑">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <h1>📊 나의 경제 브리핑</h1>
-      <p class="tagline">경제 기사와 펀더멘탈 수치를 한눈에 정리하는 블로그</p>
+      <div class="brand">
+        <span class="brand-mark">₩</span>
+        <div>
+          <h1>나의 경제 브리핑</h1>
+          <p class="tagline">팩트 기반 · 시장 · 리스크 · 펀더멘탈</p>
+        </div>
+      </div>
+      <nav class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="news" role="tab" aria-selected="true">뉴스 &amp; 리스크</button>
+        <button class="tab-btn" data-tab="heatmap" role="tab" aria-selected="false">히트맵</button>
+        <button class="tab-btn" data-tab="fundamentals" role="tab" aria-selected="false">펀더멘탈</button>
+      </nav>
     </div>
   </header>
 
-  <nav class="tabs" role="tablist">
-    <button class="tab-btn active" data-tab="news" role="tab" aria-selected="true">📰 뉴스 피드</button>
-    <button class="tab-btn" data-tab="fundamentals" role="tab" aria-selected="false">📈 펀더멘탈 대시보드</button>
-  </nav>
-
   <main class="container">
-    <!-- 뉴스 피드 -->
+    <!-- 뉴스 & 리스크 -->
     <section id="news" class="tab-panel active">
       <div class="toolbar">
-        <input type="search" id="newsSearch" placeholder="제목·요약 검색...">
-        <select id="newsFilter">
+        <input type="search" id="newsSearch" placeholder="제목·내용 검색...">
+        <select id="newsFilter" aria-label="카테고리 필터">
           <option value="all">전체 카테고리</option>
           <option value="거시경제">거시경제</option>
           <option value="금리·통화정책">금리·통화정책</option>
-          <option value="주식·증시">주식·증시</option>
+          <option value="증시">증시</option>
           <option value="환율">환율</option>
-          <option value="산업·기업">산업·기업</option>
-          <option value="기타">기타</option>
+          <option value="지정학 리스크">지정학 리스크</option>
+          <option value="AI·기술">AI·기술</option>
+          <option value="기업">기업</option>
         </select>
       </div>
       <div id="newsList" class="card-list"></div>
-      <p id="newsEmpty" class="empty-msg" hidden>아직 등록된 기사가 없어요. 곧 첫 글이 올라올 예정이에요.</p>
+      <p id="newsEmpty" class="empty-msg" hidden>표시할 글이 없어요.</p>
     </section>
 
-    <!-- 펀더멘탈 대시보드 -->
+    <!-- 히트맵 -->
+    <section id="heatmap" class="tab-panel">
+      <div class="section-head">
+        <h2>종목 히트맵</h2>
+        <p id="heatmapBasis" class="section-sub"></p>
+      </div>
+      <div class="heat-legend">
+        <span>하락</span>
+        <span class="legend-bar" aria-hidden="true"></span>
+        <span>상승</span>
+      </div>
+      <div id="heatmapGroups"></div>
+    </section>
+
+    <!-- 펀더멘탈 -->
     <section id="fundamentals" class="tab-panel">
-      <nav class="subtabs">
-        <button class="subtab-btn active" data-subtab="macro">🌍 거시 지표</button>
-        <button class="subtab-btn" data-subtab="company">🏢 기업 지표</button>
-      </nav>
-
-      <div id="macro" class="subtab-panel active">
-        <div id="macroList" class="indicator-list"></div>
-        <p id="macroEmpty" class="empty-msg" hidden>등록된 거시 지표가 없어요.</p>
+      <div class="section-head">
+        <h2>기업 펀더멘탈</h2>
+        <p class="section-sub">PER·영업이익률·시가총액·등락률 등 재무 지표 (기준일 표기, 스냅샷 · 미확인 값은 —)</p>
+      </div>
+      <div class="table-wrap">
+        <table id="companyTable" class="data-table">
+          <thead>
+            <tr>
+              <th>종목</th>
+              <th>그룹</th>
+              <th class="num">PER</th>
+              <th class="num">영업이익률</th>
+              <th class="num">시가총액</th>
+              <th class="num">YTD</th>
+              <th>메모</th>
+            </tr>
+          </thead>
+          <tbody id="companyBody"></tbody>
+        </table>
       </div>
 
-      <div id="company" class="subtab-panel">
-        <div id="companyList" class="indicator-list"></div>
-        <p id="companyEmpty" class="empty-msg" hidden>등록된 기업 지표가 없어요.</p>
+      <div class="section-head" style="margin-top:2rem">
+        <h2>거시 지표</h2>
+        <p class="section-sub">물가·유가 등 거시 경제 수치 (같은 지표는 최신순, 이전값 대비 등락 표시)</p>
       </div>
+      <div id="macroList" class="indicator-list"></div>
+      <p id="macroEmpty" class="empty-msg" hidden>등록된 거시 지표가 없어요.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <span>정적으로 호스팅되는 블로그예요 · 모든 방문자에게 같은 내용이 보여요</span>
+      <span>정적으로 호스팅되는 개인 브리핑 · 모든 방문자에게 같은 내용이 보입니다.</span>
+      <span class="disclaimer">수치는 표기된 기준일의 스냅샷이며 투자 자문이 아닙니다.</span>
     </div>
   </footer>
 
