@@ -90,8 +90,9 @@ function renderSectorNews(data) {
 // ---------- Market board ----------
 function fmtClose(v) {
   const n = Number(v);
-  return n >= 10000 ? n.toLocaleString('en-US', { maximumFractionDigits: 0 })
-                    : n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  if (n >= 10000) return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+  if (n >= 100) return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 4 });
 }
 
 function marketItemHtml(it) {
@@ -234,11 +235,16 @@ function renderIndicatorList(items, listEl, emptyEl) {
 }
 
 // ---------- Init ----------
+// 캐시된 옛 데이터가 보이지 않도록 항상 새로 받아온다.
+function fetchData(path) {
+  return fetch(path, { cache: 'no-store' });
+}
+
 async function init() {
   const [postsRes, indicatorsRes, heatmapRes] = await Promise.all([
-    fetch('data/posts.json'),
-    fetch('data/indicators.json'),
-    fetch('data/heatmap.json'),
+    fetchData('data/posts.json'),
+    fetchData('data/indicators.json'),
+    fetchData('data/heatmap.json'),
   ]);
   allPosts = await postsRes.json();
   const indicators = await indicatorsRes.json();
@@ -252,7 +258,7 @@ async function init() {
 
   // 오늘의 시장 (없어도 나머지는 정상 동작)
   try {
-    const marketRes = await fetch('data/market.json');
+    const marketRes = await fetchData('data/market.json');
     if (marketRes.ok) renderMarket(await marketRes.json());
   } catch (e) {
     console.warn('market.json 로드 실패:', e);
@@ -260,7 +266,7 @@ async function init() {
 
   // 산업별 뉴스 (없어도 나머지는 정상 동작)
   try {
-    const sectorRes = await fetch('data/sector_news.json');
+    const sectorRes = await fetchData('data/sector_news.json');
     if (sectorRes.ok) renderSectorNews(await sectorRes.json());
   } catch (e) {
     console.warn('sector_news.json 로드 실패:', e);

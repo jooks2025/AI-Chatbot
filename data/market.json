@@ -13,6 +13,9 @@
   ],
   "fx": [
     { "name": "원/달러", "close": 1489.57, "change": -0.53, "unit": "원", "date": "2026-07-14" },
-    { "name": "엔/달러", "close": 161.7, "change": null, "unit": "엔", "date": "2026-07-11" }
+    { "name": "엔/달러", "close": 161.7, "change": null, "unit": "엔", "date": "2026-07-11" },
+    { "name": "유로/달러", "close": 1.14, "change": null, "unit": "$", "date": "2026-07-14" },
+    { "name": "파운드/달러", "close": 1.342, "change": null, "unit": "$", "date": "2026-07-14" },
+    { "name": "위안/달러", "close": 6.78, "change": null, "unit": "위안", "date": "2026-07-10" }
   ]
 }

@@ -26,6 +26,9 @@ INDICES = [
 FX = [
     ("원/달러", "usdkrw", "원"),
     ("엔/달러", "usdjpy", "엔"),
+    ("유로/달러", "eurusd", "$"),
+    ("파운드/달러", "gbpusd", "$"),
+    ("위안/달러", "usdcny", "위안"),
 ]
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -79,7 +82,9 @@ def fetch_one(name, sym, extra=None):
         return None
     date, close, prev_close = res
     change = (close - prev_close) / prev_close * 100 if prev_close else 0.0
-    item = {"name": name, "close": round(close, 2), "change": round(change, 2), "date": date}
+    # 환율처럼 값이 작으면 소수 자릿수를 더 준다.
+    precision = 4 if abs(close) < 10 else 2
+    item = {"name": name, "close": round(close, precision), "change": round(change, 2), "date": date}
     if extra:
         item.update(extra)
     print(f"[ok] {name}: {close} ({change:+.2f}%)")
