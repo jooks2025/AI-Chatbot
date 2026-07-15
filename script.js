@@ -94,22 +94,29 @@ function fmtClose(v) {
                     : n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
+function marketItemHtml(it) {
+  const hasChange = it.change !== null && it.change !== undefined;
+  const cls = Number(it.change) >= 0 ? 'pos' : 'neg';
+  const chg = hasChange ? fmtPct(it.change) : '';
+  const unit = it.unit ? `<span class="mi-unit"> ${escapeHtml(it.unit)}</span>` : '';
+  return `<div class="market-item">
+    <div class="mi-name">${escapeHtml(it.name)}</div>
+    <div class="mi-close">${fmtClose(it.close)}${unit}</div>
+    <div class="mi-change ${cls}">${chg}</div>
+  </div>`;
+}
+
 function renderMarket(data) {
   const strip = document.getElementById('marketStrip');
+  const fxStrip = document.getElementById('marketFx');
   const updated = document.getElementById('marketUpdated');
-  if (!data || !Array.isArray(data.items)) return;
+  if (!data) return;
   updated.textContent = data.updatedAt && data.updatedAt !== 'seed'
     ? `업데이트 ${data.updatedAt}`
     : `기준 ${data.asOf || ''}`;
-  strip.innerHTML = data.items.map((it) => {
-    const cls = Number(it.change) >= 0 ? 'pos' : 'neg';
-    const chg = fmtPct(it.change) ?? '';
-    return `<div class="market-item">
-      <div class="mi-name">${escapeHtml(it.name)}</div>
-      <div class="mi-close">${fmtClose(it.close)}</div>
-      <div class="mi-change ${cls}">${chg}</div>
-    </div>`;
-  }).join('');
+  const indices = data.indices || data.items || [];
+  strip.innerHTML = indices.map(marketItemHtml).join('');
+  if (fxStrip) fxStrip.innerHTML = (data.fx || []).map(marketItemHtml).join('');
 }
 
 // ---------- Heatmap ----------

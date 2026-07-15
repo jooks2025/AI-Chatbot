@@ -20,7 +20,7 @@
         </div>
       </div>
       <nav class="tabs" role="tablist">
-        <button class="tab-btn active" data-tab="news" role="tab" aria-selected="true">뉴스 &amp; 리스크</button>
+        <button class="tab-btn active" data-tab="news" role="tab" aria-selected="true">홈</button>
         <button class="tab-btn" data-tab="sectors" role="tab" aria-selected="false">산업 뉴스</button>
         <button class="tab-btn" data-tab="heatmap" role="tab" aria-selected="false">히트맵</button>
         <button class="tab-btn" data-tab="fundamentals" role="tab" aria-selected="false">펀더멘탈</button>
@@ -33,10 +33,18 @@
     <section id="news" class="tab-panel active">
       <div class="market-board">
         <div class="market-head">
-          <span class="market-title">오늘의 시장</span>
+          <span class="market-title">주요 지수 · 환율</span>
           <span id="marketUpdated" class="market-updated"></span>
         </div>
+        <div class="market-sub-label">주가지수</div>
         <div id="marketStrip" class="market-strip"></div>
+        <div class="market-sub-label">환율</div>
+        <div id="marketFx" class="market-strip"></div>
+      </div>
+
+      <div class="section-head news-section-head">
+        <h2>뉴스</h2>
+        <p class="section-sub">카테고리별 팩트 기반 정리</p>
       </div>
       <div class="toolbar">
         <input type="search" id="newsSearch" placeholder="제목·내용 검색...">

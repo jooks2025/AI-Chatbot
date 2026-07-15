@@ -11,14 +11,21 @@ import urllib.request
 import urllib.error
 from datetime import datetime, timezone, timedelta
 
-# 표시명 -> Stooq 심볼
-SYMBOLS = [
+# 표시명 -> Stooq 심볼 (지수)
+INDICES = [
     ("코스피", "^kospi"),
     ("코스닥", "^kosdaq"),
     ("S&P500", "^spx"),
     ("나스닥", "^ndq"),
-    ("다우", "^dji"),
+    ("다우존스", "^dji"),
+    ("러셀2000", "^rut"),
     ("니케이225", "^nkx"),
+]
+
+# 표시명 -> Stooq 심볼, 단위 (환율)
+FX = [
+    ("원/달러", "usdkrw", "원"),
+    ("엔/달러", "usdjpy", "엔"),
 ]
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -60,36 +67,75 @@ def fetch_last_two(symbol):
     return date, close, prev_close
 
 
+def fetch_one(name, sym, extra=None):
+    """한 종목의 최신 스냅샷 dict를 반환. 실패 시 None."""
+    try:
+        res = fetch_last_two(sym)
+    except (urllib.error.URLError, TimeoutError, OSError) as e:
+        print(f"[warn] {name}({sym}) 조회 실패: {e}")
+        return None
+    if not res:
+        print(f"[warn] {name}({sym}) 데이터 없음")
+        return None
+    date, close, prev_close = res
+    change = (close - prev_close) / prev_close * 100 if prev_close else 0.0
+    item = {"name": name, "close": round(close, 2), "change": round(change, 2), "date": date}
+    if extra:
+        item.update(extra)
+    print(f"[ok] {name}: {close} ({change:+.2f}%)")
+    return item
+
+
+def load_prev():
+    if not os.path.exists(OUT):
+        return {}, {}
+    try:
+        with open(OUT, encoding="utf-8") as f:
+            data = json.load(f)
+        idx = {it["name"]: it for it in data.get("indices", [])}
+        fx = {it["name"]: it for it in data.get("fx", [])}
+        return idx, fx
+    except (OSError, json.JSONDecodeError):
+        return {}, {}
+
+
 def build():
-    items = []
-    for name, sym in SYMBOLS:
-        try:
-            res = fetch_last_two(sym)
-        except (urllib.error.URLError, TimeoutError, OSError) as e:
-            print(f"[warn] {name}({sym}) 조회 실패: {e}")
-            res = None
-        if not res:
-            print(f"[warn] {name}({sym}) 데이터 없음, 건너뜀")
-            continue
-        date, close, prev_close = res
-        change = (close - prev_close) / prev_close * 100 if prev_close else 0.0
-        items.append({
-            "name": name,
-            "close": round(close, 2),
-            "change": round(change, 2),
-            "date": date,
-        })
-        print(f"[ok] {name}: {close} ({change:+.2f}%)")
-    return items
+    prev_idx, prev_fx = load_prev()
+    indices = []
+    for name, sym in INDICES:
+        item = fetch_one(name, sym)
+        if not item and name in prev_idx:
+            print(f"[info] {name} 이전 값 유지")
+            item = prev_idx[name]
+        if item:
+            indices.append(item)
+
+    fx = []
+    for name, sym, unit in FX:
+        item = fetch_one(name, sym, {"unit": unit})
+        if not item and name in prev_fx:
+            print(f"[info] {name} 이전 값 유지")
+            item = prev_fx[name]
+        if item:
+            fx.append(item)
+
+    return indices, fx
 
 
 def fmt_num(v):
     return f"{v:,.2f}" if v < 10000 else f"{v:,.0f}"
 
 
-def make_summary(items, as_of):
-    parts = [f"{it['name']} {fmt_num(it['close'])}({it['change']:+.1f}%)" for it in items]
-    return f"{as_of} 마감 — " + ", ".join(parts) + "."
+def make_summary(indices, fx, as_of):
+    parts = [f"{it['name']} {fmt_num(it['close'])}({it['change']:+.1f}%)" for it in indices]
+    text = f"{as_of} 마감 — " + ", ".join(parts)
+    fx_parts = [
+        f"{it['name']} {fmt_num(it['close'])}({it['change']:+.1f}%)"
+        for it in fx if it.get("change") is not None
+    ]
+    if fx_parts:
+        text += " · " + ", ".join(fx_parts)
+    return text + "."
 
 
 def notify(summary):
@@ -120,17 +166,18 @@ def notify(summary):
 
 
 def main():
-    items = build()
-    if not items:
+    indices, fx = build()
+    if not indices:
         print("[error] 수집된 지수가 없어 종료 (기존 파일 유지)")
         return
-    as_of = max(it["date"] for it in items)
-    summary = make_summary(items, as_of)
+    as_of = max(it["date"] for it in indices)
+    summary = make_summary(indices, fx, as_of)
     data = {
         "asOf": as_of,
         "updatedAt": datetime.now(KST).isoformat(timespec="minutes"),
         "summary": summary,
-        "items": items,
+        "indices": indices,
+        "fx": fx,
     }
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

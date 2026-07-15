@@ -249,11 +249,21 @@ input:focus, select:focus {
   font-size: 0.74rem;
   color: var(--text-muted);
 }
+.market-sub-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin: 0.2rem 0 0.5rem;
+}
+.market-sub-label + .market-strip { margin-bottom: 0.9rem; }
 .market-strip {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
   gap: 0.6rem;
 }
+.news-section-head { margin-top: 0.5rem; }
 .market-item {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -278,6 +288,7 @@ input:focus, select:focus {
 }
 .market-item .mi-change.pos { color: var(--up); }
 .market-item .mi-change.neg { color: var(--down); }
+.market-item .mi-unit { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); }
 
 /* ---------- News cards ---------- */
 .card-list {
