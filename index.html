@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>나의 경제 브리핑</title>
+<meta name="description" content="경제 기사 요약과 거시·기업 펀더멘탈 지표를 정리하는 개인 블로그">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
       <h1>📊 나의 경제 브리핑</h1>
-      <p class="tagline">경제 기사와 펀더멘탈 수치를 한눈에 정리하는 나만의 공간</p>
+      <p class="tagline">경제 기사와 펀더멘탈 수치를 한눈에 정리하는 블로그</p>
     </div>
   </header>
 
@@ -22,58 +23,20 @@
   <main class="container">
     <!-- 뉴스 피드 -->
     <section id="news" class="tab-panel active">
-      <div class="panel-grid">
-        <div class="card form-card">
-          <h2>새 기사 요약 추가</h2>
-          <form id="newsForm">
-            <label>제목
-              <input type="text" id="newsTitle" placeholder="예: 미 연준, 기준금리 동결" required>
-            </label>
-            <label>출처
-              <input type="text" id="newsSource" placeholder="예: 한국경제, 로이터">
-            </label>
-            <label>원문 링크
-              <input type="url" id="newsUrl" placeholder="https://...">
-            </label>
-            <div class="field-row">
-              <label>카테고리
-                <select id="newsCategory">
-                  <option value="거시경제">거시경제</option>
-                  <option value="금리·통화정책">금리·통화정책</option>
-                  <option value="주식·증시">주식·증시</option>
-                  <option value="환율">환율</option>
-                  <option value="산업·기업">산업·기업</option>
-                  <option value="기타">기타</option>
-                </select>
-              </label>
-              <label>날짜
-                <input type="date" id="newsDate">
-              </label>
-            </div>
-            <label>내 요약 / 코멘트
-              <textarea id="newsSummary" rows="4" placeholder="핵심 내용을 알기 쉽게 요약해보세요" required></textarea>
-            </label>
-            <button type="submit" class="primary-btn">추가하기</button>
-          </form>
-        </div>
-
-        <div class="list-area">
-          <div class="toolbar">
-            <input type="search" id="newsSearch" placeholder="제목·요약 검색...">
-            <select id="newsFilter">
-              <option value="all">전체 카테고리</option>
-              <option value="거시경제">거시경제</option>
-              <option value="금리·통화정책">금리·통화정책</option>
-              <option value="주식·증시">주식·증시</option>
-              <option value="환율">환율</option>
-              <option value="산업·기업">산업·기업</option>
-              <option value="기타">기타</option>
-            </select>
-          </div>
-          <div id="newsList" class="card-list"></div>
-          <p id="newsEmpty" class="empty-msg" hidden>아직 등록된 기사가 없어요. 왼쪽에서 첫 기사를 추가해보세요.</p>
-        </div>
+      <div class="toolbar">
+        <input type="search" id="newsSearch" placeholder="제목·요약 검색...">
+        <select id="newsFilter">
+          <option value="all">전체 카테고리</option>
+          <option value="거시경제">거시경제</option>
+          <option value="금리·통화정책">금리·통화정책</option>
+          <option value="주식·증시">주식·증시</option>
+          <option value="환율">환율</option>
+          <option value="산업·기업">산업·기업</option>
+          <option value="기타">기타</option>
+        </select>
       </div>
+      <div id="newsList" class="card-list"></div>
+      <p id="newsEmpty" class="empty-msg" hidden>아직 등록된 기사가 없어요. 곧 첫 글이 올라올 예정이에요.</p>
     </section>
 
     <!-- 펀더멘탈 대시보드 -->
@@ -83,91 +46,21 @@
         <button class="subtab-btn" data-subtab="company">🏢 기업 지표</button>
       </nav>
 
-      <!-- 거시 지표 -->
       <div id="macro" class="subtab-panel active">
-        <div class="panel-grid">
-          <div class="card form-card">
-            <h2>거시 지표 추가</h2>
-            <form id="macroForm">
-              <label>지표명
-                <input type="text" id="macroName" placeholder="예: 기준금리, CPI, 실업률" required>
-              </label>
-              <div class="field-row">
-                <label>값
-                  <input type="number" step="any" id="macroValue" placeholder="예: 3.5" required>
-                </label>
-                <label>단위
-                  <input type="text" id="macroUnit" placeholder="예: %, 원, pt">
-                </label>
-              </div>
-              <label>국가/지역
-                <input type="text" id="macroRegion" placeholder="예: 한국, 미국, 유로존">
-              </label>
-              <label>기준일
-                <input type="date" id="macroDate">
-              </label>
-              <label>메모
-                <textarea id="macroNote" rows="2" placeholder="참고할 내용을 적어두세요"></textarea>
-              </label>
-              <button type="submit" class="primary-btn">추가하기</button>
-            </form>
-          </div>
-          <div class="list-area">
-            <div id="macroList" class="indicator-list"></div>
-            <p id="macroEmpty" class="empty-msg" hidden>등록된 거시 지표가 없어요.</p>
-          </div>
-        </div>
+        <div id="macroList" class="indicator-list"></div>
+        <p id="macroEmpty" class="empty-msg" hidden>등록된 거시 지표가 없어요.</p>
       </div>
 
-      <!-- 기업 지표 -->
       <div id="company" class="subtab-panel">
-        <div class="panel-grid">
-          <div class="card form-card">
-            <h2>기업 지표 추가</h2>
-            <form id="companyForm">
-              <label>기업명
-                <input type="text" id="companyName" placeholder="예: 삼성전자" required>
-              </label>
-              <label>지표명
-                <input type="text" id="companyMetric" placeholder="예: PER, 영업이익률, 부채비율" required>
-              </label>
-              <div class="field-row">
-                <label>값
-                  <input type="number" step="any" id="companyValue" placeholder="예: 12.4" required>
-                </label>
-                <label>단위
-                  <input type="text" id="companyUnit" placeholder="예: 배, %, 억원">
-                </label>
-              </div>
-              <label>기준일
-                <input type="date" id="companyDate">
-              </label>
-              <label>메모
-                <textarea id="companyNote" rows="2" placeholder="참고할 내용을 적어두세요"></textarea>
-              </label>
-              <button type="submit" class="primary-btn">추가하기</button>
-            </form>
-          </div>
-          <div class="list-area">
-            <div id="companyList" class="indicator-list"></div>
-            <p id="companyEmpty" class="empty-msg" hidden>등록된 기업 지표가 없어요.</p>
-          </div>
-        </div>
+        <div id="companyList" class="indicator-list"></div>
+        <p id="companyEmpty" class="empty-msg" hidden>등록된 기업 지표가 없어요.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <span>모든 데이터는 이 브라우저에만 저장됩니다.</span>
-      <div class="footer-actions">
-        <button id="exportBtn" class="ghost-btn">내보내기(JSON)</button>
-        <label class="ghost-btn file-label">
-          가져오기(JSON)
-          <input type="file" id="importInput" accept="application/json" hidden>
-        </label>
-        <button id="clearBtn" class="ghost-btn danger">전체 삭제</button>
-      </div>
+      <span>정적으로 호스팅되는 블로그예요 · 모든 방문자에게 같은 내용이 보여요</span>
     </div>
   </footer>
 
