@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-16",
+  "asOf": "2026-07-17",
   "macro": [
     {
       "name": "CPI(소비자물가지수, 전년동월비)",
@@ -102,7 +102,7 @@
       "pbr": 26.1,
       "opMargin": 65.6,
       "mktcap": "$4.74T",
-      "ytd": 12.5,
+      "ytd": 9.2,
       "note": "Mag7 최대 시총, 분기 영업이익률 65%대"
     },
     {
@@ -114,7 +114,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": "$4.34T",
-      "ytd": 17.7,
+      "ytd": 17.9,
       "note": "2026년 Mag7 중 상대적 강세"
     },
     {
@@ -126,7 +126,7 @@
       "pbr": 54.0,
       "opMargin": null,
       "mktcap": "$4.30T",
-      "ytd": 20.8,
+      "ytd": 21.6,
       "note": "PBR 54배로 밸류에이션 높음"
     },
     {
@@ -138,7 +138,7 @@
       "pbr": 6.3,
       "opMargin": null,
       "mktcap": "$2.83T",
-      "ytd": -16.3,
+      "ytd": -16.0,
       "note": "AI 설비투자 부담 부각, Mag7 중 최저 PBR"
     },
     {
@@ -162,7 +162,7 @@
       "pbr": 7.5,
       "opMargin": null,
       "mktcap": "$1.70T",
-      "ytd": 4.8,
+      "ytd": 4.3,
       "note": "Mag7 중 최저 선행 PER"
     },
     {
@@ -174,7 +174,7 @@
       "pbr": 16.6,
       "opMargin": null,
       "mktcap": "$1.40T",
-      "ytd": -10.0,
+      "ytd": -10.3,
       "note": "높은 밸류에이션(후행 PER 195배)"
     },
     {
@@ -186,7 +186,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": null,
-      "ytd": 31.2,
+      "ytd": 28.3,
       "note": "AI 수요로 YTD +46%, SMH 최상위 비중"
     },
     {
@@ -198,7 +198,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": null,
-      "ytd": 13.4,
+      "ytd": 9.5,
       "note": "2Q26 매출 +48%, AI 반도체 매출 +143%"
     },
     {
@@ -210,7 +210,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": null,
-      "ytd": 186.7,
+      "ytd": 173.6,
       "note": "AI 메모리 수요 급증, YTD +260%(대략치)"
     },
     {
@@ -222,7 +222,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": null,
-      "ytd": 136.8,
+      "ytd": 127.7,
       "note": "1년 +268%, 후행 PER 185배, 데이터센터 매출 +57%"
     },
     {
@@ -234,7 +234,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": "$301B",
-      "ytd": -20.3,
+      "ytd": -21.2,
       "note": "매출 +70%, 후행 PER 154배로 고밸류"
     },
     {
@@ -246,7 +246,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": null,
-      "ytd": 11.7,
+      "ytd": 11.8,
       "note": "1Q26 순매출 $729M(+29%), 조정 EPS +48%"
     },
     {
@@ -258,7 +258,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": null,
-      "ytd": 63.0,
+      "ytd": 49.3,
       "note": "흑자 전환, 1Q26 매출 $14.9M(+14%)"
     },
     {
@@ -270,7 +270,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": null,
-      "ytd": -6.5,
+      "ytd": -5.8,
       "note": "신제품 사이클, 월가 매수 의견(목표 $80)"
     },
     {
@@ -282,7 +282,7 @@
       "pbr": null,
       "opMargin": null,
       "mktcap": null,
-      "ytd": 3.7,
+      "ytd": 5.7,
       "note": "약국 자동화 사이클, 목표 $70"
     }
   ]
