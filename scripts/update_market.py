@@ -1,33 +1,34 @@
 #!/usr/bin/env python3
-"""주요 지수 종가와 환율을 Stooq(무료)에서 받아 data/market.json을 갱신한다.
+"""주요 지수 종가와 환율을 Yahoo Finance 차트 API(무료)에서 받아 data/market.json을 갱신한다.
 
 GitHub Actions에서 15분마다 실행되며 외부 의존성 없이 표준 라이브러리만 사용한다.
 """
 import json
 import os
 import time
+import urllib.parse
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone, timedelta
 
-# 표시명 -> Stooq 심볼 (지수)
+# 표시명 -> Yahoo Finance 심볼 (지수)
 INDICES = [
-    ("코스피", "^kospi"),
-    ("코스닥", "^kosdaq"),
-    ("S&P500", "^spx"),
-    ("나스닥", "^ndq"),
-    ("다우존스", "^dji"),
-    ("러셀2000", "^rut"),
-    ("니케이225", "^nkx"),
+    ("코스피", "^KS11"),
+    ("코스닥", "^KQ11"),
+    ("S&P500", "^GSPC"),
+    ("나스닥", "^IXIC"),
+    ("다우존스", "^DJI"),
+    ("러셀2000", "^RUT"),
+    ("니케이225", "^N225"),
 ]
 
-# 표시명 -> Stooq 심볼, 단위 (환율)
+# 표시명 -> Yahoo Finance 심볼, 단위 (환율)
 FX = [
-    ("원/달러", "usdkrw", "원"),
-    ("엔/달러", "usdjpy", "엔"),
-    ("유로/달러", "eurusd", "$"),
-    ("파운드/달러", "gbpusd", "$"),
-    ("위안/달러", "usdcny", "위안"),
+    ("원/달러", "USDKRW=X", "원"),
+    ("엔/달러", "USDJPY=X", "엔"),
+    ("유로/달러", "EURUSD=X", "$"),
+    ("파운드/달러", "GBPUSD=X", "$"),
+    ("위안/달러", "USDCNY=X", "위안"),
 ]
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,29 +52,43 @@ def _download(url, attempts=3):
 
 
 def fetch_last_two(symbol):
-    """Stooq 일봉 CSV에서 (date, close, prev_close)를 반환. 실패 시 None."""
-    url = f"https://stooq.com/q/d/l/?s={symbol}&i=d"
-    text = _download(url)
-    lines = [ln for ln in text.splitlines() if ln.strip()]
-    if len(lines) < 3 or not lines[0].lower().startswith("date"):
+    """Yahoo Finance 차트 API에서 (date, close, prev_close)를 반환. 실패 시 None."""
+    url = (
+        "https://query1.finance.yahoo.com/v8/finance/chart/"
+        + urllib.parse.quote(symbol)
+        + "?range=7d&interval=1d"
+    )
+    data = json.loads(_download(url))
+    results = (data.get("chart") or {}).get("result") or []
+    if not results:
         return None
-    # Date,Open,High,Low,Close,Volume
-    last = lines[-1].split(",")
-    prev = lines[-2].split(",")
-    try:
-        date = last[0]
-        close = float(last[4])
-        prev_close = float(prev[4])
-    except (IndexError, ValueError):
+    result = results[0]
+    quote = ((result.get("indicators") or {}).get("quote") or [{}])[0]
+    closes = quote.get("close") or []
+    stamps = result.get("timestamp") or []
+    pairs = [(t, c) for t, c in zip(stamps, closes) if c is not None]
+    if len(pairs) >= 2:
+        prev_close = float(pairs[-2][1])
+        last_t, last_c = pairs[-1]
+        date = datetime.fromtimestamp(last_t, KST).strftime("%Y-%m-%d")
+        return date, float(last_c), prev_close
+    # 폴백: 값이 하나뿐이면 meta의 전일 종가를 쓴다.
+    meta = result.get("meta") or {}
+    last_c = meta.get("regularMarketPrice")
+    prev_close = meta.get("chartPreviousClose", meta.get("previousClose"))
+    if last_c is None or prev_close is None:
         return None
-    return date, close, prev_close
+    t = meta.get("regularMarketTime")
+    date = datetime.fromtimestamp(t, KST).strftime("%Y-%m-%d") if t else ""
+    return date, float(last_c), float(prev_close)
 
 
 def fetch_one(name, sym, extra=None):
     """한 종목의 최신 스냅샷 dict를 반환. 실패 시 None."""
     try:
         res = fetch_last_two(sym)
-    except (urllib.error.URLError, TimeoutError, OSError) as e:
+    except (urllib.error.URLError, TimeoutError, OSError,
+            ValueError, KeyError, IndexError, TypeError) as e:
         print(f"[warn] {name}({sym}) 조회 실패: {e}")
         return None
     if not res:
