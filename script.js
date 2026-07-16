@@ -112,9 +112,12 @@ function renderMarket(data) {
   const fxStrip = document.getElementById('marketFx');
   const updated = document.getElementById('marketUpdated');
   if (!data) return;
-  updated.textContent = data.updatedAt && data.updatedAt !== 'seed'
-    ? `업데이트 ${data.updatedAt}`
-    : `기준 ${data.asOf || ''}`;
+  if (data.updatedAt && data.updatedAt !== 'seed') {
+    const pretty = String(data.updatedAt).replace('T', ' ').replace(/[+-]\d{2}:\d{2}$/, '').slice(0, 16);
+    updated.textContent = `업데이트 ${pretty} KST · 장중 1시간마다 자동`;
+  } else {
+    updated.textContent = `기준 ${data.asOf || ''} · 장중 1시간마다 자동`;
+  }
   const indices = data.indices || data.items || [];
   strip.innerHTML = indices.map(marketItemHtml).join('');
   if (fxStrip) fxStrip.innerHTML = (data.fx || []).map(marketItemHtml).join('');

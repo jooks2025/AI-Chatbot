@@ -143,10 +143,20 @@ def make_summary(indices, fx, as_of):
     return text + "."
 
 
+def should_notify():
+    """알림은 하루 1번(07:00 KST 아침 브리핑)만. 수동 실행(NTFY_FORCE)은 항상 전송."""
+    if os.environ.get("NTFY_FORCE", "").strip():
+        return True
+    return datetime.now(KST).hour == 7
+
+
 def notify(summary):
     topic = os.environ.get("NTFY_TOPIC", "").strip()
     if not topic:
         print("[info] NTFY_TOPIC 미설정, 알림 건너뜀")
+        return
+    if not should_notify():
+        print("[info] 아침 브리핑 시간이 아니라 알림 건너뜀 (데이터만 갱신)")
         return
     payload = json.dumps({
         "topic": topic,

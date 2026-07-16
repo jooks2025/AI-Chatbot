@@ -1,9 +1,11 @@
-name: Daily market update
+name: Market update (near real-time)
 
 on:
   schedule:
-    # 22:00 UTC = 07:00 KST (매일). 예약 실행은 저장소 기본 브랜치에서만 동작함.
-    - cron: "0 22 * * *"
+    # 매시간 정각(UTC). 데이터가 바뀔 때만 커밋하므로 장 마감·주말엔 커밋이 쌓이지 않음.
+    # 07:00 KST(=22:00 UTC) 실행에서만 아침 브리핑 푸시를 보낸다(스크립트가 판단).
+    # 예약 실행은 저장소 기본 브랜치에서만 동작함.
+    - cron: "0 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -26,6 +28,8 @@ jobs:
       - name: Update market snapshot and notify
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          # 수동 실행(테스트)일 때는 시간과 무관하게 알림을 보낸다.
+          NTFY_FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
         run: python scripts/update_market.py
 
       - name: Update sector news (Korean)
