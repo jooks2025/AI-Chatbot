@@ -114,9 +114,9 @@ function renderMarket(data) {
   if (!data) return;
   if (data.updatedAt && data.updatedAt !== 'seed') {
     const pretty = String(data.updatedAt).replace('T', ' ').replace(/[+-]\d{2}:\d{2}$/, '').slice(0, 16);
-    updated.textContent = `업데이트 ${pretty} KST · 장중 1시간마다 자동`;
+    updated.textContent = `업데이트 ${pretty} KST · 장중 15분마다 자동`;
   } else {
-    updated.textContent = `기준 ${data.asOf || ''} · 장중 1시간마다 자동`;
+    updated.textContent = `기준 ${data.asOf || ''} · 장중 15분마다 자동`;
   }
   const indices = data.indices || data.items || [];
   strip.innerHTML = indices.map(marketItemHtml).join('');

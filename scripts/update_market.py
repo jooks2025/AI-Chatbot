@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""매일 주요 지수 종가를 Stooq(무료)에서 받아 data/market.json을 갱신하고,
-NTFY_TOPIC 환경변수가 있으면 ntfy.sh로 증시 요약 푸시를 보낸다.
+"""주요 지수 종가와 환율을 Stooq(무료)에서 받아 data/market.json을 갱신한다.
 
-GitHub Actions에서 실행되며 외부 의존성 없이 표준 라이브러리만 사용한다.
+GitHub Actions에서 15분마다 실행되며 외부 의존성 없이 표준 라이브러리만 사용한다.
 """
 import json
 import os
@@ -143,43 +142,6 @@ def make_summary(indices, fx, as_of):
     return text + "."
 
 
-def should_notify():
-    """알림은 하루 1번(07:00 KST 아침 브리핑)만. 수동 실행(NTFY_FORCE)은 항상 전송."""
-    if os.environ.get("NTFY_FORCE", "").strip():
-        return True
-    return datetime.now(KST).hour == 7
-
-
-def notify(summary):
-    topic = os.environ.get("NTFY_TOPIC", "").strip()
-    if not topic:
-        print("[info] NTFY_TOPIC 미설정, 알림 건너뜀")
-        return
-    if not should_notify():
-        print("[info] 아침 브리핑 시간이 아니라 알림 건너뜀 (데이터만 갱신)")
-        return
-    payload = json.dumps({
-        "topic": topic,
-        "title": "Daily Market Brief",
-        "message": summary,
-        "tags": ["chart_with_upwards_trend"],
-    }).encode("utf-8")
-    for i in range(3):
-        try:
-            req = urllib.request.Request(
-                "https://ntfy.sh",
-                data=payload,
-                headers={"Content-Type": "application/json"},
-            )
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                print(f"[ok] ntfy 전송 완료 ({resp.status})")
-            return
-        except (urllib.error.URLError, OSError) as e:
-            print(f"[warn] ntfy 전송 실패({i + 1}/3): {e}")
-            if i < 2:
-                time.sleep(2 * (i + 1))
-
-
 def main():
     indices, fx = build()
     if not indices:
@@ -198,7 +160,6 @@ def main():
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
     print(f"[ok] {OUT} 갱신: {summary}")
-    notify(summary)
 
 
 if __name__ == "__main__":
