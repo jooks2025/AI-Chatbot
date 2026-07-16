@@ -37,10 +37,22 @@ def _get_json(url, attempts=3):
     raise last
 
 
-def _chart(symbol, rng):
+def _chart(symbol, rng, interval="1d"):
     url = ("https://query1.finance.yahoo.com/v8/finance/chart/"
-           + urllib.parse.quote(symbol) + f"?range={rng}&interval=1d")
+           + urllib.parse.quote(symbol) + f"?range={rng}&interval={interval}")
     return _get_json(url)
+
+# 차트 기간 -> (Yahoo range, interval)
+RANGES = [
+    ("1d", "1d", "5m"),
+    ("1mo", "1mo", "1d"),
+    ("3mo", "3mo", "1d"),
+    ("6mo", "6mo", "1d"),
+    ("1y", "1y", "1d"),
+    ("3y", "3y", "1wk"),
+    ("5y", "5y", "1wk"),
+    ("10y", "10y", "1mo"),
+]
 
 
 _ytd_cache = {}
@@ -62,19 +74,21 @@ def ytd(symbol):
     return val
 
 
-def history(symbol, rng="1mo"):
+def history(symbol, rng, interval):
+    intraday = interval.endswith("m") or interval.endswith("h")
+    fmt = "%H:%M" if intraday else ("%y/%m" if interval in ("1wk", "1mo") else "%m/%d")
     try:
-        res = _chart(symbol, rng)["chart"]["result"][0]
+        res = _chart(symbol, rng, interval)["chart"]["result"][0]
         ts = res["timestamp"]
         cl = res["indicators"]["quote"][0]["close"]
         pts = [(t, c) for t, c in zip(ts, cl) if c is not None]
         time.sleep(0.2)
         return {
-            "dates": [datetime.fromtimestamp(t, KST).strftime("%m/%d") for t, _ in pts],
+            "dates": [datetime.fromtimestamp(t, KST).strftime(fmt) for t, _ in pts],
             "closes": [round(c, 2) for _, c in pts],
         }
     except Exception as e:  # noqa: BLE001
-        print(f"[warn] history {symbol}: {e}")
+        print(f"[warn] history {symbol} {rng}: {e}")
         return None
 
 
@@ -118,22 +132,32 @@ def update_charts():
             prev = {}
     series = {}
     for name, sym in INDEX_SYMBOLS.items():
-        h = history(sym, "1mo")
-        series[name] = h if h else prev.get(name)
+        ranges = {}
+        for key, rng, interval in RANGES:
+            h = history(sym, rng, interval)
+            ranges[key] = h if h else (prev.get(name, {}) or {}).get(key)
+        series[name] = ranges
     out = {"updatedAt": datetime.now(KST).isoformat(timespec="minutes"), "series": series}
     with open(p, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    print("[ok] charts.json 갱신")
+    print("[ok] charts.json 갱신 (8개 기간)")
 
 
 def main():
-    if not os.environ.get("DERIVED_FORCE") and datetime.now(KST).minute >= 15:
+    force = os.environ.get("DERIVED_FORCE")
+    minute = datetime.now(KST).minute
+    hour = datetime.now(KST).hour
+    if not force and minute >= 15:
         print("[info] derived: 매시간 1회만 실행 — 이번 분에는 건너뜀")
         return
     update_heatmap()
     update_fundamentals()
-    update_charts()
+    # 차트(8개 기간 x 7지수)는 호출이 많아 하루 2회(07·15시)만 갱신
+    if force or hour in (7, 15):
+        update_charts()
+    else:
+        print("[info] 차트는 07·15시에만 갱신 — 건너뜀")
 
 
 if __name__ == "__main__":

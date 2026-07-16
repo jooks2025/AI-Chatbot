@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>나의 경제 브리핑</title>
-<meta name="description" content="팩트 기반으로 경제 기사·리스크·펀더멘탈 수치를 정리하는 개인 경제 브리핑">
+<title>경알못 — 어려운 경제, 쉽게</title>
+<meta name="description" content="어려운 경제 뉴스와 지표를 MZ 눈높이로 쉽게 풀어주는 경제 브리핑. 시세·차트·산업뉴스 자동 업데이트.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
       <div class="brand">
-        <span class="brand-mark">₩</span>
+        <span class="brand-mark">경</span>
         <div>
-          <h1>나의 경제 브리핑</h1>
-          <p class="tagline">팩트 기반 · 시장 · 리스크 · 펀더멘탈</p>
+          <h1>경알못</h1>
+          <p class="tagline">어려운 경제, MZ 눈높이로 쉽게 풀어드려요</p>
         </div>
       </div>
       <nav class="tabs" role="tablist">
@@ -45,7 +45,17 @@
         <div id="marketStrip" class="market-strip"></div>
         <div class="market-sub-label">환율</div>
         <div id="marketFx" class="market-strip"></div>
+        <div class="market-sub-label" id="extraLabel" hidden>핵심 지표 · 원자재</div>
+        <div id="marketExtra" class="market-strip"></div>
       </div>
+
+      <div class="edu-band" id="eduBand"></div>
+
+      <div class="section-head" id="liveHead" hidden>
+        <h2>🔴 실시간 경제 뉴스 <span class="auto-tag">자동</span></h2>
+        <p class="section-sub">Google 뉴스에서 자동 수집 · 호재는 초록 / 악재는 빨강</p>
+      </div>
+      <div id="liveNews" class="live-news"></div>
 
       <div class="section-head news-section-head">
         <h2>뉴스</h2>
@@ -67,6 +77,14 @@
           <option value="에너지">에너지</option>
           <option value="금융">금융</option>
           <option value="헬스케어">헬스케어</option>
+          <option value="부동산">부동산</option>
+          <option value="코인·가상자산">코인·가상자산</option>
+          <option value="정책·규제">정책·규제</option>
+          <option value="고용·노동">고용·노동</option>
+          <option value="소비·물가">소비·물가</option>
+          <option value="원자재">원자재</option>
+          <option value="세계경제">세계경제</option>
+          <option value="쉬운 경제">쉬운 경제</option>
           <option value="기업">기업</option>
         </select>
       </div>
@@ -151,11 +169,12 @@
         <span id="chartTitle"></span>
         <button id="chartClose" class="modal-close" aria-label="닫기" data-close>✕</button>
       </div>
+      <div class="range-row" id="rangeRow"></div>
       <canvas id="chartCanvas" width="640" height="300"></canvas>
       <p id="chartMeta" class="chart-meta"></p>
     </div>
   </div>
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>

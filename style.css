@@ -251,6 +251,87 @@ input:focus, select:focus {
 .cal-item b { color: var(--navy-600); font-weight: 800; }
 .events-sep { width: 1px; align-self: stretch; background: var(--border); }
 
+/* ---------- 쉬운 경제 밴드 ---------- */
+.edu-band {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  scrollbar-width: thin;
+}
+.edu-lead {
+  flex: 0 0 auto;
+  align-self: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--navy-600);
+  padding-right: 0.2rem;
+}
+.edu-tip {
+  flex: 0 0 auto;
+  max-width: 340px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 0.45rem 0.7rem;
+  font-size: 0.8rem;
+  cursor: default;
+}
+.edu-tip b { display: block; color: var(--text); font-size: 0.85rem; }
+.edu-tip .edu-desc { color: var(--text-muted); font-size: 0.76rem; }
+
+/* ---------- 실시간 경제 뉴스 (홈) ---------- */
+.auto-tag {
+  font-size: 0.65rem; font-weight: 800; vertical-align: middle;
+  background: var(--down); color: #fff; padding: 0.1rem 0.4rem; border-radius: 999px;
+}
+.live-news {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.live-item {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: var(--text);
+}
+.live-item:hover { border-color: var(--navy-500); }
+.live-item.pos { border-left-color: var(--up); }
+.live-item.neg { border-left-color: var(--down); }
+.live-sector { font-size: 0.68rem; font-weight: 800; color: var(--chip-text); background: var(--chip-bg); padding: 0.05rem 0.4rem; border-radius: 999px; }
+.live-title { display: block; font-size: 0.88rem; font-weight: 600; margin: 0.2rem 0; overflow-wrap: anywhere; }
+.live-item.pos .live-title { color: var(--up); }
+.live-item.neg .live-title { color: var(--down); }
+.live-meta { font-size: 0.72rem; color: var(--text-muted); }
+
+/* ---------- 차트 기간 버튼 ---------- */
+.range-row { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.7rem; }
+.range-btn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+.range-btn.active { background: var(--navy-600); border-color: var(--navy-600); color: #fff; }
+.range-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.chart-meta .pos { color: var(--up); font-weight: 700; }
+.chart-meta .neg { color: var(--down); font-weight: 700; }
+
 /* ---------- Market board ---------- */
 .market-board {
   background: var(--surface);

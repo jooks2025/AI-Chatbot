@@ -31,6 +31,15 @@ FX = [
     ("위안/달러", "USDCNY=X", "위안"),
 ]
 
+# 표시명 -> Yahoo 심볼, 단위, 한 줄 설명 (핵심 지표·원자재)
+EXTRA = [
+    ("미 10년물 국채", "^TNX", "%", "장기 금리. 오르면 주식 밸류에이션·대출에 부담"),
+    ("VIX 공포지수", "^VIX", "pt", "시장 불안이 커지면 상승(공포지수)"),
+    ("금", "GC=F", "$/oz", "대표 안전자산. 불안·금리↓일 때 강세"),
+    ("WTI 유가", "CL=F", "$/bbl", "오르면 물가·기업 비용 ↑"),
+    ("구리", "HG=F", "$/lb", "경기 민감해 '닥터 코퍼'로 불림"),
+]
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "data", "market.json")
 KST = timezone(timedelta(hours=9))
@@ -138,7 +147,23 @@ def build():
         if item:
             fx.append(item)
 
-    return indices, fx
+    prev_extra = {}
+    if os.path.exists(OUT):
+        try:
+            with open(OUT, encoding="utf-8") as f:
+                prev_extra = {it["name"]: it for it in json.load(f).get("extra", [])}
+        except (OSError, json.JSONDecodeError):
+            prev_extra = {}
+    extra = []
+    for name, sym, unit, note in EXTRA:
+        item = fetch_one(name, sym, {"unit": unit, "note": note})
+        if not item and name in prev_extra:
+            print(f"[info] {name} 이전 값 유지")
+            item = prev_extra[name]
+        if item:
+            extra.append(item)
+
+    return indices, fx, extra
 
 
 def fmt_num(v):
@@ -158,7 +183,7 @@ def make_summary(indices, fx, as_of):
 
 
 def main():
-    indices, fx = build()
+    indices, fx, extra = build()
     if not indices:
         print("[error] 수집된 지수가 없어 종료 (기존 파일 유지)")
         return
@@ -170,6 +195,7 @@ def main():
         "summary": summary,
         "indices": indices,
         "fx": fx,
+        "extra": extra,
     }
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

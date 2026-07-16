@@ -118,7 +118,8 @@ function marketItemHtml(it, chartable) {
   const chg = hasChange ? fmtPct(it.change) : '';
   const unit = it.unit ? `<span class="mi-unit"> ${escapeHtml(it.unit)}</span>` : '';
   const clickable = chartable ? ` clickable" data-chart="${escapeHtml(it.name)}` : '';
-  return `<div class="market-item${clickable}">
+  const tip = it.note ? ` title="${escapeHtml(it.note)}"` : '';
+  return `<div class="market-item${clickable}"${tip}>
     <div class="mi-name">${escapeHtml(it.name)}</div>
     <div class="mi-close">${fmtClose(it.close)}${unit}</div>
     <div class="mi-change ${cls}">${chg}</div>
@@ -139,6 +140,44 @@ function renderMarket(data) {
   const indices = data.indices || data.items || [];
   strip.innerHTML = indices.map((it) => marketItemHtml(it, true)).join('');
   if (fxStrip) fxStrip.innerHTML = (data.fx || []).map((it) => marketItemHtml(it, false)).join('');
+
+  const extraStrip = document.getElementById('marketExtra');
+  const extraLabel = document.getElementById('extraLabel');
+  const extra = data.extra || [];
+  if (extraStrip) {
+    extraStrip.innerHTML = extra.map((it) => marketItemHtml(it, false)).join('');
+    if (extraLabel) extraLabel.hidden = extra.length === 0;
+  }
+}
+
+// ---------- 쉬운 경제 (매크로 주석) ----------
+function renderEdu(data) {
+  const band = document.getElementById('eduBand');
+  if (!band || !data || !data.tips) return;
+  band.innerHTML = '<span class="edu-lead">🧠 쉬운 경제</span>' + data.tips.map((t) =>
+    `<span class="edu-tip" title="${escapeHtml(t.d)}"><b>${escapeHtml(t.t)}</b><span class="edu-desc">${escapeHtml(t.d)}</span></span>`
+  ).join('');
+}
+
+// ---------- 실시간 경제 뉴스 (산업뉴스 자동 수집분을 홈에 요약) ----------
+function renderLiveNews(sectorData) {
+  const wrap = document.getElementById('liveNews');
+  const head = document.getElementById('liveHead');
+  if (!wrap || !sectorData || !sectorData.sectors) return;
+  const all = [];
+  Object.entries(sectorData.sectors).forEach(([sector, items]) => {
+    (items || []).forEach((n) => all.push({ ...n, sector }));
+  });
+  all.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  const top = all.slice(0, 8);
+  if (!top.length) return;
+  head.hidden = false;
+  wrap.innerHTML = top.map((n) => `
+    <a class="live-item ${importanceClass(n.title)}" href="${escapeHtml(n.link)}" target="_blank" rel="noopener noreferrer">
+      <span class="live-sector">${escapeHtml(n.sector)}</span>
+      <span class="live-title">${escapeHtml(n.title)}</span>
+      <span class="live-meta">${escapeHtml(n.source || '')} · ${escapeHtml(n.date || '')}</span>
+    </a>`).join('');
 }
 
 // ---------- Economic events / rates band ----------
@@ -164,12 +203,25 @@ function renderEvents(data) {
 // ---------- Index price chart (modal) ----------
 let chartSeries = {};
 const chartModal = document.getElementById('chartModal');
+const RANGE_LABELS = [['1d', '1일'], ['1mo', '1개월'], ['3mo', '3개월'], ['6mo', '6개월'], ['1y', '1년'], ['3y', '3년'], ['5y', '5년'], ['10y', '10년']];
+let currentChartName = null;
 
-function openChart(name) {
-  const s = chartSeries[name];
-  const canvas = document.getElementById('chartCanvas');
-  document.getElementById('chartTitle').textContent = `${name} · 최근 1개월`;
+function openChart(name, range) {
+  currentChartName = name;
+  const perName = chartSeries[name] || {};
+  // 데이터가 있는 기간만 버튼으로 노출, 기본은 1개월(없으면 첫 사용가능 기간)
+  const available = RANGE_LABELS.filter(([k]) => perName[k] && perName[k].closes && perName[k].closes.length >= 2);
+  let rng = range || (available.some(([k]) => k === '1mo') ? '1mo' : (available[0] && available[0][0]));
+
+  const rangeRow = document.getElementById('rangeRow');
+  rangeRow.innerHTML = (available.length ? available : RANGE_LABELS).map(([k, label]) =>
+    `<button class="range-btn${k === rng ? ' active' : ''}" data-range="${k}"${perName[k] ? '' : ' disabled'}>${label}</button>`
+  ).join('');
+
+  document.getElementById('chartTitle').textContent = name;
   const meta = document.getElementById('chartMeta');
+  const canvas = document.getElementById('chartCanvas');
+  const s = perName[rng];
   if (!s || !s.closes || s.closes.length < 2) {
     meta.textContent = '차트 데이터 준비 중이에요 (다음 자동 갱신에서 채워집니다).';
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
@@ -177,10 +229,16 @@ function openChart(name) {
     drawLineChart(canvas, s);
     const first = s.closes[0], last = s.closes[s.closes.length - 1];
     const pct = ((last - first) / first * 100);
-    meta.textContent = `${s.dates[0]} → ${s.dates[s.dates.length - 1]} · ${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%`;
+    const cls = pct >= 0 ? 'pos' : 'neg';
+    meta.innerHTML = `${escapeHtml(s.dates[0])} → ${escapeHtml(s.dates[s.dates.length - 1])} · <span class="${cls}">${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%</span>`;
   }
   chartModal.hidden = false;
 }
+
+document.getElementById('rangeRow').addEventListener('click', (e) => {
+  const btn = e.target.closest('.range-btn');
+  if (btn && !btn.disabled && currentChartName) openChart(currentChartName, btn.dataset.range);
+});
 
 function drawLineChart(canvas, s) {
   const ctx = canvas.getContext('2d');
@@ -375,10 +433,14 @@ async function init() {
     console.warn('market.json 로드 실패:', e);
   }
 
-  // 산업별 뉴스 (없어도 나머지는 정상 동작)
+  // 산업별 뉴스 + 홈 실시간 뉴스 (없어도 나머지는 정상 동작)
   try {
     const sectorRes = await fetchData('data/sector_news.json');
-    if (sectorRes.ok) renderSectorNews(await sectorRes.json());
+    if (sectorRes.ok) {
+      const sectorData = await sectorRes.json();
+      renderSectorNews(sectorData);
+      renderLiveNews(sectorData);
+    }
   } catch (e) {
     console.warn('sector_news.json 로드 실패:', e);
   }
@@ -389,6 +451,14 @@ async function init() {
     if (evRes.ok) renderEvents(await evRes.json());
   } catch (e) {
     console.warn('events.json 로드 실패:', e);
+  }
+
+  // 쉬운 경제 (매크로 주석)
+  try {
+    const mRes = await fetchData('data/macro.json');
+    if (mRes.ok) renderEdu(await mRes.json());
+  } catch (e) {
+    console.warn('macro.json 로드 실패:', e);
   }
 
   // 지수 차트 데이터 (클릭 시 사용)
