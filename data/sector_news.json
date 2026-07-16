@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T13:08+09:00",
+  "updatedAt": "2026-07-16T13:38+09:00",
   "sectors": {
     "조선": [
       {
@@ -53,18 +53,6 @@
         "date": "2026-07-15"
       },
       {
-        "title": "상반기 산재 사망 ‘역대 최저’…건설업서 줄었지만 제조업은 37%↑",
-        "source": "데일리안",
-        "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxQN05xaVBUOTF1ZE5oNHRrNXpwUnJhZmNiZEpwbHJtSF93YTJBSWthR28yUDJGN2p4TUpkMWpmM3JwdWR2SV9WYjZ0WklXWEpXX2x3aDYza0ZCMlVwd0dwUG1raVAwdFliNHEzM0VYTU1rTm43VlRMSlFqajREUmxZblMxb2c2NHJkQjcxZC01Z1BYeEVjRzJEZVpPUUZ6VzJ6TThPUnhjOWJuOUxfSEpWcDlZUEVlRENEUHlEYVVfWGU0dm01MnVxWURrRUNwVXRGTEtpenpjYWxpZlBCNFJ3UWhLVk8yUWdNZWQ0OXptX1d0a0VqN0YxY2txY0l5MUhEWEkzWU1iS3RCODNXd2dQdVJrN1VVb1RPMzZ1V21PWXRjb1E?oc=5",
-        "date": "2026-07-15"
-      },
-      {
-        "title": "상반기 산재사망 253명 '역대 최저'…건설업 줄고 제조업 늘어",
-        "source": "더팩트",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE12RV9STGo1YzYzT0ZPaG5udTVzLWg3UWFvNVRzWUZMS3N1NUdFcFNzVkRTUGtIM2xOcXo5VUV6V2o0blI1MEQ0S1pSdldyUGJsZThYU19n0gFQQVVfeXFMTk0tOTZwU2ZZTEtDeTYxbFN6VzNJTnRBYWo1VTJuX0VtdEJCYjVTSklsZmZOakNnbTVGalhkdkNVVVJ4YURJeEZrYjl2MW5teWc?oc=5",
-        "date": "2026-07-15"
-      },
-      {
         "title": "취업자수 4만명 줄더니 6월에 반등…제조·건설업 2년 연속 감소세",
         "source": "한겨레",
         "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBBSER0YmcxN2E1aVJ1UHJaaHhwUFNHbkQ0bjM0bVp1SmkzR3RwYjlBdjc1Q0pEU19WVC1lcGtGQ2ZRUE4wVGFfMkQzd3pTd2p1MlNFdkpFakZaZWpNLV9tbTltSXFfSnl2OXkzTW5IcEEtZw?oc=5",
@@ -75,6 +63,18 @@
         "source": "대한경제",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9pMk1HOWhCYlJkQ01XZjZMdl9jdmJkTDdaZ1dIczAtU2IwcVo1azN5aG1LSVlJRWZ1ZVdsMERndExLUDV2eWlVUUhERWhxZ0ltb0ZCajhsc2lpQ2htSlpsYVQ2c1BPa1lqd3poRVc3NXJya2c?oc=5",
         "date": "2026-07-14"
+      },
+      {
+        "title": "[KMEC 증권 레이더 ⑯] 격화된 이란 분쟁, 건설업 투자심리 흔든다",
+        "source": "기계설비신문",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9KdHNZZnZiNGVrSEZxT2FneGwyZS1yODBTM0VzQzBNOEtzeGN0RXQwWm56a2NRMGxvZy1LaWlQVEE2VkpkQjZCQlFoYzljRnFXMG9TQWJWdU1tY3hmX3NocXBEYTN3RmgyVGFlcw?oc=5",
+        "date": "2026-07-16"
+      },
+      {
+        "title": "종합건설업 보호구간 신설 추진…전문업계와 '상호 보호' 체계 마련",
+        "source": "에너지데일리",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5wVzlGNTZULVdsWUE0T0c1dkpGY1o4X0drQndWUXZIUmI3YzA5MDlMUkVfTlFhV0NVbXYxNm9pVXlPb0ktTkRfWEtiejc4NG5neHVCSzdoR2gtTEw1WEtJYTBwVzVlbzBPclh1VFNXd0lIQQ?oc=5",
+        "date": "2026-07-15"
       }
     ],
     "반도체": [
@@ -91,27 +91,27 @@
         "date": "2026-07-16"
       },
       {
-        "title": "반도체 용수 확보 급한데…영산강 대체 식수원 사업 공모 탈락",
+        "title": "“자체 칩으론 AI 감당 안 돼”…자존심 구긴 애플, 결국 반도체 기업 인수 추진",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBQQVAzWEE5bFhlTHNua3RVVmtuREd2ZjlUUG5sMW54eEN3akFGLS0tbU1pSTJnTUJhaWF4cDM4TUZFU0JEdGg3eHRVQTFXaHM?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBvWEJrUlVEcTU1bV9TNnJ6dTNhdTcyUktTNzdETXB2Z2tPYzFrRWFmdXo1S3RiWTA3UHRNTVIyZTgzX0VueFR0eXQ1cGd2eDQ?oc=5",
         "date": "2026-07-16"
       },
       {
-        "title": "반도체공학회·팹리스산업협회, 'K-팹리스 생태계 조성' 협력",
-        "source": "전자신문",
-        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE45TzRoa0s3UVFLSDcyQmZEbzRzWTNQM2lEZ0tJanRFREQyamhoZFk3YnU5SXdWSHZ2cHllcHpyNVZKUHM4THFlSFJKNjg2dw?oc=5",
+        "title": "애플, AI 서버칩 경쟁력 위해 반도체기업 인수 타진…엔비디아 의존 극복 시도",
+        "source": "동아일보",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE12RU9KdlJDb3pSalhudUlBN0JVRmhJZlN6ZHZSZmJYYjZfRm4wMjBCNmJfeWp5Ry1SVGVYV0VDVUJpNnpkdXNQWWZibWlUeWNEaXJ4clN0OEZ1ODltVGN0XzRSSjY3R1hMZnRNeGJUWGRESktuSVHSAWZBVV95cUxNTWJYZml4VEF4SndfbDVSczlVcUR2TWI1WDdkRExpcF9OUlN2ZC1kSG9rTnE5NkJmNnRPUktrbWF0WDV1UHBZNjlIbzlLSGt5UzY0SUNyQkVXMG5PLTZxenRzSG1kdnc?oc=5",
         "date": "2026-07-16"
       },
       {
-        "title": "[속보] 한은 총재 \"반도체 가격 주시…한국 경제 미래에 시사점 많아\"",
-        "source": "연합뉴스TV",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9TWXFDTFpuVGxRa09iVEp4QUhocFZkZGZnNUxWU0YzaldzV0ZKUWJkN0YyLWJsZGRVUUIyQ1BMRVJ4c3JXTVhCcFpIVkxEaW5IQTJxZHFMc0JyUnIxQ1YySFY0cVBhM1E?oc=5",
+        "title": "한은 총재",
+        "source": "매일경제 마켓",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9KLXl6WmNWMVJ3QUMycFctaHItc3RPTF9YN1gtRVNVMWw0RDBIZDJSakM5N2hsQWNTRjczSGp5SHRvbmV3TGhSV3MyQkdBbGNBVmc?oc=5",
         "date": "2026-07-16"
       },
       {
-        "title": "SG, '1500조 반도체 메가프로젝트' 온다…SK하이닉스향 단독 공급 부각",
+        "title": "한은 \"반도체 호조로 성장세 확대…소비자물가 여전히 높아\"",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ZYkc4bGlLZEVyMjZiZXN4T1hvUklrVExIQW9DVUMxU3pMYlZsNG4wdG01UEpKOUhZZFVtUi00NVdELWo1RHVvOHdibGM1R0U?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1CYmMwMEo5ekNkN1hJbmRKMEJDODd4a1hEbzBvUzNzb1ExZ0lQQ2JQT1N5QjBsYmE5eG1Ednl2bHl6XzBXTmh2ek15VDVuVkk?oc=5",
         "date": "2026-07-16"
       }
     ],
@@ -123,9 +123,21 @@
         "date": "2026-07-16"
       },
       {
+        "title": "2026 김포 독서대전 ＜미래를 보는 눈＞ 인공지능（AI） 명사특강 임창환 교수 강연",
+        "source": "경기평화신문",
+        "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1EMFYtSEJWNVg4dGkzMWNOS01fTUlWTjRjb3RLbmJ3Z1RDWXVQWTZaVzFvREUydWJaTU94bWRaWWpZQ2k1ZXBfTTZB?oc=5",
+        "date": "2026-07-16"
+      },
+      {
         "title": "李대통령 \"AI 생성물 악용 심각…제재 고민해야\"",
         "source": "KB Think",
         "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE54YkxqemJOaUtWem5NOXliSHJYUDJpQ18wU0N1WTVWR0RYcFF1NG1lR05tbzZJSFhQM1lBVnQ5VTBzYXJwZTE3aUZXeWs1MkktRzdIWE5aMXQtdEJhejRGbDRjZHhwMm42N3NpM0JZR3JzQQ?oc=5",
+        "date": "2026-07-16"
+      },
+      {
+        "title": "2026 김포 독서대전 ＜미래를 보는 눈＞ 인공지능（AI） 명사특강 임창환 교수 강연",
+        "source": "경인신문",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE96ZDRGTHNTSVN2ZGVaLXF0TkxGb1JBSU1NbkxxOHJRWGY2ZEZjdnlmVkg4bVgwZVltTk1HQ0ZFYjdJYUZfcEVscXZ1SXB4OWdTUXN2UVEtWXdUSDNqcUVmdnRSY29sRWs?oc=5",
         "date": "2026-07-16"
       },
       {
@@ -135,21 +147,9 @@
         "date": "2026-07-16"
       },
       {
-        "title": "李대통령 \"AI, 인류가 불을 발견한 수준…우리에게 결정적 기회\"",
-        "source": "매일경제 마켓",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9jYVZPZ3NkemVDUTEyTzdOTWNBWVNvRnhrN3liRTlUUVl6aG04VWZuY0hoaHlGX2ItSUlXdGhkSU5qay1ocVlzcUk5RURCV1F5Z2c?oc=5",
-        "date": "2026-07-16"
-      },
-      {
         "title": "글로벌 제약사들 루닛 인공지능 이용한다...타깃치료제 속도",
         "source": "메디칼타임즈",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBGOVZvM1Z5UndVa3k1N0cxd05GdUJxUENkVkxCSWJWT0NNT0Y3VGV5Z1FyNFNtMjdBMkNQVEQ0b2RHTWtmQnN3R2xDa0VKX2JRRy1XMHdnbDJFcE5SS0ZMaXFwVHVmYTFobFd1QjRZR0hSdjA?oc=5",
-        "date": "2026-07-16"
-      },
-      {
-        "title": "이 대통령 “AI 생성물 표시 과태료 유예하니 악용 많아”",
-        "source": "한겨레",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9WcmFxRWN6b3FXdUFlNUNqWXczTW9TT0c3UHRWZUdPMnF6YWdMUWZrbGJhTWh0UEZpd3BObk9JYTlsMThlcWpVRTV3MjU0TkhSckhhMUFqbThNRnk3V2FReDRSekFMcURuOW04?oc=5",
         "date": "2026-07-16"
       }
     ],
@@ -193,6 +193,12 @@
     ],
     "금융": [
       {
+        "title": "신현송 한은총재 \"증시 변동성, 금융시스템 위기될 가능성 작다\"",
+        "source": "뉴스핌",
+        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5Zb3RmZklvdWlTVkotVGZmMzFRQndfUS1GVHNwYWxtLTNfU2JCYUkwc0VTcnJpZmNVZWRnemRWUUl4VmlHVXgxZXp0U2h3YUNmcTRteVBINzZOclZ5?oc=5",
+        "date": "2026-07-16"
+      },
+      {
         "title": "[속보]신현송 \"증시 변동성, 실물경제·금융안정 영향 제한적\"",
         "source": "아시아경제",
         "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBwa0xhTHZUbmczS3NrUWJDX2ZuUXIzWjduWWdfVXBzZEtwX2QtRWhVZnEwanNTR3V3WUhCeVRKWklXUDJ1QnpTRk9zdzNNZzNuV0NxVFhwaU1COFI0VlhWMw?oc=5",
@@ -220,12 +226,6 @@
         "title": "\"화장품 넘어 금융 영토로\"… 미 기네스 아킨슨, 뉴욕증시에 최초 'K-뷰티 ETF' 상장 추진",
         "source": "글로벌이코노믹",
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM3VDWk8yYW1zS19BY3lSUzFZR0NhTG9iN2xqZ1NXeFFhRVZfRlVrblFqbDg2OUpweWFDM0xydzRRNl8ydDg4OEdZdmN2dlF2c2V6X0ZteVN6M2ladXUyV0U5dHM2LU15VEJlOWY0SURPSE1yUjZZMWVNUGNEc2RDRXJmbEZuQUQ3?oc=5",
-        "date": "2026-07-16"
-      },
-      {
-        "title": "다시 고개 든 반도체 불안",
-        "source": "중소기업신문",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9YUkpRWS1GVC1mQVBfeF9YeXp3TFUwRkgzUXlxekRUSVRQN3RmOEFmSC1zWjdVQ1M1Rno1VUoxakFRNlRkVFpEV2FkU183bGUyX3djeXRzMjNKbUVPMlRVV1h6V3hyWHlVNV83SDRn?oc=5",
         "date": "2026-07-16"
       }
     ],
@@ -261,9 +261,9 @@
         "date": "2026-07-15"
       },
       {
-        "title": "제약·바이오업계, 불붙은 여름 마케팅…'팝업·샘플링·호캉스'",
-        "source": "전자신문",
-        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB6M2drMl96dFFaUjVfMDJVdlhnMHE3TXRPRmxVSW9iQzN3T1MtbTlNV0pqUE11UjFUSFJuLV9PUGh4dWNhNWk1eXF1UkJtZw?oc=5",
+        "title": "AI·ADC·우주까지…제약·바이오 ESG 보고서, '미래사업 설명서'로",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5MQjlLSTBXT0loeDI2SHBTb2tMTUdPZmVzRjVDcDJTM3pvcTJCdjhFOTZKSmQyaFFxbS1lUkVsY3Q0dGxPeEE?oc=5",
         "date": "2026-07-15"
       }
     ]
