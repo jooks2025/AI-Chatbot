@@ -7,7 +7,7 @@
 <meta name="description" content="팩트 기반으로 경제 기사·리스크·펀더멘탈 수치를 정리하는 개인 경제 브리핑">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
   <header class="site-header">
@@ -31,6 +31,11 @@
   <main class="container">
     <!-- 뉴스 & 리스크 -->
     <section id="news" class="tab-panel active">
+      <div class="events-band" id="eventsBand">
+        <div class="rates-row" id="ratesRow"></div>
+        <div class="calendar-row" id="calendarRow"></div>
+      </div>
+
       <div class="market-board">
         <div class="market-head">
           <span class="market-title">주요 지수 · 환율</span>
@@ -139,6 +144,18 @@
     </div>
   </footer>
 
-  <script src="script.js?v=6"></script>
+  <div id="chartModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <span id="chartTitle"></span>
+        <button id="chartClose" class="modal-close" aria-label="닫기" data-close>✕</button>
+      </div>
+      <canvas id="chartCanvas" width="640" height="300"></canvas>
+      <p id="chartMeta" class="chart-meta"></p>
+    </div>
+  </div>
+
+  <script src="script.js?v=7"></script>
 </body>
 </html>

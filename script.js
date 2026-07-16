@@ -60,32 +60,30 @@ function renderNews() {
       <span class="${chipClass(n.category)}">${escapeHtml(n.category)}</span>
       <h3>${escapeHtml(n.title)}</h3>
       <p class="meta">${escapeHtml(n.source || '출처 미상')} · ${formatDate(n.date)}</p>
-      <p class="summary clamped">${escapeHtml(n.summary)}</p>
-      <button class="more-btn" type="button" hidden>더보기</button>
+      <p class="summary">${escapeHtml(n.summary)}</p>
       ${n.url ? `<a class="link-btn" href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer">원문 보기 →</a>` : ''}
     </article>
   `).join('');
-
-  // 요약이 5줄을 넘으면(잘리면) '더보기' 버튼을 노출한다.
-  newsList.querySelectorAll('.news-card').forEach((card) => {
-    const summary = card.querySelector('.summary');
-    const btn = card.querySelector('.more-btn');
-    if (summary && btn && summary.scrollHeight - summary.clientHeight > 2) {
-      btn.hidden = false;
-    }
-  });
 }
 
-// '더보기 / 접기' 토글
+// 카드 클릭으로 펼치기/접기 (원문 링크 클릭은 제외)
 document.getElementById('newsList').addEventListener('click', (e) => {
-  const btn = e.target.closest('.more-btn');
-  if (!btn) return;
-  const summary = btn.previousElementSibling;
-  const clamped = summary.classList.toggle('clamped');
-  btn.textContent = clamped ? '더보기' : '접기';
+  if (e.target.closest('a')) return;
+  const card = e.target.closest('.news-card');
+  if (card) card.classList.toggle('open');
 });
 
 // ---------- Sector news ----------
+const POS_WORDS = ['수주', '호황', '최대', '급증', '흑자', '신기록', '돌파', '상승', '성장', '반등', '확대', '호조', '수혜', '역대', '순항', '체결', '증가'];
+const NEG_WORDS = ['급락', '하락', '감소', '부진', '적자', '위기', '사망', '리스크', '둔화', '충격', '파산', '악화', '축소', '우려', '경고', '규제', '공백', '지연', '탈락', '중단'];
+
+function importanceClass(title) {
+  const t = String(title);
+  if (NEG_WORDS.some((w) => t.includes(w))) return 'neg';
+  if (POS_WORDS.some((w) => t.includes(w))) return 'pos';
+  return '';
+}
+
 function renderSectorNews(data) {
   const grid = document.getElementById('sectorGrid');
   const updated = document.getElementById('sectorsUpdated');
@@ -97,7 +95,7 @@ function renderSectorNews(data) {
   grid.innerHTML = Object.entries(data.sectors).map(([sector, items]) => {
     const body = (items && items.length)
       ? `<ul class="sector-news-list">${items.map((n) => `
-          <li>
+          <li class="${importanceClass(n.title)}">
             <a href="${escapeHtml(n.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a>
             <span class="sector-news-meta">${escapeHtml(n.source || '')}${n.date ? ` · ${escapeHtml(n.date)}` : ''}</span>
           </li>`).join('')}</ul>`
@@ -114,12 +112,13 @@ function fmtClose(v) {
   return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 4 });
 }
 
-function marketItemHtml(it) {
+function marketItemHtml(it, chartable) {
   const hasChange = it.change !== null && it.change !== undefined;
   const cls = Number(it.change) >= 0 ? 'pos' : 'neg';
   const chg = hasChange ? fmtPct(it.change) : '';
   const unit = it.unit ? `<span class="mi-unit"> ${escapeHtml(it.unit)}</span>` : '';
-  return `<div class="market-item">
+  const clickable = chartable ? ` clickable" data-chart="${escapeHtml(it.name)}` : '';
+  return `<div class="market-item${clickable}">
     <div class="mi-name">${escapeHtml(it.name)}</div>
     <div class="mi-close">${fmtClose(it.close)}${unit}</div>
     <div class="mi-change ${cls}">${chg}</div>
@@ -133,14 +132,104 @@ function renderMarket(data) {
   if (!data) return;
   if (data.updatedAt && data.updatedAt !== 'seed') {
     const pretty = String(data.updatedAt).replace('T', ' ').replace(/[+-]\d{2}:\d{2}$/, '').slice(0, 16);
-    updated.textContent = `업데이트 ${pretty} KST · 장중 15분마다 자동`;
+    updated.textContent = `업데이트 ${pretty} KST · 15분마다 자동 (지수 클릭 시 차트)`;
   } else {
-    updated.textContent = `기준 ${data.asOf || ''} · 장중 15분마다 자동`;
+    updated.textContent = `기준 ${data.asOf || ''} · 15분마다 자동 (지수 클릭 시 차트)`;
   }
   const indices = data.indices || data.items || [];
-  strip.innerHTML = indices.map(marketItemHtml).join('');
-  if (fxStrip) fxStrip.innerHTML = (data.fx || []).map(marketItemHtml).join('');
+  strip.innerHTML = indices.map((it) => marketItemHtml(it, true)).join('');
+  if (fxStrip) fxStrip.innerHTML = (data.fx || []).map((it) => marketItemHtml(it, false)).join('');
 }
+
+// ---------- Economic events / rates band ----------
+function renderEvents(data) {
+  const ratesRow = document.getElementById('ratesRow');
+  const calRow = document.getElementById('calendarRow');
+  if (!data) return;
+  ratesRow.innerHTML = (data.rates || []).map((r) => {
+    const arrow = r.dir === 'up' ? '▲' : r.dir === 'down' ? '▼' : '';
+    return `<span class="rate-pill" title="${escapeHtml(r.note || '')}">
+      <span class="rp-name">${escapeHtml(r.name)}</span>
+      <span class="rp-val">${escapeHtml(r.value)}</span>
+      <span class="rp-dir ${r.dir || ''}">${arrow}</span>
+    </span>`;
+  }).join('');
+  if ((data.calendar || []).length) {
+    calRow.innerHTML = '<span class="events-sep"></span>' + data.calendar.map((c) =>
+      `<span class="cal-item"><b>${escapeHtml((c.date || '').slice(5))}</b> ${escapeHtml(c.label)}</span>`
+    ).join('');
+  }
+}
+
+// ---------- Index price chart (modal) ----------
+let chartSeries = {};
+const chartModal = document.getElementById('chartModal');
+
+function openChart(name) {
+  const s = chartSeries[name];
+  const canvas = document.getElementById('chartCanvas');
+  document.getElementById('chartTitle').textContent = `${name} · 최근 1개월`;
+  const meta = document.getElementById('chartMeta');
+  if (!s || !s.closes || s.closes.length < 2) {
+    meta.textContent = '차트 데이터 준비 중이에요 (다음 자동 갱신에서 채워집니다).';
+    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+  } else {
+    drawLineChart(canvas, s);
+    const first = s.closes[0], last = s.closes[s.closes.length - 1];
+    const pct = ((last - first) / first * 100);
+    meta.textContent = `${s.dates[0]} → ${s.dates[s.dates.length - 1]} · ${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%`;
+  }
+  chartModal.hidden = false;
+}
+
+function drawLineChart(canvas, s) {
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height, pad = 34;
+  ctx.clearRect(0, 0, W, H);
+  const cs = s.closes;
+  const min = Math.min(...cs), max = Math.max(...cs);
+  const rng = (max - min) || 1;
+  const x = (i) => pad + (W - pad * 2) * (i / (cs.length - 1));
+  const y = (v) => pad + (H - pad * 2) * (1 - (v - min) / rng);
+  const up = cs[cs.length - 1] >= cs[0];
+  const line = up ? '#12905a' : '#d1493c';
+  // grid
+  const css = getComputedStyle(document.body);
+  ctx.strokeStyle = 'rgba(120,130,150,0.2)'; ctx.lineWidth = 1;
+  for (let g = 0; g <= 3; g++) {
+    const gy = pad + (H - pad * 2) * g / 3;
+    ctx.beginPath(); ctx.moveTo(pad, gy); ctx.lineTo(W - pad, gy); ctx.stroke();
+  }
+  // area
+  const grad = ctx.createLinearGradient(0, pad, 0, H - pad);
+  grad.addColorStop(0, up ? 'rgba(18,144,90,0.22)' : 'rgba(209,73,60,0.22)');
+  grad.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.beginPath(); ctx.moveTo(x(0), y(cs[0]));
+  cs.forEach((v, i) => ctx.lineTo(x(i), y(v)));
+  ctx.lineTo(x(cs.length - 1), H - pad); ctx.lineTo(x(0), H - pad); ctx.closePath();
+  ctx.fillStyle = grad; ctx.fill();
+  // line
+  ctx.beginPath(); ctx.moveTo(x(0), y(cs[0]));
+  cs.forEach((v, i) => ctx.lineTo(x(i), y(v)));
+  ctx.strokeStyle = line; ctx.lineWidth = 2; ctx.stroke();
+  // endpoint dot
+  ctx.beginPath(); ctx.arc(x(cs.length - 1), y(cs[cs.length - 1]), 3.5, 0, Math.PI * 2);
+  ctx.fillStyle = line; ctx.fill();
+  // labels
+  ctx.fillStyle = css.getPropertyValue('--text-muted') || '#888';
+  ctx.font = '11px sans-serif'; ctx.textAlign = 'left';
+  ctx.fillText(max.toLocaleString(), 2, y(max) + 4);
+  ctx.fillText(min.toLocaleString(), 2, y(min) + 4);
+}
+
+chartModal.addEventListener('click', (e) => {
+  if (e.target.hasAttribute('data-close')) chartModal.hidden = true;
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') chartModal.hidden = true; });
+document.addEventListener('click', (e) => {
+  const item = e.target.closest('.market-item.clickable');
+  if (item) openChart(item.dataset.chart);
+});
 
 // ---------- Heatmap ----------
 function mix(a, b, t) {
@@ -292,6 +381,22 @@ async function init() {
     if (sectorRes.ok) renderSectorNews(await sectorRes.json());
   } catch (e) {
     console.warn('sector_news.json 로드 실패:', e);
+  }
+
+  // 주요 금리·일정 (없어도 정상 동작)
+  try {
+    const evRes = await fetchData('data/events.json');
+    if (evRes.ok) renderEvents(await evRes.json());
+  } catch (e) {
+    console.warn('events.json 로드 실패:', e);
+  }
+
+  // 지수 차트 데이터 (클릭 시 사용)
+  try {
+    const chRes = await fetchData('data/charts.json');
+    if (chRes.ok) chartSeries = (await chRes.json()).series || {};
+  } catch (e) {
+    console.warn('charts.json 로드 실패:', e);
   }
 }
 
