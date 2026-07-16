@@ -80,6 +80,8 @@
 
 * { box-sizing: border-box; }
 
+html, body { max-width: 100%; overflow-x: hidden; }
+
 body {
   margin: 0;
   font-family: var(--font);
@@ -332,7 +334,27 @@ input:focus, select:focus {
   white-space: pre-wrap;
   font-size: 0.95rem;
   color: var(--text);
+  overflow-wrap: anywhere;
 }
+/* 기본은 5줄로 접어서 보여준다 (가독성). */
+.news-card .summary.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.more-btn {
+  margin-top: 0.4rem;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--navy-600);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.more-btn:hover { text-decoration: underline; }
 
 .chip {
   display: inline-block;
@@ -606,8 +628,30 @@ input:focus, select:focus {
 .footer-inner a:hover { text-decoration: underline; }
 
 @media (max-width: 640px) {
-  .header-inner { flex-direction: column; align-items: flex-start; }
-  .tabs { width: 100%; }
-  .tab-btn { flex: 1; text-align: center; padding: 0.5rem 0.5rem; }
+  .site-header { padding: 0.9rem 1rem; }
+  .header-inner { flex-direction: column; align-items: stretch; gap: 0.7rem; padding: 0; }
+  .site-header h1 { font-size: 1.15rem; }
+  .tagline { font-size: 0.75rem; }
   .brand-mark { width: 38px; height: 38px; font-size: 1.2rem; }
+
+  /* 탭이 4개라 화면을 넘으면 가로 스크롤 (잘리지 않게) */
+  .tabs {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab-btn { flex: 0 0 auto; white-space: nowrap; }
+
+  .container { padding: 0 1rem; }
+  .toolbar { flex-direction: column; }
+  .toolbar input[type="search"], .toolbar select { width: 100%; }
+  .market-head { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
+  .market-updated { white-space: normal; line-height: 1.35; }
+  .news-card { padding: 1rem 1.05rem; }
+  .site-header h1, .news-card h3, .section-head h2 { overflow-wrap: anywhere; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
 }

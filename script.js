@@ -60,11 +60,30 @@ function renderNews() {
       <span class="${chipClass(n.category)}">${escapeHtml(n.category)}</span>
       <h3>${escapeHtml(n.title)}</h3>
       <p class="meta">${escapeHtml(n.source || '출처 미상')} · ${formatDate(n.date)}</p>
-      <p class="summary">${escapeHtml(n.summary)}</p>
+      <p class="summary clamped">${escapeHtml(n.summary)}</p>
+      <button class="more-btn" type="button" hidden>더보기</button>
       ${n.url ? `<a class="link-btn" href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer">원문 보기 →</a>` : ''}
     </article>
   `).join('');
+
+  // 요약이 5줄을 넘으면(잘리면) '더보기' 버튼을 노출한다.
+  newsList.querySelectorAll('.news-card').forEach((card) => {
+    const summary = card.querySelector('.summary');
+    const btn = card.querySelector('.more-btn');
+    if (summary && btn && summary.scrollHeight - summary.clientHeight > 2) {
+      btn.hidden = false;
+    }
+  });
 }
+
+// '더보기 / 접기' 토글
+document.getElementById('newsList').addEventListener('click', (e) => {
+  const btn = e.target.closest('.more-btn');
+  if (!btn) return;
+  const summary = btn.previousElementSibling;
+  const clamped = summary.classList.toggle('clamped');
+  btn.textContent = clamped ? '더보기' : '접기';
+});
 
 // ---------- Sector news ----------
 function renderSectorNews(data) {
@@ -72,8 +91,8 @@ function renderSectorNews(data) {
   const updated = document.getElementById('sectorsUpdated');
   if (!data || !data.sectors) return;
   updated.textContent = data.updatedAt && data.updatedAt !== 'seed'
-    ? `자동 업데이트 ${data.updatedAt} · 매일 07:00 KST 갱신`
-    : '매일 07:00 KST 자동 갱신 (첫 수집 전이라 일부 섹터는 비어 있어요)';
+    ? `자동 업데이트 ${data.updatedAt} · 15분마다 갱신`
+    : '15분마다 자동 갱신 (첫 수집 전이라 일부 섹터는 비어 있어요)';
 
   grid.innerHTML = Object.entries(data.sectors).map(([sector, items]) => {
     const body = (items && items.length)
