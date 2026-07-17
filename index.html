@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>경알못 — 어려운 경제, 쉽게</title>
 <meta name="description" content="어려운 경제 뉴스와 지표를 MZ 눈높이로 쉽게 풀어주는 경제 브리핑. 시세·차트·산업뉴스 자동 업데이트.">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
   <header class="site-header">
@@ -24,6 +25,7 @@
         <button class="tab-btn" data-tab="sectors" role="tab" aria-selected="false">산업 뉴스</button>
         <button class="tab-btn" data-tab="heatmap" role="tab" aria-selected="false">히트맵</button>
         <button class="tab-btn" data-tab="fundamentals" role="tab" aria-selected="false">펀더멘탈</button>
+        <button class="tab-btn" data-tab="glossary" role="tab" aria-selected="false">용어사전</button>
       </nav>
     </div>
   </header>
@@ -31,6 +33,15 @@
   <main class="container">
     <!-- 뉴스 & 리스크 -->
     <section id="news" class="tab-panel active">
+      <div class="brief-card" id="briefCard" hidden>
+        <div class="brief-head">
+          <h2>🗞️ 전날 증시 브리핑</h2>
+          <span id="fngGauge" class="fng-pill" hidden></span>
+        </div>
+        <ul id="briefLines" class="brief-lines"></ul>
+        <button class="brief-more" id="briefMore" type="button">상세 기사 보기 ↓</button>
+      </div>
+
       <div class="events-band" id="eventsBand">
         <div class="rates-row" id="ratesRow"></div>
         <div class="calendar-row" id="calendarRow"></div>
@@ -155,6 +166,18 @@
       <div id="macroList" class="indicator-list"></div>
       <p id="macroEmpty" class="empty-msg" hidden>등록된 거시 지표가 없어요.</p>
     </section>
+
+    <!-- 용어사전 -->
+    <section id="glossary" class="tab-panel">
+      <div class="section-head">
+        <h2>경제 용어사전</h2>
+        <p class="section-sub">모르는 용어를 검색해보세요 · MZ 눈높이 설명</p>
+      </div>
+      <div class="toolbar">
+        <input type="search" id="glossarySearch" placeholder="용어 검색 (예: PER, 환율, DSR)...">
+      </div>
+      <div id="glossaryList" class="glossary-list"></div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -172,11 +195,15 @@
         <button id="chartClose" class="modal-close" aria-label="닫기" data-close>✕</button>
       </div>
       <div class="range-row" id="rangeRow"></div>
-      <canvas id="chartCanvas" width="640" height="300"></canvas>
+      <div id="chartStats" class="chart-stats"></div>
+      <div class="chart-wrap">
+        <canvas id="chartCanvas" width="640" height="300"></canvas>
+        <div id="chartTip" class="chart-tip"></div>
+      </div>
       <p id="chartMeta" class="chart-meta"></p>
     </div>
   </div>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>

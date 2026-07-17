@@ -126,6 +126,43 @@ function marketItemHtml(it, chartable) {
   </div>`;
 }
 
+// ---------- 전날 증시 브리핑 ----------
+function renderBrief(data) {
+  const card = document.getElementById('briefCard');
+  if (!card || !data || !Array.isArray(data.brief) || !data.brief.length) return;
+  card.hidden = false;
+  document.getElementById('briefLines').innerHTML =
+    data.brief.map((l) => `<li>${escapeHtml(l)}</li>`).join('');
+  const fng = document.getElementById('fngGauge');
+  if (data.fng && data.fng.value != null) {
+    const v = data.fng.value;
+    const ko = v >= 75 ? '극단적 탐욕' : v >= 55 ? '탐욕' : v >= 45 ? '중립' : v >= 25 ? '공포' : '극단적 공포';
+    fng.hidden = false;
+    fng.textContent = `😱 공포·탐욕 ${v} · ${ko}`;
+    fng.style.background = v >= 55 ? 'rgba(63,207,133,0.28)' : v <= 45 ? 'rgba(240,103,90,0.3)' : 'rgba(255,255,255,0.16)';
+  }
+}
+document.getElementById('briefMore').addEventListener('click', () => {
+  const target = document.getElementById('liveHead').hidden
+    ? document.querySelector('.news-section-head')
+    : document.getElementById('liveHead');
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// ---------- 용어사전 ----------
+let glossaryTerms = [];
+function renderGlossary(filter) {
+  const list = document.getElementById('glossaryList');
+  if (!list) return;
+  const q = (filter || '').trim().toLowerCase();
+  const items = glossaryTerms.filter((x) =>
+    !q || x.t.toLowerCase().includes(q) || x.d.toLowerCase().includes(q));
+  list.innerHTML = items.map((x) =>
+    `<div class="glossary-item"><div class="gl-term">${escapeHtml(x.t)}</div><div class="gl-desc">${escapeHtml(x.d)}</div></div>`
+  ).join('') || '<p class="empty-msg">검색 결과가 없어요.</p>';
+}
+document.getElementById('glossarySearch').addEventListener('input', (e) => renderGlossary(e.target.value));
+
 function renderMarket(data) {
   const strip = document.getElementById('marketStrip');
   const fxStrip = document.getElementById('marketFx');
@@ -244,13 +281,42 @@ function openChart(name, range) {
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
   } else {
     drawLineChart(canvas, s);
-    const first = s.closes[0], last = s.closes[s.closes.length - 1];
+    const cs = s.closes;
+    const first = cs[0], last = cs[cs.length - 1];
     const pct = ((last - first) / first * 100);
     const cls = pct >= 0 ? 'pos' : 'neg';
+    const fmt = (n) => n.toLocaleString('en-US', { maximumFractionDigits: n < 100 ? 2 : 0 });
+    document.getElementById('chartStats').innerHTML =
+      `<span class="cur">현재<b>${fmt(last)}</b></span>` +
+      `<span>시작<b>${fmt(first)}</b></span>` +
+      `<span>최고<b>${fmt(Math.max(...cs))}</b></span>` +
+      `<span>최저<b>${fmt(Math.min(...cs))}</b></span>`;
     meta.innerHTML = `${escapeHtml(s.dates[0])} → ${escapeHtml(s.dates[s.dates.length - 1])} · <span class="${cls}">${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%</span>`;
   }
   chartModal.hidden = false;
 }
+
+// 차트 위에서 마우스를 움직이면 해당 지점의 날짜·값을 툴팁으로 보여준다.
+let chartPoints = [];
+(function () {
+  const canvas = document.getElementById('chartCanvas');
+  const tip = document.getElementById('chartTip');
+  if (!canvas || !tip) return;
+  canvas.addEventListener('mousemove', (e) => {
+    if (!chartPoints.length) return;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const mx = (e.clientX - rect.left) * scaleX;
+    let nearest = chartPoints[0];
+    for (const p of chartPoints) if (Math.abs(p.x - mx) < Math.abs(nearest.x - mx)) nearest = p;
+    const fmt = (n) => n.toLocaleString('en-US', { maximumFractionDigits: n < 100 ? 2 : 0 });
+    tip.textContent = `${nearest.date} · ${fmt(nearest.value)}`;
+    tip.style.left = (nearest.x / scaleX) + 'px';
+    tip.style.top = (nearest.y / (canvas.height / rect.height)) + 'px';
+    tip.style.opacity = '1';
+  });
+  canvas.addEventListener('mouseleave', () => { tip.style.opacity = '0'; });
+})();
 
 document.getElementById('rangeRow').addEventListener('click', (e) => {
   const btn = e.target.closest('.range-btn');
@@ -266,6 +332,7 @@ function drawLineChart(canvas, s) {
   const rng = (max - min) || 1;
   const x = (i) => pad + (W - pad * 2) * (i / (cs.length - 1));
   const y = (v) => pad + (H - pad * 2) * (1 - (v - min) / rng);
+  chartPoints = cs.map((v, i) => ({ x: x(i), y: y(v), value: v, date: (s.dates && s.dates[i]) || '' }));
   const up = cs[cs.length - 1] >= cs[0];
   const line = up ? '#12905a' : '#d1493c';
   // grid
@@ -442,12 +509,24 @@ async function init() {
   renderIndicatorList(indicators.macro || [], document.getElementById('macroList'), document.getElementById('macroEmpty'));
   renderIndicatorList(indicators.fx || [], document.getElementById('fxList'), document.getElementById('fxEmpty'));
 
-  // 오늘의 시장 (없어도 나머지는 정상 동작)
+  // 오늘의 시장 + 전날 브리핑 (없어도 나머지는 정상 동작)
   try {
     const marketRes = await fetchData('data/market.json');
-    if (marketRes.ok) renderMarket(await marketRes.json());
+    if (marketRes.ok) {
+      const marketData = await marketRes.json();
+      renderMarket(marketData);
+      renderBrief(marketData);
+    }
   } catch (e) {
     console.warn('market.json 로드 실패:', e);
+  }
+
+  // 용어사전
+  try {
+    const gRes = await fetchData('data/glossary.json');
+    if (gRes.ok) { glossaryTerms = (await gRes.json()).terms || []; renderGlossary(''); }
+  } catch (e) {
+    console.warn('glossary.json 로드 실패:', e);
   }
 
   // 산업별 뉴스 + 홈 실시간 뉴스 (없어도 나머지는 정상 동작)

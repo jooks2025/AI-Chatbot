@@ -26,7 +26,8 @@
   --shadow: 0 1px 2px rgba(14, 26, 58, 0.06), 0 4px 16px rgba(14, 26, 58, 0.07);
   --shadow-sm: 0 1px 2px rgba(14, 26, 58, 0.08);
   --maxw: 1120px;
-  --font: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font: "Gowun Dodum", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-display: "Jua", "Gowun Dodum", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,6 +82,12 @@
 * { box-sizing: border-box; }
 
 html, body { max-width: 100%; overflow-x: hidden; }
+
+.site-header h1, .brand-mark, .section-head h2, .brief-head h2,
+.market-title, .tab-btn, .modal-head #chartTitle {
+  font-family: var(--font-display);
+  letter-spacing: 0;
+}
 
 body {
   margin: 0;
@@ -251,6 +258,49 @@ input:focus, select:focus {
 .cal-item b { color: var(--navy-600); font-weight: 800; }
 .events-sep { width: 1px; align-self: stretch; background: var(--border); }
 
+/* ---------- 전날 증시 브리핑 ---------- */
+.brief-card {
+  background: linear-gradient(135deg, var(--navy-800), var(--navy-600));
+  color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.brief-head { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-bottom: 0.5rem; }
+.brief-head h2 { margin: 0; font-size: 1.1rem; color: #fff; }
+.fng-pill {
+  font-size: 0.76rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 999px;
+  background: rgba(255,255,255,0.16); color: #fff; white-space: nowrap;
+}
+.brief-lines { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.28rem; }
+.brief-lines li { font-size: 0.92rem; line-height: 1.45; color: #eaf0fd; overflow-wrap: anywhere; }
+.brief-more {
+  margin-top: 0.75rem;
+  background: var(--gold); color: var(--navy-900);
+  border: none; border-radius: 999px; padding: 0.4rem 0.9rem;
+  font-family: var(--font-display); font-size: 0.85rem; cursor: pointer;
+}
+.brief-more:hover { filter: brightness(1.05); }
+
+/* ---------- 용어사전 ---------- */
+.glossary-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.7rem; }
+.glossary-item {
+  background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--navy-500);
+  border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); padding: 0.7rem 0.9rem;
+}
+.glossary-item .gl-term { font-family: var(--font-display); font-size: 1rem; color: var(--navy-600); }
+.glossary-item .gl-desc { font-size: 0.86rem; color: var(--text); margin-top: 0.15rem; }
+
+/* ---------- 차트 호버 툴팁 ---------- */
+.chart-wrap { position: relative; }
+.chart-tip {
+  position: absolute; pointer-events: none; z-index: 2;
+  background: var(--navy-900); color: #fff; font-size: 0.75rem; font-weight: 700;
+  padding: 0.25rem 0.5rem; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -130%);
+  opacity: 0; transition: opacity 0.1s;
+}
+
 /* ---------- 쉬운 경제 밴드 (자동 순환) ---------- */
 .edu-band {
   display: flex;
@@ -344,6 +394,10 @@ input:focus, select:focus {
 .range-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 .chart-meta .pos { color: var(--up); font-weight: 700; }
 .chart-meta .neg { color: var(--down); font-weight: 700; }
+.chart-stats { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; margin-bottom: 0.5rem; font-size: 0.82rem; }
+.chart-stats span { color: var(--text-muted); }
+.chart-stats b { color: var(--text); font-variant-numeric: tabular-nums; margin-left: 0.25rem; }
+.chart-stats .cur b { color: var(--navy-600); font-size: 1.05rem; }
 
 /* ---------- Market board ---------- */
 .market-board {

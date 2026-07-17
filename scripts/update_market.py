@@ -34,6 +34,7 @@ FX = [
 # 표시명 -> Yahoo 심볼, 단위, 한 줄 설명 (핵심 지표·원자재)
 EXTRA = [
     ("미 10년물 국채", "^TNX", "%", "장기 금리. 오르면 주식 밸류에이션·대출에 부담"),
+    ("미 3개월 국채", "^IRX", "%", "단기 금리. 연준 정책금리와 비슷하게 움직임"),
     ("VIX 공포지수", "^VIX", "pt", "시장 불안이 커지면 상승(공포지수)"),
     ("금", "GC=F", "$/oz", "대표 안전자산. 불안·금리↓일 때 강세"),
     ("WTI 유가", "CL=F", "$/bbl", "오르면 물가·기업 비용 ↑"),
@@ -182,17 +183,112 @@ def make_summary(indices, fx, as_of):
     return text + "."
 
 
+def _pick(items, name):
+    for it in items:
+        if it["name"] == name:
+            return it
+    return None
+
+
+def _dir_word(items):
+    ups = [it for it in items if (it.get("change") or 0) > 0]
+    downs = [it for it in items if (it.get("change") or 0) < 0]
+    if ups and not downs:
+        return "일제히 상승"
+    if downs and not ups:
+        return "일제히 하락"
+    return "혼조"
+
+
+def make_brief(indices, fx, extra, as_of):
+    """어제 증시에 무슨 일이 있었는지 데이터로 만든 5줄 요약."""
+    def g(name):
+        return _pick(indices, name)
+
+    def line(it):
+        return f"{it['name']} {it['change']:+.1f}%" if it else ""
+
+    us = [g("S&P500"), g("나스닥"), g("다우존스"), g("러셀2000")]
+    us = [x for x in us if x]
+    kr = [g("코스피"), g("코스닥")]
+    kr = [x for x in kr if x]
+    nk = g("니케이225")
+    krw = _pick(fx, "원/달러")
+    tnx = _pick(extra, "미 10년물 국채")
+
+    all_idx = [x for x in indices if x.get("change") is not None]
+    top = max(all_idx, key=lambda x: x["change"]) if all_idx else None
+    bottom = min(all_idx, key=lambda x: x["change"]) if all_idx else None
+
+    lines = []
+    if us:
+        lines.append(f"🇺🇸 뉴욕증시 {_dir_word(us)} — " + ", ".join(line(x) for x in us))
+    if kr:
+        lines.append(f"🇰🇷 한국증시 {_dir_word(kr)} — " + ", ".join(line(x) for x in kr))
+    if nk:
+        lines.append(f"🇯🇵 니케이225 {nk['change']:+.1f}%")
+    fx_bits = []
+    if krw:
+        fx_bits.append(f"원/달러 {fmt_num(krw['close'])}원({krw['change']:+.1f}%)")
+    if tnx:
+        fx_bits.append(f"미 10년물 {tnx['close']}%")
+    if fx_bits:
+        lines.append("💱 " + " · ".join(fx_bits))
+    if top and bottom:
+        lines.append(f"📌 최대 상승 {top['name']} {top['change']:+.1f}% / 최대 하락 {bottom['name']} {bottom['change']:+.1f}%")
+    return f"{as_of} 기준", lines[:5]
+
+
+def add_spread(extra):
+    """장단기 금리차(10년-3개월). 마이너스면 경기침체 신호."""
+    tnx = _pick(extra, "미 10년물 국채")
+    irx = _pick(extra, "미 3개월 국채")
+    if tnx and irx:
+        spread = round(tnx["close"] - irx["close"], 2)
+        extra.append({
+            "name": "장단기 금리차(10Y-3M)",
+            "close": spread,
+            "change": None,
+            "unit": "%p",
+            "note": "마이너스(역전)면 경기침체 신호로 해석돼요",
+        })
+
+
+def fetch_fng():
+    """공포·탐욕 지수(alternative.me, 무료). 실패 시 None."""
+    try:
+        raw = _download("https://api.alternative.me/fng/?limit=1")
+        d = json.loads(raw)["data"][0]
+        return {"value": int(d["value"]), "label": d.get("value_classification", "")}
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError, IndexError) as e:
+        print(f"[warn] 공포탐욕지수 실패: {e}")
+        return None
+
+
 def main():
     indices, fx, extra = build()
     if not indices:
         print("[error] 수집된 지수가 없어 종료 (기존 파일 유지)")
         return
+    add_spread(extra)
     as_of = max(it["date"] for it in indices)
     summary = make_summary(indices, fx, as_of)
+    brief_as_of, brief = make_brief(indices, fx, extra, as_of)
+    fng = fetch_fng()
+    prev_fng = None
+    if os.path.exists(OUT):
+        try:
+            with open(OUT, encoding="utf-8") as f:
+                prev_fng = json.load(f).get("fng")
+        except (OSError, json.JSONDecodeError):
+            prev_fng = None
     data = {
         "asOf": as_of,
         "updatedAt": datetime.now(KST).isoformat(timespec="minutes"),
         "summary": summary,
+        "brief": brief,
+        "briefAsOf": brief_as_of,
+        "fng": fng or prev_fng,
         "indices": indices,
         "fx": fx,
         "extra": extra,
