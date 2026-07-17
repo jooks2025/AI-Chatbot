@@ -163,6 +163,38 @@ function renderGlossary(filter) {
 }
 document.getElementById('glossarySearch').addEventListener('input', (e) => renderGlossary(e.target.value));
 
+// 용어 퀴즈: 설명을 보고 맞는 용어 고르기
+function shuffle(a) { return [...a].sort(() => Math.random() - 0.5); }
+function renderQuiz() {
+  const el = document.getElementById('quizCard');
+  if (!el || glossaryTerms.length < 4) return;
+  const pool = shuffle(glossaryTerms);
+  const answer = pool[0];
+  const choices = shuffle([answer, ...pool.slice(1, 4)]);
+  el.innerHTML =
+    `<div class="quiz-q">🧩 이 설명에 맞는 용어는?</div>` +
+    `<div class="quiz-def">“${escapeHtml(answer.d)}”</div>` +
+    `<div class="quiz-choices">${choices.map((c) =>
+      `<button class="quiz-choice" data-correct="${c.t === answer.t}">${escapeHtml(c.t)}</button>`).join('')}</div>` +
+    `<div class="quiz-feedback" id="quizFeedback"></div>`;
+}
+document.getElementById('quizCard').addEventListener('click', (e) => {
+  const choice = e.target.closest('.quiz-choice');
+  if (choice) {
+    const correct = choice.dataset.correct === 'true';
+    document.querySelectorAll('.quiz-choice').forEach((b) => {
+      b.disabled = true;
+      if (b.dataset.correct === 'true') b.classList.add('right');
+    });
+    if (!correct) choice.classList.add('wrong');
+    document.getElementById('quizFeedback').innerHTML =
+      (correct ? '✅ 정답!' : '❌ 아쉬워요, 정답은 초록색!') +
+      ' <button class="quiz-next" id="quizNext" type="button">다음 문제 →</button>';
+    return;
+  }
+  if (e.target.closest('#quizNext')) renderQuiz();
+});
+
 function renderMarket(data) {
   const strip = document.getElementById('marketStrip');
   const fxStrip = document.getElementById('marketFx');
@@ -383,7 +415,7 @@ function mix(a, b, t) {
 }
 
 function heatColor(change) {
-  const cap = 15; // % scale for full saturation
+  const cap = 4; // 일일 등락 기준: ±4%에서 색이 가장 진해짐
   const t = Math.max(-1, Math.min(1, Number(change) / cap));
   const neutral = [58, 74, 102];   // slate that ties into navy
   const green = [18, 122, 74];
@@ -528,20 +560,15 @@ function fetchData(path) {
 }
 
 async function init() {
-  const [postsRes, indicatorsRes, heatmapRes] = await Promise.all([
+  const [postsRes, heatmapRes] = await Promise.all([
     fetchData('data/posts.json'),
-    fetchData('data/indicators.json'),
     fetchData('data/heatmap.json'),
   ]);
   allPosts = await postsRes.json();
-  const indicators = await indicatorsRes.json();
   const heatmap = await heatmapRes.json();
 
   renderNews();
   renderHeatmap(heatmap);
-  renderCompanies(indicators.companies || [], indicators.asOf);
-  renderIndicatorList(indicators.macro || [], document.getElementById('macroList'), document.getElementById('macroEmpty'));
-  renderIndicatorList(indicators.fx || [], document.getElementById('fxList'), document.getElementById('fxEmpty'));
 
   // 오늘의 시장 + 전날 브리핑 (없어도 나머지는 정상 동작)
   try {
@@ -558,7 +585,7 @@ async function init() {
   // 용어사전
   try {
     const gRes = await fetchData('data/glossary.json');
-    if (gRes.ok) { glossaryTerms = (await gRes.json()).terms || []; renderGlossary(''); }
+    if (gRes.ok) { glossaryTerms = (await gRes.json()).terms || []; renderGlossary(''); renderQuiz(); }
   } catch (e) {
     console.warn('glossary.json 로드 실패:', e);
   }

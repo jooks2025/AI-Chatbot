@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
   <header class="site-header">
@@ -24,7 +24,6 @@
         <button class="tab-btn active" data-tab="news" role="tab" aria-selected="true">홈</button>
         <button class="tab-btn" data-tab="sectors" role="tab" aria-selected="false">산업 뉴스</button>
         <button class="tab-btn" data-tab="heatmap" role="tab" aria-selected="false">히트맵</button>
-        <button class="tab-btn" data-tab="fundamentals" role="tab" aria-selected="false">펀더멘탈</button>
         <button class="tab-btn" data-tab="glossary" role="tab" aria-selected="false">용어사전</button>
       </nav>
     </div>
@@ -128,51 +127,13 @@
       <div id="heatmapGroups"></div>
     </section>
 
-    <!-- 펀더멘탈 -->
-    <section id="fundamentals" class="tab-panel">
-      <div class="section-head">
-        <h2>기업 펀더멘탈</h2>
-        <p class="section-sub">PER·PBR·영업이익률·시가총액·등락률 등 재무 지표 (기준일 표기, 스냅샷 · 미확인 값은 —)</p>
-      </div>
-      <div class="table-wrap">
-        <table id="companyTable" class="data-table">
-          <thead>
-            <tr>
-              <th>종목</th>
-              <th>그룹</th>
-              <th class="num sortable" data-sort="per">PER</th>
-              <th class="num sortable" data-sort="pbr">PBR</th>
-              <th class="num sortable" data-sort="opMargin">영업이익률</th>
-              <th class="num sortable" data-sort="mktcap">시가총액</th>
-              <th class="num sortable" data-sort="ytd">YTD</th>
-              <th>메모</th>
-            </tr>
-          </thead>
-          <tbody id="companyBody"></tbody>
-        </table>
-      </div>
-
-      <div class="section-head" style="margin-top:2rem">
-        <h2>환율</h2>
-        <p class="section-sub">원/달러·엔/달러·유로/달러·달러인덱스 (같은 지표는 최신순, 이전값 대비 등락 표시)</p>
-      </div>
-      <div id="fxList" class="indicator-list"></div>
-      <p id="fxEmpty" class="empty-msg" hidden>등록된 환율 지표가 없어요.</p>
-
-      <div class="section-head" style="margin-top:2rem">
-        <h2>거시 지표</h2>
-        <p class="section-sub">물가·유가 등 거시 경제 수치 (같은 지표는 최신순, 이전값 대비 등락 표시)</p>
-      </div>
-      <div id="macroList" class="indicator-list"></div>
-      <p id="macroEmpty" class="empty-msg" hidden>등록된 거시 지표가 없어요.</p>
-    </section>
-
     <!-- 용어사전 -->
     <section id="glossary" class="tab-panel">
       <div class="section-head">
         <h2>경제 용어사전</h2>
-        <p class="section-sub">모르는 용어를 검색해보세요 · MZ 눈높이 설명</p>
+        <p class="section-sub">퀴즈로 익히고, 모르는 용어는 검색해보세요 · MZ 눈높이 설명</p>
       </div>
+      <div id="quizCard" class="quiz-card"></div>
       <div class="toolbar">
         <input type="search" id="glossarySearch" placeholder="용어 검색 (예: PER, 환율, DSR)...">
       </div>
@@ -204,6 +165,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=11"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>

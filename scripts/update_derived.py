@@ -74,6 +74,18 @@ def ytd(symbol):
     return val
 
 
+def daily_change(symbol):
+    """전일 대비(1일) 등락률(%). 실패 시 None."""
+    try:
+        res = _chart(symbol, "5d", "1d")["chart"]["result"][0]
+        cl = [c for c in res["indicators"]["quote"][0]["close"] if c is not None]
+        if len(cl) >= 2 and cl[-2]:
+            return round((cl[-1] - cl[-2]) / cl[-2] * 100, 1)
+    except Exception as e:  # noqa: BLE001
+        print(f"[warn] daily {symbol}: {e}")
+    return None
+
+
 def history(symbol, rng, interval):
     intraday = interval.endswith("m") or interval.endswith("h")
     fmt = "%H:%M" if intraday else ("%y/%m" if interval in ("1wk", "1mo") else "%m/%d")
@@ -97,11 +109,11 @@ def update_heatmap():
     data = json.load(open(p, encoding="utf-8"))
     for g in data.get("groups", []):
         for it in g.get("items", []):
-            v = ytd(it.get("ticker", ""))
+            v = daily_change(it.get("ticker", ""))
             if v is not None:
                 it["change"] = v
     data["asOf"] = datetime.now(KST).strftime("%Y-%m-%d")
-    data["basis"] = "연초 대비(YTD) 등락률 · 자동 갱신 · 타일 크기는 시가총액 기준"
+    data["basis"] = "전일 대비(1일) 등락률 · 자동 갱신 · 타일 크기는 시가총액 기준"
     with open(p, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
@@ -195,7 +207,6 @@ def main():
         print("[info] derived: 매시간 1회만 실행 — 이번 분에는 건너뜀")
         return
     update_heatmap()
-    update_fundamentals()
     # 차트(8개 기간 x 7지수)는 호출이 많아 하루 2회(07·15시)만 갱신
     if force or hour in (7, 15):
         update_charts()

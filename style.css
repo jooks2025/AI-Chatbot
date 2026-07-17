@@ -284,6 +284,29 @@ input:focus, select:focus {
 }
 .brief-more:hover { filter: brightness(1.05); }
 
+/* ---------- 용어 퀴즈 ---------- */
+.quiz-card {
+  background: linear-gradient(135deg, var(--navy-700), var(--navy-500));
+  color: #fff; border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 1.1rem 1.25rem; margin-bottom: 1.1rem;
+}
+.quiz-q { font-family: var(--font-display); font-size: 1rem; margin-bottom: 0.4rem; }
+.quiz-def { font-size: 0.95rem; color: var(--gold-soft); margin-bottom: 0.8rem; line-height: 1.5; }
+.quiz-choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.5rem; }
+.quiz-choice {
+  background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); color: #fff;
+  border-radius: 999px; padding: 0.5rem 0.8rem; font-family: inherit; font-size: 0.9rem; cursor: pointer;
+}
+.quiz-choice:hover:not(:disabled) { background: rgba(255,255,255,0.26); }
+.quiz-choice:disabled { cursor: default; }
+.quiz-choice.right { background: var(--up); border-color: var(--up); font-weight: 700; }
+.quiz-choice.wrong { background: var(--down); border-color: var(--down); }
+.quiz-feedback { margin-top: 0.7rem; font-weight: 700; font-size: 0.92rem; }
+.quiz-next {
+  margin-left: 0.5rem; background: var(--gold); color: var(--navy-900); border: none;
+  border-radius: 999px; padding: 0.3rem 0.8rem; font-family: var(--font-display); font-size: 0.82rem; cursor: pointer;
+}
+
 /* ---------- 용어사전 ---------- */
 .glossary-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.7rem; }
 .glossary-item {
