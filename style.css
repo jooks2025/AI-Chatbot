@@ -81,6 +81,7 @@
 
 * { box-sizing: border-box; }
 
+html { font-size: 17px; }
 html, body { max-width: 100%; overflow-x: hidden; }
 
 .site-header h1, .brand-mark, .section-head h2, .brief-head h2,
@@ -701,6 +702,9 @@ input:focus, select:focus {
   white-space: nowrap;
   font-size: 0.82rem;
 }
+.data-table th.sortable { cursor: pointer; user-select: none; }
+.data-table th.sortable:hover { color: var(--gold-soft); }
+.data-table th.sortable[data-arrow]::after { content: " " attr(data-arrow); font-size: 0.7rem; }
 .data-table th.num, .data-table td.num {
   text-align: right;
   font-variant-numeric: tabular-nums;

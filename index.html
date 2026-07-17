@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
   <header class="site-header">
@@ -140,11 +140,11 @@
             <tr>
               <th>종목</th>
               <th>그룹</th>
-              <th class="num">PER</th>
-              <th class="num">PBR</th>
-              <th class="num">영업이익률</th>
-              <th class="num">시가총액</th>
-              <th class="num">YTD</th>
+              <th class="num sortable" data-sort="per">PER</th>
+              <th class="num sortable" data-sort="pbr">PBR</th>
+              <th class="num sortable" data-sort="opMargin">영업이익률</th>
+              <th class="num sortable" data-sort="mktcap">시가총액</th>
+              <th class="num sortable" data-sort="ytd">YTD</th>
               <th>메모</th>
             </tr>
           </thead>
@@ -204,6 +204,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>

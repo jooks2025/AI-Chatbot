@@ -108,18 +108,61 @@ def update_heatmap():
     print("[ok] heatmap.json 갱신")
 
 
+def _fmt_cap(n):
+    if not n:
+        return None
+    if n >= 1e12:
+        return f"${n / 1e12:.2f}T"
+    if n >= 1e9:
+        return f"${n / 1e9:.0f}B"
+    return f"${n / 1e6:.0f}M"
+
+
+def fetch_quote_map(symbols):
+    """Yahoo 시세 API에서 PER·PBR·시총을 배치로 받아온다. 막히면 빈 dict."""
+    out = {}
+    if not symbols:
+        return out
+    url = ("https://query1.finance.yahoo.com/v7/finance/quote?symbols="
+           + urllib.parse.quote(",".join(symbols)))
+    try:
+        res = _get_json(url)["quoteResponse"]["result"]
+        for q in res:
+            trailing, forward = q.get("trailingPE"), q.get("forwardPE")
+            per = round(trailing, 1) if trailing else (round(forward, 1) if forward else None)
+            out[q.get("symbol")] = {
+                "per": per,
+                "perType": "후행" if trailing else ("선행" if forward else ""),
+                "pbr": round(q["priceToBook"], 1) if q.get("priceToBook") else None,
+                "mktcap": _fmt_cap(q.get("marketCap")),
+            }
+    except Exception as e:  # noqa: BLE001
+        print(f"[warn] 시세(PER/PBR/시총) 조회 실패: {e}")
+    return out
+
+
 def update_fundamentals():
     p = os.path.join(DATA, "indicators.json")
     data = json.load(open(p, encoding="utf-8"))
-    for c in data.get("companies", []):
+    companies = data.get("companies", [])
+    quotes = fetch_quote_map([c["ticker"] for c in companies if c.get("ticker")])
+    for c in companies:
         v = ytd(c.get("ticker", ""))
         if v is not None:
             c["ytd"] = v
+        q = quotes.get(c.get("ticker"))
+        if q:
+            if q["per"] is not None:
+                c["per"], c["perType"] = q["per"], q["perType"]
+            if q["pbr"] is not None:
+                c["pbr"] = q["pbr"]
+            if q["mktcap"]:
+                c["mktcap"] = q["mktcap"]
     data["asOf"] = datetime.now(KST).strftime("%Y-%m-%d")
     with open(p, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    print("[ok] indicators.json YTD 갱신")
+    print("[ok] indicators.json 갱신 (YTD + PER/PBR/시총 시도)")
 
 
 def update_charts():

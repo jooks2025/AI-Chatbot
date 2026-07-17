@@ -416,9 +416,31 @@ function renderHeatmap(data) {
 }
 
 // ---------- Company fundamentals table ----------
+let companyData = [];
+let sortState = { key: null, dir: -1 };
+
+function capValue(s) {
+  if (!s) return -Infinity;
+  const m = String(s).match(/([\d.]+)\s*([TBM])/i);
+  if (!m) return -Infinity;
+  const mult = { t: 1e12, b: 1e9, m: 1e6 }[m[2].toLowerCase()] || 1;
+  return parseFloat(m[1]) * mult;
+}
+
+function sortedCompanies() {
+  if (!sortState.key) return companyData;
+  const k = sortState.key;
+  return [...companyData].sort((a, b) => {
+    const va = k === 'mktcap' ? capValue(a[k]) : (a[k] == null ? -Infinity : Number(a[k]));
+    const vb = k === 'mktcap' ? capValue(b[k]) : (b[k] == null ? -Infinity : Number(b[k]));
+    return (va - vb) * sortState.dir;
+  });
+}
+
 function renderCompanies(companies, asOf) {
+  if (companies) companyData = companies;
   const body = document.getElementById('companyBody');
-  body.innerHTML = companies.map((c) => {
+  body.innerHTML = sortedCompanies().map((c) => {
     const per = c.per !== null && c.per !== undefined
       ? `${c.per}<span class="per-tag">${c.perType ? escapeHtml(c.perType) : ''}</span>`
       : '<span class="muted">—</span>';
@@ -444,6 +466,18 @@ function renderCompanies(companies, asOf) {
     </tr>`;
   }).join('');
 }
+
+// 펀더멘탈 표 헤더 클릭 정렬
+document.querySelectorAll('#companyTable th.sortable').forEach((th) => {
+  th.addEventListener('click', () => {
+    const key = th.dataset.sort;
+    sortState.dir = sortState.key === key ? -sortState.dir : -1;
+    sortState.key = key;
+    document.querySelectorAll('#companyTable th.sortable').forEach((t) => t.removeAttribute('data-arrow'));
+    th.setAttribute('data-arrow', sortState.dir < 0 ? '▼' : '▲');
+    renderCompanies();
+  });
+});
 
 // ---------- Indicator list (macro / fx) ----------
 function renderIndicatorList(items, listEl, emptyEl) {
