@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-17",
+  "asOf": "2026-07-18",
   "basis": "연초 대비(YTD) 등락률 · 자동 갱신 · 타일 크기는 시가총액 기준",
   "groups": [
     {
@@ -8,43 +8,43 @@
         {
           "ticker": "NVDA",
           "name": "엔비디아",
-          "change": 9.8,
+          "change": 7.4,
           "weight": 2
         },
         {
           "ticker": "GOOGL",
           "name": "알파벳",
-          "change": 12.5,
+          "change": 10.0,
           "weight": 2
         },
         {
           "ticker": "AAPL",
           "name": "애플",
-          "change": 23.0,
+          "change": 23.1,
           "weight": 2
         },
         {
           "ticker": "MSFT",
           "name": "MS",
-          "change": -15.2,
+          "change": -16.7,
           "weight": 1
         },
         {
           "ticker": "AMZN",
           "name": "아마존",
-          "change": 10.3,
+          "change": 9.2,
           "weight": 1
         },
         {
           "ticker": "META",
           "name": "메타",
-          "change": 2.2,
+          "change": -0.7,
           "weight": 1
         },
         {
           "ticker": "TSLA",
           "name": "테슬라",
-          "change": -10.7,
+          "change": -13.1,
           "weight": 1
         }
       ]
@@ -55,19 +55,19 @@
         {
           "ticker": "TSM",
           "name": "TSMC",
-          "change": 28.2,
+          "change": 24.6,
           "weight": 2
         },
         {
           "ticker": "MU",
           "name": "마이크론",
-          "change": 170.5,
+          "change": 169.1,
           "weight": 1
         },
         {
           "ticker": "AVGO",
           "name": "브로드컴",
-          "change": 7.7,
+          "change": 6.7,
           "weight": 1
         }
       ]
@@ -78,19 +78,19 @@
         {
           "ticker": "IWM",
           "name": "러셀2000",
-          "change": 18.8,
+          "change": 18.2,
           "weight": 1
         },
         {
           "ticker": "QQQ",
           "name": "나스닥100",
-          "change": 15.1,
+          "change": 13.4,
           "weight": 1
         },
         {
           "ticker": "SPY",
           "name": "S&P500",
-          "change": 9.9,
+          "change": 8.8,
           "weight": 1
         }
       ]
@@ -101,31 +101,31 @@
         {
           "ticker": "XLK",
           "name": "기술",
-          "change": 23.0,
+          "change": 21.7,
           "weight": 1
         },
         {
           "ticker": "XLE",
           "name": "에너지",
-          "change": 24.9,
+          "change": 26.4,
           "weight": 1
         },
         {
           "ticker": "XLI",
           "name": "산업재",
-          "change": 14.0,
+          "change": 13.6,
           "weight": 1
         },
         {
           "ticker": "XLV",
           "name": "헬스케어",
-          "change": 4.0,
+          "change": 3.6,
           "weight": 1
         },
         {
           "ticker": "XLF",
           "name": "금융",
-          "change": 3.3,
+          "change": 2.4,
           "weight": 1
         }
       ]
@@ -136,7 +136,7 @@
         {
           "ticker": "PLTR",
           "name": "팔란티어",
-          "change": -19.9,
+          "change": -21.1,
           "weight": 1
         }
       ]
