@@ -150,13 +150,30 @@ function renderMarket(data) {
   }
 }
 
-// ---------- 쉬운 경제 (매크로 주석) ----------
+// ---------- 쉬운 경제 (자동 순환 로테이션) ----------
+let eduTimer = null;
 function renderEdu(data) {
   const band = document.getElementById('eduBand');
-  if (!band || !data || !data.tips) return;
-  band.innerHTML = '<span class="edu-lead">🧠 쉬운 경제</span>' + data.tips.map((t) =>
-    `<span class="edu-tip" title="${escapeHtml(t.d)}"><b>${escapeHtml(t.t)}</b><span class="edu-desc">${escapeHtml(t.d)}</span></span>`
-  ).join('');
+  if (!band || !data || !data.tips || !data.tips.length) return;
+  const tips = [...data.tips].sort(() => Math.random() - 0.5); // 매번 순서 섞기
+  band.innerHTML = `
+    <span class="edu-lead">🧠 쉬운 경제</span>
+    <div class="edu-rot" id="eduRot"></div>
+    <button class="edu-nav" id="eduNext" type="button" aria-label="다음 상식">›</button>`;
+  const rot = document.getElementById('eduRot');
+  let i = 0;
+  const show = () => {
+    const t = tips[i % tips.length];
+    rot.innerHTML = `<span class="edu-slide"><b>${escapeHtml(t.t)}</b> <span class="edu-desc">${escapeHtml(t.d)}</span></span>`;
+  };
+  const advance = () => { i += 1; show(); };
+  show();
+  const start = () => { clearInterval(eduTimer); eduTimer = setInterval(advance, 4500); };
+  start();
+  document.getElementById('eduNext').addEventListener('click', () => { advance(); start(); });
+  // 마우스 올리면 잠깐 멈춤
+  band.addEventListener('mouseenter', () => clearInterval(eduTimer));
+  band.addEventListener('mouseleave', start);
 }
 
 // ---------- 실시간 경제 뉴스 (산업뉴스 자동 수집분을 홈에 요약) ----------
