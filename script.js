@@ -45,6 +45,52 @@ function chipClass(cat) {
   return 'chip';
 }
 
+// 난이도 배지 (왕초보/기본/심화)
+const LEVEL_META = {
+  '왕초보': { cls: 'lv-easy', icon: '🟢' },
+  '기본': { cls: 'lv-mid', icon: '🟡' },
+  '심화': { cls: 'lv-hard', icon: '🔴' },
+};
+function levelBadge(level) {
+  const m = LEVEL_META[level];
+  if (!m) return '';
+  return `<span class="level-badge ${m.cls}">${m.icon} ${escapeHtml(level)}</span>`;
+}
+
+// 읽는 시간 추정 (한글 대략 분당 500자)
+function readTime(text) {
+  const len = String(text || '').replace(/\s/g, '').length;
+  return Math.max(1, Math.round(len / 500));
+}
+
+// 본문 속 경제 용어에 점선 밑줄 → 탭하면 뜻 팝업 (glossary.json 재활용)
+function linkifyTerms(rawText) {
+  const text = String(rawText || '');
+  if (!glossaryTerms.length) return escapeHtml(text);
+  const terms = [...glossaryTerms]
+    .filter((x) => x.t && x.t.length >= 2)
+    .sort((a, b) => b.t.length - a.t.length);
+  const used = new Set();
+  let out = '';
+  let i = 0;
+  while (i < text.length) {
+    let hit = null;
+    for (const term of terms) {
+      if (used.has(term.t)) continue;
+      if (text.startsWith(term.t, i)) { hit = term; break; }
+    }
+    if (hit) {
+      out += `<button type="button" class="term" data-def="${escapeHtml(hit.d)}">${escapeHtml(hit.t)}</button>`;
+      used.add(hit.t);
+      i += hit.t.length;
+    } else {
+      out += escapeHtml(text[i]);
+      i += 1;
+    }
+  }
+  return out;
+}
+
 function renderNews() {
   const query = newsSearch.value.trim().toLowerCase();
   const category = newsFilter.value;
@@ -57,21 +103,60 @@ function renderNews() {
   newsEmpty.hidden = filtered.length > 0;
   newsList.innerHTML = filtered.map((n) => `
     <article class="news-card" data-cat="${escapeHtml(n.category)}">
-      <span class="${chipClass(n.category)}">${escapeHtml(n.category)}</span>
+      <div class="card-tags">
+        <span class="${chipClass(n.category)}">${escapeHtml(n.category)}</span>
+        ${levelBadge(n.level)}
+        <span class="read-time">⏱️ ${readTime(n.summary)}분</span>
+      </div>
       <h3>${escapeHtml(n.title)}</h3>
+      ${n.impact ? `<p class="impact-line"><span class="impact-tag">내 삶에 미치는 영향</span> ${escapeHtml(n.impact)}</p>` : ''}
       <p class="meta">${escapeHtml(n.source || '출처 미상')} · ${formatDate(n.date)}</p>
-      <p class="summary">${escapeHtml(n.summary)}</p>
+      <p class="summary">${linkifyTerms(n.summary)}</p>
       ${n.url ? `<a class="link-btn" href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer">원문 보기 →</a>` : ''}
     </article>
   `).join('');
 }
 
-// 카드 클릭으로 펼치기/접기 (원문 링크 클릭은 제외)
+// 카드 클릭으로 펼치기/접기 (원문 링크·용어 팝업 클릭은 제외)
 document.getElementById('newsList').addEventListener('click', (e) => {
-  if (e.target.closest('a')) return;
+  if (e.target.closest('a') || e.target.closest('.term')) return;
   const card = e.target.closest('.news-card');
   if (card) card.classList.toggle('open');
 });
+
+// ---------- 용어 팝업 (본문 속 용어 탭 → 뜻 보기) ----------
+const termPop = document.createElement('div');
+termPop.className = 'term-pop';
+termPop.hidden = true;
+document.body.appendChild(termPop);
+
+function showTermPop(btn) {
+  const def = btn.dataset.def || '';
+  termPop.innerHTML = `<b>${escapeHtml(btn.textContent)}</b><span>${escapeHtml(def)}</span>`;
+  termPop.hidden = false;
+  const r = btn.getBoundingClientRect();
+  const pw = Math.min(280, window.innerWidth - 24);
+  termPop.style.width = pw + 'px';
+  let left = r.left + window.scrollX + r.width / 2 - pw / 2;
+  left = Math.max(12 + window.scrollX, Math.min(left, window.scrollX + window.innerWidth - pw - 12));
+  termPop.style.left = left + 'px';
+  termPop.style.top = (r.bottom + window.scrollY + 6) + 'px';
+}
+function hideTermPop() { termPop.hidden = true; }
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.term');
+  if (btn) {
+    e.stopPropagation();
+    if (!termPop.hidden && termPop.dataset.for === btn.dataset.def) { hideTermPop(); return; }
+    termPop.dataset.for = btn.dataset.def;
+    showTermPop(btn);
+    return;
+  }
+  if (!e.target.closest('.term-pop')) hideTermPop();
+});
+window.addEventListener('scroll', hideTermPop, { passive: true });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideTermPop(); });
 
 // ---------- Sector news ----------
 const POS_WORDS = ['수주', '호황', '최대', '급증', '흑자', '신기록', '돌파', '상승', '성장', '반등', '확대', '호조', '수혜', '역대', '순항', '체결', '증가'];

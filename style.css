@@ -566,6 +566,84 @@ input:focus, select:focus {
 .chip.risk { background: rgba(209, 73, 60, 0.14); color: var(--down); }
 .chip.ai { background: rgba(217, 164, 65, 0.18); color: #9a7418; }
 
+/* 카드 상단 태그 줄: 카테고리 + 난이도 + 읽는시간 */
+.card-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.level-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+.level-badge.lv-easy { background: rgba(63, 207, 133, 0.16); color: #17845a; border-color: rgba(63, 207, 133, 0.35); }
+.level-badge.lv-mid { background: rgba(217, 164, 65, 0.16); color: #9a7418; border-color: rgba(217, 164, 65, 0.35); }
+.level-badge.lv-hard { background: rgba(209, 73, 60, 0.14); color: var(--down); border-color: rgba(209, 73, 60, 0.32); }
+:root[data-theme="dark"] .level-badge.lv-easy { color: #5fe0a3; }
+:root[data-theme="dark"] .level-badge.lv-mid { color: var(--gold-soft); }
+:root[data-theme="dark"] .level-badge.lv-hard { color: #ff8f82; }
+.read-time {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+/* '내 삶에 미치는 영향' 한 줄 훅 — 접혀 있어도 보임 */
+.impact-line {
+  margin: 0.5rem 0 0.35rem;
+  padding: 0.55rem 0.7rem;
+  background: linear-gradient(90deg, rgba(217, 164, 65, 0.14), rgba(217, 164, 65, 0.04));
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+.impact-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--navy-900);
+  background: var(--gold);
+  padding: 0.1rem 0.45rem;
+  border-radius: 6px;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+:root[data-theme="dark"] .impact-tag { color: #1a1300; }
+
+/* 본문 속 용어 → 탭하면 뜻 팝업 */
+.term {
+  font: inherit;
+  color: var(--navy-600);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 700;
+  border-bottom: 1.5px dotted var(--navy-500);
+}
+.term:hover { color: var(--gold); border-bottom-color: var(--gold); }
+:root[data-theme="dark"] .term { color: var(--gold-soft); border-bottom-color: var(--gold); }
+.term-pop {
+  position: absolute;
+  z-index: 60;
+  background: var(--navy-900);
+  color: #fff;
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  box-shadow: var(--shadow);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.term-pop b { display: block; color: var(--gold-soft); margin-bottom: 0.2rem; font-size: 0.86rem; }
+
 /* ---------- Sector news ---------- */
 .sector-grid {
   display: grid;
