@@ -169,15 +169,175 @@ function importanceClass(title) {
   return '';
 }
 
+// 산업별 소개·관련 종목·핵심 용어 (초보가 기사를 읽기 전에 '이 산업이 뭔지' 잡게)
+const SECTOR_META = {
+  '조선': {
+    intro: '배를 만들어 파는 산업이에요. LNG선·친환경 선박 수주가 실적을 좌우하고, 수주가 쌓이면 몇 년치 일감이 확보돼요.',
+    stocks: ['HD현대중공업', '삼성중공업', '한화오션', 'HD한국조선해양'],
+    terms: [
+      { t: '수주잔고', d: '이미 계약해 앞으로 만들 물량. 많을수록 미래 매출이 보장돼요.' },
+      { t: '슈퍼사이클', d: '수요가 오래·강하게 이어지는 초호황 국면.' },
+      { t: 'LNG선', d: '액화천연가스를 실어나르는 고부가가치 선박.' },
+    ],
+  },
+  '건설': {
+    intro: '집·도로·플랜트를 짓는 산업이에요. 금리, 부동산 경기, 정부 SOC 예산에 민감해요.',
+    stocks: ['삼성물산', '현대건설', 'GS건설', 'DL이앤씨'],
+    terms: [
+      { t: 'PF', d: '프로젝트 파이낸싱. 개발 사업의 미래 수익을 담보로 받는 대출로, 부실해지면 건설사에 위험이 커져요.' },
+      { t: '분양', d: '완공 전 아파트를 미리 파는 것.' },
+      { t: '수주', d: '공사 계약을 따내는 것.' },
+    ],
+  },
+  '반도체': {
+    intro: 'AI·스마트폰의 두뇌를 만드는 한국 경제의 핵심 산업이에요. 메모리 가격 사이클을 크게 타요.',
+    stocks: ['삼성전자', 'SK하이닉스', 'TSMC', '엔비디아'],
+    terms: [
+      { t: 'HBM', d: 'AI에 쓰는 초고속 메모리. 요즘 가장 인기 있는 제품이에요.' },
+      { t: '파운드리', d: '설계도대로 칩을 대신 만들어주는 사업(TSMC가 1위).' },
+      { t: '사이클', d: '가격이 올랐다 내렸다 반복되는 흐름.' },
+    ],
+  },
+  'AI': {
+    intro: '인공지능 모델과 인프라 산업이에요. 빅테크의 막대한 설비투자(CAPEX)가 관련주를 끌어올려요.',
+    stocks: ['엔비디아', '마이크로소프트', '알파벳', '팔란티어'],
+    terms: [
+      { t: 'CAPEX', d: '설비·인프라에 쓰는 대규모 투자금.' },
+      { t: 'LLM', d: '대규모 언어모델. ChatGPT 같은 AI의 핵심 엔진.' },
+      { t: '데이터센터', d: 'AI를 돌리는 대형 서버 시설.' },
+    ],
+  },
+  '에너지': {
+    intro: '원유·가스·전력 산업이에요. 유가와 지정학 리스크에 따라 물가와 기업 비용이 출렁여요.',
+    stocks: ['S-Oil', 'SK이노베이션', '엑슨모빌', '셰브론'],
+    terms: [
+      { t: 'WTI', d: '미국 서부텍사스 원유. 국제 유가의 기준이에요.' },
+      { t: 'OPEC+', d: '산유국 연합. 생산량 조절로 유가에 영향을 줘요.' },
+      { t: '정제마진', d: '원유를 가공해 파는 정유사의 핵심 수익 지표.' },
+    ],
+  },
+  '금융': {
+    intro: '은행·보험·증권 산업이에요. 금리가 오르면 예대마진이 커져 은행 실적에 유리해요.',
+    stocks: ['KB금융', '신한지주', '하나금융', '삼성생명'],
+    terms: [
+      { t: '예대마진', d: '예금금리와 대출금리의 차이. 은행의 핵심 수익원.' },
+      { t: 'NIM', d: '순이자마진. 은행이 돈을 얼마나 남기는지 보여줘요.' },
+      { t: '배당', d: '이익 일부를 주주에게 나눠주는 것(금융주는 배당 매력이 커요).' },
+    ],
+  },
+  '헬스케어': {
+    intro: '제약·바이오·의료기기 산업이에요. 신약 임상 결과 하나에 주가가 크게 움직여요.',
+    stocks: ['삼성바이오로직스', '셀트리온', '유한양행', '일라이릴리'],
+    terms: [
+      { t: '임상', d: '신약이 안전하고 효과 있는지 사람에게 시험하는 단계.' },
+      { t: 'CDMO', d: '다른 회사 약을 대신 개발·생산해주는 사업.' },
+      { t: 'FDA', d: '미국 식품의약국. 신약 허가의 관문이에요.' },
+    ],
+  },
+  '부동산': {
+    intro: '주택·상업용 부동산 시장이에요. 대출규제(DSR·LTV)와 금리가 집값을 좌우해요.',
+    stocks: ['롯데리츠', 'SK리츠', '맥쿼리인프라'],
+    terms: [
+      { t: 'DSR', d: '소득 대비 갚아야 할 원리금 비율. 대출 한도를 정해요.' },
+      { t: 'LTV', d: '집값 대비 빌릴 수 있는 비율.' },
+      { t: '리츠(REITs)', d: '부동산에 투자해 임대수익을 나눠주는 상품.' },
+    ],
+  },
+  '코인·가상자산': {
+    intro: '비트코인·이더리움 등 디지털 자산이에요. 변동성이 크고 금리·달러 흐름에 민감해요.',
+    stocks: ['비트코인', '이더리움', '코인베이스'],
+    terms: [
+      { t: '반감기', d: '비트코인 신규 발행량이 절반으로 주는 이벤트(약 4년마다).' },
+      { t: '스테이블코인', d: '달러 등에 가치를 고정해 변동성을 줄인 코인.' },
+      { t: '변동성', d: '가격이 얼마나 심하게 출렁이는지를 나타내요.' },
+    ],
+  },
+  '세계경제': {
+    intro: '미국·중국·유럽 등 글로벌 경기 흐름이에요. 환율·수출·금리 정책이 서로 얽혀 움직여요.',
+    stocks: ['미국 경기', '중국 경기', '달러인덱스'],
+    terms: [
+      { t: '연준(Fed)', d: '미국 중앙은행. 세계 금리의 기준을 만들어요.' },
+      { t: '무역수지', d: '수출에서 수입을 뺀 값.' },
+      { t: '리세션', d: '경기 침체를 뜻하는 말.' },
+    ],
+  },
+  '채권·금리': {
+    intro: '국채·회사채처럼 돈을 빌려주고 이자를 받는 시장이에요. 금리가 오르면 채권 가격은 내려요.',
+    stocks: ['미 10년물 국채', '한국 국고채', '회사채'],
+    terms: [
+      { t: '국채', d: '정부가 발행하는 채권. 가장 안전한 자산으로 꼽혀요.' },
+      { t: '장단기 금리차', d: '장기금리에서 단기금리를 뺀 값. 역전되면 침체 신호로 봐요.' },
+      { t: '듀레이션', d: '금리 변화에 채권 가격이 얼마나 민감한지.' },
+    ],
+  },
+  '고용·노동': {
+    intro: '일자리·임금·실업률 지표예요. 경기의 체온계이자 중앙은행 금리 결정의 핵심 근거예요.',
+    stocks: ['실업률', '비농업고용', '임금상승률'],
+    terms: [
+      { t: '비농업고용(NFP)', d: '미국의 대표 고용지표. 매달 시장을 흔들어요.' },
+      { t: '실업률', d: '일할 의사가 있는데 일자리를 못 구한 사람의 비율.' },
+      { t: '완전고용', d: '사실상 일자리가 넘치는 상태.' },
+    ],
+  },
+  '재테크': {
+    intro: '월급 외 자산을 불리는 실전 지식이에요. 예적금·ETF·연금·절세 전략을 다뤄요.',
+    stocks: ['ISA', '연금저축', 'ETF'],
+    terms: [
+      { t: 'ISA', d: '이자·배당을 절세해주는 만능 계좌.' },
+      { t: 'ETF', d: '여러 종목을 묶어 한 번에 사는 상품.' },
+      { t: '복리', d: '이자에 이자가 붙어 눈덩이처럼 불어나는 효과.' },
+    ],
+  },
+  '쉬운 경제': {
+    intro: '어려운 경제 개념을 생활 언어로 풀어주는 코너예요. 뉴스가 안 읽히면 여기부터 보세요!',
+    stocks: [],
+    terms: [
+      { t: '기준금리', d: '중앙은행이 정하는 돈의 기본 가격.' },
+      { t: '인플레이션', d: '물가가 계속 오르는 것.' },
+      { t: '환율', d: '다른 나라 돈과 바꾸는 비율.' },
+    ],
+  },
+};
+
+function sectorTemp(items) {
+  let pos = 0; let neg = 0;
+  (items || []).forEach((n) => {
+    const c = importanceClass(n.title);
+    if (c === 'pos') pos += 1; else if (c === 'neg') neg += 1;
+  });
+  if (!items || !items.length) return null;
+  if (pos > neg) return { cls: 'pos', label: `🟢 호재 우세 (${pos}·${neg})` };
+  if (neg > pos) return { cls: 'neg', label: `🔴 악재 우세 (${pos}·${neg})` };
+  return { cls: 'neu', label: `⚪ 혼조 (${pos}·${neg})` };
+}
+
 function renderSectorNews(data) {
   const grid = document.getElementById('sectorGrid');
   const updated = document.getElementById('sectorsUpdated');
   if (!data || !data.sectors) return;
-  updated.textContent = data.updatedAt && data.updatedAt !== 'seed'
-    ? `자동 업데이트 ${data.updatedAt} · 15분마다 갱신`
-    : '15분마다 자동 갱신 (첫 수집 전이라 일부 섹터는 비어 있어요)';
+  if (data.updatedAt && data.updatedAt !== 'seed') {
+    const pretty = String(data.updatedAt).replace('T', ' ').replace(/[+-]\d{2}:\d{2}$/, '').slice(0, 16);
+    updated.textContent = `자동 업데이트 ${pretty} KST · 15분마다 갱신 · 산업 소개·관련 종목은 고정 안내예요`;
+  } else {
+    updated.textContent = '15분마다 자동 갱신 (첫 수집 전이라 일부 섹터는 비어 있어요)';
+  }
 
   grid.innerHTML = Object.entries(data.sectors).map(([sector, items]) => {
+    const meta = SECTOR_META[sector];
+    const temp = sectorTemp(items);
+    const head = `<div class="sector-head-row">
+        <h3>${escapeHtml(sector)}</h3>
+        ${temp ? `<span class="sector-temp ${temp.cls}">${temp.label}</span>` : ''}
+      </div>`;
+    const intro = meta && meta.intro ? `<p class="sector-intro">${escapeHtml(meta.intro)}</p>` : '';
+    const stocks = meta && meta.stocks && meta.stocks.length
+      ? `<div class="sector-meta-row"><span class="sm-label">관련</span>${meta.stocks.map((s) =>
+          `<span class="stock-chip">${escapeHtml(s)}</span>`).join('')}</div>`
+      : '';
+    const terms = meta && meta.terms && meta.terms.length
+      ? `<div class="sector-meta-row"><span class="sm-label">용어</span>${meta.terms.map((x) =>
+          `<button type="button" class="term" data-def="${escapeHtml(x.d)}">${escapeHtml(x.t)}</button>`).join('')}</div>`
+      : '';
     const body = (items && items.length)
       ? `<ul class="sector-news-list">${items.map((n) => `
           <li class="${importanceClass(n.title)}">
@@ -185,7 +345,7 @@ function renderSectorNews(data) {
             <span class="sector-news-meta">${escapeHtml(n.source || '')}${n.date ? ` · ${escapeHtml(n.date)}` : ''}</span>
           </li>`).join('')}</ul>`
       : '<p class="sector-empty">자동 수집 대기 중 — 다음 갱신에서 채워집니다.</p>';
-    return `<div class="sector-card"><h3>${escapeHtml(sector)}</h3>${body}</div>`;
+    return `<div class="sector-card">${head}${intro}${stocks}${terms}${body}</div>`;
   }).join('');
 }
 
