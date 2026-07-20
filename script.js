@@ -31,20 +31,6 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
 
 // ---------- News ----------
 let allPosts = [];
-let userProfile = null; // 고객 맞춤 프로필 (localStorage)
-
-// 개인화 점수: 관심 카테고리 우선 + 지식수준 맞춤 (높을수록 위로)
-function personalScore(post) {
-  if (!userProfile) return 0;
-  let s = 0;
-  if (Array.isArray(userProfile.interests) && userProfile.interests.includes(post.category)) s += 100;
-  if (userProfile.level === '왕초보') {
-    if (post.level === '왕초보') s += 6;
-    else if (post.level === '기본') s += 2;
-    else if (post.level === '심화') s -= 3;
-  }
-  return s;
-}
 const newsList = document.getElementById('newsList');
 const newsEmpty = document.getElementById('newsEmpty');
 const newsSearch = document.getElementById('newsSearch');
@@ -109,18 +95,10 @@ function renderNews() {
   const query = newsSearch.value.trim().toLowerCase();
   const category = newsFilter.value;
 
-  // 카테고리를 직접 고르지 않았을 때만 개인화 정렬을 적용해요.
-  const personalize = userProfile && category === 'all' && !query;
   const filtered = allPosts
     .filter((n) => category === 'all' || n.category === category)
     .filter((n) => !query || n.title.toLowerCase().includes(query) || n.summary.toLowerCase().includes(query))
-    .sort((a, b) => {
-      if (personalize) {
-        const ds = personalScore(b) - personalScore(a);
-        if (ds !== 0) return ds;
-      }
-      return (b.date || '').localeCompare(a.date || '');
-    });
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
   newsEmpty.hidden = filtered.length > 0;
   newsList.innerHTML = filtered.map((n) => `
@@ -827,10 +805,6 @@ function fetchData(path) {
 }
 
 async function init() {
-  userProfile = loadProfile();
-  applyPrefs();
-  buildSettingsFab();
-
   const [postsRes, heatmapRes] = await Promise.all([
     fetchData('data/posts.json'),
     fetchData('data/heatmap.json'),
@@ -839,9 +813,7 @@ async function init() {
   const heatmap = await heatmapRes.json();
 
   renderNews();
-  renderGreeting();
   renderHeatmap(heatmap);
-  maybeOnboard();
 
   // 오늘의 시장 + 전날 브리핑 (없어도 나머지는 정상 동작)
   try {
@@ -898,183 +870,6 @@ async function init() {
   } catch (e) {
     console.warn('charts.json 로드 실패:', e);
   }
-}
-
-// ============ 고객 맞춤: 온보딩 + 테마/글자크기 ============
-const PROFILE_KEY = 'gaermot_profile_v1';
-const PREF_KEY = 'gaermot_pref_v1';
-
-const PERSONAS = [
-  { id: 'newbie', label: '사회초년생', emoji: '🧑‍💼', interests: ['재테크', '금리·통화정책', '부동산'], greet: '월급을 잘 굴리는 첫걸음, 오늘 경제 한 스푼 떠먹여 드릴게요 🥄' },
-  { id: 'jobseeker', label: '취준생', emoji: '📚', interests: ['고용·노동', '거시경제', '세계경제'], greet: '면접에서 써먹는 경제 상식, 여기서 챙겨가요.' },
-  { id: 'stock', label: '주식 초보', emoji: '📈', interests: ['증시', '반도체', 'AI·기술'], greet: '차트만 보지 말고, 왜 오르내리는지부터 잡아봐요.' },
-  { id: 'biz', label: '자영업자·소상공인', emoji: '🏪', interests: ['금리·통화정책', '소비·물가', '환율'], greet: '금리·물가·환율이 곧 내 가게 비용이에요. 핵심만 짚어드려요.' },
-  { id: 'house', label: '내집마련 준비', emoji: '🏠', interests: ['부동산', '금리·통화정책', '거시경제'], greet: '대출·금리·집값, 내 집 마련에 필요한 것만 모았어요.' },
-  { id: 'curious', label: '그냥 궁금해서', emoji: '🤔', interests: ['쉬운 경제', '거시경제', '증시'], greet: '어려운 경제, 부담 없이 쉬운 것부터 구경해요.' },
-];
-const INTEREST_OPTIONS = ['부동산', '증시', '코인·가상자산', '금리·통화정책', 'AI·기술', '반도체', '재테크', '고용·노동', '세계경제', '소비·물가', '환율', '에너지'];
-
-function loadProfile() { try { return JSON.parse(localStorage.getItem(PROFILE_KEY) || 'null'); } catch (e) { return null; } }
-function saveProfile(p) { try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) { /* 저장 실패 무시 */ } }
-function loadPref() { try { return JSON.parse(localStorage.getItem(PREF_KEY) || 'null') || { theme: 'system', font: 'normal' }; } catch (e) { return { theme: 'system', font: 'normal' }; } }
-function savePref(p) { try { localStorage.setItem(PREF_KEY, JSON.stringify(p)); } catch (e) { /* 무시 */ } }
-function personaById(id) { return PERSONAS.find((x) => x.id === id); }
-
-function applyPrefs() {
-  const p = loadPref();
-  const root = document.documentElement;
-  if (p.theme === 'light' || p.theme === 'dark') root.setAttribute('data-theme', p.theme);
-  else root.removeAttribute('data-theme');
-  const map = { small: '16px', normal: '17px', large: '19px' };
-  root.style.fontSize = map[p.font] || '17px';
-}
-
-function renderGreeting() {
-  const news = document.getElementById('news');
-  if (!news) return;
-  let banner = document.getElementById('greetBanner');
-  if (!userProfile) { if (banner) banner.remove(); return; }
-  const persona = personaById(userProfile.persona) || {};
-  if (!banner) {
-    banner = document.createElement('div');
-    banner.id = 'greetBanner';
-    banner.className = 'greet-banner';
-    news.insertBefore(banner, news.firstChild);
-  }
-  const chips = (userProfile.interests || []).slice(0, 6)
-    .map((c) => `<span class="greet-chip">#${escapeHtml(c)}</span>`).join('');
-  banner.innerHTML = `
-    <div class="greet-top">
-      <span class="greet-emoji">${persona.emoji || '👋'}</span>
-      <div class="greet-text">
-        <div class="greet-title">${escapeHtml(persona.label || '나만의')} 맞춤 브리핑</div>
-        <div class="greet-sub">${escapeHtml(persona.greet || '오늘도 경제 한 스푼 🥄')}</div>
-      </div>
-      <button class="greet-edit" id="greetEdit" type="button">맞춤 설정</button>
-    </div>
-    ${chips ? `<div class="greet-chips"><span class="greet-chip-label">내 관심</span>${chips}</div>` : ''}`;
-  const edit = document.getElementById('greetEdit');
-  if (edit) edit.addEventListener('click', openOnboarding);
-}
-
-function closeOnb() { const el = document.getElementById('onbOverlay'); if (el) el.remove(); }
-
-function openOnboarding() {
-  closeOnb();
-  const cur = userProfile || { persona: null, interests: [], level: null };
-  const ov = document.createElement('div');
-  ov.className = 'onb-overlay';
-  ov.id = 'onbOverlay';
-  ov.innerHTML = `
-    <div class="onb-card" role="dialog" aria-modal="true">
-      <button class="onb-x" id="onbClose" type="button" aria-label="닫기">✕</button>
-      <h2 class="onb-h">👋 나에게 맞는 경제 브리핑</h2>
-      <p class="onb-lead">3가지만 골라주면 홈을 나에게 맞게 정리해드려요.<br>정보는 이 기기(브라우저)에만 저장돼요.</p>
-      <div class="onb-q">
-        <div class="onb-q-title">1. 나를 소개하면?</div>
-        <div class="onb-opts" data-group="persona">
-          ${PERSONAS.map((p) => `<button type="button" class="onb-opt${cur.persona === p.id ? ' on' : ''}" data-val="${p.id}">${p.emoji} ${escapeHtml(p.label)}</button>`).join('')}
-        </div>
-      </div>
-      <div class="onb-q">
-        <div class="onb-q-title">2. 관심 주제는? <span class="onb-hint">여러 개 선택 · 안 골라도 돼요</span></div>
-        <div class="onb-opts" data-group="interests">
-          ${INTEREST_OPTIONS.map((c) => `<button type="button" class="onb-opt${cur.interests && cur.interests.includes(c) ? ' on' : ''}" data-val="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join('')}
-        </div>
-      </div>
-      <div class="onb-q">
-        <div class="onb-q-title">3. 경제 지식 수준은?</div>
-        <div class="onb-opts" data-group="level">
-          <button type="button" class="onb-opt${cur.level === '왕초보' ? ' on' : ''}" data-val="왕초보">🐣 왕초보</button>
-          <button type="button" class="onb-opt${cur.level === '보통' ? ' on' : ''}" data-val="보통">🙂 조금 알아요</button>
-        </div>
-      </div>
-      <button class="onb-start" id="onbStart" type="button">이대로 시작하기 →</button>
-    </div>`;
-  document.body.appendChild(ov);
-
-  ov.addEventListener('click', (e) => {
-    if (e.target === ov || e.target.closest('#onbClose')) { closeOnb(); return; }
-    const opt = e.target.closest('.onb-opt');
-    if (opt) {
-      const group = opt.closest('.onb-opts').dataset.group;
-      if (group === 'interests') opt.classList.toggle('on');
-      else { opt.parentElement.querySelectorAll('.onb-opt').forEach((b) => b.classList.remove('on')); opt.classList.add('on'); }
-      return;
-    }
-    if (e.target.closest('#onbStart')) {
-      const personaBtn = ov.querySelector('[data-group="persona"] .onb-opt.on');
-      const persona = personaBtn ? personaBtn.dataset.val : null;
-      let interests = [...ov.querySelectorAll('[data-group="interests"] .onb-opt.on')].map((b) => b.dataset.val);
-      const levelBtn = ov.querySelector('[data-group="level"] .onb-opt.on');
-      const level = levelBtn ? levelBtn.dataset.val : '보통';
-      if ((!interests || !interests.length) && persona) interests = (personaById(persona) || {}).interests || [];
-      userProfile = { persona: persona || 'curious', interests, level };
-      saveProfile(userProfile);
-      closeOnb();
-      renderGreeting();
-      renderNews();
-    }
-  });
-}
-
-function maybeOnboard() { if (!loadProfile()) openOnboarding(); }
-
-function buildSettingsFab() {
-  if (document.getElementById('settingsFab')) return;
-  const fab = document.createElement('button');
-  fab.className = 'settings-fab';
-  fab.id = 'settingsFab';
-  fab.type = 'button';
-  fab.setAttribute('aria-label', '화면·맞춤 설정');
-  fab.textContent = '⚙️';
-  document.body.appendChild(fab);
-  fab.addEventListener('click', openSettings);
-}
-
-function openSettings() {
-  const pref = loadPref();
-  const sheet = document.createElement('div');
-  sheet.className = 'settings-overlay';
-  sheet.id = 'settingsOverlay';
-  sheet.innerHTML = `
-    <div class="settings-sheet" role="dialog" aria-modal="true">
-      <div class="settings-head"><b>화면 설정</b><button class="onb-x" id="setClose" type="button" aria-label="닫기">✕</button></div>
-      <div class="set-row">
-        <span class="set-label">테마</span>
-        <div class="seg" data-group="theme">
-          <button type="button" class="seg-btn${pref.theme === 'light' ? ' on' : ''}" data-val="light">☀️ 라이트</button>
-          <button type="button" class="seg-btn${pref.theme === 'dark' ? ' on' : ''}" data-val="dark">🌙 다크</button>
-          <button type="button" class="seg-btn${(!pref.theme || pref.theme === 'system') ? ' on' : ''}" data-val="system">자동</button>
-        </div>
-      </div>
-      <div class="set-row">
-        <span class="set-label">글자 크기</span>
-        <div class="seg" data-group="font">
-          <button type="button" class="seg-btn${pref.font === 'small' ? ' on' : ''}" data-val="small">작게</button>
-          <button type="button" class="seg-btn${(!pref.font || pref.font === 'normal') ? ' on' : ''}" data-val="normal">보통</button>
-          <button type="button" class="seg-btn${pref.font === 'large' ? ' on' : ''}" data-val="large">크게</button>
-        </div>
-      </div>
-      <button class="set-redo" id="setRedo" type="button">🎯 맞춤 설정 다시하기</button>
-    </div>`;
-  document.body.appendChild(sheet);
-
-  sheet.addEventListener('click', (e) => {
-    if (e.target === sheet || e.target.closest('#setClose')) { sheet.remove(); return; }
-    const seg = e.target.closest('.seg-btn');
-    if (seg) {
-      const group = seg.closest('.seg').dataset.group;
-      seg.parentElement.querySelectorAll('.seg-btn').forEach((b) => b.classList.remove('on'));
-      seg.classList.add('on');
-      const p = loadPref();
-      p[group] = seg.dataset.val;
-      savePref(p);
-      applyPrefs();
-      return;
-    }
-    if (e.target.closest('#setRedo')) { sheet.remove(); openOnboarding(); }
-  });
 }
 
 init();
