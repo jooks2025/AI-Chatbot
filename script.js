@@ -106,6 +106,7 @@ function renderNews() {
       <div class="card-tags">
         <span class="${chipClass(n.category)}">${escapeHtml(n.category)}</span>
         ${levelBadge(n.level)}
+        ${n.auto ? '<span class="auto-badge">🔄 자동수집</span>' : '<span class="pick-badge">✍️ 해설</span>'}
         <span class="read-time">⏱️ ${readTime(n.summary)}분</span>
       </div>
       <h3>${escapeHtml(n.title)}</h3>
@@ -815,6 +816,19 @@ async function init() {
   renderNews();
   renderHeatmap(heatmap);
 
+  // 자동 수집 뉴스(매일 갱신)를 손으로 쓴 해설과 합친다 (URL 기준 중복 제거).
+  try {
+    const anRes = await fetchData('data/auto_news.json');
+    if (anRes.ok) {
+      const auto = (await anRes.json()).posts || [];
+      const seen = new Set(allPosts.map((p) => p.url));
+      allPosts = allPosts.concat(auto.filter((p) => p.url && !seen.has(p.url)));
+      renderNews();
+    }
+  } catch (e) {
+    console.warn('auto_news.json 로드 실패:', e);
+  }
+
   // 오늘의 시장 + 전날 브리핑 (없어도 나머지는 정상 동작)
   try {
     const marketRes = await fetchData('data/market.json');
@@ -830,7 +844,12 @@ async function init() {
   // 용어사전
   try {
     const gRes = await fetchData('data/glossary.json');
-    if (gRes.ok) { glossaryTerms = (await gRes.json()).terms || []; renderGlossary(''); renderQuiz(); }
+    if (gRes.ok) {
+      glossaryTerms = (await gRes.json()).terms || [];
+      renderGlossary('');
+      renderQuiz();
+      renderNews(); // 용어사전이 로드된 뒤 본문 용어에 밑줄·팝업을 다시 입힌다.
+    }
   } catch (e) {
     console.warn('glossary.json 로드 실패:', e);
   }

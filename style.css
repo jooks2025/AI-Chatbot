@@ -592,6 +592,16 @@ input:focus, select:focus {
   color: var(--text-muted);
   margin-left: auto;
 }
+.auto-badge, .pick-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+}
+.auto-badge { background: rgba(52, 91, 176, 0.14); color: var(--navy-600); }
+.pick-badge { background: rgba(217, 164, 65, 0.16); color: #9a7418; }
+:root[data-theme="dark"] .auto-badge { color: #a8c0f0; }
+:root[data-theme="dark"] .pick-badge { color: var(--gold-soft); }
 
 /* '내 삶에 미치는 영향' 한 줄 훅 — 접혀 있어도 보임 */
 .impact-line {
