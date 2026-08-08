@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T18:55+09:00",
+  "updatedAt": "2026-08-08T19:41+09:00",
   "sectors": {
     "조선": [
       {
@@ -34,7 +34,7 @@
       },
       {
         "title": "조선업 수주 대박, 영암 경제는 썰물",
-        "source": "gjdream.com",
+        "source": "드림투데이",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9vT2p4RUpDZFBPNHZ0QktkQldfcjUtSUdva3Y1YXIybkZma1c3RXNuZXVGWFRSQTF0M2lFWV9taWtlakszYjVZdHBxOGd2SkFwa2MyN1FaTC1xZUZZbGJJSzQ5TFJsdjE3VGc?oc=5",
         "date": "2026-07-29"
       }
@@ -54,7 +54,7 @@
       },
       {
         "title": "수요 줄고 공사 밀리고…경기 건설업 '침체의 늪'",
-        "source": "인천일보",
+        "source": "incheonilbo.com",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBCY1ZPNnlNWktCeHlRcEdOc1RyeUtJZGYyZmg4elRvYkc4cVdjenF4TW1NYjNLVmRqblRsR3VCci1uYm9WOWdHMnQ0NXRpN2RZdGI2UW53NkRBTTRoUHFqa0k1bEU4YVE5OHJNUzN0MkI?oc=5",
         "date": "2026-08-05"
       },
@@ -109,19 +109,13 @@
         "date": "2026-08-08"
       },
       {
-        "title": "\"애플-CXMT 메모리 반도체 공급협상 결렬…가격 조건 안 맞아\"",
-        "source": "한국경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LOGpuN05UT1VUMjF1a2V6cWI4Q1RQYzJLSU84cTd5Mi1fZVAxdGpqbDU1c1BkSHBCcG1IYmdvSEpGemhRYzRJVnpSX0NtVGZQcTlleURNNmw4Zw?oc=5",
-        "date": "2026-08-06"
+        "title": "[반도체 공급 전쟁] 메모리 3사, 내년 물량도 완판…'뉴노멀' 된 장기계약",
+        "source": "녹색경제신문",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ycndUTkZnc0ZybU1kSzd0ZU1mV01MMW10UUNsaHJZamZ2Tl90dnBhV2xQZmJpd3ZTN0l5RDVjQnlnMUYxeTN3Q2hJamFScGNOT2poZkFnR0dCeExFVTIyUkVieEVpQk11?oc=5",
+        "date": "2026-08-07"
       }
     ],
     "AI": [
-      {
-        "title": "[인공지능 줌인] \"AI가 내 일자리를 삼켰다\"…중국, 무분별한 AI 도입 속 노동시장 '격랑'",
-        "source": "위키리크스한국",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBHM1N0QWJXUjVhZ0ttNjA1dDBERGJWN1lOMGpWeUttTUFYMkYxdmNuWk5ET1lnc2gwTkRyeHNyVG55T0FXOVM5SFZxV3R5TDZ5dy1ZaUtuOXhobDA1RnkwVEZrdnhSc0ltbXJKQkRGQQ?oc=5",
-        "date": "2026-08-08"
-      },
       {
         "title": "AI가 만든 '딥페이크' 영상·목소리 잡아낼 수 있을까",
         "source": "동아사이언스",
@@ -129,8 +123,14 @@
         "date": "2026-08-08"
       },
       {
+        "title": "[인공지능 줌인] \"AI가 내 일자리를 삼켰다\"…중국, 무분별한 AI 도입 속 노동시장 '격랑'",
+        "source": "위키리크스한국",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBHM1N0QWJXUjVhZ0ttNjA1dDBERGJWN1lOMGpWeUttTUFYMkYxdmNuWk5ET1lnc2gwTkRyeHNyVG55T0FXOVM5SFZxV3R5TDZ5dy1ZaUtuOXhobDA1RnkwVEZrdnhSc0ltbXJKQkRGQQ?oc=5",
+        "date": "2026-08-08"
+      },
+      {
         "title": "北도 AI 전쟁 뛰어들었다…김일성大에 ‘인공지능학부’, 유치원부터 로봇 교육",
-        "source": "sandtimes.co.kr",
+        "source": "샌드타임즈",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBQcXpIYzI0SGVJX0dRekVBdkxaMFVYNHpGRkJVLTEyb1N2TmFDajJ4RmJON2taRjhVaGVNc3RITDFWT0JQMmpLc04yX3QtQXNINUxINlZRR196RmV2ZUROd2ZzVlhyejhKajdzMQ?oc=5",
         "date": "2026-08-08"
       },
@@ -148,7 +148,7 @@
       },
       {
         "title": "인공지능이 완전히 새로운 바이러스 16종을 만들어냈습니다. 과학자들이 우려하는 이유는 무엇일까요?",
-        "source": "vietnam.vn",
+        "source": "Vietnam.vn",
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNnJ1VnFmeWN0UU9DME42Mnc3NFJtVm85b09wUHV2U1JPR1JsNnVnLWZqeUxQaEstUExkdTFZTFM1dXFBcDNVYThxWDJKMUk1UFZfcFk2ZG5MdmZhTDFidy1EcTQzQ2Fsem5fMlZEUzhUbWZCOHI3RlJ3ekJoYVhQSTMyU0QySUpfeFlFMkFrTi0?oc=5",
         "date": "2026-08-08"
       }
@@ -179,19 +179,25 @@
         "date": "2026-08-07"
       },
       {
+        "title": "'전기국가' 선언 앞에 놓인 세 가지 선결과제[이유범의 에코&에너지]",
+        "source": "파이낸셜뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB1WEQ4QlhxeGpaRXpUVFV4M3JHMFZkRmxaZ0VzdjFkZWVsNkxCRUtFbl9JNGY3blNORGtpQklydkczN1lNMnpQeXBzWWZacE9OaDljYXRYLWwwdw?oc=5",
+        "date": "2026-08-08"
+      },
+      {
         "title": "역대급 전력 수요에도…블랙아웃 걱정 없는 이유",
         "source": "한국경제",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9vOWlkS3ZmeWVSMHlzNm05Nm4td0pjai1pQXRpNll3MmJMcHdxTGNRdDVoaGl2d2JSWmlnRFA3eTZsVTVhZXlXOVBVeUVJNFk3d0I0MnJYYk80dw?oc=5",
         "date": "2026-08-05"
-      },
-      {
-        "title": "'전력산업 구조개편 해법 ‘통합적 공공 거버넌스’ 공감대'",
-        "source": "에너지데일리",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBWT3VlUHdYZUQyUThuMU9iWVlWZXhXTUZlR1A3eGJwamI1MXZPMlRMR0RMcF9FeUxjajh5YzFJY1RrdExOdnZJUURxS1NKOHhHaUJyY1Nod0pOX3JMWW0xaHV0Rjl1YkVqbzJOXzltMmRTdw?oc=5",
-        "date": "2026-08-07"
       }
     ],
     "금융": [
+      {
+        "title": "美뉴욕증시, ‘고용 쇼크’에도 상승…S&P500 사상 최고",
+        "source": "뉴시안",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBkc1ViUV9taGlxc281RGkzd1pJSjRGSmxVX25tclFOMHhYbnpJMW4wampSa3hNWTEwcVI0bGdmSlFzbmZnb3NwZXNxSWFublZScS1HTjFVZkVfVlk5LW8tR25zQTFZdzVUTGfSAW5BVV95cUxNcFBLSk1BUEdsTHVBbFdMRW5vbEtiaVM2NjVGeHdnOTFmcHhxb0J2TnlJdXZ4VU9Vb19UQ1ZVSEJZeUpUcEdIMGRxLTdjc1dnOXphdnVIX2daaHZRYTl0ZW9DdDVCdER3emJzYVl2dw?oc=5",
+        "date": "2026-08-08"
+      },
       {
         "title": "미국 증시, 금리인상 기대론 후퇴에 상승…S&P500 사상최고치 마감",
         "source": "BBS불교방송",
@@ -221,12 +227,6 @@
         "source": "뉴스1",
         "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1wNTRUMEh4NWs2eHhYbWQ4VVFscVE2bnlURUZvQllScWY0MHNpWWsxbW1aMUtUVU02eXh0UWsyZlJ2QW96TVJDbmc1Mmw5MmVZM3lZdV9Hc2lJSG56TXJvYmdR?oc=5",
         "date": "2026-08-07"
-      },
-      {
-        "title": "\"한국 증시 투자 부적격\" 블룸버그 칼럼에…금융위 정면 반박 By EBN",
-        "source": "Investing.com 한국어",
-        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE4wcTlBUGU5ODRXcVV5VEZhdk81UWZKUHc2UEg0SXZLWFM4Rl85VTV3Snd3dVpBZEJJQlZhQy1CZ0FWWXNtMnBFTUd0YU5nT00yZHlXRE92eHBNZV9qSTlrd01DLWlQWFZFMkhDaGp4cVA?oc=5",
-        "date": "2026-08-05"
       }
     ],
     "헬스케어": [
@@ -282,7 +282,7 @@
       },
       {
         "title": "[26년 8월] 대전 아파트 분양 전망 회복세...충남은 하락",
-        "source": "chungnamilbo.co.kr",
+        "source": "충남일보",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1menVaVWo0eERpS1ZOV3FldUM0UUU2M2pqYzJkX1YyWkNzVHk2NW5UeVJiYmtrOTk5QjhOY19tNGx3NHl4OXNNTGpHcWFEYlluRldzWEI1UUJ3YWhUcGVrYVhsUDhBeng3Sjl1endRel9WaXM?oc=5",
         "date": "2026-08-06"
       },
@@ -314,7 +314,7 @@
       },
       {
         "title": "방향성 못잡는 비트코인, 9100만선 눈치보기 [주간코인시황]",
-        "source": "it.chosun.com",
+        "source": "IT조선",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE40SFdhQ3BzT2UtLTh4QU10cE9nOGlibjJ4cFZKcjlxSkpPTlpwcDc0V0hIQW0xSUgyeW41VFhwaVhaemVReVlOYW50dVV1d0tVblBMYnVrOU1BNTV4M2U5dzBwNUcxNzRrd3dEb0x3bEjSAXRBVV95cUxQTzNlM1Z1RC1DYzZTTnE2Z1N5Nzc4NUlTMjlZd3dDUXdlakZxOW9HZ3ROdGxtRUxVZGUwakJhS3BqTi1LWHdJM2h4V055dFNaX3VsTjRkZlVjZzVYQml0ekQ5dlBUZFRYTWtOd2RlS3hCRi1jeQ?oc=5",
         "date": "2026-08-08"
       },
@@ -326,7 +326,7 @@
       },
       {
         "title": "[08:09 가상자산] 비트코인, 엇갈린 '바닥' 전망 속 9100만원대 박스권",
-        "source": "신아일보",
+        "source": "shinailbo.co.kr",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBPaTBtdXlVWE82dlQ4LWRfN19IVDhnMmtHS0tWX1BCTWwzUGlHS0tFN3ZjektrZFZ0bHZ1WmE1SXd5MXZkdVdnb21aY1NBZ2drdHFGZWl6aFQzQXgyMDItcXJrSW9OQ3ZMOEU0eFlKNDI?oc=5",
         "date": "2026-08-07"
       },
@@ -352,7 +352,7 @@
       },
       {
         "title": "관세, 석유, 그리고 인공지능: 세계 경제를 위협하는 '완벽한 폭풍'.",
-        "source": "vietnam.vn",
+        "source": "Vietnam.vn",
         "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOSjNtMHBpZGo0WHM0RGQyNUNUMWtVVnF6LTVDUG41Y0g3QjduRGxORFkyemlLX1drUERnT2l2ZjV5TU9ZMURRbS0yNDZtUGdOenhzS2lqQktwQkNRNlhZNGU5VnZDdUd0eDZQRnh3LXJHelA1NmRKZnVJV0c2RFRNelFYOWlCY1hlcmxGMEQyTW9Bb2c?oc=5",
         "date": "2026-07-27"
       },
@@ -408,7 +408,7 @@
       },
       {
         "title": "[뉴욕 금·채권·달러] 고용 쇼크에 금리 인상론 후퇴…국채·달러 급락, 금 2.4%↑",
-        "source": "블록미디어",
+        "source": "blockmedia.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE05eWtwclM5a05YZ1NtOE0yaDJnSDFvU1I2VFNmakhLNXNCR1FVZnMwaURlUG1KNHJ5X0dIOFJvX3FzT1lkdzc5a2VTWWQyb2E5OVMtNDJaMS0?oc=5",
         "date": "2026-08-08"
       },
@@ -504,7 +504,7 @@
       },
       {
         "title": "나는 왜 경제에 대해 쓰고, 녹음하고, 촬영하는가",
-        "source": "브런치",
+        "source": "brunch.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBsV254a2habk02T204cVkwcTc1cmUxZ3paRDJWUFVVOFhFOHdjSElsRFpMM3FELWxrUzZvemRISnlhWmc4UmU0dWpn?oc=5",
         "date": "2026-03-08"
       },
