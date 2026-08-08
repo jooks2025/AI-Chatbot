@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T22:59+09:00",
+  "updatedAt": "2026-08-08T23:42+09:00",
   "sectors": {
     "조선": [
       {
@@ -66,7 +66,7 @@
       },
       {
         "title": "경기 건설업 4년째 부진, 수주가 공사로 못 이어지는 ‘기성 지연’…왜?",
-        "source": "kgnews.co.kr",
+        "source": "경기신문",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ia0Q2UHIwWlpZTmh1VTl0NTR1LUpXQWpibWEybGZJZkhyRnJvSDhrd3ZnM01ReW5zVFpIcHN2OF9LaThNSGNOaFJYbmxieXROTk1YZG93VFhOQnowSlZsTVJLeko?oc=5",
         "date": "2026-08-05"
       },
@@ -78,6 +78,18 @@
       }
     ],
     "반도체": [
+      {
+        "title": "용인·청주에 반도체 공장 추가 건설… 하이닉스, 54조 투자 확정",
+        "source": "조선일보",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZ3JEUmhMLWpWeE92d3JtM2pDcVRWdDVUM2cteld2cWxfYUZOWWJtNWNXS3lsdnlDcjNLUGRPbnYxdW5jYThObzNuSXVyaTFuM255Q2pCcWZuWFd2UDdkNXd0VUVIOXo5bmE3WFlNMm1SSWp0NUxTS2dLX3lnMV9qclVxNA?oc=5",
+        "date": "2026-08-08"
+      },
+      {
+        "title": "SK하이닉스, 용인 반도체에 54조 베팅…대규모 투자 나선다",
+        "source": "서울경제",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE41bWx2STBtc3lxb2NqME9KWlJrS1h1amVJV1RjdWszaGl1bi1wcEVHendRVDJneVlTRVg2enNnLXIwemxrWDdyazA5WF9uZHVaWnfSAVNBVV95cUxNeXZtS0MtU3NEaDUxVF82d0xHOHFVMGROZzVHS2tiYm5ib1lFSnQ2WUt5MVo1Nk5VYmdkOTlubGotQ1lEQS1YRE9rMFNTQkVpZXk0SQ?oc=5",
+        "date": "2026-08-08"
+      },
       {
         "title": "월가 'ATM' 된 삼전닉스?…반도체 저승사자도 \"이젠 살 때\" [빈난새의 빈틈없이마켓]",
         "source": "한국경제",
@@ -100,18 +112,6 @@
         "title": "AI 반도체에 밀린 일본…한국·대만에 상반기 수출 첫 추월",
         "source": "서울경제",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8tdU5MRWhrclAyblpRMkJWcnNuelBfS3VIS1AtQlBSd0VaVjZ3MWhyZ3NZU0xFanIyalhTMlpUX2RXdUJXVWJiWEFuai1zeUl3RnfSAVNBVV95cUxNRGJudHF4bFN1WVAzV0l4Y1VnYTdhc2dTRTlEOC1PUDRvVjhOQVM3d2k0bHBCb1lLa1ctMmpMaGJPNURiaUwtb3RZU0dyTEFEazNRSQ?oc=5",
-        "date": "2026-08-08"
-      },
-      {
-        "title": "SK하이닉스, 용인 반도체에 54조 베팅…대규모 투자 나선다",
-        "source": "서울경제",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE41bWx2STBtc3lxb2NqME9KWlJrS1h1amVJV1RjdWszaGl1bi1wcEVHendRVDJneVlTRVg2enNnLXIwemxrWDdyazA5WF9uZHVaWnfSAVNBVV95cUxNeXZtS0MtU3NEaDUxVF82d0xHOHFVMGROZzVHS2tiYm5ib1lFSnQ2WUt5MVo1Nk5VYmdkOTlubGotQ1lEQS1YRE9rMFNTQkVpZXk0SQ?oc=5",
-        "date": "2026-08-08"
-      },
-      {
-        "title": "용인·청주에 반도체 공장 추가 건설… 하이닉스, 54조 투자 확정",
-        "source": "조선일보",
-        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZ3JEUmhMLWpWeE92d3JtM2pDcVRWdDVUM2cteld2cWxfYUZOWWJtNWNXS3lsdnlDcjNLUGRPbnYxdW5jYThObzNuSXVyaTFuM255Q2pCcWZuWFd2UDdkNXd0VUVIOXo5bmE3WFlNMm1SSWp0NUxTS2dLX3lnMV9qclVxNA?oc=5",
         "date": "2026-08-08"
       }
     ],
@@ -205,27 +205,27 @@
         "date": "2026-08-05"
       },
       {
-        "title": "미국 증시, 금리인상 기대론 후퇴에 상승…S&P500 사상최고치 마감",
-        "source": "BBS불교방송",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GMDczQ2RvQ1FjRHNCUGtzQnVvMGhqbzFmejRCaks1dXNqVHBwYklTM3hERl9zdFNYbDY5eXNKQXhfX3h3alU4ZG5ObzNhVGI2SER5YzVpVFdyTWVhZFprdUpyOWJHWUFpZFpr?oc=5",
-        "date": "2026-08-08"
-      },
-      {
         "title": "“韓 증시 변동성 커 ‘투자 부적격’” 블룸버그 칼럼에…금융위 정면 반박 - 조선비즈",
         "source": "Chosunbiz",
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdlQ5YjZEMTBxVjF3Vjg0YmhnM09DdXQ5WHdWczB3WTRJOFJ3VVdIM01TXzlMd3Nmc3ZQTWZyTlhlWFpndlZaQ1FHWU1ZSVBfOU5FYW9uUzNMTmxqOWdzeElZaHdBdmhBR19nX1VvaHZCcVZ1R25ucXh5Yzd1SDY2bEpwdXI4SkdK0gGcAUFVX3lxTE1DX09HM0xjQmNGdGJaVVczWVZlOUs4RDEyRklvdmdJazBJUTIxRDVUWmtfWDZLbjJFZVVzMVFGOTZYZVZ6VExWRVlGVXo0UmlObGZPY1p0Nm5lcE4tZG9MSzhJR1JXajEtOWJHaVFzVnRFVkpUa3VkelgxZlljNWNBdm5sYUZaMWdzTi1uQUR3a1pfSU0yOFcxbzk0Uw?oc=5",
         "date": "2026-08-05"
       },
       {
-        "title": "美뉴욕증시, ‘고용 쇼크’에도 상승…S&P500 사상 최고",
-        "source": "뉴시안",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBkc1ViUV9taGlxc281RGkzd1pJSjRGSmxVX25tclFOMHhYbnpJMW4wampSa3hNWTEwcVI0bGdmSlFzbmZnb3NwZXNxSWFublZScS1HTjFVZkVfVlk5LW8tR25zQTFZdzVUTGfSAW5BVV95cUxNcFBLSk1BUEdsTHVBbFdMRW5vbEtiaVM2NjVGeHdnOTFmcHhxb0J2TnlJdXZ4VU9Vb19UQ1ZVSEJZeUpUcEdIMGRxLTdjc1dnOXphdnVIX2daaHZRYTl0ZW9DdDVCdER3emJzYVl2dw?oc=5",
+        "title": "미국 증시, 금리인상 기대론 후퇴에 상승…S&P500 사상최고치 마감",
+        "source": "BBS불교방송",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GMDczQ2RvQ1FjRHNCUGtzQnVvMGhqbzFmejRCaks1dXNqVHBwYklTM3hERl9zdFNYbDY5eXNKQXhfX3h3alU4ZG5ObzNhVGI2SER5YzVpVFdyTWVhZFprdUpyOWJHWUFpZFpr?oc=5",
         "date": "2026-08-08"
       },
       {
         "title": "美증시, 금리인상 기대론 후퇴에 상승…S&P500 사상최고치 마감",
         "source": "조세금융신문",
         "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE56VXR5bzFEdTVJNFAyX3ZtSFdqNnM3aUtocUtOVlNBZFI3U3lsVzlhRTZFTEwyYk94anRMaUFSTTYzSkhiVDlxaTNwRkFzZ0JoWWYzRWlyc0t0OC1tZUg2OFNLOA?oc=5",
+        "date": "2026-08-08"
+      },
+      {
+        "title": "美뉴욕증시, ‘고용 쇼크’에도 상승…S&P500 사상 최고",
+        "source": "뉴시안",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBkc1ViUV9taGlxc281RGkzd1pJSjRGSmxVX25tclFOMHhYbnpJMW4wampSa3hNWTEwcVI0bGdmSlFzbmZnb3NwZXNxSWFublZScS1HTjFVZkVfVlk5LW8tR25zQTFZdzVUTGfSAW5BVV95cUxNcFBLSk1BUEdsTHVBbFdMRW5vbEtiaVM2NjVGeHdnOTFmcHhxb0J2TnlJdXZ4VU9Vb19UQ1ZVSEJZeUpUcEdIMGRxLTdjc1dnOXphdnVIX2daaHZRYTl0ZW9DdDVCdER3emJzYVl2dw?oc=5",
         "date": "2026-08-08"
       }
     ],
@@ -294,13 +294,13 @@
       },
       {
         "title": "[올앳부동산]아파트 분양 후 가격 떨어지면 정부가 다시 사준다는데···당신은 구매하겠습니까?",
-        "source": "경향신문",
+        "source": "khan.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9jcmlwYmtMWkQxN3BNWl8xOW96QzZ3bnhnb1Q3b2dxRGxGNFZ4NW5vZmNNb2tXbkpPYllyRkV2MnE0SklIaHl3MGN1SWttUENZbkxxeENQTWdxQdIBX0FVX3lxTFBXVF9fOHRFRU5Qaldld0J5MGdRN2E0QVJ1LUxSMC1BaXdtTGZBQTBjSG5acEVPeE9yU2xNMEJGZGdfS0s0OFV2THFyZkhJTGZfMDRISXJuNU4tSHZZd0tB?oc=5",
         "date": "2026-01-19"
       },
       {
         "title": "6월 서울 아파트 분양시장…뜨겁지도 차갑지도 않다",
-        "source": "연합인포맥스",
+        "source": "news.einfomax.co.kr",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1KNUlsa0czRlZwSk04dk11a2ZLVDZDTldzUTN1Uk5IOENtMWREa1Y5Z2R5bTN0cnNFUTlURUNYZzlRbnhtaFlNMGpfNE02LWoyZ3hUM2tzNldCT3h6ZUh3LWFqY3NELWx0Ni15YmhyLXk?oc=5",
         "date": "2026-06-09"
       }
@@ -396,7 +396,7 @@
       },
       {
         "title": "[뉴욕채권] 국채가 강보합…호르무즈 기대감 속 '입찰 축소' 가능성 돌출",
-        "source": "연합인포맥스",
+        "source": "news.einfomax.co.kr",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5TcGFyOGtYbjVmZDloaGszc0dONk95eldleTFDRVMwUFg0QzNhdmVWcGtHUVBNT1pDek5TNXdrOHY5VEhfS0xsb3NKNlo0T3plaHhfTXEyUl9NMVhkalBWQnNXY2t6SXN1clI2ejlQcm4?oc=5",
         "date": "2026-08-06"
       },
@@ -466,7 +466,7 @@
       },
       {
         "title": "KB자산운용 'RISE 버크셔포트폴리오 ETF' 하락장서 수익률 선방",
-        "source": "중소기업신문",
+        "source": "smedaily.co.kr",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE85SDRENUxuRTVfbFBJREoyb0VuRXA1UFBMSGZNWERKU1BCUTdNYnlGbm9pNHVZbmZIVmZsV3ZSSXlVVmllN2UtYVpzR3lObnRscXFsbFVtWkRQUzhTQ29VYVdEam1DQnI3eGdrUQ?oc=5",
         "date": "2026-08-05"
       },
@@ -504,7 +504,7 @@
       },
       {
         "title": "나는 왜 경제에 대해 쓰고, 녹음하고, 촬영하는가",
-        "source": "brunch.co.kr",
+        "source": "브런치",
         "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBsV254a2habk02T204cVkwcTc1cmUxZ3paRDJWUFVVOFhFOHdjSElsRFpMM3FELWxrUzZvemRISnlhWmc4UmU0dWpn?oc=5",
         "date": "2026-03-08"
       },
