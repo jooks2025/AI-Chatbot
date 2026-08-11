@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-11T22:34+09:00",
+  "updatedAt": "2026-08-11T23:44+09:00",
   "sectors": {
     "조선": [
       {
         "title": "‘저가 싹쓸이’ 中조선소마저 선별 수주…슬롯 부족에 韓엔 선가 호재 [비즈360]",
-        "source": "biz.heraldcorp.com",
+        "source": "헤럴드경제",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5UallGRlBvbXdRMTJUSlVhRGx5V3V4bWxDWHpJc096Q0JhWmxhZ1V4QmxuZG5YSzhfcjczdDgwcVV1Q1Q2cFh6bkIwbjB2ZHdrcTlwYVlB?oc=5",
         "date": "2026-08-11"
       },
@@ -59,12 +59,6 @@
         "date": "2026-08-11"
       },
       {
-        "title": "고려사이버대 차민수 교수, 지역별 전문건설업 분석해 적정 공사비수급 최적화 필요성 제시",
-        "source": "네이트",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1FOWJyMVA3VHhYeF9VcDQ0bXpYal9JMzgyRUlhRUpjRjF1VGUxaGVjWXFGX0F3dFJ4ZWFFRkFtdWpYYXZsZS1UYTNlSDB6YjlCQ2lR?oc=5",
-        "date": "2026-08-10"
-      },
-      {
         "title": "건설업 외감기업 경영 악화 심각… 5년 새 한계기업 3배 가까이 급증",
         "source": "대한경제",
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5JdVp0SWppTDdNM01FbFhmUDItUHFRQjJGMXJjUnpOX3FESWRoNVNiWUJoRExpcVlhcG1JUXpOSXBFb1NKcmlBckxvRVZCQnMyMkdsNUM2QmQ1YlhRZXBuSm9Oa3VremYtMTlXSDVJNERiUUZj?oc=5",
@@ -75,27 +69,15 @@
         "source": "한국일보",
         "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA4LWlVVThobm9zODVNX01LaEE1X0d4TURyUTZoTElhS0hqd1ltZ1pvdG03eXdUNG9EeEZvR0RUVkpkU01NakhnOEZVN3A1ejBKTWtHRDhLeC1kUWtaTldDUjZfMml2S0hKM3FoZFpB0gFzQVVfeXFMT1k4UU8xc0pCRHZ5ZV9WbGk3bmRtYlNfREJENm5sR2JDYk1UTHhqMnpHeWRMQkM5Z3VRU1ZpeklpRDhGUnBMNmpvU2FpcUc5eDBEY3hsZVNuZF9QZ1VwOHhNYnlzOUd0SUZmR0Y1TU1SampPdw?oc=5",
         "date": "2026-08-10"
+      },
+      {
+        "title": "익산시, '건설'로 계약유형 분류하고 산림조합과 수의계약 수십 건 '추가 확인'",
+        "source": "프레시안",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1BckFWcHp4X3p0aVphLVNzRllRZUw5VUJyYWJ6SHBHaEprX1dLUFM5ZGFqcGs5T1RNQi14RnZib25idEY2cG1rNnpoNEoxU2FmcWlmTFJIVGRMUUY4Zm1FU3IzNFpKaHVHeDhN?oc=5",
+        "date": "2026-08-11"
       }
     ],
     "반도체": [
-      {
-        "title": "101% 폭등 뒤 22% 급락…“반도체 대박은 끝, 이 종목 사라”",
-        "source": "중앙일보",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5SZVNnZGtqaHNwRm5KNkV1T3NOWXhlZTRqc0I0NzF3RTNuc1J3eWFETW9hNTBIRnRkekxGYlJVLXdJTkJGMGg3dTNaTGgtMzFPMUdUNGln?oc=5",
-        "date": "2026-08-11"
-      },
-      {
-        "title": "\"반도체 중소형주 주목할 타이밍\"…소부장 낙수효과 기대",
-        "source": "한국경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5NZm9rbUdoMGo4QngwdUYxcElWNXROSUhTRGlaY29pQXlBR0hrN0V0enp1M1pNdTZLem9oQVhldk50bHptR3hHN0tXT0xkdXJsYjdtY0NhV2pSZw?oc=5",
-        "date": "2026-08-11"
-      },
-      {
-        "title": "번스타인, WFE 성장 전망 상향…반도체 장비주 목표주가 일제히 올려",
-        "source": "Investing.com 한국어",
-        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBzb01vTEFCTDRKbkpTNGdBOEF3UmdUQ0t4UUlfaHdEMGxzWnNpcUJtWmlVZjlxMENfcDdSZUFWT2I5Z2JDcjRBRFNKQ3FKMHNISWdHRUd5dUNLUHBDa1RDcFQ5dXdOc3JfSlpFQ2szbEw?oc=5",
-        "date": "2026-08-11"
-      },
       {
         "title": "'삼전닉스보다 낫다'…유망 반도체 중소형주 12종은?",
         "source": "한국경제",
@@ -109,9 +91,27 @@
         "date": "2026-08-11"
       },
       {
-        "title": "일본 반도체 기업 키옥시아, 최대주주 사실상 SK하이닉스로 바뀌었다",
-        "source": "매일경제",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Wb1pvNVg3SXNZZDFQZ2Jna3BnQXVUZXpDcTg3V2lkeXVhbWlnTnk1T1ljSVp2b0lhSU90eWdEazVaZG91VHZJcG1nV0htQXBWa1E?oc=5",
+        "title": "\"반도체 수출급증에 실적 모멘텀\"…삼전 4%·하닉 0.35%↑(종합)",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wWEt5cUlJZy0xWXFEOTN0eU9nekpwazJGd2s5bVJvUE1GM2h1TjNhdWU4MEFlZWx6WVl6aWNPb3V1N3BEdEM0QS1wRzF5UXdFNE43SFdPVWlvaG_SAWBBVV95cUxPUUhfVlNPeFUyUUN5eXlFWFc3V3c4bHJReG5xeXRKdVNNWTFEOTF4Y2VvWEI4N3lQaG4td0ZnNDFlQXk1TTNLSUlGQmpMUmx5bmNkRkdRYXRfT0hZQzQ0WGE?oc=5",
+        "date": "2026-08-11"
+      },
+      {
+        "title": "반도체 상승에 코스피 반등...코스닥도 강보합",
+        "source": "YTN",
+        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE94OGlxeks2UjBtNGlhdFhORlJ6dFpyQ3BqcVl2YXhfOTgzVDNLTU13UXdiNFZLUm9DX182eElzS0FfZGJCcFpFZ1pqblVMUXlfNWpJd3NqcWVRTllBdEE?oc=5",
+        "date": "2026-08-11"
+      },
+      {
+        "title": "용인 산단 찾은 與 \"반도체 클러스터 전력·용수 등 핵심 인프라 적시 구축\"",
+        "source": "뉴시스",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9EbGdTLUxyMnFpWGVYMThwT2xxOUxpWi1LQjdlT1RfMk4zWEt5enRYQVBqQ1RSakdfV214MjVhMmJfU0ZZTGY1T1N2blBwX0VfRUhsczh4OHZ2cHM4WU1KZ9IBeEFVX3lxTE5PblNKcC15M1E0UnpwbmhHaXFjdmU5ekhMaHZfVWtNY0hiVkZVbFF4UGlqN3dSRnVUaXNQUEN5VjhHQkdjR2FIT01TeE5zVUxyVHlpZ2U1Q1hKMU9Tc2xwb3FCUFNFUFd6dHBRXzFkdjF4VjV5N0hvcw?oc=5",
+        "date": "2026-08-11"
+      },
+      {
+        "title": "용인시, 반도체 소부장·앵커기업 ‘동반성장 생태계’ 구축 나선다",
+        "source": "아시아경제",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9UWmZqajJRM0pENmVFaTI5QmU0MEhoWVdraWhoOGhVRDV0enVGMjdhNHV3bExqc3VPU0h5WFVSX1VGRWN6TE9qSHAtb2gyZjNiUEhMbGNSUnlZOExacDZWZw?oc=5",
         "date": "2026-08-11"
       }
     ],
@@ -147,7 +147,7 @@
         "date": "2026-08-11"
       },
       {
-        "title": "“제주를 인공지능 실증 거점으로”...위 지사, AI·AX 선도 기업에 제안",
+        "title": "“제주를 인공지능 실증 거점으로”...위 지사, 국내 대표 AI·AX 기업에 제안",
         "source": "뉴스제주",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9sUWJVa0lCRkN2aURmM2NOQTJLd0dxOHJFZDJ4TjhiZmpLcmRCNS12akN0d1Nsdlg4VHN0VkdFajU5NUdFU0xZMlZvdzM4Z0xYeENpQzBRbGhKTTJfQVQ4Y0dwOUhJWU1LZXJj?oc=5",
         "date": "2026-08-11"
@@ -157,12 +157,12 @@
       {
         "title": "[아세안 전력대전환]②\"데이터센터 수요는 계산도 안됐다…전력망 투자 시급”",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5UOXN2bDZYM2I5NFFOUEczQlRTcGplbGxkSTRlaXJFRU9aQWFZZWN4SVdOR3FycjA3MzZsLUx4S0ktTlRxdmpaLXo1SnlxZ1E?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBmeFVMQ3I0TjB5YkM4bHhCY0w4bElTdC1NSlJuSmgySzc4SzNJaTJRZmx0X0p2T0pnWUVNYWd3cGJHQk9nMnc?oc=5",
         "date": "2026-08-10"
       },
       {
         "title": "AI·반도체 시대 제조 경쟁력은 '전력'…IEA “에너지 인프라가 산업패권 좌우”",
-        "source": "전자신문",
+        "source": "etnews.com",
         "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBWdXpKN2lKR0VrRUNMSHA5YllEUkFyREQ4T1BkZEJGOGNyMTEyZHQ5MEhXWnpWWkQ4eEZMRTMxU2EtcTE2VDY2VFpkWE5vUQ?oc=5",
         "date": "2026-08-10"
       },
@@ -174,7 +174,7 @@
       },
       {
         "title": "기후환노위, 3대 메가프로젝트 현안 질의…전력·용수 공급 실효성 도마 위",
-        "source": "electimes.com",
+        "source": "전기신문",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE50XzItand1WU9YRUI5QVJnLWItdnU0NjhvamxhNFNNcjAyZTA1aFlEaEphTUkwTWJXSHJ0ZG5aZkdZQVd5Q1AtazZTT1lDZ19vLXVsbEY2alZWWVYxVGhycG5WUlZjY0k0N0pxOdIBcEFVX3lxTE1HTkhld3Vmb05YMUhSX1NYaVJNSlBUTFZmczFZTjJ2QUxWUnpwSnBmVDRyR3ZmckI1QmZ4OVVLZGlWTE1FS2taai1meGRJOHdocUxpTE5OZm1EREZnVHAtT0lFbzUwemZybTd1TWxkNUs?oc=5",
         "date": "2026-08-11"
       },
@@ -193,15 +193,9 @@
     ],
     "금융": [
       {
-        "title": "동양생명, 17년 만에 증시 퇴장…우리금융 100% 자회사로",
-        "source": "뉴스저널리즘",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5sX0RjX3RKVllRV0dnNWZLUTBGTXF1Sm02OHJEMlhrZnZQalhROG14UXZuWS1zWkxCTVFvZnc0Y1JKem4yMU5HRnF6TGtfZ1RfUS1SVnFDNEZpMVV1bGlYOFBXaHZWVlk5MlVr?oc=5",
-        "date": "2026-08-11"
-      },
-      {
-        "title": "동양생명, 우리금융 주식교환 완료…우리금융그룹 완전자회사 편입 - 머니투데이",
-        "source": "머니투데이",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE43ZElSZ0hjQ21FMTY0dVd5RnBMQjRKUzFuV1I2VUp2cUZQdU40dHRhSlBUQ1FHR0E3Skx3bGdUOW0zbC1fY2ZIX2cwV2ZId2JFMGtPXzY1YjNtVGI0QlhHb0RqUkYxS1RjRVJF0gFwQVVfeXFMUHFlSXlvNnk2ekd5TmhvT3Bsc1BETE84OVFHcG1UbXZ0eDdCTUI5aFZ3ZWtuWDJHVXBSWl9mRnQ0eWRndmU5SjhfT3FqMDV0dV9lcWRNTTZzN0xuMVZweHRSVm1GdU9JVEUyRVNJdHFGTQ?oc=5",
+        "title": "iM금융, 핀테크사 뉴지스탁 증권 산하로 재편…시너지 강화",
+        "source": "fetv.co.kr",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5PTDVMZzBxMHJldW5peThSTmRTOFNkZUVCM1NfakEzWXc0blBXaG5xSU1TV245N1gzaUt0RHpKZTFqQUozbE5FOTQ1MnZmTkQyT2lhekdCSU9ZYldIakZvdU4wV3FOTnA1?oc=5",
         "date": "2026-08-11"
       },
       {
@@ -211,41 +205,47 @@
         "date": "2026-08-11"
       },
       {
+        "title": "동양생명, 우리금융 주식교환 완료…우리금융그룹 완전자회사 편입 - 머니투데이",
+        "source": "머니투데이",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE43ZElSZ0hjQ21FMTY0dVd5RnBMQjRKUzFuV1I2VUp2cUZQdU40dHRhSlBUQ1FHR0E3Skx3bGdUOW0zbC1fY2ZIX2cwV2ZId2JFMGtPXzY1YjNtVGI0QlhHb0RqUkYxS1RjRVJF0gFwQVVfeXFMUHFlSXlvNnk2ekd5TmhvT3Bsc1BETE84OVFHcG1UbXZ0eDdCTUI5aFZ3ZWtuWDJHVXBSWl9mRnQ0eWRndmU5SjhfT3FqMDV0dV9lcWRNTTZzN0xuMVZweHRSVm1GdU9JVEUyRVNJdHFGTQ?oc=5",
+        "date": "2026-08-11"
+      },
+      {
+        "title": "한국금융지주, 2분기 기대치 19% 상회… \"증시 호조가 만든 어닝 서프라이즈\" - 키움증권",
+        "source": "s-journal.co.kr",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE41UEJiLXlRUWg5cmpxNEltZWVLaHZ5Y3dPWC13cy1GS1BIci1Wc292M01pNGRPNUR5ZWFFMHNTTDU1aW5TeG42c1cxQVJkSXBqY281dDFzMlNqTU4tM01UZlp5WmFselpWdHZPT0R3?oc=5",
+        "date": "2026-08-11"
+      },
+      {
         "title": "[미국증시] 엔비디아 5000억 달러 AI 금융 플랫폼…순환 금융 우려에 2.9% 하락",
         "source": "자본시장뉴스",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9zQlJTZk9Iekk1UXNYZEJSeUc1eE1EaFplZkRka1FRQzlUYk5rdDFtQlE0X3pOT2ZyUjNDQ3RFNE10aC1Bd1NjZVNtMEFRbG4xTWswMUI2MmJVdDZaMHl2dDFKdDBGd0U?oc=5",
         "date": "2026-08-11"
       },
       {
-        "title": "증시 자금 '코스닥'으로 간다",
-        "source": "중소기업신문",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41RXlJSFIwbGphdVUxejMxcnVMV1A1NGNZWEswVHRpS3JuUkF1elIwMFcyenRUcW1VU0Z6OTFkR1dUTmMteUd4cDRhWkRjVXowWXEwLTlaX1EwNTJIYlVSaDlIek8zN041VXl0dQ?oc=5",
-        "date": "2026-08-11"
-      },
-      {
-        "title": "5% 오른 국제유가·AI 순환금융 우려에도 덜 흔들린 미 증시 [마켓무버의 국장 힌트]",
-        "source": "한국경제TV",
-        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vemFoZF92bHRQbG5YZmpyV21tT2ZBTkRWTTg4czhCVnZDMFFYUkJsdlZXb2V4ZDZzeUtzQmxVZk40bldEVm82d0RCV0c1LXdwY1lyd0lPWFVJdmJDSUtXX3FvVEhtQjRBelFXSnVOY0VlN0lwUWtr?oc=5",
+        "title": "동양생명, 17년 만에 증시 퇴장…우리금융 100% 자회사로",
+        "source": "뉴스저널리즘",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5sX0RjX3RKVllRV0dnNWZLUTBGTXF1Sm02OHJEMlhrZnZQalhROG14UXZuWS1zWkxCTVFvZnc0Y1JKem4yMU5HRnF6TGtfZ1RfUS1SVnFDNEZpMVV1bGlYOFBXaHZWVlk5MlVr?oc=5",
         "date": "2026-08-11"
       }
     ],
     "헬스케어": [
       {
-        "title": "BIX 2026, 바이오헬스케어 혁신 판도 읽는다",
-        "source": "메드월드뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51dWljOG5CNFVoQXdXV3RkZHNGUWFvN0ZybTlKX3RlNmxGcG84V29hY2I3MGJsY0JEVy1XMkhZX1dzX2V2TFgyQlRCaWtPcTZmeXNHU3BWZ2UybEtYNmNGckt5TElxNmc?oc=5",
-        "date": "2026-08-11"
-      },
-      {
-        "title": "[유한양행-유일한 아카데미] 파이프라인 세계 3위 한국…노연홍 “이제 AI가 승부 가른다”",
+        "title": "[유한양행-유일한 아카데미] 노연홍 회장 “한국, 신약 파이프라인 세계 3위... 이제 AI가 승부 가른다”",
         "source": "더나은미래",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBuRWU5S1lXdkNKTzdILWR1YnpYal8xdEswYjRiVElmS0l5dnI1bXF2Y1VsSnMxZ0gxQVhQd2tWcFVRRkVzVExxdEdkdFBvcFRnRlE?oc=5",
         "date": "2026-08-11"
       },
       {
         "title": "메디씽큐, 공동대표로 이희열 벤처블릭 대표 선임",
-        "source": "pharmnews.com",
+        "source": "팜뉴스",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5VRWNIUnZiYk5XU2R6WThfTlVHNXlKTFc0NWk4cml0WUZMQ2FNczBCc1R3QmFiNENHb0ZVN2Q0bEk3eVFkS2ZqR2hoMW9yaVRFdU84b3FjTm9pOFZsS0JmQ0taZXVnTWxQbFhqNw?oc=5",
+        "date": "2026-08-11"
+      },
+      {
+        "title": "BIX 2026, 바이오헬스케어 혁신 판도 읽는다",
+        "source": "메드월드뉴스",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE83TVdqUENHaHI0aUlZcTEtWDZkUnpPUWM0YWlNVmhWcm5XRDgzSkxoUERWSjVQWFJQZW1qaXhkamdFUFkxYlFtT2d0cS1fa08wTzlUOGktaWFHYWRXY2RfWmpNNTNTWUZtTmtTVw?oc=5",
         "date": "2026-08-11"
       },
       {
@@ -261,10 +261,10 @@
         "date": "2026-08-11"
       },
       {
-        "title": "대웅제약, 병·의원 넘어 검진 사후관리로 디지털헬스케어 확대",
-        "source": "스마트비즈",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE16R0dmQVNMNmtGMGlWQUVJdVlIUG1YUXFCTmpKVHBtaWtBa3NvRldYaERHTllCUGs5cndiVmFmUWg2TXBXZmxkYk43U0NKS3NLcXphbW1iak5aR185ekMtOXJhTnNzMkplY0N1dA?oc=5",
-        "date": "2026-08-11"
+        "title": "[기획] 보건의료산업 혁신은 구호뿐… 수출 편중에 불균형 심화",
+        "source": "매일일보",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9ZRnpUMXNmSXZaQllmMVFtUzJHNTh5aUw1UnlTZ1hfZkpuSEppNUJVSzNNX3VoaXdfaVBIalRVbFlIaDJkcUlGRDh3ODNjdTRjWkktNGwzMVl0ZTJaRjlyX1pDb0w?oc=5",
+        "date": "2026-08-09"
       }
     ],
     "부동산": [
@@ -351,34 +351,34 @@
         "date": "2026-07-22"
       },
       {
+        "title": "관세, 석유, 그리고 인공지능: 세계 경제를 위협하는 '완벽한 폭풍'.",
+        "source": "Vietnam.vn",
+        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOSjNtMHBpZGo0WHM0RGQyNUNUMWtVVnF6LTVDUG41Y0g3QjduRGxORFkyemlLX1drUERnT2l2ZjV5TU9ZMURRbS0yNDZtUGdOenhzS2lqQktwQkNRNlhZNGU5VnZDdUd0eDZQRnh3LXJHelA1NmRKZnVJV0c2RFRNelFYOWlCY1hlcmxGMEQyTW9Bb2c?oc=5",
+        "date": "2026-07-27"
+      },
+      {
+        "title": "트럼프의 '해방의 날' 관세 1년 … 세계 경제에서 달라진 4가지",
+        "source": "BBC",
+        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yWHg2YzRIaU82VGdQeC1waDgyZFhFM1F3S1ItMjFnNGpZWk04Mk1USXU5M2RIYk9sYXhCZktMNl95UHJGSFpSQm1mV2p3bmVPU1ptMUR6UjIzRkRH0gFiQVVfeXFMTkhVVUVKZmpnMHNrZnlfMVhuU2hwSXFiYnNvYTFLTXQ2UmZ0a3dRdV9TWmNCVlF4SVgzLWNaT0JMUFdZeURpOHc1bmF3WksxbU1yMm91VTY5dFlBb1Y2M1AxNlE?oc=5",
+        "date": "2026-04-03"
+      },
+      {
         "title": "[美관세 위법판결] 세계 경제 불확실성 커졌다…각국 무역합의 '안갯속'",
         "source": "연합뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAxXzFGaW9hMmYtMmlWYVFDUkc1dU5UVUNJZFJ3anh3M2xpOHZrQ19lUFYtb2dlbWVZU2ExLUpIZ0NNTWtrbGZRd0d1Z2tRU00yWS1sYVdWM0x1N2fSAWBBVV95cUxQalFyZzM0eDJnMEt4eWR1alJnQmd6UGltdGFEWXFtLWphd1QtTlRsM0FlVkR4WEZSNlVMX0xFTUpIdDU1cTZfdzZfWW9leXFrUW1MdXVjS2kxYl8yckZmTEs?oc=5",
         "date": "2026-02-21"
       },
       {
-        "title": "관세, 석유, 그리고 인공지능: 세계 경제를 위협하는 '완벽한 폭풍'.",
-        "source": "vietnam.vn",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOSjNtMHBpZGo0WHM0RGQyNUNUMWtVVnF6LTVDUG41Y0g3QjduRGxORFkyemlLX1drUERnT2l2ZjV5TU9ZMURRbS0yNDZtUGdOenhzS2lqQktwQkNRNlhZNGU5VnZDdUd0eDZQRnh3LXJHelA1NmRKZnVJV0c2RFRNelFYOWlCY1hlcmxGMEQyTW9Bb2c?oc=5",
-        "date": "2026-07-27"
+        "title": "반기문, 中 보아오포럼서 관세전쟁, 세계경제 전후 최악 위기…亞 협력 강조",
+        "source": "아주경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBYZEx6VWlsT0NTMUpFRm9PZXBmcExrX2pXcmZlaFVDTmt5MGdXNXYySXBQWVZXWFJ3QkM2THFXYV8zVW9ubGpoUUhNb1ZIRVdQdVFkTThtUmhad9IBWEFVX3lxTE5aYzlGakRKbFN4d3RBMTZMVk12VUZjTGt3RkRvVU1uYlNoRWNrSm1uenlTcXZzV2dSVWRMY0RiTm5xYklaOGItUHVQcmw1UDQ4QUNfbzROR0o?oc=5",
+        "date": "2026-03-25"
       },
       {
-        "title": "'관세왕' 트럼프 청구서 날아온다…세계 경제 살얼음판",
-        "source": "한국경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1tcnZ1TjZQSHduTFp5aERBWkg2ZmZ1STNQZ2ZDcHJhXzVtc2JUd3JXTktpaXNpMTVrQXVtdFFhUUZqN3pOUHlLb3ljdktpd0NfdW5VS0M4RUhydw?oc=5",
-        "date": "2026-01-18"
-      },
-      {
-        "title": "미국이 ‘관세폭탄’ 던지니… 세계도 ‘무역빗장’ 걸었다[트럼프 재집권 1년 美 어디로 가나]",
-        "source": "문화일보",
-        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBLdUV0WGJyRUl1cnNSTzc5bkJOWTFrODByN09QRnhyekNLb2xwY1RpWlpneUgxM0xNTm1nX2dXNEtNaFNmWG9sQzN4Z1pISVdT?oc=5",
-        "date": "2026-01-20"
-      },
-      {
-        "title": "유엔 “세계 2.7% 성장”…관세 버텼지만 저성장 굳어지는 글로벌 경제",
-        "source": "mstoday.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBBSUY0R2dEbjZOeVFPWFBvdDZvWjZhYW1Oc3p0M2huNXJTVi1GRTV4aC1aVzVfV3IxX1N6Zzlld1hRcFFzR1R5TnljTUZBWlpEZDI0MDFTazBvWS11bWx4eThJbTdJNzV1bDYxMw?oc=5",
-        "date": "2026-01-09"
+        "title": "미국과 도널드 트럼프 사이의 관세 분쟁이 무역 전쟁으로, 이제는 경제 전쟁으로까지 확대되고 있다: 전망 및 결과",
+        "source": "Xpert.Digital - Konrad Wolfenstein",
+        "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZzZxa0hiajBEUk9IQVBWOHRLWWpnNmZkZGg5aW9iTU9yaVJDeHEwRWZjT2hUQkc2eVFGaE55OTZ5cnFNS2tENTVObE03dzRWdHJZWGliUVVnU2F3VW5STHByLWtRY1NDQmx4OWF6alh1cktaN0tNd3lyZ19DcUgyX2phd3U1VlQ0Y1JXdHZmdWxGa2ZsQWZ4Q0c1R0JHVkk1YzdlWk5wOUFoV2lzY3JCRTRvSUM2VFpvcDZMY25kQVdORi1CLWhSYXV3T1F0ZjlsNy1N?oc=5",
+        "date": "2026-02-26"
       }
     ],
     "채권·금리": [
@@ -389,10 +389,10 @@
         "date": "2026-08-11"
       },
       {
-        "title": "국고채 금리↑…한은 '추가 인상' 언급·초장기물 입찰 경계감(종합)",
-        "source": "연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5OWnZHaXNpSnZFeFhiMURSdHBkazUzRGxCRENwNnRGSFJobU1MN0syai1QMkFXWjhxckN5ZFFxUlRNdWVnVEJRZlFRMjBXNXF4OXBQeHFCbnp6dUEwYkFkRA?oc=5",
-        "date": "2026-08-11"
+        "title": "치솟는 美 장기금리… ‘최고 채권 판매자’베선트가 꺼낸 ‘3장의 카드’",
+        "source": "조선일보",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSEhoZUJPT1FHT09pU0VOVUhfY2RqYk9NbEFqdnNuSGJhX0pXa0lYWmZ2el9jVzlmSVNzeGM2aGhqNm42bVpXZVQ3ZS1LekN0TlJIbHFpZDIydWlqMXFjcnhxMmR5ckJuSldTNkJSRU05NkdhNWhmd3RaQ3gwZUFMVERlRU1vSGdx?oc=5",
+        "date": "2026-08-10"
       },
       {
         "title": "[채권/외환] 美 국채금리 다시 뛴다… CPI 경계·유가 급등에 10년물 4.70% 돌파",
@@ -401,10 +401,10 @@
         "date": "2026-08-11"
       },
       {
-        "title": "치솟는 美 장기금리… ‘최고 채권 판매자’베선트가 꺼낸 ‘3장의 카드’",
-        "source": "조선일보",
-        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSEhoZUJPT1FHT09pU0VOVUhfY2RqYk9NbEFqdnNuSGJhX0pXa0lYWmZ2el9jVzlmSVNzeGM2aGhqNm42bVpXZVQ3ZS1LekN0TlJIbHFpZDIydWlqMXFjcnhxMmR5ckJuSldTNkJSRU05NkdhNWhmd3RaQ3gwZUFMVERlRU1vSGdx?oc=5",
-        "date": "2026-08-10"
+        "title": "국고채 금리↑…한은 '추가 인상' 언급·초장기물 입찰 경계감(종합)",
+        "source": "매일경제 마켓",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8wSVlvTnozWHU0WmdyaFBXellHbGF2b1M5cXM0aW03a0p2YzhtVDZKbGtqVXNWY09ESlN1OWZ4YW5aZUlITVdOVFh6WVFIb0xjanc?oc=5",
+        "date": "2026-08-11"
       },
       {
         "title": "금리 올리고 중동 악재까지…채권시장 얼어붙었다",
