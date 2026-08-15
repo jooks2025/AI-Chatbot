@@ -1,7 +1,13 @@
 {
-  "updatedAt": "2026-08-16T00:01+09:00",
+  "updatedAt": "2026-08-16T00:36+09:00",
   "sectors": {
     "조선": [
+      {
+        "title": "中 조선업, 7월 글로벌 선박 수주 81% 차지",
+        "source": "스틸데일리",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBoSm1zYlIxZTlOZ0RUWkZPeG5yVjBYMUdwRHdIMlJ2R3hUOXFmTDR6R3QyenNJRnlic1ozQ0dyeVZ1SG1Nc3lnSTdpcUJZd1FYZjh3OUF3cFhweThMam1KZndqTnBWV1Jyd1ZlSF9OLUNHdHJs0gF0QVVfeXFMUGhKbXNiUjFlOU5nRFRaRk94bnJWMFgxR3BEd0gyUnZHeFQ5cWZMNHpHdDJ6c0lGeWJzWjNDR3J5VnVIbU1zeWdJN2lxQll3UVhmOHc5QXdwWHB5OExqbUpmd2pOcFZXUnJ3VmVIX04tQ0d0cmw?oc=5",
+        "date": "2026-08-14"
+      },
       {
         "title": "조선업, 수주 호조 뒤 인력난…생산 차질 방지 총력",
         "source": "폴리뉴스 Polinews",
@@ -15,14 +21,8 @@
         "date": "2026-08-14"
       },
       {
-        "title": "中 조선업, 7월 글로벌 선박 수주 81% 차지",
-        "source": "스틸데일리",
-        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBoSm1zYlIxZTlOZ0RUWkZPeG5yVjBYMUdwRHdIMlJ2R3hUOXFmTDR6R3QyenNJRnlic1ozQ0dyeVZ1SG1Nc3lnSTdpcUJZd1FYZjh3OUF3cFhweThMam1KZndqTnBWV1Jyd1ZlSF9OLUNHdHJs0gF0QVVfeXFMUGhKbXNiUjFlOU5nRFRaRk94bnJWMFgxR3BEd0gyUnZHeFQ5cWZMNHpHdDJ6c0lGeWJzWjNDR3J5VnVIbU1zeWdJN2lxQll3UVhmOHc5QXdwWHB5OExqbUpmd2pOcFZXUnJ3VmVIX04tQ0d0cmw?oc=5",
-        "date": "2026-08-14"
-      },
-      {
         "title": "LNG 연료선 수주잔량 韓 압도하는 中조선업계…\"韓과 기술격차 축소는 기정사실\"",
-        "source": "straightnews.co.kr",
+        "source": "스트레이트뉴스",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE05UnBYTjBMLTNwMVJ4ZkowN1BrR2pGR1o2dUdCc3JtVkdZMEN0MlBNVjRXYzRWOEg5T1BzU21MaEhOWXRIejlrRnF3dEVSNzNRbmNsZi1PbF9VTGEzSFpBOUQwR0Y5VGd1cFdjYjdPNldzUVk?oc=5",
         "date": "2026-08-12"
       },
@@ -66,7 +66,7 @@
       },
       {
         "title": "(무너진 건설 생태계) 상반기 폐업 2092곳…건설업 수익성 5년새 '반토막'",
-        "source": "뉴스토마토",
+        "source": "newstomato.com",
         "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9MR20zVTdNSDU2ZEpLLUJrZC11cUtTTFhyTnN4ZkxuSnMwVDRBYk9PUUo1Q3JnTDYweXZaQ3MzUjNRNkl2cFdlYXdfeDE3Q0NXU2VSSVN4SmlVbGNPbU9SYg?oc=5",
         "date": "2026-08-12"
       },
@@ -103,15 +103,15 @@
         "date": "2026-08-15"
       },
       {
-        "title": "투자자들 뉴욕 증시 '귀환'...반도체 저가 매수가 상승 주도",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5aWVNsSTdmcDV6MUxqbE1DTjlMTDdxM1FySFZXQkEyZzNhVWVDN3lHSExJRVIwNmpKYXdkX25BaEhpeVl2akJzZWdKMGtpdWc?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "美 상무장관, 값싼 中 메모리 쓰려던 애플 ‘제동’…K반도체 ‘안도’",
         "source": "문화일보",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA5d1pzT1Q0X1NtSnZ3WGZZT2lGSnFROHh5YkR2Ti1nYXV3eG1oZVZaZHpUSER1UDlkclY1TlQwZ244VlU0YklrWDE4YmRLd0Rn?oc=5",
+        "date": "2026-08-15"
+      },
+      {
+        "title": "美 정부, 애플에 중국산 메모리 반도체 구매 자제 촉구",
+        "source": "연합인포맥스",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85OFdxbFA5LTdYSUlkVVNoNEZEbDQwNW9pS2hkOHUtNkRMeDlfejBwVm9heXdvSzZxOTVIRVJmNy1STWpRc2NNenhvWUdvdzFpd0V2dElpOVZhS3ROMFYyLV9lUVcwemRzWXgzRHhleC0?oc=5",
         "date": "2026-08-15"
       }
     ],
@@ -141,16 +141,16 @@
         "date": "2026-08-14"
       },
       {
-        "title": "지진 피해자 두 번 울린 AI 조작, 日 언론 “법적 대응”",
-        "source": "헤럴드경제",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5EZnZyRl9sNzI2bWtJTHc1amZSUVhiVE96UnpCN1l3VWNhaE9lcVBnOXVYOE5SLWhDelY0YUs4Zkd1YTRMVTFtaklNWWJEdlY2OUl0Nm13?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "“인공지능 AI로 똑똑하게, 휴식은 아날로그 감성”…지금은 ‘이원적 관광’ 시대 [여행+]",
         "source": "v.daum.net",
         "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1oa1NaTWt0NnpUdjRZYnFvMjA5NEYycjVSNGYxdXJ2SlI4M0lwNUhrNXktR1AyZ2NibUlYSGtkdHN4ajBCMFE?oc=5",
         "date": "2026-08-12"
+      },
+      {
+        "title": "지진 피해자 두 번 울린 AI 조작, 日 언론 “법적 대응”",
+        "source": "헤럴드경제",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5EZnZyRl9sNzI2bWtJTHc1amZSUVhiVE96UnpCN1l3VWNhaE9lcVBnOXVYOE5SLWhDelY0YUs4Zkd1YTRMVTFtaklNWWJEdlY2OUl0Nm13?oc=5",
+        "date": "2026-08-15"
       }
     ],
     "에너지": [
@@ -168,7 +168,7 @@
       },
       {
         "title": "메가프로젝트 담은 전력수요 밑그림 나온다... 20일 토론회 개최",
-        "source": "hankookilbo.com",
+        "source": "한국일보",
         "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE52VFdTd2h3aHRqalpTY2FUODByUkxxelY5M1gtb2Q5aDFLd2lvbHdkS0pZak5Ld3NUTGh5aXN3b3hSanVYc2tJa1FBZVBTTEozTGFCM0Z0d2tJU2pydWczMk1QdTM1NEJ4ekR0b0RR0gFzQVVfeXFMUE5jbDFZZk5CZWk1TlZnVDZyVDk4QkNQSHhQMmcxV2NweU52WjVaWGJKZzdyUWp2SDlSTDVFV0pRS0RkeGpQamM4bWowSV85UF8xVk9ZbzJSMzhxODlFSWNJN3ZEUTE1aWM3bTA4S2d3Umdycw?oc=5",
         "date": "2026-08-15"
       },
@@ -200,7 +200,7 @@
       },
       {
         "title": "뉴욕증시, 소비 둔화 우려에 숨고르기…S&P500 0.2%↓",
-        "source": "뉴시안",
+        "source": "newsian.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9KSEhmc3h5T3Z0ZWg1QnpzTHVpakVRczlYS2FJNHpKQXc5cmJEM2xpdXFVaFFlMjM1cUxza0tsR3M5NjhJMFVGaElRdk9CaWZjS0VVblVQUkRfV1ZCNTI5M0hhVVg0cFVNLUHSAW5BVV95cUxNM002bElKSTdfZmxjX25QbXRMNy01dVVGaDVWUDZqMDNXdWh5QjR1SXJsejd0QUFNdWJxcmdSOVZSLTg0U2I0VlRYR2tHVXR4RW0zMWNTS2NuN3hFYmdCTWJ2VG12M0lmRzdtblFRdw?oc=5",
         "date": "2026-08-15"
       },
@@ -211,16 +211,16 @@
         "date": "2026-08-13"
       },
       {
-        "title": "뉴욕 증시, 소비 둔화 우려에 하락...유가, 중동 긴장 고조에 1%대 상승 [데일리국제금융]",
-        "source": "서울경제",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGbzhUd0JqTGFUd0NCMGl5SDlNZ1hoc1N1NWFKb1FRWDY0bmpXel9mTXRCdTh4T2xoVnNITV9NWDFwbGZ0allHNjFZVC1uckxhN0E?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "증권사 순익 두 배 껑충…금융지주 내 존재감 '쑥'",
         "source": "비즈워치",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0yS1hQemswSUhiU24zNGx5X093TlZPRHQzdFU0VldSMjN6aWJGWWt3Qzk4X3l5SHJNenZZejJQbDRqV0U5dERMZ2Jtem1ZMGtzc2o2M1hIWUJXX1BKaDhwZlpwd0ZNdm5QN0E?oc=5",
         "date": "2026-08-12"
+      },
+      {
+        "title": "뉴욕 증시, 소비 둔화 우려에 하락...유가, 중동 긴장 고조에 1%대 상승 [데일리국제금융]",
+        "source": "서울경제",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGbzhUd0JqTGFUd0NCMGl5SDlNZ1hoc1N1NWFKb1FRWDY0bmpXel9mTXRCdTh4T2xoVnNITV9NWDFwbGZ0allHNjFZVC1uckxhN0E?oc=5",
+        "date": "2026-08-15"
       },
       {
         "title": "신한투자증권, 상반기 순익 5777억…IB∙금융상품 실적 견인",
@@ -243,12 +243,6 @@
         "date": "2026-08-13"
       },
       {
-        "title": "유한양행, '유일한 아카데미 2026' 성료…청년 헬스케어 인재 육성",
-        "source": "메디파나뉴스",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9MaXJ2d0didFpkRVBSUnZtazhiTVhuSGcwZWNCOTI0RmtNa0RmVG5iaXpTY184YzJMZG9URzZTLXpZVkxFLVVJWUF4QzVtMnhUd01vOWNfV245ZmN1d2RCUzB2UU1DNkh2cWxV?oc=5",
-        "date": "2026-08-12"
-      },
-      {
         "title": "\"BIX 2026, 바이오헬스케어 혁신 판도 읽는다\"",
         "source": "한국의약통신",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIMVdEQnRrYnAyYmpTaGd5NC10NXpiNG10ZnB3RlpPbHFlUDViVUxTOUFqQ1NTeDZqa3doQmh2RjZDME55LWtBQkRtU2ZSMkRqM2s5NGdXaVE4YnYzRXRxS1NiVU5JRXZiZWxj?oc=5",
@@ -258,6 +252,12 @@
         "title": "유한양행, 청년 헬스케어 사회혁신가 프로그램 '유일한아카데미 2026' 성료",
         "source": "팜뉴스",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBqYmk0S1lPR0lDb3ZFTkVHa2Nuc0xENEMxLWRXeVE4RUlWbERyMkVGckJvaGttVlpUbVFRdTBQZzQxak5SQ1A3VW9xSjlsellLUEFqcFpjQnY1X0JBS2hRdDdxYXlTNnQ1X3JZdQ?oc=5",
+        "date": "2026-08-12"
+      },
+      {
+        "title": "유한양행, 헬스케어 혁신가 양성 ‘유일한 아카데미 2026’ 성료",
+        "source": "의학신문",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0yMlEwa0NfZUREQm5YRW5scndPRllpV0xGQzFxei1sNnkwS0E5cFdFTWZMNWUwc1hIcTNoWGN5WTNqWV8ydEFZTGU2aGdkQjd0T0xvQklEWjBvXzVyZkJjUjlUdHBjZWNwaUE?oc=5",
         "date": "2026-08-12"
       },
       {
@@ -313,22 +313,10 @@
         "date": "2026-08-15"
       },
       {
-        "title": "금리인상 우려 완화 불구… 비트코인 여전히 게걸음 [주간코인시황]",
-        "source": "IT조선",
-        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE16MlpnVktLM1c3M1M2VkRPWEJua0lWTGxZbmpTNHlmcXVUMlBKcDJtR2dsY1E4b2Y4azFUUGxFNzZycm90TFpEREdjMXpFWEltclRCUVo5WUI4LVF1VVdHOVpiU3VIQUZ2S1FnYTk0ZmnSAXRBVV95cUxPMFpsRDBuOFNfM0l1X25iMEh4SzdKdWtVQk9jRjJUX2l5YUZiUnZKd1daV3M0bW9DellsRktja3VhbDRxbmYzZ2t2WlFtRndQX1loMUlDdjkta3c2X1BCaGpVS21ESWNWc01WTEZVM2x3OHNuOA?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "[07:49 가상자산] 비트코인, 美 금리 인상 우려 완화에도 상승 폭 제한",
         "source": "신아일보",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1COF9yTWJRM055VmpDWl93bGZuVDJYWExxVEJCVWlxVmlyLXNLcGdPT2JjYzdFZ2Fvd2xObDNTTW1yajB0MkJuSjVnanB0QzhtNFU1OUE4SnFvZnA1bzdzQXJHNk90STQ5bjM3RjQ2QTE?oc=5",
         "date": "2026-08-14"
-      },
-      {
-        "title": "GSR, 모델 포트폴리오서 솔라나 비중 43.6%로 확대…비트코인·이더리움은 축소",
-        "source": "TradingView",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9DYzlTQlV5QWhSTTh1aDZ3dVQybkhIZjhoZmdwRENaNmZ6SzFKam9jb1R0QUxiQ08yeUpVRGJaZEhSRWt3VHpnc1JfSk5kSUJOTVUtWTc1N1h1aE1rUDBrZTYzNkhMeGZHVDRqNw?oc=5",
-        "date": "2026-08-13"
       },
       {
         "title": "[D-BIZ 암호화폐 뉴스] 이스라엘 최대 은행 ‘뱅크 레우미’, 2027년 암호화폐 거래 서비스 전격 도입… 갤럭시 디지털과 맞손",
@@ -337,10 +325,22 @@
         "date": "2026-08-15"
       },
       {
-        "title": "해외로 나간 코인 자금 5년간 700조…‘현물’에 갇힌 韓 가상자산 시장",
-        "source": "매일경제 마켓",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9pUUdKd1dXMkFYV0ZDWldsdWhEMkNVUVVNUGs4bjRmVHY3VzVsVGtZbVpUU0VoMkxFRjZvU0xjOGNhTUxOVGxUSEZTQ1FsOWQxRlE?oc=5",
-        "date": "2026-08-12"
+        "title": "GSR, 모델 포트폴리오서 솔라나 비중 43.6%로 확대…비트코인·이더리움은 축소",
+        "source": "TradingView",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9DYzlTQlV5QWhSTTh1aDZ3dVQybkhIZjhoZmdwRENaNmZ6SzFKam9jb1R0QUxiQ08yeUpVRGJaZEhSRWt3VHpnc1JfSk5kSUJOTVUtWTc1N1h1aE1rUDBrZTYzNkhMeGZHVDRqNw?oc=5",
+        "date": "2026-08-13"
+      },
+      {
+        "title": "\"알트코인은 죽었다…비트코인 대체 불가능\"",
+        "source": "블루밍비트",
+        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9NMnJTeGdlWFNGQXQ1dndZbTRsMWhvTHZXS01ZQnNfeGtQOTh0elllV2hwNlo3bjhfTURObm5MVi03RTBLR3Y1aFVzSXdhdnFr?oc=5",
+        "date": "2026-08-15"
+      },
+      {
+        "title": "금리인상 우려 완화 불구… 비트코인 여전히 게걸음 [주간코인시황]",
+        "source": "IT조선",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE16MlpnVktLM1c3M1M2VkRPWEJua0lWTGxZbmpTNHlmcXVUMlBKcDJtR2dsY1E4b2Y4azFUUGxFNzZycm90TFpEREdjMXpFWEltclRCUVo5WUI4LVF1VVdHOVpiU3VIQUZ2S1FnYTk0ZmnSAXRBVV95cUxPMFpsRDBuOFNfM0l1X25iMEh4SzdKdWtVQk9jRjJUX2l5YUZiUnZKd1daV3M0bW9DellsRktja3VhbDRxbmYzZ2t2WlFtRndQX1loMUlDdjkta3c2X1BCaGpVS21ESWNWc01WTEZVM2x3OHNuOA?oc=5",
+        "date": "2026-08-15"
       }
     ],
     "세계경제": [
