@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T02:37+09:00",
+  "updatedAt": "2026-08-16T02:58+09:00",
   "sectors": {
     "조선": [
       {
@@ -22,13 +22,13 @@
       },
       {
         "title": "LNG 연료선 수주잔량 韓 압도하는 中조선업계…\"韓과 기술격차 축소는 기정사실\"",
-        "source": "스트레이트뉴스",
+        "source": "straightnews.co.kr",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE05UnBYTjBMLTNwMVJ4ZkowN1BrR2pGR1o2dUdCc3JtVkdZMEN0MlBNVjRXYzRWOEg5T1BzU21MaEhOWXRIejlrRnF3dEVSNzNRbmNsZi1PbF9VTGEzSFpBOUQwR0Y5VGd1cFdjYjdPNldzUVk?oc=5",
         "date": "2026-08-12"
       },
       {
         "title": "‘저가 싹쓸이’ 中조선소마저 선별 수주…슬롯 부족에 韓엔 선가 호재 [비즈360]",
-        "source": "biz.heraldcorp.com",
+        "source": "헤럴드경제",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5UallGRlBvbXdRMTJUSlVhRGx5V3V4bWxDWHpJc096Q0JhWmxhZ1V4QmxuZG5YSzhfcjczdDgwcVV1Q1Q2cFh6bkIwbjB2ZHdrcTlwYVlB?oc=5",
         "date": "2026-08-11"
       },
@@ -79,8 +79,14 @@
     ],
     "반도체": [
       {
+        "title": "서학개미, 다시 반도체 베팅…이틀간 9천억 원 넘게 사들여",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5YUV9vcmRsbndfVnE1ZGc5T1o2M0dBOVBBNE81b3B1UnhDdFc3aVppYzBYZ0JwR3JsbGdWemprRkQ2bXN2dzRVcXVpMWZSZGs?oc=5",
+        "date": "2026-08-15"
+      },
+      {
         "title": "서학개미 장바구니 1년새 달라졌다…'반도체·레버리지'로 쏠림 - 머니투데이",
-        "source": "머니투데이",
+        "source": "mt.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ycEU5bEQwQWVjdzZGMzdMREpCX2dLdVc1TFhDTWZHbkxMVl9ZNVliWnZFVTNLM3pwV05LTUZyS1ZCOVQyYkdvOW1HNU9XVENIUmpERHo2aXFpNjRhdDJ0N2pOVEV4cmot0gFuQVVfeXFMTVJmNjdMaGhhNEEwbGMycmFJNk5pb0lQNVRZSG1HQUZMZ0UxMmkxQ1RXT3B4RlRMSkc1STFweVZTejFDYUpXNnB5YzJnaFhkRmN2a24wNy1NOW9GZzhqQWd5Sk11MmlQS240OUl1aUE?oc=5",
         "date": "2026-08-15"
       },
@@ -91,12 +97,6 @@
         "date": "2026-08-15"
       },
       {
-        "title": "[이주의 ETF] 신한자산운용 'SOL 반도체전공정' 20%대 올라 상승률 1위, 반도체 테마 강세",
-        "source": "비즈니스포스트",
-        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ocDh5YWpnUkpJcGp2SG9rRnhnODZwOEhKVDZmdExmYUhIWHFBUzVCSVBWTElob25rSHFEM3hDTHBsVnBhbk5RMTZyc0RVOHV2c1ptQ2k3V2szZUw4Ulg5a1BST0V1aWVGSVZNMXBMRkdvYnM?oc=5",
-        "date": "2026-08-14"
-      },
-      {
         "title": "美 상무장관, 값싼 中 메모리 쓰려던 애플 ‘제동’…K반도체 ‘안도’",
         "source": "문화일보",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA5d1pzT1Q0X1NtSnZ3WGZZT2lGSnFROHh5YkR2Ti1nYXV3eG1oZVZaZHpUSER1UDlkclY1TlQwZ244VlU0YklrWDE4YmRLd0Rn?oc=5",
@@ -104,7 +104,7 @@
       },
       {
         "title": "러트닉 \"애플 중국산 반도체 구매 지지하지 않아…다른 해결책 있어야\" - 머니투데이",
-        "source": "머니투데이",
+        "source": "mt.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAwODBaRjljS3U3SFBCbHBtMmE3YUkxSlpoX0YteGthQzUxb2duTTJDNTc5T2ctRUdBam9WUW9GREhBWlhOdzQxSU8wdm9CZHVNY3lOSXJyV0xEMFN5bUxuUzdIajFVcngw0gFuQVVfeXFMTnNkRk90OWRqQzczZUwzRHJLYzMzZ1dTV0JkLXdvSkYwWVhxa1VYLUsyYm1CMTJrSjFaSVZVR0RjTjM3ZVNXNldna1pjd2MzSkhlRmI4VUU3YjN1aWFzdzM2WXN1YTZQV0pGUDVhTGc?oc=5",
         "date": "2026-08-15"
       },
@@ -167,6 +167,12 @@
         "date": "2026-08-14"
       },
       {
+        "title": "파주시, 공공 재생에너지 생산 전력 지역기업에 직접 공급",
+        "source": "인천일보",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9LRU16MElURHZlVlk1bzJEUWdwSFNyVmV1MDlTQ0RRSVBHY2lzanFjVlhzMnllR3dVX0I0b1NjLUNac0x3WHdUOGlKUXlsd1V4QmI5S21CdXp1VWJEclYxTlNkS3NJMWEzTU1senNaV1M?oc=5",
+        "date": "2026-08-13"
+      },
+      {
         "title": "메가프로젝트 담은 전력수요 밑그림 나온다... 20일 토론회 개최",
         "source": "한국일보",
         "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE52VFdTd2h3aHRqalpTY2FUODByUkxxelY5M1gtb2Q5aDFLd2lvbHdkS0pZak5Ld3NUTGh5aXN3b3hSanVYc2tJa1FBZVBTTEozTGFCM0Z0d2tJU2pydWczMk1QdTM1NEJ4ekR0b0RR0gFzQVVfeXFMUE5jbDFZZk5CZWk1TlZnVDZyVDk4QkNQSHhQMmcxV2NweU52WjVaWGJKZzdyUWp2SDlSTDVFV0pRS0RkeGpQamM4bWowSV85UF8xVk9ZbzJSMzhxODlFSWNJN3ZEUTE1aWM3bTA4S2d3Umdycw?oc=5",
@@ -182,12 +188,6 @@
         "title": "AI 시대 전력난 해결할 유일한 수단…에너지 대전환에 수소 역할 커진다",
         "source": "서울경제",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhSDV0QVg5OGdOamlOQjRzLWRWZUh0dFBZUGxqbkhVcDM2RHZEU1B1XzFCeUlKRzRSb0gybHhyRE9lV2Q3NElISDlKdXYtVjlBRUE?oc=5",
-        "date": "2026-08-13"
-      },
-      {
-        "title": "AI가 불붙인 전력수요…에너지 대전환에 커지는 ‘수소 역할론’",
-        "source": "아시아투데이",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA1d0pLcTFJcC1oUFlFQzN4NkZQdDJORVg2WUlqZ2ZPeXpWTkplWk9nQlNtRTIycXdZZC1SdjNGdUh2dTJvRjQ0ak1uaEZwZXBnTm9sYnFSMnQwMmpXc3U0eTRBMk9QS2pucklJTEFB?oc=5",
         "date": "2026-08-13"
       }
     ],
@@ -217,16 +217,16 @@
         "date": "2026-08-12"
       },
       {
-        "title": "뉴욕 증시, 소비 둔화 우려에 하락...유가, 중동 긴장 고조에 1%대 상승 [데일리국제금융]",
-        "source": "서울경제",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGbzhUd0JqTGFUd0NCMGl5SDlNZ1hoc1N1NWFKb1FRWDY0bmpXel9mTXRCdTh4T2xoVnNITV9NWDFwbGZ0allHNjFZVC1uckxhN0E?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "신한투자증권, 상반기 순익 5777억…IB∙금융상품 실적 견인",
         "source": "서울경제TV",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9uRTFVVGVsTHpuMWVCYkd1NGVHWFdfVzRXZ1NaS1V4S0RCOHRvREdjZUJ5U2dRM2lFMVA1NG90Y2ZFUmZJZzhRaDRWRTdPOUxIUlktRkdncExsTnZXajltQ05TWXM?oc=5",
         "date": "2026-08-14"
+      },
+      {
+        "title": "뉴욕 증시, 소비 둔화 우려에 하락...유가, 중동 긴장 고조에 1%대 상승 [데일리국제금융]",
+        "source": "서울경제",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGbzhUd0JqTGFUd0NCMGl5SDlNZ1hoc1N1NWFKb1FRWDY0bmpXel9mTXRCdTh4T2xoVnNITV9NWDFwbGZ0allHNjFZVC1uckxhN0E?oc=5",
+        "date": "2026-08-15"
       }
     ],
     "헬스케어": [
@@ -244,7 +244,7 @@
       },
       {
         "title": "\"BIX 2026, 바이오헬스케어 혁신 판도 읽는다\"",
-        "source": "kmpnews.co.kr",
+        "source": "한국의약통신",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIMVdEQnRrYnAyYmpTaGd5NC10NXpiNG10ZnB3RlpPbHFlUDViVUxTOUFqQ1NTeDZqa3doQmh2RjZDME55LWtBQkRtU2ZSMkRqM2s5NGdXaVE4YnYzRXRxS1NiVU5JRXZiZWxj?oc=5",
         "date": "2026-08-12"
       },
@@ -288,7 +288,7 @@
       },
       {
         "title": "[아유경제_부동산] 올해 8월 전국 아파트 분양전망지수 2달 연속 상승… “수도권은 큰 폭 하락”",
-        "source": "아유경제",
+        "source": "areyou.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA5dWZ3UGhGX0ZMTFRyVkgwcW50dlZWRFRZTVV1WndhdWxxbEpfRTdVcTRDOGFXeGV5andyalFXV1kyLUdOOWFkbWYycHJpZFN1bW9ENUNwNmVfZzZRWVRj?oc=5",
         "date": "2026-08-07"
       },
@@ -331,16 +331,16 @@
         "date": "2026-08-13"
       },
       {
-        "title": "[D-BIZ 암호화폐 뉴스] 이스라엘 최대 은행 ‘뱅크 레우미’, 2027년 암호화폐 거래 서비스 전격 도입… 갤럭시 디지털과 맞손",
-        "source": "데일리비즈온",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMLXR6Z01rXzlDZ0pWeUxNaWdnMXlSUFI3S3hXOFloRWF6bC1ZY09GSDlteWVEYmQzTXZvaFY4YVhtRndmWU8yWTFJS0JNLUdnV0RnU1k0TFNKejBMSVlzNU1IY0RBZnEzQlBfRw?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "해외로 나간 코인 자금 5년간 700조…‘현물’에 갇힌 韓 가상자산 시장",
         "source": "매일경제 마켓",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9pUUdKd1dXMkFYV0ZDWldsdWhEMkNVUVVNUGs4bjRmVHY3VzVsVGtZbVpUU0VoMkxFRjZvU0xjOGNhTUxOVGxUSEZTQ1FsOWQxRlE?oc=5",
         "date": "2026-08-12"
+      },
+      {
+        "title": "[D-BIZ 암호화폐 뉴스] 이스라엘 최대 은행 ‘뱅크 레우미’, 2027년 암호화폐 거래 서비스 전격 도입… 갤럭시 디지털과 맞손",
+        "source": "데일리비즈온",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMLXR6Z01rXzlDZ0pWeUxNaWdnMXlSUFI3S3hXOFloRWF6bC1ZY09GSDlteWVEYmQzTXZvaFY4YVhtRndmWU8yWTFJS0JNLUdnV0RnU1k0TFNKejBMSVlzNU1IY0RBZnEzQlBfRw?oc=5",
+        "date": "2026-08-15"
       }
     ],
     "세계경제": [
@@ -390,7 +390,7 @@
       },
       {
         "title": "기준금리 인상에 채권시장 위축… 국고채 금리↑채권 발행·거래량↓ - 머니투데이",
-        "source": "머니투데이",
+        "source": "mt.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xWU93TzlHWnhTZ0doY1h4VjlSUEhXWHRQNlk1QjVyMlFhZ3lXTUZhMFluS2k0X1V2RzFUQUpKdnIwVnFVMXhGeXV6X2lXcm5lcXk2aUozS0dHU2hTR0Rsd1RhM3JBNXl10gFuQVVfeXFMTU03ZWczdG5MNTVObzVnd19uRXBhZlo0V3o5WHU5T3FuYjVQZVI2M3RvV19rTWJNOUVrY3p1S1ltZkpFMHJkc1B0bUIyQk5La2lpLUFhcnB0M1N4RnBqN1RHbzcyY0tpTzhrakZMUFE?oc=5",
         "date": "2026-08-10"
       },
