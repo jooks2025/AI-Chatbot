@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T08:30+09:00",
+  "updatedAt": "2026-08-16T08:58+09:00",
   "sectors": {
     "조선": [
       {
@@ -10,13 +10,13 @@
       },
       {
         "title": "조선업, 수주 호조 뒤 인력난…생산 차질 방지 총력",
-        "source": "폴리뉴스 Polinews",
+        "source": "polinews.co.kr",
         "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE90YW9KWWhyX0NDNTMwY092Ri1SR2tsOGQ2eGdTb3lwR0NJX3U4TmRHbVFyeUF6cEcwOGNHY3dLRDBBU0xNbzl6S2E3RDRFUHNSNmNoVXBpUnp5NXMxVS05T1k4OFJmQ19NNjA0UGN30gFyQVVfeXFMTUtXeTQza2NLZnhrVE9FTmRWano5WGF3aVAyUG1NYjVyc3dCRjJKdkJ0cy1TYzhkUzlFLU5faFVOV0JMXzlRRUdWc1I2Q05udHR5alNSNkFSUG1JV2xZOC1xNXJncmpGcWRXZXJ2bTVqai1R?oc=5",
         "date": "2026-08-13"
       },
       {
         "title": "올해 중국조선소 수주잔량 급증",
-        "source": "해양한국",
+        "source": "monthlymaritimekorea.com",
         "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBuUlV3UEg2Vl9fUmRrQ3VFUDE1NmJHWnJudnZMZ3BPanh3SFJFcEtPdWlWR2pPaVNYY2JDbUE3MHVPb3Jha0FISWVsRGJpN3dSYXhOWDJZTnZtd1BaVG9rd3o1NEhxWXhlY0c4VDIzNDJOd0l5MTY3d3hn?oc=5",
         "date": "2026-08-14"
       },
@@ -79,8 +79,26 @@
     ],
     "반도체": [
       {
+        "title": "“반도체 지금 팔아라?” 충격적 65만→35만원, 삼성전자 목표주가 믿어도 되나",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE85VENzQ0Y0a3A3MG9CZG80MmtHQ05qZ200Wm9mS2UtNm9QUVV4bUtBWDI5X1M5U2dReDFMelBhZ3l5U05UaGctM1gwUGVXZFU?oc=5",
+        "date": "2026-08-15"
+      },
+      {
+        "title": "'AI 반도체 호황 덕'... 삼성전자, 올 상반기 對美ㆍ 對中 수출 급증",
+        "source": "글로벌경제신문",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4wUGV6Y0ZibHA2eWR3RnhadmF4SlZUaFQ3RmE4MzdmM1hveXVPLWNia0txcHZxOHM3LVFPSXpQaWlFZEU5Wi1PSFlERXVXWDRjcm40UDFuU1dKT1dsQ2hMX3lSYVIyckd5aDhUNNIBcEFVX3lxTFBfX2E0YWQwYVJsdWFYNFVrVVpsbHllZDFOZ0R5aDJtdTZTNXVQTXZyQWE0TENWNFRFaHN5dUZGVzkyWkFQblRjUzVxaFAwdXdxc0Y1bGtRa0ptc1A4QjNKOElaUEhOZmcwVklxblliLVQ?oc=5",
+        "date": "2026-08-15"
+      },
+      {
+        "title": "반도체 호황에 삼성전자 미·중 수출 ‘껑충’",
+        "source": "남도일보",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5iemtBVGZNTjBDdDRtaU54WXNGQ2MzeVZqdjFqcGdPNzBNRDhTcGVSMVFZd3ZKX0VpWmotWlBnS0ZjbjZrOG92RTc4Sm93bk5kX3FobzZtTks3TkRLdVRkNTZrQ3htOGpRWFpjb9IBcEFVX3lxTFB6cFlob0RPU1NKNW5sWk03YXhaOHhnemNLX1g0TmFLbnNxRlFCRVBlcjhQaU91THVNQVYxS3RRMTk3OGwxWmdDN0FVa3QxTjRpdkNGR0M5Q0pKdFZwMUVTamxLejBwUXN6ZXFybDVHUzA?oc=5",
+        "date": "2026-08-15"
+      },
+      {
         "title": "반도체 반등에 서학개미 '속슬' 다시 담는다…이틀간 9천억 대거 순매수",
-        "source": "etnews.com",
+        "source": "전자신문",
         "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1KSl9GRkMzZ2k5Z2dhVjI1VnFDeFRtczM5UnRUQ19hUDZkMjQ4R29FSlRMUEMtSFdtY29SaHpOMU1zVWZTbl9IRWtOM1k0QQ?oc=5",
         "date": "2026-08-15"
       },
@@ -94,24 +112,6 @@
         "title": "서학개미, 다시 반도체 베팅…이틀간 9천억 원 넘게 사들여",
         "source": "v.daum.net",
         "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5YUV9vcmRsbndfVnE1ZGc5T1o2M0dBOVBBNE81b3B1UnhDdFc3aVppYzBYZ0JwR3JsbGdWemprRkQ2bXN2dzRVcXVpMWZSZGs?oc=5",
-        "date": "2026-08-15"
-      },
-      {
-        "title": "“반도체 지금 팔아라?” 충격적 65만→35만원, 삼성전자 목표주가 믿어도 되나",
-        "source": "헤럴드경제",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE90OGtmQ09haVpnd2xWOG5Icl9uMHFSQ0EwOURoNjEwdW5hOEVsaGlxSERQQkp1WnJZSHowYVA0UWVZZGFPaUswSmRRYUVUc0oxbDJveDhR?oc=5",
-        "date": "2026-08-15"
-      },
-      {
-        "title": "같은 반도체 호황인데…한국 성장률, 대만에 13분기 연속 밀렸다",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qNlJwWW5mVjlqRVdyZzhjTVF2S0JraXVRdnU1WkVSNFV3UEFzTTNBQ1paMjF4YzdOclBsb1VhTm93dHdTcDROLVB1dlh1TU0?oc=5",
-        "date": "2026-08-16"
-      },
-      {
-        "title": "'반도체산단 부지' 광주군공항 임시배치 윤곽…최적 해법은",
-        "source": "뉴시스",
-        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FYS00VVJHTFhMWlVjdklzR2ozQ0hVYnV2MGpmUkFvRWQweDk1SU00MjBfNG9GTjVOSjM0X2ZWeU0xMnU0aG45dlFRY2szLWM0SXpicjZtLUJCUllUbVY3TtIBeEFVX3lxTFByaTZIOTJ6Q19zdnhPeW4tYnlIWGFkWGN3SG9fZXNNTEY3WGxUTlZNbG1CNDZZUlJsQWdla2hJODd5N2Rfb1dZcEpNZks2OHlZZDBja3lyYVFDVkVpNXpYZURLR0JtbzN4NEJ4MnBFU2luQUdneGdJRg?oc=5",
         "date": "2026-08-15"
       }
     ],
@@ -162,7 +162,7 @@
       },
       {
         "title": "제12차 전기본 정책토론회 20일 개최…국가 전력수요 재전망",
-        "source": "kookje.co.kr",
+        "source": "국제신문",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNUjMzNWZ5Q1RWZ1ROSm1jOUlkdXJUWHFDSEhDdWM3OXpVVEduXzdkS2x6dlJOYUhDUDRJSjFFZGloSjRIbTRFWFBUTldFWnlXY0l5WkpiUEFNb25iUUNBLXJYNEQzOVZCeDI3VWpCdENhaWFpN0plVWJ1UUd1aHBJODA1aldHNWF6MTROMExjLUtRbFF1OVNuSA?oc=5",
         "date": "2026-08-15"
       },
@@ -200,15 +200,21 @@
       },
       {
         "title": "신한투자증권 상반기 순익 5777억…\"자본효율 중심 성장\"",
-        "source": "뉴시안",
+        "source": "newsian.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5Hc21CNWptc2ZBR3EyZFdQUWlndGxiaDRqQnBsSVcyajFQUnh0NldUTFhjc1lXTm91cllOd2J0TG9md1lPeHZKWjl5TDlIcklLdjNZVEtFa0NXYklXRWhtbUpuX1otQkVKZ0E?oc=5",
         "date": "2026-08-14"
       },
       {
-        "title": "뉴욕 증시, 소비 둔화 우려에 하락...유가, 중동 긴장 고조에 1%대 상승 [데일리국제금융]",
-        "source": "서울경제",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGbzhUd0JqTGFUd0NCMGl5SDlNZ1hoc1N1NWFKb1FRWDY0bmpXel9mTXRCdTh4T2xoVnNITV9NWDFwbGZ0allHNjFZVC1uckxhN0E?oc=5",
-        "date": "2026-08-15"
+        "title": "한양증권, 숏폼 콘텐츠 '한양사전'으로 증시 역사 조명",
+        "source": "BBS불교방송",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5sNlJFZHhLY0FCQy1XVzVzOEtpLW1fOU0wYVM3MUVVUnN3dmZfeVgwR2hSOWJPeUxZMHoyYWhieU0zOFlTTFhVc0NkeFd6UHZHSEVKUVBTTE40bVdWeDVMWEpTTmI2cExyV05F?oc=5",
+        "date": "2026-08-13"
+      },
+      {
+        "title": "신한투자증권, 상반기 순익 5777억…IB∙금융상품 실적 견인",
+        "source": "sentv.co.kr",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9uRTFVVGVsTHpuMWVCYkd1NGVHWFdfVzRXZ1NaS1V4S0RCOHRvREdjZUJ5U2dRM2lFMVA1NG90Y2ZFUmZJZzhRaDRWRTdPOUxIUlktRkdncExsTnZXajltQ05TWXM?oc=5",
+        "date": "2026-08-14"
       },
       {
         "title": "엄태영 의원 \"증시 과열 초래한 금융당국, 사과하고 책임져야\"",
@@ -221,26 +227,20 @@
         "source": "매일경제 마켓",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9weWRGWW9UdVVicDBMWXZ3NVRoNGVyTVRSM0owa1pUeWtuTjc3ZVA2dklvT0M5c2NsUngxcXhqUU1CTkt5bUt2aVh5amoxTzRCb0E?oc=5",
         "date": "2026-08-12"
-      },
-      {
-        "title": "정부, 증시 긴급조치권한 확보 착수…금융위기·코로나 복기",
-        "source": "연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WVTBvcm56U3loQjROVWVSMkRLOU5fUTZqRkVJVDZzeHhBNFFiMktPbzlqRkVTQ0VaR2FOeEhQQkd3ai12Q1J1SVNLN2czR2NFTWEtclMxQXVxdGvSAWBBVV95cUxOdlBfYk9tT2pnQXdpZTJhS196bUZySlVlSS1FSE02TDZ2aVVjd0tmYVl5elJia25NWmt0bmx4MndMR09EM0Y0bUJ1b3hKd3ZEVm5IZkk1SXNSSVJQVmhxUmE?oc=5",
-        "date": "2026-08-02"
       }
     ],
     "헬스케어": [
-      {
-        "title": "새 캐시카우 찾는 제약사…디지털헬스케어 대안될까[K-제약바이오 성장동력②]",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5lYmJ2bjZlM0VpV1EwSXVaY3RvQ0lBQXN3ZmFwanRLaXNDNTBjM2loWWNFWlBVa1VDQWM5OVpIQlFrbDZTZDQ1Ui1sdw?oc=5",
-        "date": "2026-08-12"
-      },
       {
         "title": "청년들이 제안한 헬스케어 해법…'약손' 유일한 아카데미 대상",
         "source": "청년의사",
         "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1TOHJlc3hFa2x2Nk0xaVNoSms1TUVoTWdUNzlOYkkyUjg2Wk50VFp4a0NzQTJtbjhvUjhhckpjQlhLenI1NWozSEQ0S0RnT29fMEhMNHJNeGVtUU92Z01GOGhDdkxDX1NERDFud3ZWWdIBc0FVX3lxTE5palZiX2wyOUJNMC1VSDZma05rNExtaE1WVWJXelhtVmEtVzBBTHhqcVFUUUpTUFhLeldLWWlub0Mxb1ViSzJqSGRVQi1tcFl4S3l6U0xXbW5VYzVKR1d6c1NSb2xNakltQ1lrVm9xM1NBSUk?oc=5",
         "date": "2026-08-13"
+      },
+      {
+        "title": "새 캐시카우 찾는 제약사…디지털헬스케어 대안될까[K-제약바이오 성장동력②]",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5lYmJ2bjZlM0VpV1EwSXVaY3RvQ0lBQXN3ZmFwanRLaXNDNTBjM2loWWNFWlBVa1VDQWM5OVpIQlFrbDZTZDQ1Ui1sdw?oc=5",
+        "date": "2026-08-12"
       },
       {
         "title": "\"BIX 2026, 바이오헬스케어 혁신 판도 읽는다\"",
@@ -250,7 +250,7 @@
       },
       {
         "title": "유한양행, 청년 헬스케어 사회혁신가 프로그램 '유일한아카데미 2026' 성료",
-        "source": "pharmnews.com",
+        "source": "팜뉴스",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBqYmk0S1lPR0lDb3ZFTkVHa2Nuc0xENEMxLWRXeVE4RUlWbERyMkVGckJvaGttVlpUbVFRdTBQZzQxak5SQ1A3VW9xSjlsellLUEFqcFpjQnY1X0JBS2hRdDdxYXlTNnQ1X3JZdQ?oc=5",
         "date": "2026-08-12"
       },
@@ -465,18 +465,6 @@
         "date": "2026-08-14"
       },
       {
-        "title": "“자산 형성은 습관과 원칙의 결과…복리의 임계점 돌파해야”",
-        "source": "정보통신신문",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9iakJ4WlZqM3ZjQkhKOG95MUpnZDI2NjBBcm9lVm5wMGpWNGJ2M0tIak9scWNrYVREVkJ3cm9lSXhaQ3hONjJqRnRKeTZnMTJWUHNGaEtnbDhwWjJ5SEp5TUZaODVOZnQ30gFsQVVfeXFMT2VtdWE2ZUFZVnM3NXhWM3A4aTM3MU9DaERCb2pXTktrQjNhc1RpZ2NxVHlTY09zRkhkcldicnlYVkstM2taU3RSMHRCenNFQmFKejdsZDE1ZU1PMjQwWkczNkp6QUJfUVZKT3Ny?oc=5",
-        "date": "2026-08-10"
-      },
-      {
-        "title": "iM뱅크, 제7회 재테크 포럼 개최…AI 시대 투자 전략 제시",
-        "source": "kyongbuk.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB1TkI5QUFMZzBEejhsdEQ4WUNtSWo1dXpiS2VsS0FyWGh1cmZJMHNldVBNdXRyS2Q4dG9vTFZ4bC01ZUd1ZzNSdU9qVy1udURSRi1hTlR0eFUzVm1mR0dvVnJEUV95OGtkNTAyd0IwRQ?oc=5",
-        "date": "2026-07-29"
-      },
-      {
         "title": "[TVis] 김종국 “30년간 재테크 한 번도 안 해... 전부 현금, 이자 2%만” (옥문아)",
         "source": "일간스포츠",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5PYWtlZnRyLWw0SlFST24zQTZjVGxyNnR0ako3LXl0b2k2UW55Z3JBVmNadHFpYUtkS09QT2xJeUNwMndLSTJhcWE5azZWMHZHLVhLTjJULXZjSkk?oc=5",
@@ -493,12 +481,24 @@
         "source": "브릿지경제",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LSkRXVDlmbzJWdHJJTi1kdGxuSVJHQTg2dkhUUWY3UGVmRmpvaXZVVDkyRXNhaldUSE5pT3NVZjl1RDVpR2ZHaV9RaktkNXZHZVB4YWRfWUdDQQ?oc=5",
         "date": "2026-07-23"
+      },
+      {
+        "title": "iM뱅크, ‘AI 시대 투자 전략’ 주제 재테크 포럼 개최…미래 금융 변화와 자산관리 방향 공유",
+        "source": "브레이크뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5UWll1SjcwOWtYYmVfZTFwM0RKTUhMUFdLVlQxeGxEWUpUQ2lxUGkwTExiVjVhQTJVQjBlRVVlWkRxcXlsRlowag?oc=5",
+        "date": "2026-07-29"
+      },
+      {
+        "title": "iM뱅크(아이엠뱅크), ‘21세기 투자자 - AI시대에 달라지는 투자의 문법’ 재테크 포럼 개최",
+        "source": "한국경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE90YjVTYXo5VTZqSUNDUnRZZ2RabDZXRXhtdTI5cXk4M0VoVjBOR1lwbFoxQmxCTUNyaEdmcGZSeGFVeVRRampXYVp3Q2tDRkdOLUpFQWZZQ3dvdw?oc=5",
+        "date": "2026-07-29"
       }
     ],
     "쉬운 경제": [
       {
         "title": "[신간도서 출간] 원자재 투자의 모든 것, 모르면 호구되는 투자상식 外",
-        "source": "에너지경제신문",
+        "source": "ekn.kr",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9qclViMDdpenRERjBwZ2kxQWlvY1A1MFlYTlBid0VTdGFQMTVZU2M3MGxVYVh3bl9vdnIwRTY0S1UtN1Z2RzIyX3NnYzE1S29peU1SajAxWEhDaHc?oc=5",
         "date": "2026-07-25"
       },
