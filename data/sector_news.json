@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T06:37+09:00",
+  "updatedAt": "2026-08-16T06:58+09:00",
   "sectors": {
     "조선": [
       {
@@ -13,6 +13,12 @@
         "source": "폴리뉴스 Polinews",
         "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE90YW9KWWhyX0NDNTMwY092Ri1SR2tsOGQ2eGdTb3lwR0NJX3U4TmRHbVFyeUF6cEcwOGNHY3dLRDBBU0xNbzl6S2E3RDRFUHNSNmNoVXBpUnp5NXMxVS05T1k4OFJmQ19NNjA0UGN30gFyQVVfeXFMTUtXeTQza2NLZnhrVE9FTmRWano5WGF3aVAyUG1NYjVyc3dCRjJKdkJ0cy1TYzhkUzlFLU5faFVOV0JMXzlRRUdWc1I2Q05udHR5alNSNkFSUG1JV2xZOC1xNXJncmpGcWRXZXJ2bTVqai1R?oc=5",
         "date": "2026-08-13"
+      },
+      {
+        "title": "지난달 한국 선박 수주 점유율 16%…중국 81%",
+        "source": "KBS 뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xcVFpSlVUU2xZRmN0eEVEZEh5V3hlMU81T0E0UFJrSEdGYzZKWU1GTGxMRVN5Sk41VDBiMFF6XzRhVVBFNEtHN3ZBZ19FSVZmZ3F6Ym0xRVhET1E?oc=5",
+        "date": "2026-08-14"
       },
       {
         "title": "올해 중국조선소 수주잔량 급증",
@@ -31,12 +37,6 @@
         "source": "헤럴드경제",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5UallGRlBvbXdRMTJUSlVhRGx5V3V4bWxDWHpJc096Q0JhWmxhZ1V4QmxuZG5YSzhfcjczdDgwcVV1Q1Q2cFh6bkIwbjB2ZHdrcTlwYVlB?oc=5",
         "date": "2026-08-11"
-      },
-      {
-        "title": "LS증권 \"조선업, 수주·선가 지표 견고…밸류에이션 매력 향상\"",
-        "source": "연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WZ293Zk9rYzMwTkJkY1VrTmhNQzF0ZWNPaS1nV28tTDJodWZJdC1JQXNwRXJobWR3R1dob2Zrc1dJUDlvRTNPcHVYNzlMZzgwLUcwd0N6blBsVzjSAWBBVV95cUxNV0RLZEhRdzJyaWNkZFRhYnJnejdUWHhnRnVrS2kxMlM0M1VYTG5lQ0l1SEhNRkZ2V0tJRFNqX0R6TWdYaEVJeEtrR1V2X2pnVjJHRUJOUnZzWUY3b1I2VGg?oc=5",
-        "date": "2026-07-27"
       }
     ],
     "건설": [
@@ -66,7 +66,7 @@
       },
       {
         "title": "(무너진 건설 생태계) 상반기 폐업 2092곳…건설업 수익성 5년새 '반토막'",
-        "source": "newstomato.com",
+        "source": "뉴스토마토",
         "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9MR20zVTdNSDU2ZEpLLUJrZC11cUtTTFhyTnN4ZkxuSnMwVDRBYk9PUUo1Q3JnTDYweXZaQ3MzUjNRNkl2cFdlYXdfeDE3Q0NXU2VSSVN4SmlVbGNPbU9SYg?oc=5",
         "date": "2026-08-12"
       },
@@ -79,15 +79,15 @@
     ],
     "반도체": [
       {
-        "title": "서학개미, 다시 반도체 베팅…이틀간 9천억 원 넘게 사들여",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5YUV9vcmRsbndfVnE1ZGc5T1o2M0dBOVBBNE81b3B1UnhDdFc3aVppYzBYZ0JwR3JsbGdWemprRkQ2bXN2dzRVcXVpMWZSZGs?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "서학개미 장바구니 1년새 달라졌다…'반도체·레버리지'로 쏠림 - 머니투데이",
         "source": "머니투데이",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ycEU5bEQwQWVjdzZGMzdMREpCX2dLdVc1TFhDTWZHbkxMVl9ZNVliWnZFVTNLM3pwV05LTUZyS1ZCOVQyYkdvOW1HNU9XVENIUmpERHo2aXFpNjRhdDJ0N2pOVEV4cmot0gFuQVVfeXFMTVJmNjdMaGhhNEEwbGMycmFJNk5pb0lQNVRZSG1HQUZMZ0UxMmkxQ1RXT3B4RlRMSkc1STFweVZTejFDYUpXNnB5YzJnaFhkRmN2a24wNy1NOW9GZzhqQWd5Sk11MmlQS240OUl1aUE?oc=5",
+        "date": "2026-08-15"
+      },
+      {
+        "title": "서학개미, 다시 반도체 베팅…이틀간 9천억 원 넘게 사들여",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5YUV9vcmRsbndfVnE1ZGc5T1o2M0dBOVBBNE81b3B1UnhDdFc3aVppYzBYZ0JwR3JsbGdWemprRkQ2bXN2dzRVcXVpMWZSZGs?oc=5",
         "date": "2026-08-15"
       },
       {
@@ -97,22 +97,22 @@
         "date": "2026-08-15"
       },
       {
-        "title": "“2027년 PER 3배 저평가”…K-반도체, ‘1000조 실적 호황’ 속 재평가 속도",
-        "source": "etoday.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9MSG9PaEtRaEo3REZlT21tVzI3YlJXemJ3QVhHLTdzZjVTUlA1dkdGOU9NX2RITnc2bTdmcHpSYVRTQ1QtZUkxN3ItZDVXbHNJYW40SQ?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "“반도체 지금 팔아라?” 충격적 65만→35만원, 삼성전자 목표주가 믿어도 되나",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE85VENzQ0Y0a3A3MG9CZG80MmtHQ05qZ200Wm9mS2UtNm9QUVV4bUtBWDI5X1M5U2dReDFMelBhZ3l5U05UaGctM1gwUGVXZFU?oc=5",
+        "source": "헤럴드경제",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE90OGtmQ09haVpnd2xWOG5Icl9uMHFSQ0EwOURoNjEwdW5hOEVsaGlxSERQQkp1WnJZSHowYVA0UWVZZGFPaUswSmRRYUVUc0oxbDJveDhR?oc=5",
         "date": "2026-08-15"
       },
       {
-        "title": "대신證 “반도체 사이클 안 끝났다”...삼전닉스 반등할까",
-        "source": "mk.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1LaE1uUGprVnRQc0VPcmI4ZHpyQTAwb3h0dVp1Rlg4b0Z2Y2JiNHhuQTZEYlFaZ18tUzJBVEptNXplVXh5OGpsU1N0Y2s3TkNRRW83eA?oc=5",
-        "date": "2026-08-14"
+        "title": "“2027년 PER 3배 저평가”…K-반도체, ‘1000조 실적 호황’ 속 재평가 속도",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE44bUZ1QzBpZVRKanBJeG9HMlJnZUtudDkzU1RBZnRaSUtPWU1wbTVsUVRhODJBRkNmMVdhdHJ6cFJVbi1Oel9GTHZrUWZCblk?oc=5",
+        "date": "2026-08-15"
+      },
+      {
+        "title": "“이 정도면 국민주 맞네”…반도체株 열풍에 ‘삼전닉스’ 개미 1100만명 넘었다",
+        "source": "서울경제",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1FRkVRaWJJLUdMVzhKR3RJUU5vWUoxYmVqNllyWVFBYms2clFRWHZSQ1Bpa0I5R0dZbzNZWGZKRmFuNTcyU3ZaUU45MWpNeWxmVGc?oc=5",
+        "date": "2026-08-15"
       }
     ],
     "AI": [
@@ -459,16 +459,16 @@
     ],
     "재테크": [
       {
-        "title": "“자산 형성은 습관과 원칙의 결과…복리의 임계점 돌파해야”",
-        "source": "정보통신신문",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9iakJ4WlZqM3ZjQkhKOG95MUpnZDI2NjBBcm9lVm5wMGpWNGJ2M0tIak9scWNrYVREVkJ3cm9lSXhaQ3hONjJqRnRKeTZnMTJWUHNGaEtnbDhwWjJ5SEp5TUZaODVOZnQ30gFsQVVfeXFMT2VtdWE2ZUFZVnM3NXhWM3A4aTM3MU9DaERCb2pXTktrQjNhc1RpZ2NxVHlTY09zRkhkcldicnlYVkstM2taU3RSMHRCenNFQmFKejdsZDE1ZU1PMjQwWkczNkp6QUJfUVZKT3Ny?oc=5",
-        "date": "2026-08-10"
-      },
-      {
         "title": "[민주 재테크] 삼성증권·NH투자증권·삼성생명",
         "source": "민주신문",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4wczhfd3FBcWg0ZUFmWngtLU9oRDlCWmk5TURrMUNFdDE0dGpUdWRpYWJmbi15R0ZBVkFzbmo2N0I3aVN5aVNHN0c1bXNUZTUxYWZFNU1Ba3g3WUpsaXpqTFRTY2ZwUk3SAWtBVV95cUxNamxaYzZ6T3F4VWQ1elF0OUpNMlFhSkc5UW5hbEhSTUppY3JXcWJpaTI1VG9vbnJ1M0F0X1JidmtxdS1sYjVBOTl6SWFTUWQ5ZEFSZlY5VmU4ZlRUS1pld1pnbjBMQXNYMzZMdw?oc=5",
         "date": "2026-08-14"
+      },
+      {
+        "title": "“자산 형성은 습관과 원칙의 결과…복리의 임계점 돌파해야”",
+        "source": "정보통신신문",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9iakJ4WlZqM3ZjQkhKOG95MUpnZDI2NjBBcm9lVm5wMGpWNGJ2M0tIak9scWNrYVREVkJ3cm9lSXhaQ3hONjJqRnRKeTZnMTJWUHNGaEtnbDhwWjJ5SEp5TUZaODVOZnQ30gFsQVVfeXFMT2VtdWE2ZUFZVnM3NXhWM3A4aTM3MU9DaERCb2pXTktrQjNhc1RpZ2NxVHlTY09zRkhkcldicnlYVkstM2taU3RSMHRCenNFQmFKejdsZDE1ZU1PMjQwWkczNkp6QUJfUVZKT3Ny?oc=5",
+        "date": "2026-08-10"
       },
       {
         "title": "iM뱅크, 제7회 재테크 포럼 개최…AI 시대 투자 전략 제시",
@@ -498,7 +498,7 @@
     "쉬운 경제": [
       {
         "title": "[신간도서 출간] 원자재 투자의 모든 것, 모르면 호구되는 투자상식 外",
-        "source": "에너지경제신문",
+        "source": "ekn.kr",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9qclViMDdpenRERjBwZ2kxQWlvY1A1MFlYTlBid0VTdGFQMTVZU2M3MGxVYVh3bl9vdnIwRTY0S1UtN1Z2RzIyX3NnYzE1S29peU1SajAxWEhDaHc?oc=5",
         "date": "2026-07-25"
       },
