@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T00:36+09:00",
+  "updatedAt": "2026-08-16T00:58+09:00",
   "sectors": {
     "조선": [
       {
@@ -42,7 +42,7 @@
     "건설": [
       {
         "title": "윤석열 정부때 축소한 건설업 E-9 고용제한 범위 ‘원상복귀’",
-        "source": "labortoday.co.kr",
+        "source": "매일노동뉴스",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aanVDV2RrZzQwMlV0Q0p3MEdOUlFfWFBudmUtOHlsa3ZjWFR0ZTQ0TldsNkxXaXMwQTMxNWQzMmh4a3NVZ3NSMmFvS0hNalF3aTNadHlTLUZhdG1HTDZFNHljeV9QcDg1LVpFZXE2aGk?oc=5",
         "date": "2026-08-14"
       },
@@ -97,12 +97,6 @@
         "date": "2026-08-14"
       },
       {
-        "title": "반도체 24조·태양광 14조...머스크의 거침없는 ‘쩐의 전쟁’ [김기혁의 테슬라월드]",
-        "source": "서울경제",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5RMkRZUG9MeVM0azQ4bDMtN29seDFFLVBCWU9ZOXNkRmVCd1NXYmtBNVVXeXJEeU1oRk5YS2tRRmV1VFE1c25HQ3dMTGJJNlMyVkE?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "美 상무장관, 값싼 中 메모리 쓰려던 애플 ‘제동’…K반도체 ‘안도’",
         "source": "문화일보",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA5d1pzT1Q0X1NtSnZ3WGZZT2lGSnFROHh5YkR2Ti1nYXV3eG1oZVZaZHpUSER1UDlkclY1TlQwZ244VlU0YklrWDE4YmRLd0Rn?oc=5",
@@ -112,6 +106,12 @@
         "title": "美 정부, 애플에 중국산 메모리 반도체 구매 자제 촉구",
         "source": "연합인포맥스",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85OFdxbFA5LTdYSUlkVVNoNEZEbDQwNW9pS2hkOHUtNkRMeDlfejBwVm9heXdvSzZxOTVIRVJmNy1STWpRc2NNenhvWUdvdzFpd0V2dElpOVZhS3ROMFYyLV9lUVcwemRzWXgzRHhleC0?oc=5",
+        "date": "2026-08-15"
+      },
+      {
+        "title": "러트닉 \"애플 중국산 반도체 구매 지지하지 않아…다른 해결책 있어야\" - 머니투데이",
+        "source": "머니투데이",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAwODBaRjljS3U3SFBCbHBtMmE3YUkxSlpoX0YteGthQzUxb2duTTJDNTc5T2ctRUdBam9WUW9GREhBWlhOdzQxSU8wdm9CZHVNY3lOSXJyV0xEMFN5bUxuUzdIajFVcngw0gFuQVVfeXFMTnNkRk90OWRqQzczZUwzRHJLYzMzZ1dTV0JkLXdvSkYwWVhxa1VYLUsyYm1CMTJrSjFaSVZVR0RjTjM3ZVNXNldna1pjd2MzSkhlRmI4VUU3YjN1aWFzdzM2WXN1YTZQV0pGUDVhTGc?oc=5",
         "date": "2026-08-15"
       }
     ],
@@ -136,21 +136,21 @@
       },
       {
         "title": "인공지능(AI) 시대에도 지역은 사람을 통해 기록됩니다",
-        "source": "서부경남신문",
+        "source": "seobunews.com",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE05aTg1dWVfMnloaC1tVGxfanVjcDNHRVZ3YXhPLU1MTXVRbWtTTlBuX181MTcyZ3EwT3RzZzNDbzNyTlplaU1paDhrdDI1c3pEOURlWms5c2Q4a1dQdmFOWm9ZMjRTX3hVMXc?oc=5",
         "date": "2026-08-14"
+      },
+      {
+        "title": "“인공지능(AI) 활용으로 업무 방식 전환 본격화”",
+        "source": "전라매일",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HNXdlZnR2Y0dlU0RRUUpGM1NsNGMwMGQ5WmpaQV95Tkp1WjJBVEpFaHVWODFFUFd0QkxaY2ZQd1dFbUdpMXpIbHBsbDkwdW9mREE?oc=5",
+        "date": "2026-08-13"
       },
       {
         "title": "“인공지능 AI로 똑똑하게, 휴식은 아날로그 감성”…지금은 ‘이원적 관광’ 시대 [여행+]",
         "source": "v.daum.net",
         "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1oa1NaTWt0NnpUdjRZYnFvMjA5NEYycjVSNGYxdXJ2SlI4M0lwNUhrNXktR1AyZ2NibUlYSGtkdHN4ajBCMFE?oc=5",
         "date": "2026-08-12"
-      },
-      {
-        "title": "지진 피해자 두 번 울린 AI 조작, 日 언론 “법적 대응”",
-        "source": "헤럴드경제",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5EZnZyRl9sNzI2bWtJTHc1amZSUVhiVE96UnpCN1l3VWNhaE9lcVBnOXVYOE5SLWhDelY0YUs4Zkd1YTRMVTFtaklNWWJEdlY2OUl0Nm13?oc=5",
-        "date": "2026-08-15"
       }
     ],
     "에너지": [
@@ -194,7 +194,7 @@
     "금융": [
       {
         "title": "증시 변동성 축소·우호적 매크로 환경...외인 매수세 지속 기대감",
-        "source": "daily.hankooki.com",
+        "source": "데일리한국",
         "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9INWJNR05DQk1SaVI5RHVqLUVjTWM2b0twTmpxWmJ2aXhwZmFvNGdMY3pFZUpBQ3o5RW9oaVYycGprQUdfRlNobjhJSGJWTmhqZWVXUXFaR0FzWmZSbWgzOE5OOXNQLUFJUWRCbkc5NNIBc0FVX3lxTE8xWHlHMl9TdkMwOTVrM0ItZGpFODE4Q1E2Sy1EVUpBUWZSdEV5QWRmbS1zYjZicXNlNm8wZnFTTExSa3A2Q2tFSmFLUE45Q3NHamFiYXdfX1RrUDhPVjB0b2FyLXFFRzl1R3N0UDN4LXdQWk0?oc=5",
         "date": "2026-08-15"
       },
@@ -313,16 +313,16 @@
         "date": "2026-08-15"
       },
       {
+        "title": "금리인상 우려 완화 불구… 비트코인 여전히 게걸음 [주간코인시황]",
+        "source": "IT조선",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE16MlpnVktLM1c3M1M2VkRPWEJua0lWTGxZbmpTNHlmcXVUMlBKcDJtR2dsY1E4b2Y4azFUUGxFNzZycm90TFpEREdjMXpFWEltclRCUVo5WUI4LVF1VVdHOVpiU3VIQUZ2S1FnYTk0ZmnSAXRBVV95cUxPMFpsRDBuOFNfM0l1X25iMEh4SzdKdWtVQk9jRjJUX2l5YUZiUnZKd1daV3M0bW9DellsRktja3VhbDRxbmYzZ2t2WlFtRndQX1loMUlDdjkta3c2X1BCaGpVS21ESWNWc01WTEZVM2x3OHNuOA?oc=5",
+        "date": "2026-08-15"
+      },
+      {
         "title": "[07:49 가상자산] 비트코인, 美 금리 인상 우려 완화에도 상승 폭 제한",
         "source": "신아일보",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1COF9yTWJRM055VmpDWl93bGZuVDJYWExxVEJCVWlxVmlyLXNLcGdPT2JjYzdFZ2Fvd2xObDNTTW1yajB0MkJuSjVnanB0QzhtNFU1OUE4SnFvZnA1bzdzQXJHNk90STQ5bjM3RjQ2QTE?oc=5",
         "date": "2026-08-14"
-      },
-      {
-        "title": "[D-BIZ 암호화폐 뉴스] 이스라엘 최대 은행 ‘뱅크 레우미’, 2027년 암호화폐 거래 서비스 전격 도입… 갤럭시 디지털과 맞손",
-        "source": "데일리비즈온",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMLXR6Z01rXzlDZ0pWeUxNaWdnMXlSUFI3S3hXOFloRWF6bC1ZY09GSDlteWVEYmQzTXZvaFY4YVhtRndmWU8yWTFJS0JNLUdnV0RnU1k0TFNKejBMSVlzNU1IY0RBZnEzQlBfRw?oc=5",
-        "date": "2026-08-15"
       },
       {
         "title": "GSR, 모델 포트폴리오서 솔라나 비중 43.6%로 확대…비트코인·이더리움은 축소",
@@ -331,16 +331,16 @@
         "date": "2026-08-13"
       },
       {
-        "title": "\"알트코인은 죽었다…비트코인 대체 불가능\"",
-        "source": "블루밍비트",
-        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9NMnJTeGdlWFNGQXQ1dndZbTRsMWhvTHZXS01ZQnNfeGtQOTh0elllV2hwNlo3bjhfTURObm5MVi03RTBLR3Y1aFVzSXdhdnFr?oc=5",
+        "title": "[D-BIZ 암호화폐 뉴스] 이스라엘 최대 은행 ‘뱅크 레우미’, 2027년 암호화폐 거래 서비스 전격 도입… 갤럭시 디지털과 맞손",
+        "source": "데일리비즈온",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMLXR6Z01rXzlDZ0pWeUxNaWdnMXlSUFI3S3hXOFloRWF6bC1ZY09GSDlteWVEYmQzTXZvaFY4YVhtRndmWU8yWTFJS0JNLUdnV0RnU1k0TFNKejBMSVlzNU1IY0RBZnEzQlBfRw?oc=5",
         "date": "2026-08-15"
       },
       {
-        "title": "금리인상 우려 완화 불구… 비트코인 여전히 게걸음 [주간코인시황]",
-        "source": "IT조선",
-        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE16MlpnVktLM1c3M1M2VkRPWEJua0lWTGxZbmpTNHlmcXVUMlBKcDJtR2dsY1E4b2Y4azFUUGxFNzZycm90TFpEREdjMXpFWEltclRCUVo5WUI4LVF1VVdHOVpiU3VIQUZ2S1FnYTk0ZmnSAXRBVV95cUxPMFpsRDBuOFNfM0l1X25iMEh4SzdKdWtVQk9jRjJUX2l5YUZiUnZKd1daV3M0bW9DellsRktja3VhbDRxbmYzZ2t2WlFtRndQX1loMUlDdjkta3c2X1BCaGpVS21ESWNWc01WTEZVM2x3OHNuOA?oc=5",
-        "date": "2026-08-15"
+        "title": "해외로 나간 코인 자금 5년간 700조…‘현물’에 갇힌 韓 가상자산 시장",
+        "source": "매일경제 마켓",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9pUUdKd1dXMkFYV0ZDWldsdWhEMkNVUVVNUGs4bjRmVHY3VzVsVGtZbVpUU0VoMkxFRjZvU0xjOGNhTUxOVGxUSEZTQ1FsOWQxRlE?oc=5",
+        "date": "2026-08-12"
       }
     ],
     "세계경제": [
@@ -376,7 +376,7 @@
       },
       {
         "title": "[딜로이트 글로벌 경제 리뷰] 미국 IEEPA 관세 위법 판결의 영향과 대응 전략",
-        "source": "파이낸셜포스트",
+        "source": "financialpost.co.kr",
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5GOVpDUlVESVN4NHVOODBVUmUzTDJ6NGZFak9lamNxaXdZdEJvMmZxb0hUQVVJNV9Sc0Y0bjdTQ3l1NkhFRTNsbk90V1ZzWGlKYWRBbjNPMkIyY0JkNW9XQkpFaklkVDFNVDdQQ0Q3Ym9PTTNl?oc=5",
         "date": "2026-02-28"
       }
@@ -465,12 +465,6 @@
         "date": "2026-08-14"
       },
       {
-        "title": "“자산 형성은 습관과 원칙의 결과…복리의 임계점 돌파해야”",
-        "source": "정보통신신문",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9iakJ4WlZqM3ZjQkhKOG95MUpnZDI2NjBBcm9lVm5wMGpWNGJ2M0tIak9scWNrYVREVkJ3cm9lSXhaQ3hONjJqRnRKeTZnMTJWUHNGaEtnbDhwWjJ5SEp5TUZaODVOZnQ30gFsQVVfeXFMT2VtdWE2ZUFZVnM3NXhWM3A4aTM3MU9DaERCb2pXTktrQjNhc1RpZ2NxVHlTY09zRkhkcldicnlYVkstM2taU3RSMHRCenNFQmFKejdsZDE1ZU1PMjQwWkczNkp6QUJfUVZKT3Ny?oc=5",
-        "date": "2026-08-10"
-      },
-      {
         "title": "iM뱅크, 제7회 재테크 포럼 개최…AI 시대 투자 전략 제시",
         "source": "kyongbuk.co.kr",
         "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB1TkI5QUFMZzBEejhsdEQ4WUNtSWo1dXpiS2VsS0FyWGh1cmZJMHNldVBNdXRyS2Q4dG9vTFZ4bC01ZUd1ZzNSdU9qVy1udURSRi1hTlR0eFUzVm1mR0dvVnJEUV95OGtkNTAyd0IwRQ?oc=5",
@@ -483,16 +477,22 @@
         "date": "2026-08-14"
       },
       {
-        "title": "iM뱅크, 스테이블코인·AI시대 투자전략 공유…재테크 포럼 개최",
-        "source": "마켓인",
-        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBHTnBsTGR3NXRjSVRDb3hlRnZjblY3ZmpfYVQ4NTBZajMzbTg0MWZLdnUxZTBLVFF6NktLNml5LVdxQ2E3dG0wQzhoOWtoZEtxRkkzV0RIYmdxcUk0LVdReUJWZnhxVGZodWloTmZYUUxXR2c?oc=5",
-        "date": "2026-07-29"
-      },
-      {
         "title": "은평구, 학부모 대상 ‘재테크 금융교육’…주식·투자부터 자녀 경제교육까지",
         "source": "잡포스트",
         "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9pQnJlaGhXNGJBeTdaR2Q1bDNJa2pXaUlGTEk3LWJ3YkttYmZBcGZBV2RrMm9jRWVmM0NvSnExdkMzMlB1dXdrN09vbUktVVQzMHRxOVNCTzNtWFlLLXN1aTRjWXc1OXZnTENaN1Nn0gFyQVVfeXFMT3dwQ2o3M1Y1WnBuaXJnMVZfWUppVm9nYmpQZEhHcFlES2RvbXF0UU5HMU9pSU1rQVBVNl8wR1hxcm5wSF9KZ1phbDhPbUpLbmFIVEo0ZGdtRHoxNlZBY2pOTG5TbXlLUE4xeXlNbElPckJB?oc=5",
         "date": "2026-08-14"
+      },
+      {
+        "title": "[비바100] 챗GPT가 바꾸는 재테크…AI 자산관리 시장 2035년 200조 시대",
+        "source": "브릿지경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LSkRXVDlmbzJWdHJJTi1kdGxuSVJHQTg2dkhUUWY3UGVmRmpvaXZVVDkyRXNhaldUSE5pT3NVZjl1RDVpR2ZHaV9RaktkNXZHZVB4YWRfWUdDQQ?oc=5",
+        "date": "2026-07-23"
+      },
+      {
+        "title": "iM뱅크, ‘AI 시대 투자 전략’ 주제 재테크 포럼 개최…미래 금융 변화와 자산관리 방향 공유",
+        "source": "브레이크뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5UWll1SjcwOWtYYmVfZTFwM0RKTUhMUFdLVlQxeGxEWUpUQ2lxUGkwTExiVjVhQTJVQjBlRVVlWkRxcXlsRlowag?oc=5",
+        "date": "2026-07-29"
       }
     ],
     "쉬운 경제": [
