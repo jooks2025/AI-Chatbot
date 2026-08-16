@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T19:03+09:00",
+  "updatedAt": "2026-08-16T19:42+09:00",
   "sectors": {
     "조선": [
       {
@@ -54,7 +54,7 @@
       },
       {
         "title": "대구시, 지역 건설업 활성화한다…공공공사 공구 분할·하도급률 상향",
-        "source": "munhwa.com",
+        "source": "문화일보",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5IanFZcnRtMFNwNnhteTI2Q0xhR0U2aDV0UlVkcHBxbGxhQ2d1ckJkMnVsNlB0WTBwSFc0anItUHk5VU9MYThzdVdzRV9oVGo5?oc=5",
         "date": "2026-08-13"
       },
@@ -91,15 +91,15 @@
         "date": "2026-08-14"
       },
       {
-        "title": "[단독] \"수주물량 70%가 반도체\"…공작기계 공장 '풀가동'",
-        "source": "한국경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5GQmVLeXdCZWNic3VLbkd4bGdaUTBVZXo5VVhuaUNjSnhnUDBEREl0dWNWcDZSSW9jUGZNMmJSeVJMamRyZFNGN2FhLTJ1eUo0MnpBTGV2UWdFZw?oc=5",
+        "title": "부울경 산업 전기료 10%↓…반도체 기업 올까",
+        "source": "국제신문",
+        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNXJoUkJDN0s0ZkpvUjdGNjB5TmkwU2xhYlJoektfemdtMjdxbEQwdkJOY0JGNVdVWjZLVGdZcEhQWmNjUXdWV2YwUl9jZzRnaV9oLUJMVC05V0NjdnhZYVdrcnhUal9PUGd6LUxhVDhpdlhVN0s4RXRGWThVZ3hwSzJTUEZMM1dlYy1SU04tcF9MZEk?oc=5",
         "date": "2026-08-16"
       },
       {
-        "title": "한미반도체 폭등 맞힌 ‘주식 타짜’ “다음 텐배거는 이 종목”",
-        "source": "중앙일보",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBpR2h0aTdOUjd4VTF4SjJ3X09pVGlIZTVVNjVJSVRrX0k3Z1lqamZNRGpIUnB0Qlg0aHZjc25DcjFTU0xDOTI0TVJZbGRjY3U0WmItTUtR?oc=5",
+        "title": "[단독] \"수주물량 70%가 반도체\"…공작기계 공장 '풀가동'",
+        "source": "한국경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5GQmVLeXdCZWNic3VLbkd4bGdaUTBVZXo5VVhuaUNjSnhnUDBEREl0dWNWcDZSSW9jUGZNMmJSeVJMamRyZFNGN2FhLTJ1eUo0MnpBTGV2UWdFZw?oc=5",
         "date": "2026-08-16"
       },
       {
@@ -231,12 +231,6 @@
     ],
     "헬스케어": [
       {
-        "title": "유한양행, '유일한 아카데미 2026' 성료…청년 헬스케어 인재 육성",
-        "source": "메디파나뉴스",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9MaXJ2d0didFpkRVBSUnZtazhiTVhuSGcwZWNCOTI0RmtNa0RmVG5iaXpTY184YzJMZG9URzZTLXpZVkxFLVVJWUF4QzVtMnhUd01vOWNfV245ZmN1d2RCUzB2UU1DNkh2cWxV?oc=5",
-        "date": "2026-08-12"
-      },
-      {
         "title": "\"BIX 2026, 바이오헬스케어 혁신 판도 읽는다\"",
         "source": "한국의약통신",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIMVdEQnRrYnAyYmpTaGd5NC10NXpiNG10ZnB3RlpPbHFlUDViVUxTOUFqQ1NTeDZqa3doQmh2RjZDME55LWtBQkRtU2ZSMkRqM2s5NGdXaVE4YnYzRXRxS1NiVU5JRXZiZWxj?oc=5",
@@ -265,6 +259,12 @@
         "source": "뉴스핌",
         "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5YT1BrbktVYjNyUkpSTFRUMTZ3THhWZmZvWWZUOURBMm1BUXdSM3FGUnBoMVpURjRwWW5HbzhLTE82VVNwa0Z1WS1iNE5IUEpldzJNVUR2NlNiMGJW?oc=5",
         "date": "2026-08-11"
+      },
+      {
+        "title": "제약·바이오·헬스케어 산업 6대 테크 트렌드",
+        "source": "Deloitte",
+        "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORUM2RjdjaDdydDdlZXNFTGNmTFJKX29kYzFCYVV4SERYbDZMOXNOVGVoZmtfUFJQV0ZKUmZiQ3BZejVWMGl0cmg0VWRSRFcyNE9xRWx6QXhTWjdfNENwLUZndlhjZ3V2eFAydW1wSGVyYUZXN1RTaHFjRURzZ21fR1VKeFFvMHo0OENCelo0RXJWcEM4aTI2ZzBDYUtPekpoSy1iLVEtMFZIa0xEdlF1UkVZUnlqdXVHX1U3VHQyWW9qNWctb0dlNlFzWEYyZw?oc=5",
+        "date": "2026-07-07"
       }
     ],
     "부동산": [
@@ -276,7 +276,7 @@
       },
       {
         "title": "[8월 셋째 주 아파트 분양일정] ‘써밋클라비온’ 등 3788가구 분양",
-        "source": "디트NEWS24",
+        "source": "dtnews24.com",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1VOFYzRVN0eFd3OUpVNUpaRjFGSGJjdmUxbDRKb3g5NjFQUzFUeGEtWDNGWmp6aklmSDZoV1RPNjRVdkJwbGdSUnRTbGN4d19xMjY4bnBtYWpjc2tDZlQwb2tJVzF4R0JDaHp3?oc=5",
         "date": "2026-08-14"
       },
@@ -338,7 +338,7 @@
       },
       {
         "title": "[07:49 가상자산] 비트코인, 美 금리 인상 우려 완화에도 상승 폭 제한",
-        "source": "신아일보",
+        "source": "shinailbo.co.kr",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1COF9yTWJRM055VmpDWl93bGZuVDJYWExxVEJCVWlxVmlyLXNLcGdPT2JjYzdFZ2Fvd2xObDNTTW1yajB0MkJuSjVnanB0QzhtNFU1OUE4SnFvZnA1bzdzQXJHNk90STQ5bjM3RjQ2QTE?oc=5",
         "date": "2026-08-14"
       }
@@ -346,21 +346,9 @@
     "세계경제": [
       {
         "title": "60개국 ‘강제노동 관세’ 폭탄… 곳간 빈 美가 부른 ‘자유무역의 종말’[글로벌경제 인사이트]",
-        "source": "munhwa.com",
+        "source": "문화일보",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1NY1V6U3ZvMEt4T1IxdVQ3dUVNdnc2UVlpWE1aOF9yVjFkMXF3OGE1RTN4S0RuamhIRnNCblJ2bEdiWnhwNWphelpiYzlQaUVv?oc=5",
         "date": "2026-07-28"
-      },
-      {
-        "title": "트럼프는 지금까지 어떤 관세를 도입했고, 그 이유는 무엇일까?",
-        "source": "BBC",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1rdmtRTmRtMTNObTJlNzctc0RXeWNtUGxxN3c2cW9aRlpkM2JiY0lDX1hXSGJnNVB3NDJCcG5wbVZqMkM4Sk5sakhhX1JBRVJ6THRtbjRWRGxfRmNj0gFiQVVfeXFMTU1ReWRBdVBqTnBtczMwQ2hHNWVrdFNTNWxHeXliU2NZU2tPNV9odWs1T2M5ZGdUd2ZtbGFPTmtrbXJiUzZlUE5sd0EtSm1TRGU5eWM5OXVaLXp6eUFhRE1IN0E?oc=5",
-        "date": "2026-07-22"
-      },
-      {
-        "title": "중국 \"미국과 동등한 규모로 각자 중시하는 제품 관세 인하 합의\"",
-        "source": "조선일보",
-        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNjRHVV9YQXNDNDU1RFNjenBWeVh0Q2JHdXM3Y2pkbllheW9GVk95QnNrdWJ5MXozRGlPdGZQXy1oaERtZ0tiMTVPLXRFZVhHdkVyWjNhRlhQUG1ydkE4ZUxLVFpzZjRBd2hUNzZ4Rnp1S0p4UjRKR0Nla3ZUUVE1YlgxbVRKTEVCcUFvZ3VjZ2xWX1F5MXdZSWFzdFdwdw?oc=5",
-        "date": "2026-05-16"
       },
       {
         "title": "트럼프의 '해방의 날' 관세 1년 … 세계 경제에서 달라진 4가지",
@@ -369,10 +357,22 @@
         "date": "2026-04-03"
       },
       {
+        "title": "중국 \"미국과 동등한 규모로 각자 중시하는 제품 관세 인하 합의\"",
+        "source": "조선일보",
+        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNjRHVV9YQXNDNDU1RFNjenBWeVh0Q2JHdXM3Y2pkbllheW9GVk95QnNrdWJ5MXozRGlPdGZQXy1oaERtZ0tiMTVPLXRFZVhHdkVyWjNhRlhQUG1ydkE4ZUxLVFpzZjRBd2hUNzZ4Rnp1S0p4UjRKR0Nla3ZUUVE1YlgxbVRKTEVCcUFvZ3VjZ2xWX1F5MXdZSWFzdFdwdw?oc=5",
+        "date": "2026-05-16"
+      },
+      {
         "title": "[美관세 위법판결] 세계 경제 불확실성 커졌다…각국 무역합의 '안갯속'",
         "source": "연합뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAxXzFGaW9hMmYtMmlWYVFDUkc1dU5UVUNJZFJ3anh3M2xpOHZrQ19lUFYtb2dlbWVZU2ExLUpIZ0NNTWtrbGZRd0d1Z2tRU00yWS1sYVdWM0x1N2fSAWBBVV95cUxQalFyZzM0eDJnMEt4eWR1alJnQmd6UGltdGFEWXFtLWphd1QtTlRsM0FlVkR4WEZSNlVMX0xFTUpIdDU1cTZfdzZfWW9leXFrUW1MdXVjS2kxYl8yckZmTEs?oc=5",
         "date": "2026-02-21"
+      },
+      {
+        "title": "[딜로이트 글로벌 경제 리뷰] 미국 IEEPA 관세 위법 판결의 영향과 대응 전략",
+        "source": "파이낸셜포스트",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5GOVpDUlVESVN4NHVOODBVUmUzTDJ6NGZFak9lamNxaXdZdEJvMmZxb0hUQVVJNV9Sc0Y0bjdTQ3l1NkhFRTNsbk90V1ZzWGlKYWRBbjNPMkIyY0JkNW9XQkpFaklkVDFNVDdQQ0Q3Ym9PTTNl?oc=5",
+        "date": "2026-02-28"
       },
       {
         "title": "미국과 도널드 트럼프 사이의 관세 분쟁이 무역 전쟁으로, 이제는 경제 전쟁으로까지 확대되고 있다: 전망 및 결과",
@@ -384,7 +384,7 @@
     "채권·금리": [
       {
         "title": "[뉴욕마켓워치] 소비가 부진해도 금리가 오르네…주식·채권·달러 '트리플 약세'",
-        "source": "연합인포맥스",
+        "source": "news.einfomax.co.kr",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9ub0tKaWFlOFhDMEtmMEppc2taNkVsX0JBa2JHUUpqQW9NZmZnaXVsRVdYVWY0eXo4QTFwa0xqbTYxX2t2LWhDYkFBTUxxb0xua2Jwb0VXSENzY0VzbW5fdmtKOGlHRVluVmU0MkJ4MlU?oc=5",
         "date": "2026-08-15"
       },
