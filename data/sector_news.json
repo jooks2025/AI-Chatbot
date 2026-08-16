@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T22:37+09:00",
+  "updatedAt": "2026-08-16T23:01+09:00",
   "sectors": {
     "조선": [
       {
@@ -42,7 +42,7 @@
     "건설": [
       {
         "title": "윤석열 정부때 축소한 건설업 E-9 고용제한 범위 ‘원상복귀’",
-        "source": "매일노동뉴스",
+        "source": "labortoday.co.kr",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aanVDV2RrZzQwMlV0Q0p3MEdOUlFfWFBudmUtOHlsa3ZjWFR0ZTQ0TldsNkxXaXMwQTMxNWQzMmh4a3NVZ3NSMmFvS0hNalF3aTNadHlTLUZhdG1HTDZFNHljeV9QcDg1LVpFZXE2aGk?oc=5",
         "date": "2026-08-14"
       },
@@ -79,22 +79,16 @@
     ],
     "반도체": [
       {
-        "title": "“반도체 지금 팔아라?” 충격적 65만→35만원, 삼성전자 목표주가 믿어도 되나",
-        "source": "헤럴드경제",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE90OGtmQ09haVpnd2xWOG5Icl9uMHFSQ0EwOURoNjEwdW5hOEVsaGlxSERQQkp1WnJZSHowYVA0UWVZZGFPaUswSmRRYUVUc0oxbDJveDhR?oc=5",
-        "date": "2026-08-15"
-      },
-      {
-        "title": "AI칩 커지자 고성능 반도체기판도 품귀…빅테크도 줄섰다 - 머니투데이",
-        "source": "mt.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE14YkRqdTlab3dXZjd2OXBvQkxOc3dCZVFkTWk3TmJoeXRQQ2dRTElKbjRWTjlsNjgwVVRYTEVGSW8wVlVXZldvTXE1NEMyVHV5VE5IN01QUEdqTnEwMGg3MzJRWGJHSEpJbW9CedIBckFVX3lxTE1HMFFCenRyNjIyUFBCZnB4R3lzcm5HaG1TSXNTV2wwOXV2SURQOTIyaWJFMV81NjQyRzFYUEd4eW56UmhOb0wtcVAxdmR1dS1STFp0eUlKVi1QbWR5XzdHR2RUelZ6SG5UZFNmRTNnQktadw?oc=5",
-        "date": "2026-08-14"
-      },
-      {
         "title": "같은 반도체 호황인데…한국 성장률, 대만에 13분기 연속 밀렸다",
         "source": "v.daum.net",
         "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qNlJwWW5mVjlqRVdyZzhjTVF2S0JraXVRdnU1WkVSNFV3UEFzTTNBQ1paMjF4YzdOclBsb1VhTm93dHdTcDROLVB1dlh1TU0?oc=5",
         "date": "2026-08-16"
+      },
+      {
+        "title": "“반도체 지금 팔아라?” 충격적 65만→35만원, 삼성전자 목표주가 믿어도 되나",
+        "source": "헤럴드경제",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE90OGtmQ09haVpnd2xWOG5Icl9uMHFSQ0EwOURoNjEwdW5hOEVsaGlxSERQQkp1WnJZSHowYVA0UWVZZGFPaUswSmRRYUVUc0oxbDJveDhR?oc=5",
+        "date": "2026-08-15"
       },
       {
         "title": "[단독] \"수주물량 70%가 반도체\"…공작기계 공장 '풀가동'",
@@ -109,9 +103,15 @@
         "date": "2026-08-16"
       },
       {
-        "title": "비거주 1주택자에 중과세, 호남반도체 발목 잡는다?",
-        "source": "조선일보",
-        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1YUWcwZl9kRUM0bVc1QUpBS0VMaVdtVUJoTlVONnNqb3lBLVVBNXB3LXN0NUpqdG9UYzluaWNrb2N6cWFuUC0zdTlCY2NmR19Lc2d4VUtkb3F6OEN4YTctME1oekVkRFJIX3ZZS1M3cnZFcWxmVzh1UQ?oc=5",
+        "title": "“여보, 삼전닉스 아직 안팔았지?”…‘300조’ 관측에 반도체 개미 ‘들썩’",
+        "source": "서울경제",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5nR2xPVWNiek5SZWx0M3ZTLWNueWowbDBGLU9IcExOUnpuSF81Sk1Qb3FSX0NrUXlXYlVtOGI1bVlsdEtZY0xId1ZtOEtkRTBDVHc?oc=5",
+        "date": "2026-08-16"
+      },
+      {
+        "title": "삼전닉스 다음은 어디?…시총 과열 맞춘 이재만이 찍은 반도체 소부장",
+        "source": "전자신문",
+        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFA1NXMzUHBzZkpCYWl4RFp0X0xlMkQ5UzBoemZ0RmNDUGN6a1BjaldLV3BDcGE3SlJSeXFfSkg0YzNOTEVDODhQQ3Jod3E5UQ?oc=5",
         "date": "2026-08-16"
       }
     ],
@@ -129,15 +129,21 @@
         "date": "2026-08-16"
       },
       {
+        "title": "“이 글, 인공지능이 썼을까?”…이제 알 수 있다, 앤트로픽 'AI 텍스트'에 워터마크 심는다",
+        "source": "인공지능신문",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4zMDZwRksyTzZSOGFFR3V1a0doLXZlSlBHdTZVWVJ0bWctVzB5a2FRT0JnMG9IUnNqTXc4OFVxY0J5dndEWEJBVTdFb2RoNXlCRmNTWFFWZ25YUWROWmtUR0llZUNpR0U?oc=5",
+        "date": "2026-08-16"
+      },
+      {
         "title": "미국, 한국 포함 35개국에 ‘중국 주도 AI 협력체 불참’ 요구 방침",
         "source": "한겨레",
         "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5lNm1pYmwxeDNaME1ma0ZQalVlb1FOWFgwNDlFMEhpTjRkb2NrS0R0ZnZqZExRbDBqWjU0RG9jQzMyNWdHRC1TcWRhcUFlU2Q3bm1reHdWOTE1TkY5eFNVdTZRRWdlbGdib01zckhsUQ?oc=5",
         "date": "2026-08-16"
       },
       {
-        "title": "“이 글, 인공지능이 썼을까?”…이제 알 수 있다, 앤트로픽 'AI 텍스트'에 워터마크 심는다",
-        "source": "인공지능신문",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4zMDZwRksyTzZSOGFFR3V1a0doLXZlSlBHdTZVWVJ0bWctVzB5a2FRT0JnMG9IUnNqTXc4OFVxY0J5dndEWEJBVTdFb2RoNXlCRmNTWFFWZ25YUWROWmtUR0llZUNpR0U?oc=5",
+        "title": "인공지능(AI) 시대에 수능 논술형 도입 교육계 찬반 팽팽",
+        "source": "newsedu.co.kr",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hd1BYNnpiV1VWdkRfYm44c1IzNV9hYnpMWWNoaG5DSW9IejBqdTlLWlpvekYwMHNCSWF4OEFQLVFSQjB6QUJWRU1OQ1JoQy1GS3RUZnBySHZRaEpwV0RLZ3ZjekFpYTUzUkFDdtIBcEFVX3lxTFBRLWE2V3FTUzlpZkwxaDRFVVFBNDE2aHlWWjF5em5RckY0OTBHeHZhSGZEY3hLakRVNnB0emxoQlNPcEV2UUQyU3BROGdMU0tjLXNqZ2RoR0VFLWREMDlCLUhRRnlvaVhSRkpKWmZPQTI?oc=5",
         "date": "2026-08-16"
       },
       {
@@ -145,38 +151,14 @@
         "source": "뉴스데일리",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5NNzhaTlpGYko4eHVuaDRfVE8zOGVJZXRzR1pjUVdXX1N2aE1lZFVqMTY1UWYzbUw3RkpzR1ZqRTUyeHF0Q3dUc3JjTzFfM3dkak5nZHR1cGR2ak95OEhQOHRTc21DU3BXRFFV?oc=5",
         "date": "2026-08-16"
-      },
-      {
-        "title": "AI도 집단지성…다수결 원칙 따른다",
-        "source": "동아사이언스",
-        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE52a01XZ2VsQmtEemlNNU5TQzNicEZoQ3RsaDk2SlZ4bzM2ZnBGaEo2SWlnQnJWZ1RTTTJ4aHg1WWJzNVFqTmthLUhBbUJ2cVlIQXRFcQ?oc=5",
-        "date": "2026-08-16"
       }
     ],
     "에너지": [
-      {
-        "title": "‘3대 메가 프로젝트’ 전력수요 잠정치 20일 공개한다",
-        "source": "한겨레",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5hUTBxY09wYkFHTE1UVy1aUkMxXzlZUlFpVVdzRUhhSDBJbDdjOHcxenU0VlRxZ1ZRSDFIZ1RyY0RVek1MYWo1TXJ0Vk81T2cxOExYZjhPUDc0TzVacHB3SzAxVlJQd1AzMjRSVw?oc=5",
-        "date": "2026-08-16"
-      },
       {
         "title": "AI 핵심 인프라 재생에너지…전력 안정성 높이는 ESS 입지 확대",
         "source": "v.daum.net",
         "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtb3BCNFMybFZ1emhhY0oxTG1Ib2FmbnQ3M2FLbVRGSktPdExMZEJVVk5aM3FyQzhqWDNWWk5GZ1ktRktkQlJZSVJNYVF3bWM?oc=5",
         "date": "2026-08-16"
-      },
-      {
-        "title": "메가프로젝트 담은 전력수요 밑그림 나온다... 20일 토론회 개최",
-        "source": "한국일보",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE52VFdTd2h3aHRqalpTY2FUODByUkxxelY5M1gtb2Q5aDFLd2lvbHdkS0pZak5Ld3NUTGh5aXN3b3hSanVYc2tJa1FBZVBTTEozTGFCM0Z0d2tJU2pydWczMk1QdTM1NEJ4ekR0b0RR0gFzQVVfeXFMUE5jbDFZZk5CZWk1TlZnVDZyVDk4QkNQSHhQMmcxV2NweU52WjVaWGJKZzdyUWp2SDlSTDVFV0pRS0RkeGpQamM4bWowSV85UF8xVk9ZbzJSMzhxODlFSWNJN3ZEUTE1aWM3bTA4S2d3Umdycw?oc=5",
-        "date": "2026-08-15"
-      },
-      {
-        "title": "12차 전기본 4·5차 토론회…20일 전력수요 재전망 논의",
-        "source": "데일리안",
-        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPcE9wN2NIbW9hb1p0Z3hWQV8xeTItbU14amNGM3JoanFtU1ZjdHZLYmZJcUlZMjVVdjFJUlQ4cmJ1Smhob1BmZ2hNNERVSU80WFBybU5sYWxYYkd1cEtfenVWMnlmZUZVem15VnNJVmRMUjJrZjhoMHoxcTNyb1dIT0g3cmYzak1rY25HUUZRVlRMVnVCTDRHVmN5eUdZWFRxTHRuT0kyTHV1bnhsVENXUUxtdlF1QVJDdTBEQ1R1REM1YmlHQnN6THJRWlFWSGU1QkxrVFBWLU1TMlZGeGVQeWJGSQ?oc=5",
-        "date": "2026-08-15"
       },
       {
         "title": "[단독] 지역별 요금제 급물살…LMP, 3분기 규칙개정 추진",
@@ -185,10 +167,28 @@
         "date": "2026-08-14"
       },
       {
+        "title": "메가프로젝트 담은 전력수요 밑그림 나온다... 20일 토론회 개최",
+        "source": "한국일보",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE52VFdTd2h3aHRqalpTY2FUODByUkxxelY5M1gtb2Q5aDFLd2lvbHdkS0pZak5Ld3NUTGh5aXN3b3hSanVYc2tJa1FBZVBTTEozTGFCM0Z0d2tJU2pydWczMk1QdTM1NEJ4ekR0b0RR0gFzQVVfeXFMUE5jbDFZZk5CZWk1TlZnVDZyVDk4QkNQSHhQMmcxV2NweU52WjVaWGJKZzdyUWp2SDlSTDVFV0pRS0RkeGpQamM4bWowSV85UF8xVk9ZbzJSMzhxODlFSWNJN3ZEUTE1aWM3bTA4S2d3Umdycw?oc=5",
+        "date": "2026-08-15"
+      },
+      {
         "title": "한국남동발전, 새만금서 ‘빛·수소·전력’ 잇는다…국내 첫 무탄소 에너지 순환 실증",
         "source": "인더스트리뉴스",
         "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9uc0NsSS1FeTZPSTRTUHlTUGQtM09XMGJ4M21jSlMyZl9sZVk5MGxBMVFnRFJPdnM2MklCNmpFQzBmQ0IyLU9NMjJSbjBUQWo5TjdZVnZaY240S2dzU0V6SC1XMDBQYjRBTWFzY0N3UE9qQQ?oc=5",
         "date": "2026-08-15"
+      },
+      {
+        "title": "아르헨티나, 20년 만에 민간 주도 에너지 인프라 투자 나서",
+        "source": "더구루",
+        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9vYVNIdUtCWC12WldGUFFtS25HSEhGNlMzV182T2UzcU03Nmg1eUU3a3IzZEdDUWRqdno5NnB1NERCUFE4emppT2JuLWxReW9pT09UWHdtVFNoOUcxMUlTWnFESQ?oc=5",
+        "date": "2026-08-16"
+      },
+      {
+        "title": "42.5℃ 폭염의 교훈, 전기를 잘 써야 하는 시대가 온다",
+        "source": "시사IN",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1tNHZvRDZoQWZiWnJjM09hQjd1S1ZCRFJIblo5VmRqM3dKMG53TFR5dXpWMXc0WjVnejN6TjFhYXM5ZjQtMkUtQjFBSnFmSWdYZlktRkNzeTFjYnpFNlQzZGRaNGN4WkQ5Q1E?oc=5",
+        "date": "2026-08-13"
       }
     ],
     "금융": [
@@ -200,7 +200,7 @@
       },
       {
         "title": "한양증권, 숏폼 콘텐츠 '한양사전'으로 증시 역사 조명",
-        "source": "BBS불교방송",
+        "source": "news.bbsi.co.kr",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5sNlJFZHhLY0FCQy1XVzVzOEtpLW1fOU0wYVM3MUVVUnN3dmZfeVgwR2hSOWJPeUxZMHoyYWhieU0zOFlTTFhVc0NkeFd6UHZHSEVKUVBTTE40bVdWeDVMWEpTTmI2cExyV05F?oc=5",
         "date": "2026-08-13"
       },
@@ -407,22 +407,22 @@
         "date": "2026-08-14"
       },
       {
-        "title": "치솟는 美 장기금리… ‘최고 채권 판매자’베선트가 꺼낸 ‘3장의 카드’",
-        "source": "조선일보",
-        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSEhoZUJPT1FHT09pU0VOVUhfY2RqYk9NbEFqdnNuSGJhX0pXa0lYWmZ2el9jVzlmSVNzeGM2aGhqNm42bVpXZVQ3ZS1LekN0TlJIbHFpZDIydWlqMXFjcnhxMmR5ckJuSldTNkJSRU05NkdhNWhmd3RaQ3gwZUFMVERlRU1vSGdx?oc=5",
-        "date": "2026-08-10"
-      },
-      {
         "title": "[채권/외환] 美 생산자물가 둔화에 국채 강세…9월 금리 인상 기대 후퇴",
         "source": "뉴스핌",
         "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB4WFFCejJzd043UGo4N1RlckttLTZKLVdlaFBJT3EzN0lWTHNUeGhJNmtjeUtuUGtGWVdLek1XOG9zSG56YWNCYk1LbUF0S3A0Mnk3LXZSLV95UWpq?oc=5",
         "date": "2026-08-14"
+      },
+      {
+        "title": "치솟는 美 장기금리… ‘최고 채권 판매자’베선트가 꺼낸 ‘3장의 카드’",
+        "source": "조선일보",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSEhoZUJPT1FHT09pU0VOVUhfY2RqYk9NbEFqdnNuSGJhX0pXa0lYWmZ2el9jVzlmSVNzeGM2aGhqNm42bVpXZVQ3ZS1LekN0TlJIbHFpZDIydWlqMXFjcnhxMmR5ckJuSldTNkJSRU05NkdhNWhmd3RaQ3gwZUFMVERlRU1vSGdx?oc=5",
+        "date": "2026-08-10"
       }
     ],
     "고용·노동": [
       {
         "title": "전체 취업자 10만명 늘었지만…청년 고용은 ’한파’",
-        "source": "yonhapnewstv.co.kr",
+        "source": "연합뉴스TV",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2RUZ1LWR0b2puelNEMElOSkVJREZiUmlXYWpCaUM3WU1RdEpQa1FFNjhrQ3V2eVZFamZleEVMVXJGRWFJVUNSU2VKRG1MenpxZXgyQUsyd0Rhak9NNy1tYU9RRk9hSTA?oc=5",
         "date": "2026-08-13"
       },
@@ -446,13 +446,13 @@
       },
       {
         "title": "청년 고용률 27개월 연속 하락… ‘고용 없는 성장’의 비명",
-        "source": "더스쿠프",
+        "source": "thescoop.co.kr",
         "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE56SGgzelFYajloQ294cFNRaTVLbkUwQUxxOURfUmpJdWM1Z3lUcGZhU2JvcHlNTHVuSksyV3F2TFF6a0g2b0lFVGZIR0NYSWRuYTl2endiZTdCWXFzSGxoZ0Qxemc3dDBTb0oxSVhR?oc=5",
         "date": "2026-08-13"
       },
       {
         "title": "통합특별시 첫 고용지표…취업자는 늘고 실업률은 낮아져",
-        "source": "드림투데이",
+        "source": "gjdream.com",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5YRmxLNnA3YkNRcnBwRWxLTUhlcU1GbTZFRnRja2owU0cwcHMwZG85S2hkdGNQX2htMzlaNTNuR1FaV2U5VUtkbVFWcVZOUnZMcWs4d2owYTI4a3YzOWVRUGVhSnQtSlY4dnc?oc=5",
         "date": "2026-08-13"
       }
@@ -498,7 +498,7 @@
     "쉬운 경제": [
       {
         "title": "나는 왜 경제에 대해 쓰고, 녹음하고, 촬영하는가",
-        "source": "brunch.co.kr",
+        "source": "브런치",
         "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBsV254a2habk02T204cVkwcTc1cmUxZ3paRDJWUFVVOFhFOHdjSElsRFpMM3FELWxrUzZvemRISnlhWmc4UmU0dWpn?oc=5",
         "date": "2026-03-08"
       },
