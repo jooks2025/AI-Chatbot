@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T04:57+09:00",
+  "updatedAt": "2026-08-17T05:32+09:00",
   "sectors": {
     "조선": [
       {
@@ -41,6 +41,12 @@
     ],
     "건설": [
       {
+        "title": "수주 줄고 공사비 오르고…지역 건설업 줄폐업",
+        "source": "KBS 뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8ybDRjNnNRMEpUZWpXbjFaWk4wTV9teF9Zb1ZSTy1jeDRmenkwbFNkWEZRZDJxWnVXSmxmSk9tTXl3NnY3VC1GZFpzemNJcEZqOFNVdDBsLS1hcDA?oc=5",
+        "date": "2026-08-16"
+      },
+      {
         "title": "윤석열 정부때 축소한 건설업 E-9 고용제한 범위 ‘원상복귀’",
         "source": "매일노동뉴스",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aanVDV2RrZzQwMlV0Q0p3MEdOUlFfWFBudmUtOHlsa3ZjWFR0ZTQ0TldsNkxXaXMwQTMxNWQzMmh4a3NVZ3NSMmFvS0hNalF3aTNadHlTLUZhdG1HTDZFNHljeV9QcDg1LVpFZXE2aGk?oc=5",
@@ -69,12 +75,6 @@
         "source": "뉴스핌",
         "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1tbzl1TUZmNjZ4Z1RlelVfbGxIdXdNWS1scVJFTlhpUlBqdVFXUHZITTdIbmZucTVXZ1lHRUFramJUb2NVd1RCNDhhWGZWUlZMSFJac3RVTFZqWV9k?oc=5",
         "date": "2026-08-13"
-      },
-      {
-        "title": "(무너진 건설 생태계) 상반기 폐업 2092곳…건설업 수익성 5년새 '반토막'",
-        "source": "뉴스토마토",
-        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9MR20zVTdNSDU2ZEpLLUJrZC11cUtTTFhyTnN4ZkxuSnMwVDRBYk9PUUo1Q3JnTDYweXZaQ3MzUjNRNkl2cFdlYXdfeDE3Q0NXU2VSSVN4SmlVbGNPbU9SYg?oc=5",
-        "date": "2026-08-12"
       }
     ],
     "반도체": [
@@ -141,16 +141,16 @@
         "date": "2026-08-16"
       },
       {
-        "title": "인공지능(AI) 시대에 수능 논술형 도입 교육계 찬반 팽팽",
-        "source": "newsedu.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hd1BYNnpiV1VWdkRfYm44c1IzNV9hYnpMWWNoaG5DSW9IejBqdTlLWlpvekYwMHNCSWF4OEFQLVFSQjB6QUJWRU1OQ1JoQy1GS3RUZnBySHZRaEpwV0RLZ3ZjekFpYTUzUkFDdtIBcEFVX3lxTFBRLWE2V3FTUzlpZkwxaDRFVVFBNDE2aHlWWjF5em5RckY0OTBHeHZhSGZEY3hLakRVNnB0emxoQlNPcEV2UUQyU3BROGdMU0tjLXNqZ2RoR0VFLWREMDlCLUhRRnlvaVhSRkpKWmZPQTI?oc=5",
-        "date": "2026-08-16"
-      },
-      {
         "title": "허위영상물(딥페이크) 범죄, 경찰 인공지능(AI) 3중 대응으로 끝까지 쫓는다",
         "source": "bvba.org",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9CNk5iWTF2RUVndWczUDVYa3NsMkRjdHFPYWVhOEprQWlfZERqdmowa3BRbDNiRzlaUDFEcTZhSW9kT25qbzFmVkRTNk9TMTNuaVE?oc=5",
         "date": "2026-08-17"
+      },
+      {
+        "title": "인공지능(AI) 시대에 수능 논술형 도입 교육계 찬반 팽팽",
+        "source": "newsedu.co.kr",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hd1BYNnpiV1VWdkRfYm44c1IzNV9hYnpMWWNoaG5DSW9IejBqdTlLWlpvekYwMHNCSWF4OEFQLVFSQjB6QUJWRU1OQ1JoQy1GS3RUZnBySHZRaEpwV0RLZ3ZjekFpYTUzUkFDdtIBcEFVX3lxTFBRLWE2V3FTUzlpZkwxaDRFVVFBNDE2aHlWWjF5em5RckY0OTBHeHZhSGZEY3hLakRVNnB0emxoQlNPcEV2UUQyU3BROGdMU0tjLXNqZ2RoR0VFLWREMDlCLUhRRnlvaVhSRkpKWmZPQTI?oc=5",
+        "date": "2026-08-16"
       }
     ],
     "에너지": [
@@ -238,7 +238,7 @@
       },
       {
         "title": "\"BIX 2026, 바이오헬스케어 혁신 판도 읽는다\"",
-        "source": "kmpnews.co.kr",
+        "source": "한국의약통신",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIMVdEQnRrYnAyYmpTaGd5NC10NXpiNG10ZnB3RlpPbHFlUDViVUxTOUFqQ1NTeDZqa3doQmh2RjZDME55LWtBQkRtU2ZSMkRqM2s5NGdXaVE4YnYzRXRxS1NiVU5JRXZiZWxj?oc=5",
         "date": "2026-08-12"
       },
@@ -246,6 +246,12 @@
         "title": "새 캐시카우 찾는 제약사…디지털헬스케어 대안될까[K-제약바이오 성장동력②]",
         "source": "v.daum.net",
         "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5lYmJ2bjZlM0VpV1EwSXVaY3RvQ0lBQXN3ZmFwanRLaXNDNTBjM2loWWNFWlBVa1VDQWM5OVpIQlFrbDZTZDQ1Ui1sdw?oc=5",
+        "date": "2026-08-12"
+      },
+      {
+        "title": "유한양행, 헬스케어 혁신가 양성 ‘유일한 아카데미 2026’ 성료",
+        "source": "의학신문",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0yMlEwa0NfZUREQm5YRW5scndPRllpV0xGQzFxei1sNnkwS0E5cFdFTWZMNWUwc1hIcTNoWGN5WTNqWV8ydEFZTGU2aGdkQjd0T0xvQklEWjBvXzVyZkJjUjlUdHBjZWNwaUE?oc=5",
         "date": "2026-08-12"
       },
       {
@@ -259,12 +265,6 @@
         "source": "Deloitte",
         "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORUM2RjdjaDdydDdlZXNFTGNmTFJKX29kYzFCYVV4SERYbDZMOXNOVGVoZmtfUFJQV0ZKUmZiQ3BZejVWMGl0cmg0VWRSRFcyNE9xRWx6QXhTWjdfNENwLUZndlhjZ3V2eFAydW1wSGVyYUZXN1RTaHFjRURzZ21fR1VKeFFvMHo0OENCelo0RXJWcEM4aTI2ZzBDYUtPekpoSy1iLVEtMFZIa0xEdlF1UkVZUnlqdXVHX1U3VHQyWW9qNWctb0dlNlFzWEYyZw?oc=5",
         "date": "2026-07-07"
-      },
-      {
-        "title": "'동전주 퇴출제' 첫 경고, 제약·바이오 6곳 관리종목 지정 눈 앞",
-        "source": "약사공론",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1KbVlYbjBscEdjYUlDUW04R0JVMXVGRFp1NXdIS2syWFhGUEtDQTBUZTM5eG5XUzZ1cTExSy1xa1g2UE03VXh4U1J3c2Y3ZjNfdlVLQ2R4SE9fS2s3Q09SMlFGc3pHRDZoRGFSaQ?oc=5",
-        "date": "2026-08-06"
       }
     ],
     "부동산": [
@@ -308,13 +308,13 @@
     "코인·가상자산": [
       {
         "title": "비트코인, 美 가상자산 규제 연기에 6만3000달러선 횡보 [크립토브리핑]",
-        "source": "파이낸셜뉴스",
+        "source": "fnnews.com",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzOGpOYVUwQnN6TjY2WUNWMnFvN21WQnNVNFVwdVEzTm05MnlkUUZObjFXOVhXbmVPZFNtTTJtMnE1Z0p3MWJ2djl2T0g2VWdWX012MERUNmQxZw?oc=5",
         "date": "2026-08-14"
       },
       {
         "title": "김치프리미엄은 옛말?… 해외보다 싸진 국내 코인",
-        "source": "IT조선",
+        "source": "it.chosun.com",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5CLTZaeS1Uell5WkdlZ3RPRkxaWk9RY2VPVTJ0MDkzTHd1eHMxTDJKTHAtRHhDdmxjME9PUlc2NXVDLW9BYUNndHQwS2NlenJGV3lrMkxjMjE4S2d1cGhzaVFfNk1kc1BVNGt3c3VoRVjSAXRBVV95cUxQNlpYOE8zdFdnQWZ2U2FxbzdKaFBqSnUxMHg1M1k3cEROTkZQV0xUM1c2ZVpFem4yLTFPOU5jYjNCU0Rkdno5MEx6NzN3cVZ4ZGwxZ0hHTjloaDlINktkR1Jwbkg4ejc5MGhGMU5kVDg4YzZiQQ?oc=5",
         "date": "2026-08-16"
       },
@@ -358,7 +358,7 @@
       },
       {
         "title": "중국 \"미국과 동등한 규모로 각자 중시하는 제품 관세 인하 합의\"",
-        "source": "chosun.com",
+        "source": "조선일보",
         "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNjRHVV9YQXNDNDU1RFNjenBWeVh0Q2JHdXM3Y2pkbllheW9GVk95QnNrdWJ5MXozRGlPdGZQXy1oaERtZ0tiMTVPLXRFZVhHdkVyWjNhRlhQUG1ydkE4ZUxLVFpzZjRBd2hUNzZ4Rnp1S0p4UjRKR0Nla3ZUUVE1YlgxbVRKTEVCcUFvZ3VjZ2xWX1F5MXdZSWFzdFdwdw?oc=5",
         "date": "2026-05-16"
       },
@@ -528,7 +528,7 @@
       },
       {
         "title": "[ 책꽂이 엿보기 ] 경제 금융 지식, 어린이 눈높이로 쉽고 친근하게",
-        "source": "kidshankook.kr",
+        "source": "소년한국일보",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5HdC1JMzZvajBqQllPOXJpSTFWeVFQVnhiQzkwaUJGSVhWN0VMMmloZ2ViOVNOc2Nza2s1OERCNWpDUm1pRnpMNVViUkFCelZqNDZoa0pjU0lDOXZoM1Nlbk5TNFJ0cUhiVlHSAW5BVV95cUxOMEU0SjdMekFvdUdGeThNc3UwY2ZZWnEzZ2xIV0UtZmNibXJDRlRfd1JYaEJ0SWVKRDVtbERCWDVSZjh1MVlJSEpIVnlFOVRNLWpfQ1hQeDg4YW1Sb3hOeTAzMDR5WmQ0SEk5ZkpIZw?oc=5",
         "date": "2021-09-06"
       }
