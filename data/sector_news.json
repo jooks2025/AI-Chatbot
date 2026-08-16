@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T04:36+09:00",
+  "updatedAt": "2026-08-17T04:57+09:00",
   "sectors": {
     "조선": [
       {
@@ -22,7 +22,7 @@
       },
       {
         "title": "올해 중국조선소 수주잔량 급증",
-        "source": "monthlymaritimekorea.com",
+        "source": "해양한국",
         "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBuUlV3UEg2Vl9fUmRrQ3VFUDE1NmJHWnJudnZMZ3BPanh3SFJFcEtPdWlWR2pPaVNYY2JDbUE3MHVPb3Jha0FISWVsRGJpN3dSYXhOWDJZTnZtd1BaVG9rd3o1NEhxWXhlY0c4VDIzNDJOd0l5MTY3d3hn?oc=5",
         "date": "2026-08-14"
       },
@@ -54,7 +54,7 @@
       },
       {
         "title": "대구시, 지역 건설업 활성화한다…공공공사 공구 분할·하도급률 상향",
-        "source": "문화일보",
+        "source": "munhwa.com",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5IanFZcnRtMFNwNnhteTI2Q0xhR0U2aDV0UlVkcHBxbGxhQ2d1ckJkMnVsNlB0WTBwSFc0anItUHk5VU9MYThzdVdzRV9oVGo5?oc=5",
         "date": "2026-08-13"
       },
@@ -103,15 +103,15 @@
         "date": "2026-08-16"
       },
       {
-        "title": "부울경 산업 전기료 10%↓…반도체 기업 올까",
-        "source": "국제신문",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNblRLVUxyb3hnRFZ1YXd4Q2UxWmdYZDZXamRrTE1HRGR3ZVdMbUJLY1JXRS1MdFU5eEkxU0l5akh1VkdEMnFsUC1LeHpUeGtURHpxaEZHNXNMM3B0N3BSTkFsUWxzSFphTGkxd3dwSjBTMEZab0RLSnMxNXhOZV9QVHlvN2RTSy1raWxmc19R?oc=5",
-        "date": "2026-08-16"
+        "title": "다음주 코스피 또 7천 볼까…반도체 회복·숏커버 가세",
+        "source": "연합인포맥스",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5XSzJMS01oaFRaTzZVdEtBMWt6SFlQY3Nyb2IzM3lrRlA0Y1UtNThCQ1o3ZFR2MGFaYXBfaUNldlE2R2ZibloxVkJBR3RCRThORHZPWlRJTFBNWXdwampTeEtIcy16MlpjMENCMkRVTUjSAXRBVV95cUxOSWR5dXoxNmtwY1Z1WkZkN1dJM1RBS05MQVRXWmg2QjdVWG1mdFlWRjZoRXBIalFMc3p4cHFMYUljREo2WmNKcEU5ME9tU1lmN3hhQnowd1VqVGNKNFloWkctQWNrT3VUNmpKWnpCZmpPaGNZZA?oc=5",
+        "date": "2026-08-15"
       },
       {
-        "title": "반도체 붐에 팹리스·장비社도 상장 '잰걸음'",
-        "source": "매일경제 마켓",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1fV0o3S1dhMTRmeXJERnVSdVl4by1RTDF6UjRRcVJ2ajhZTFR5a1Q4MUcxay1RRzZLeHVNbFNRdjV5Q2JRUU9oYnN6U19IYTBibEE?oc=5",
+        "title": "여전히 저평가 코스피…반도체 회복 속 정상화 시동[주간증시전망]",
+        "source": "뉴시스",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9YeEVqTERtaEw1dkZqb3lHbC1oQy1MM0xub0ROSXQxOFJaLW8zeHJGdmZDVU1tT09lQjBHN1k1aTZhVFZ4R1BaeUNRRHZ5SjdmZjR4TEVmXy02eFlTRjlBR9IBeEFVX3lxTE5IUUNQSmF6cEhIcE53ZGl1WnlhZHRwQzl5RVVDejZURWVYSUphM0xZbm9jWWtxa0JTOC1Qd2ZySmgtR2lORDZvc0ZFdUJlQ1huSFVUekJ4cmRnQlJQRXJlS05yaWpsaFcwYmg5MFh0ZmR2ajRFMURZSw?oc=5",
         "date": "2026-08-16"
       }
     ],
@@ -249,12 +249,6 @@
         "date": "2026-08-12"
       },
       {
-        "title": "유한양행, 헬스케어 혁신가 양성 ‘유일한 아카데미 2026’ 성료",
-        "source": "의학신문",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0yMlEwa0NfZUREQm5YRW5scndPRllpV0xGQzFxei1sNnkwS0E5cFdFTWZMNWUwc1hIcTNoWGN5WTNqWV8ydEFZTGU2aGdkQjd0T0xvQklEWjBvXzVyZkJjUjlUdHBjZWNwaUE?oc=5",
-        "date": "2026-08-12"
-      },
-      {
         "title": "한국제약바이오협회, ‘2026 CP 가이드북’ 발행",
         "source": "헬스케어N",
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5HekF3RWkwV1Q3Qno0aElfcl8xM29LeGQ1YWFub3JGSVh1MnJOS3B3ZzU4UWxXZnBMRDNESDBoZ1dhWEtIcG5nMUtCZjNYS0ZaQnFQRjdXU0kyMUkwZDNKQ3V1eVV0MEFnVDVMSENYVVc4dHhF?oc=5",
@@ -265,12 +259,18 @@
         "source": "Deloitte",
         "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORUM2RjdjaDdydDdlZXNFTGNmTFJKX29kYzFCYVV4SERYbDZMOXNOVGVoZmtfUFJQV0ZKUmZiQ3BZejVWMGl0cmg0VWRSRFcyNE9xRWx6QXhTWjdfNENwLUZndlhjZ3V2eFAydW1wSGVyYUZXN1RTaHFjRURzZ21fR1VKeFFvMHo0OENCelo0RXJWcEM4aTI2ZzBDYUtPekpoSy1iLVEtMFZIa0xEdlF1UkVZUnlqdXVHX1U3VHQyWW9qNWctb0dlNlFzWEYyZw?oc=5",
         "date": "2026-07-07"
+      },
+      {
+        "title": "'동전주 퇴출제' 첫 경고, 제약·바이오 6곳 관리종목 지정 눈 앞",
+        "source": "약사공론",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1KbVlYbjBscEdjYUlDUW04R0JVMXVGRFp1NXdIS2syWFhGUEtDQTBUZTM5eG5XUzZ1cTExSy1xa1g2UE03VXh4U1J3c2Y3ZjNfdlVLQ2R4SE9fS2s3Q09SMlFGc3pHRDZoRGFSaQ?oc=5",
+        "date": "2026-08-06"
       }
     ],
     "부동산": [
       {
         "title": "아파트 분양 열기 더 뜨거워진 도시 '세종'",
-        "source": "metrosejong.com",
+        "source": "메트로세종",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBFSW5xN1dZTGttOGVpTFNMN0tjV0N4eFQ1dW5LVGpidUQzT1ItZmFPWDBJQmctbkZMYWpZcVh4LTFZd29Sc2k2d0puZHpWOUw0aWlDR0ZLR0JFMHRyNDdhUHpZZkNVU1plMm5R0gFvQVVfeXFMUHdOUTRqSmRxcTVxUTJJdjVNWGdYdkdxOHUtbVR6SS03Nkt5QThPZTZSQnBkcm4tajdhRm82MU5XTHdqT203bEFEVUM3dl80dy01UFRMZmkybmI3akh4NUJGRHlxTThHc0pDWlJiaEJB?oc=5",
         "date": "2026-08-11"
       },
@@ -287,22 +287,22 @@
         "date": "2026-08-07"
       },
       {
-        "title": "8월 전국 아파트 분양 4만 가구…수도권엔 2만7000가구",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BYVJJTm9TMVBKSTBaRW1IX29MU3VYNmsyVlVSb0tKSHZpSGw2S1RmWVJVZ2Y3VWQybzRldzEwNE1xNDBnS3MxS0NJZw?oc=5",
-        "date": "2026-07-30"
+        "title": "[올앳부동산]아파트 분양 후 가격 떨어지면 정부가 다시 사준다는데···당신은 구매하겠습니까?",
+        "source": "경향신문",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9jcmlwYmtMWkQxN3BNWl8xOW96QzZ3bnhnb1Q3b2dxRGxGNFZ4NW5vZmNNb2tXbkpPYllyRkV2MnE0SklIaHl3MGN1SWttUENZbkxxeENQTWdxQdIBX0FVX3lxTFBXVF9fOHRFRU5Qaldld0J5MGdRN2E0QVJ1LUxSMC1BaXdtTGZBQTBjSG5acEVPeE9yU2xNMEJGZGdfS0s0OFV2THFyZkhJTGZfMDRISXJuNU4tSHZZd0tB?oc=5",
+        "date": "2026-01-19"
       },
       {
-        "title": "충청권 아파트 분양경기 희비…대전 개선·충북 회복·충남 뒷걸음",
-        "source": "cctoday.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1WS0pjaTBXTnZTYnI5N24xQWZuWkI5aXlSSnBNRVdRNk9VVm10ZG9hdEp3R0didURzUzZBZ1k0Z001Ykw5dXlEamJ1WjZVTlFYMU5Rd3dHc2RjNlhKT0FRRF9EdDRHVjNCeGQ0SDBn?oc=5",
-        "date": "2026-08-07"
+        "title": "6월 서울 아파트 분양시장…뜨겁지도 차갑지도 않다",
+        "source": "연합인포맥스",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1KNUlsa0czRlZwSk04dk11a2ZLVDZDTldzUTN1Uk5IOENtMWREa1Y5Z2R5bTN0cnNFUTlURUNYZzlRbnhtaFlNMGpfNE02LWoyZ3hUM2tzNldCT3h6ZUh3LWFqY3NELWx0Ni15YmhyLXk?oc=5",
+        "date": "2026-06-09"
       },
       {
-        "title": "[아유경제_부동산] 올해 8월 전국 아파트 분양전망지수 2달 연속 상승… “수도권은 큰 폭 하락”",
-        "source": "아유경제",
-        "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA5dWZ3UGhGX0ZMTFRyVkgwcW50dlZWRFRZTVV1WndhdWxxbEpfRTdVcTRDOGFXeGV5andyalFXV1kyLUdOOWFkbWYycHJpZFN1bW9ENUNwNmVfZzZRWVRj?oc=5",
-        "date": "2026-08-07"
+        "title": "호치민시 아파트 분양시장, 고금리 장기화·높은 가격에 ‘꽁꽁’…수급 미스매치 심화",
+        "source": "인사이드비나",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZR0F4MElUcUdCTEdEUG1tRldGZFFQSVp1bl81NjRFMkxzZkdRVkZwMm5WRUtsZFM1eWdPNGgydGVERldTRndaSGRaSVFqdXNwUXhoYmN4RmkxMmNnT2QzeERaUC1MREVlWGNENQ?oc=5",
+        "date": "2026-07-08"
       }
     ],
     "코인·가상자산": [
@@ -332,7 +332,7 @@
       },
       {
         "title": "[8월 2주차] 가상화폐 시장 정리",
-        "source": "khgames.co.kr",
+        "source": "경향게임스",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XaE5ybkRWeG96TzZVdmFXZkdxOVBMcVNnQzRHU2E5a2RweGpQdy1VbXNCUnpxMnk2dDZIcTVTUE9zMVREWUsyM3YwQjNsVGhTMW4zOGZ2RE5UbHdjYmlGVWt4ZUp0eTd3YWFVSw?oc=5",
         "date": "2026-08-16"
       },
@@ -346,7 +346,7 @@
     "세계경제": [
       {
         "title": "60개국 ‘강제노동 관세’ 폭탄… 곳간 빈 美가 부른 ‘자유무역의 종말’[글로벌경제 인사이트]",
-        "source": "문화일보",
+        "source": "munhwa.com",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1NY1V6U3ZvMEt4T1IxdVQ3dUVNdnc2UVlpWE1aOF9yVjFkMXF3OGE1RTN4S0RuamhIRnNCblJ2bEdiWnhwNWphelpiYzlQaUVv?oc=5",
         "date": "2026-07-28"
       },
