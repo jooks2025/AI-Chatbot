@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T04:43+09:00",
+  "updatedAt": "2026-08-18T05:09+09:00",
   "sectors": {
     "조선": [
       {
@@ -72,7 +72,7 @@
       },
       {
         "title": "[세무회계] 건설업 세무조사와 대응방안 (9)",
-        "source": "koscaj.com",
+        "source": "대한전문건설신문",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9lZVk2Ym9TUEFuUnNjZnNlUGJTNHR6Q3phRjVibmUyWnBHQUxsSGZ5MHlGWm9TUDVBMmJTUDljQ2Qxb0JvQzNLYkNORkRnbEQ2NlJuMTlTN1RWU0o0aTdiTV9jWHhMTnhY0gFsQVVfeXFMTUYxV0xQWHVUUEhScnNhb2N1SXBhekM0SVJDMF9YVVIwdWFzaTRRaHJBN2dJTERlUk0yci1Vci1IQjkwX1pOdmZfTVRodDY1TTNRT044OUxFMWM0eFFMNGZaUFFEUnZLNHJQZTRO?oc=5",
         "date": "2026-08-17"
       }
@@ -110,7 +110,7 @@
       },
       {
         "title": "삼성전자 노조의 ‘호남 반도체 제동’ 후폭풍…흔들리는 노정관계",
-        "source": "경향신문",
+        "source": "khan.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE42N2ZrNUROX2ZOVnM5RE9MRTR0QVNGOUJVdUxyQnJpVHZkUFFPZWIwNXF1c3lXNmFOUklVblI4UkdNYzBGWjVMOUhsWHdfUWRxRjBjblNWSG1pd9IBX0FVX3lxTFBGUmVIdWRMRG9FQTZQc3UyNU5EOHJmOXdxWE5OU3BwWTExbTFEV2NOeTkwdVFFa0NTY21jdld5Y1IwTHM4Rk5tUHJ6X0E1Sll6V05rU0Y3UjZTUFVaUy1z?oc=5",
         "date": "2026-08-17"
       }
@@ -118,7 +118,7 @@
     "AI": [
       {
         "title": "안양시노사민정협의회, ‘인공지능(AI) 전환과 노동권 포럼’ 개최",
-        "source": "경기경제신문",
+        "source": "ggeco.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE10aFFBNzRYTVV3T3lwRnc4R1hCZTViWkk4VTBXYkRQNUR6YzNITGhCR2Z2RDJZUGtxeDZtdkdUcjMwWnJzV2JFY1k3M0NRZWtOVTVwTXVIdHdzUjRXamN4VQ?oc=5",
         "date": "2026-08-17"
       },
@@ -135,6 +135,12 @@
         "date": "2026-08-17"
       },
       {
+        "title": "AI 쇼트드라마…인간의 자리는? [미디어 전망대]",
+        "source": "한겨레",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE94dHdxV2FhcHp4LWdsS2x0OFNsdjk4NW9uMTJVT0JYalQ1OXhNWUNjV2VELVdFbUJMQVUxUUhzSWJmNVpQSEMteWtyVFE4YnhkOEdqdVByWmlhZlVHY0s4cjJXd1g?oc=5",
+        "date": "2026-08-18"
+      },
+      {
         "title": "폐교가 AI 교육 거점으로…의성 인공지능교육관 10월 문 연다",
         "source": "hidomin.com",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5ld3h2ZFJCZ0hhMklKejVVZ211MFNuT0JfNXhKZjBIcjlXZHhKWWhDVGVvOW5CdmlpYU5PaWpfcGEweU9XNVg5ZHhWSTltVHNUd20xdnBzbGNxT014ODdVczNHaWxWVGxldWc?oc=5",
@@ -142,14 +148,8 @@
       },
       {
         "title": "‘의료 인공지능 전환(AX)’ 빨라지는 서울대병원",
-        "source": "dailymedi.com",
+        "source": "데일리메디",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5scEdJT1lMU05KTDhHR2ppbGtEYUNjY3ItTjBOMGU5dFlua2E1ZE82amZLMVU4RktBY0pXMmMxbHdsR1ozSjBYaS1ZclU5bnJ5SnIzeWlFRTZWeXhiVER5amlYaTBqSVBJ?oc=5",
-        "date": "2026-08-17"
-      },
-      {
-        "title": "日혼다, 차량 안전설계에 AI 도입…개발기간 40% 단축 목표",
-        "source": "연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1FUm01QUtTYThmTGxqTkZVV2tQWldENFVucG5OWml4elNYakxYMXBYV3ZSNTdaTkNCSkxsM1Rnek1mNGg0UU5rbGtZMXA4bnBZbThxazFmUk8tSFnSAWBBVV95cUxPNms0c0hWZDhqRk00cUczaS0yQUNHaTBFbTB1NTlzbUtkazRCdm5lQkVmbnVKOU1jcThXWFQ3XzdlZ19ENWJVUGg5OXRTNHpVVERaN1NLNEpyRG9waWVudWE?oc=5",
         "date": "2026-08-17"
       }
     ],
@@ -168,7 +168,7 @@
       },
       {
         "title": "\"기술·인재에 자본까지\"...나주, 에너지 생태계 구축",
-        "source": "YTN",
+        "source": "ytn.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SQXZMOW50OFhoaDVmb3RBYUs1aXpTOXRXempsX0FaOUt1aC1FWTNCNEhHcS15aEFTS3VRblNrTllnZ1hFd1NiRWl3QjIzVllsSUs4NXl2V2lTTmtzVXc?oc=5",
         "date": "2026-08-17"
       },
@@ -186,7 +186,7 @@
       },
       {
         "title": "[시평] AI 데이터센터·전력망, 안정 운영하려면",
-        "source": "todayenergy.kr",
+        "source": "투데이에너지",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9fd2x4aDlmMDd6SVpQQ1lhdkk2aWlVQjdfdnY1RGotY2J2bExDRlBYcTVTN0pvWEhUdURla3hmX2Q5bE5GTDFCejZSRTVMYURFakRxWEtldUxJeGpTMXJOdGdLdFhUNzY5eEJkbg?oc=5",
         "date": "2026-08-17"
       }
@@ -218,7 +218,7 @@
       },
       {
         "title": "엄태영 의원 \"증시 과열 초래한 금융당국, 사과하고 책임져야\"",
-        "source": "뉴스핌",
+        "source": "newspim.com",
         "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE81MWFTNjdEYVpGenJ1Y3VNbkU3Y2NpN2hEOE1EZXQwWFU1YjlPVVNGaVY4YXVtdXhZYmVDRXNjWS1BbzZ0MER5U1VDTkFQNl9VMjhVQ0tTUklsN3BT?oc=5",
         "date": "2026-08-13"
       },
@@ -238,7 +238,7 @@
       },
       {
         "title": "유한양행, '유일한 아카데미 2026' 성료…청년 헬스케어 인재 육성",
-        "source": "메디파나뉴스",
+        "source": "medipana.com",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9MaXJ2d0didFpkRVBSUnZtazhiTVhuSGcwZWNCOTI0RmtNa0RmVG5iaXpTY184YzJMZG9URzZTLXpZVkxFLVVJWUF4QzVtMnhUd01vOWNfV245ZmN1d2RCUzB2UU1DNkh2cWxV?oc=5",
         "date": "2026-08-12"
       },
@@ -314,7 +314,7 @@
       },
       {
         "title": "녹아내리는 코인 가격… 침체 늪 빠진 가상자산 시장",
-        "source": "부산일보",
+        "source": "busan.com",
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1CYmRic0dDclEyTU9ycEh5d01hbkFEM1pLUjNSX21JaVBkUnlLLTJnTXNpTUxLMlNhbHhlWDV6RlptNFhObDNvYjJENi03RjVvSVBqSlNWWDJ3LWQ5QzktLW9iQl96SzBYc1lMYjBmUWJYMURm?oc=5",
         "date": "2026-08-17"
       },
@@ -389,15 +389,15 @@
         "date": "2026-08-17"
       },
       {
+        "title": "[뉴욕채권] 베어 스팁…유가 급등 속 30년물 금리 2007년 이후 최고",
+        "source": "KB Think",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1WZTRic2p2cFI4cXRPb0ZGNWhRbjBuQ3FJd3Z3dmJ1Mm1wQjFyUzd4Z3JvOHBzZVdWVk84Wm1LUFJXcGQxc1VpTmdtZVNoTjkzTloxeDVVVXVOd285WUkzbGRxZmVtc1NIQ01oQkQtUXRFZw?oc=5",
+        "date": "2026-08-18"
+      },
+      {
         "title": "日 10년물 국채금리 한때 2.93%…30년만에 최고치",
         "source": "연합뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9XbWIxa0JpOEsyR09MVXpEUG9kaW44VUZQTkRQUGhEcWl2VldDdUlJZ19zRDh0SHE3aFFFUkhDZHhVdVQxVEt4Wkt4azFqWHo4eDI0VU52WEFhQjDSAWBBVV95cUxONWFXNE1uWmZod1pVdTQ0VkpBXzA0SWdVTjh3R3hzQk1mZWJfRlNpZW5UTkNuckVBdGRlNkVpaFUtMXpuY3BKQlVzSndRdEVXNTZySnVmeWRRVVV1U0kyR0I?oc=5",
-        "date": "2026-08-17"
-      },
-      {
-        "title": "[채권-주간] 수급이 남의 편…10년 입찰 등 스티프닝 압력 경계",
-        "source": "KB Think",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE42T0xBVkY0c29Vczh3RGRRTDFZUFFyX25STDQxU3FVWUVjOTdaQUVsYTFnX0lHZVcyQnM1MzZ2SjMya3FYTzkxRGJEcV9VdE1tN1lpbnEwckFQTmhUUUtNYlZrX1ozekhBUHNlVXF2QTJfQQ?oc=5",
         "date": "2026-08-17"
       },
       {
@@ -434,13 +434,13 @@
       },
       {
         "title": "고용 회복에도 청년은 ‘한파’…청년 취업자 19만명 감소",
-        "source": "nongmin.com",
+        "source": "농민신문",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9jaEV1RXVvMFRUT0pnek96dVdoMnZIQjd1eHByYkwtQ3U4eFJHSlBSMG05U2Y2RFlMLVBBWlRQaTY2VXpERk5UeVZGb09aRTB0MDlwTmsxWXZpQQ?oc=5",
         "date": "2026-08-13"
       },
       {
         "title": "고용절벽에 심화하는 청년의 ‘취업전쟁’···청년 취업자 19만명 줄고 청년 실업률은 5년 반 만에 최대폭 상승",
-        "source": "경향신문",
+        "source": "khan.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9GY1pNSXZhX2VqRnhTcUthTnZDeFFaWFEwWi1VRXIzTGlraFJCZWJOMTZrZ1hkcEdJQjMyNnYyQUUxVlBOc2xkWjVnMGNyczBaN3hRbWRGM29WUdIBX0FVX3lxTFBqWUFsa3JNTXJKYzFFMUlGZkItcnd5YTR0SlhSM1piMzRQem5md3BhWVY0YWRiTnJIcnk4NHU4dnhEakl3cUxqUW1WS0pBLVhPUy1KYVNTYjF3czJpaVlr?oc=5",
         "date": "2026-08-12"
       },
