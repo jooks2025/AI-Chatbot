@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T21:02+09:00",
+  "updatedAt": "2026-08-17T22:07+09:00",
   "sectors": {
     "조선": [
       {
@@ -10,7 +10,7 @@
       },
       {
         "title": "지난달 한국 선박 수주 점유율 16%…중국 81%",
-        "source": "news.kbs.co.kr",
+        "source": "KBS 뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xcVFpSlVUU2xZRmN0eEVEZEh5V3hlMU81T0E0UFJrSEdGYzZKWU1GTGxMRVN5Sk41VDBiMFF6XzRhVVBFNEtHN3ZBZ19FSVZmZ3F6Ym0xRVhET1E?oc=5",
         "date": "2026-08-14"
       },
@@ -34,7 +34,7 @@
       },
       {
         "title": "조선업 ‘수주절벽’ 온다는데...두 국책기관 전망 왜 달랐나",
-        "source": "뉴스톱",
+        "source": "newstopkorea.com",
         "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1BTmlQUFU0YW9UckpULU9XUmppeDVKMXp3VGw1TVQ4R0Z6U1dnMVoyOUlGUHV5MS1sXzR0YXYyaTZhcE04bkJyMXp6c0RwMHdXMUEyYVdoZWVLazR2M24xR3hQSnpWREhaZ1F0V0dFcw?oc=5",
         "date": "2026-07-27"
       }
@@ -42,25 +42,25 @@
     "건설": [
       {
         "title": "건설업 비명 이유 있었다…구조적 대책 필요",
-        "source": "원주투데이",
+        "source": "wonjutoday.co.kr",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5zTl9lTTNtNUtYQ3JROHp6ejJsY3M1eG53OWQzdFphWG9IS0d4NG1HdW0zT2prTnp4OFdPMEJCY3RjM3BaZXM3Zzh3bzdiS18zaHFJNmpQV183ZXF2a19VeWhBUU5YTjNpYk55Ti0tMGg?oc=5",
         "date": "2026-08-17"
       },
       {
         "title": "수주 줄고 공사비 오르고…지역 건설업 줄폐업",
-        "source": "news.kbs.co.kr",
+        "source": "KBS 뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE02RmxNZkE3TEh1TFRyWWRaV19SUEVibXJBSHBUTzQ4RDFUaVAxbFVYaUt5SWM4bjNmNWp4UmFIT0ZqMU9vMUpQMVhHa1dUZy1XX2g3UVhSLUlFNGc?oc=5",
         "date": "2026-08-17"
       },
       {
         "title": "AI 시대, 건설업의 본질 재인식 필요",
-        "source": "기계설비신문",
+        "source": "kmecnews.co.kr",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0wdDk0M2RBbDBXNXVUSzUza1h5bTlRNzNfLUYyODFicU9ZMHlGU0s4dkQ0dUt1RWxDRlZ6VmJVdXlabUNiYk1GbUNBVVpjSkdQZGtYLVBQbk91VHFMay02OFBiNlVFSUo3ek83Nw?oc=5",
         "date": "2026-08-17"
       },
       {
         "title": "[세무회계] 건설업 세무조사와 대응방안 (9)",
-        "source": "koscaj.com",
+        "source": "대한전문건설신문",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9lZVk2Ym9TUEFuUnNjZnNlUGJTNHR6Q3phRjVibmUyWnBHQUxsSGZ5MHlGWm9TUDVBMmJTUDljQ2Qxb0JvQzNLYkNORkRnbEQ2NlJuMTlTN1RWU0o0aTdiTV9jWHhMTnhY0gFsQVVfeXFMTUYxV0xQWHVUUEhScnNhb2N1SXBhekM0SVJDMF9YVVIwdWFzaTRRaHJBN2dJTERlUk0yci1Vci1IQjkwX1pOdmZfTVRodDY1TTNRT044OUxFMWM0eFFMNGZaUFFEUnZLNHJQZTRO?oc=5",
         "date": "2026-08-17"
       },
@@ -91,27 +91,27 @@
         "date": "2026-08-16"
       },
       {
-        "title": "\"이제는 오른다?\" 스페이스X·테슬라 순매수…반도체주는 차익 매도[서학픽] - 머니투데이",
-        "source": "머니투데이",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9KMzA3UWRFdlp5blBwYlZjTGJ1NVk3TGlXbGx2OThpWWtiT01VbDk2RmFJZkxpa1ZQRnpDQUVTVm54VmlMeW9qbXVGeFo4bDVBTDE5eEl6UlhNLXcxYXZGcTF1N21BMjJk0gFuQVVfeXFMTUhLbGlXa01hdmNFQ29EZHNXNlRoejl3bDFyaUppNnFOaXJXZEZxOExWQmwtWElnVGhlU0tubVRMT2pINTk3MVdRRkNXZ2xYbE96WE43RXptNFh3NHpOMi1WU0ZURVp3T2xFTUN1YkE?oc=5",
+        "title": "\"반도체 우려 정점 지났다\"…3분기에 삼전닉스 주가 재평가 기대",
+        "source": "연합인포맥스",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9JUGJiM3VYbHRDc0N0ZGxURnE4OF9WSUJ0aU5LR0pDYTloNEVacFFpeVpUN1RGVlBHLWRROEdveGU4T2Q1cEZNb2xFN2tOOWgxbFB3dDBtZkZVRE5ySVlhTFJkeThlN2tTR0QxTzQ4Z0k?oc=5",
         "date": "2026-08-17"
       },
       {
-        "title": "\"반도체 쏠림 판 바뀐다\"…증권사 센터장의 파격 진단 보니",
+        "title": "쉬어가던 반도체 들썩이자 삼전닉스 '빚투' 신용잔고 다시 '쑥'",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB4TnZ0cTUxQkNWOWtGdVE1a2Rwdzc3Vk4wOTB5MWk2d3ZPZlg5RzhTSTdzbkp4ZTJ1Qzc2VU5WNWhlRWp0cGZybG1iRFlFdDg?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9IdFl1Nk85T01DS2JxWUhlaWxsOVZ1a1F0Mk51MlBRUzFaR1lYWUQyMWtvbnc2dkxZVGZCQmxKZFYzMFJDYW9vUkdacUpVUm8?oc=5",
+        "date": "2026-08-16"
+      },
+      {
+        "title": "[주간증시전망] 반도체·외국인 귀환에 반등한 코스피…'美 경기 우려' 뚫고 7000선 안착할까",
+        "source": "브릿지경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBjclF4a0NvSzBXX056bzdKWl84SFRrcHJFcXZSTFVnN3ZVZVNfd3FsUnJzUVkyYTB5cUJUd3JfVXB0ZWMtbEVMMjhpTjl3V1NxektKVjBrU24zUQ?oc=5",
         "date": "2026-08-17"
       },
       {
-        "title": "반도체 공장만 지어선 사람 못 잡는다…전남광주시 ‘정주도시’ 설계 착수",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBXQTNIZ0tGd1R2U3ZGbi10OTJ1c3duelQwUG5RZXF3WXQ5aUFtakJYdS1ENXJnS2hTcXY3NG9kbHRXSkJIRGpoNWlDclpkbGM?oc=5",
-        "date": "2026-08-17"
-      },
-      {
-        "title": "전남광주 광산구, 반도체 효과 빛그린산단으로 확산 모색",
-        "source": "아시아경제",
-        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBSUVVNYVFnTW9scWp5anRWMk9lRFhBa2x0ZUhxOTNtY1h4VjA4ZElzWmdxRmtqZU15RktTcXllRDBoby1PRmlHM0R3LTRPYVA0OE9VQkhpR3pnYVpCdnJoZw?oc=5",
+        "title": "삼성전자 노조의 ‘호남 반도체 제동’ 후폭풍…흔들리는 노정관계",
+        "source": "경향신문",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE42N2ZrNUROX2ZOVnM5RE9MRTR0QVNGOUJVdUxyQnJpVHZkUFFPZWIwNXF1c3lXNmFOUklVblI4UkdNYzBGWjVMOUhsWHdfUWRxRjBjblNWSG1pd9IBX0FVX3lxTFBGUmVIdWRMRG9FQTZQc3UyNU5EOHJmOXdxWE5OU3BwWTExbTFEV2NOeTkwdVFFa0NTY21jdld5Y1IwTHM4Rk5tUHJ6X0E1Sll6V05rU0Y3UjZTUFVaUy1z?oc=5",
         "date": "2026-08-17"
       }
     ],
@@ -137,7 +137,7 @@
       {
         "title": "\"AI 소설 쏟아져 심사비 폭증\"…日 신인문학상 '존폐 위기'",
         "source": "연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBUNkRHdTl4Yzg4VHU5MElJVURXb3BrQU9zUjdCQWZkNVdHakVFVFlib1dkUUNickFfZnRRS0hfQlRZZjlKV0NGZ2Jiamtrb0VKaFh0VzZBSnZwRjQ?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBUNkRHdTl4Yzg4VHU5MElJVURXb3BrQU9zUjdCQWZkNVdHakVFVFlib1dkUUNickFfZnRRS0hfQlRZZjlKV0NGZ2Jiamtrb0VKaFh0VzZBSnZwRjTSAWBBVV95cUxNenlzMHZkQloxbmpIMDNXMmxmUXpJWlNlOUhFMllKeTlFWm1BbUo3LThXR2tfT25CWC1BUlh3YUpLX0w2QlFQZ040bTNqUXg0UXEtS1d0Z20wdE94TE9ZRGg?oc=5",
         "date": "2026-08-17"
       },
       {
@@ -147,9 +147,9 @@
         "date": "2026-08-17"
       },
       {
-        "title": "국방부의 디지털 전환 노력에 인공지능을 적용합니다.",
+        "title": "인공지능(AI)이 중국 반도체 산업의 급속한 성장을 견인하고 있다.",
         "source": "Vietnam.vn",
-        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZXNVLVVZUGdmZFRabVRuckVPcW13bmRDdzNDb1BhQmZWeUUzMHF2UlNLSkxHWm1OSFVPU1d0c3N6U0M0Y2hWRDc0VXBVR1Q5djVXNjN5dDFCRkJ4ekRpZ0VsSkxFZVFSenBBN3dXQmUxSkI1MlRESEtFVjZYakJ1Wm1KMnBNcm9NODBDcg?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ibXAtMVJVOGgza1ZLcEdLSGh3MmNZdHp1V1NjY2dnVmtsc1hYdUlhdk9rTVYtdGZPd05iOGl6OWhkbmllTDBiNlpDM2JkMnROMUNtM25MRlJVUWV0UmFVMTJub3IwRkRJRk8wSGpjZVlsNC1qOFE?oc=5",
         "date": "2026-08-17"
       }
     ],
@@ -167,12 +167,6 @@
         "date": "2026-08-16"
       },
       {
-        "title": "12차 전기본 4·5차 토론회…20일 전력수요 재전망 논의",
-        "source": "데일리안",
-        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPcE9wN2NIbW9hb1p0Z3hWQV8xeTItbU14amNGM3JoanFtU1ZjdHZLYmZJcUlZMjVVdjFJUlQ4cmJ1Smhob1BmZ2hNNERVSU80WFBybU5sYWxYYkd1cEtfenVWMnlmZUZVem15VnNJVmRMUjJrZjhoMHoxcTNyb1dIT0g3cmYzak1rY25HUUZRVlRMVnVCTDRHVmN5eUdZWFRxTHRuT0kyTHV1bnhsVENXUUxtdlF1QVJDdTBEQ1R1REM1YmlHQnN6THJRWlFWSGU1QkxrVFBWLU1TMlZGeGVQeWJGSQ?oc=5",
-        "date": "2026-08-15"
-      },
-      {
         "title": "\"기술·인재에 자본까지\"...나주, 에너지 생태계 구축",
         "source": "YTN",
         "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SQXZMOW50OFhoaDVmb3RBYUs1aXpTOXRXempsX0FaOUt1aC1FWTNCNEhHcS15aEFTS3VRblNrTllnZ1hFd1NiRWl3QjIzVllsSUs4NXl2V2lTTmtzVXc?oc=5",
@@ -185,10 +179,16 @@
         "date": "2026-08-17"
       },
       {
-        "title": "[시평] AI 데이터센터·전력망, 안정 운영하려면",
-        "source": "투데이에너지",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9fd2x4aDlmMDd6SVpQQ1lhdkk2aWlVQjdfdnY1RGotY2J2bExDRlBYcTVTN0pvWEhUdURla3hmX2Q5bE5GTDFCejZSRTVMYURFakRxWEtldUxJeGpTMXJOdGdLdFhUNzY5eEJkbg?oc=5",
+        "title": "반도체·AI가 흔든 ‘12차 전기본’… 전력수요 윤곽 나온다",
+        "source": "아시아투데이",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9jNjVBUmFEV0pzNW4yLUhJZzVyeWRHVzhwRGlUSkxBVHNzSmxrazE4TThGaGEtQkJyd0h3Y21sTXJQcHdqRHN0eXFSeGFXczNCWGlsR2xBNmVlQTJmWl9iTjMzOWNaYTNLWkpPS0p3?oc=5",
         "date": "2026-08-17"
+      },
+      {
+        "title": "[단독] 지역별 요금제 급물살…LMP, 3분기 규칙개정 추진",
+        "source": "전기신문",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8zMnRhcjRLdTdDelN0cHBWUkxacGpuWXNDMG5Pc0RvU2xUU2FLY2E2MHVoeUdxQXFDd3o0dURTT0QzTVQtSmVoNlFLaHNOdkxtWnJ4bDF2eU9WY25mWUNYMzVEZ0ltS0l3WEwxONIBcEFVX3lxTFB4RjAwaGFGZnhpT21VOFJzSFJTSUpLbDROSkNfSXNLN2t6QzlMQ1dhNkhxNnl6YkVWM2tMN2JwYVZJR19zRXk1UVVWNVhtZGxyNjZ1ZllDTy1GZEx3Ul9taGNhVGVXVWFLN0c4N0swSTU?oc=5",
+        "date": "2026-08-14"
       }
     ],
     "금융": [
@@ -238,7 +238,7 @@
       },
       {
         "title": "유한양행, '유일한 아카데미 2026' 성료…청년 헬스케어 인재 육성",
-        "source": "메디파나뉴스",
+        "source": "medipana.com",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9MaXJ2d0didFpkRVBSUnZtazhiTVhuSGcwZWNCOTI0RmtNa0RmVG5iaXpTY184YzJMZG9URzZTLXpZVkxFLVVJWUF4QzVtMnhUd01vOWNfV245ZmN1d2RCUzB2UU1DNkh2cWxV?oc=5",
         "date": "2026-08-12"
       },
@@ -270,7 +270,7 @@
     "부동산": [
       {
         "title": "경기지역 8월 아파트 분양 1만1912세대…대형 아파트 공급 '눈길'",
-        "source": "뉴스1",
+        "source": "news1.kr",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1xSUFUczBWdlZQb1dhcVREQ2NxSzV2STBBdVh6SUJuSHpPUjdILXNzVjFsYWFwUXUyZ2ZXaFA4aUIzODBRdm1JWWFEdjZYMHpxRkdHcEd30gFbQVVfeXFMUDR3QS1aWm5rT0RQUGJpeUNYN3V6TlNSMU1kSjB4RFpsZGpkMURuYlhnaFd5MEg1UUczOXhxTm5WTVEtSE9FTUF4MVlqZDdfdjBwTGwtVHJZcFYzcw?oc=5",
         "date": "2026-08-17"
       },
@@ -282,7 +282,7 @@
       },
       {
         "title": "[8월 셋째 주 아파트 분양일정] ‘써밋클라비온’ 등 3788가구 분양",
-        "source": "디트NEWS24",
+        "source": "dtnews24.com",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1VOFYzRVN0eFd3OUpVNUpaRjFGSGJjdmUxbDRKb3g5NjFQUzFUeGEtWDNGWmp6aklmSDZoV1RPNjRVdkJwbGdSUnRTbGN4d19xMjY4bnBtYWpjc2tDZlQwb2tJVzF4R0JDaHp3?oc=5",
         "date": "2026-08-14"
       },
@@ -308,7 +308,7 @@
     "코인·가상자산": [
       {
         "title": "녹아내리는 코인 가격… 침체 늪 빠진 가상자산 시장",
-        "source": "부산일보",
+        "source": "busan.com",
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1CYmRic0dDclEyTU9ycEh5d01hbkFEM1pLUjNSX21JaVBkUnlLLTJnTXNpTUxLMlNhbHhlWDV6RlptNFhObDNvYjJENi03RjVvSVBqSlNWWDJ3LWQ5QzktLW9iQl96SzBYc1lMYjBmUWJYMURm?oc=5",
         "date": "2026-08-17"
       },
@@ -402,7 +402,7 @@
       },
       {
         "title": "[채권-주간] 수급이 남의 편…10년 입찰 등 스티프닝 압력 경계",
-        "source": "kbthink.com",
+        "source": "KB Think",
         "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE42T0xBVkY0c29Vczh3RGRRTDFZUFFyX25STDQxU3FVWUVjOTdaQUVsYTFnX0lHZVcyQnM1MzZ2SjMya3FYTzkxRGJEcV9VdE1tN1lpbnEwckFQTmhUUUtNYlZrX1ozekhBUHNlVXF2QTJfQQ?oc=5",
         "date": "2026-08-17"
       },
@@ -477,16 +477,16 @@
         "date": "2026-08-14"
       },
       {
-        "title": "[재테크 특집] AI 자산관리서비스 일반 투자계좌로 확대",
-        "source": "세계일보",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5lMnJBNkpoV0szUGdmb0NEMm1ZS3FPYnM0S2RQMWxZcV9uYUxTMlJfT084QWdRQ1BxUEIyU0FrbmJHZDhUbEdvSTM2OWtKTHNCeWJxWlBMMzHSAVRBVV95cUxORkFKeDVhX3pmbFkyVjlkT0ZYOXQ2OThqS1pVN1p5djRxY1dnQ0JaWE9PN3BDQU5KQzRhcmhwc29BU0NCS19jOGNOc01YTU9JSW5meU0?oc=5",
-        "date": "2026-07-26"
-      },
-      {
         "title": "[비바100] 챗GPT가 바꾸는 재테크…AI 자산관리 시장 2035년 200조 시대",
         "source": "브릿지경제",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LSkRXVDlmbzJWdHJJTi1kdGxuSVJHQTg2dkhUUWY3UGVmRmpvaXZVVDkyRXNhaldUSE5pT3NVZjl1RDVpR2ZHaV9RaktkNXZHZVB4YWRfWUdDQQ?oc=5",
         "date": "2026-07-23"
+      },
+      {
+        "title": "[재테크 특집] AI 자산관리서비스 일반 투자계좌로 확대",
+        "source": "segye.com",
+        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5lMnJBNkpoV0szUGdmb0NEMm1ZS3FPYnM0S2RQMWxZcV9uYUxTMlJfT084QWdRQ1BxUEIyU0FrbmJHZDhUbEdvSTM2OWtKTHNCeWJxWlBMMzHSAVRBVV95cUxORkFKeDVhX3pmbFkyVjlkT0ZYOXQ2OThqS1pVN1p5djRxY1dnQ0JaWE9PN3BDQU5KQzRhcmhwc29BU0NCS19jOGNOc01YTU9JSW5meU0?oc=5",
+        "date": "2026-07-26"
       },
       {
         "title": "iM뱅크, ‘AI 시대 투자 전략’ 주제 재테크 포럼 개최…미래 금융 변화와 자산관리 방향 공유",
