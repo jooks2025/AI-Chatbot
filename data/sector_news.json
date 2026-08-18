@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T20:31+09:00",
+  "updatedAt": "2026-08-18T21:02+09:00",
   "sectors": {
     "조선": [
       {
@@ -10,7 +10,7 @@
       },
       {
         "title": "지난달 한국 선박 수주 점유율 16%…중국 81%",
-        "source": "news.kbs.co.kr",
+        "source": "KBS 뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xcVFpSlVUU2xZRmN0eEVEZEh5V3hlMU81T0E0UFJrSEdGYzZKWU1GTGxMRVN5Sk41VDBiMFF6XzRhVVBFNEtHN3ZBZ19FSVZmZ3F6Ym0xRVhET1E?oc=5",
         "date": "2026-08-14"
       },
@@ -60,7 +60,7 @@
       },
       {
         "title": "수주 줄고 공사비 오르고…지역 건설업 줄폐업",
-        "source": "news.kbs.co.kr",
+        "source": "KBS 뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8ybDRjNnNRMEpUZWpXbjFaWk4wTV9teF9Zb1ZSTy1jeDRmenkwbFNkWEZRZDJxWnVXSmxmSk9tTXl3NnY3VC1GZFpzemNJcEZqOFNVdDBsLS1hcDA?oc=5",
         "date": "2026-08-16"
       },
@@ -79,15 +79,9 @@
     ],
     "반도체": [
       {
-        "title": "현대차證 \"삼전·닉스 주주환원, 반도체 강세장 변수될 것\"",
-        "source": "뉴시스",
-        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE45MWlIVnJiSHdiMThxemRTSG85clc0dERSdHJIdjMxSnNWOWtZMGhKTnY5cUhUX0Z0TVYteDVRTWZ1aGhrejdXWFA4eWNkQS01bzlvQ0czWFNiU3lMeTYxcNIBeEFVX3lxTE5telVfMTJaMmVyNmN6d1hPcmlPR0RvQVNoRjFvRW1ISzV1eno3Z2NiNHBHZzctM2ZKazRZWGFNRGVZTmx0RlFvb0Yyc3FsNDNWSWdqMllvbUpJOW90MjlhZHc1VGIwZHo0eW9oQjRmZHdPdDFHZThlOA?oc=5",
-        "date": "2026-08-18"
-      },
-      {
-        "title": "“뉴욕증시 빠졌지만 반도체 불기둥”…프리마켓서 달아오른 삼전닉스, 7천피 재도전?",
+        "title": "반도체 '주춤'…코스피 7,200 찍고 6,900",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tRV9LVzhrLXVwYkVYRy1hejdjaXA0aVg4VDVvVWVXc1o5UDhmQ1dCVEhmQnVROXZRZy01eVpPMk0yT3lIYkFwdEVsNjZjWk0?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1OUmJ0Q0pPaUhKSE1uZ1JaY1ZCQnN1SW1Qcndwejl0RnpXZUVldXlXcmIzc2k1bDhEZTE4NFBmOHpwT0JWQ3c?oc=5",
         "date": "2026-08-18"
       },
       {
@@ -103,15 +97,21 @@
         "date": "2026-08-18"
       },
       {
-        "title": "햇빛 비춰 ‘반도체 독성 폐수’ 정화",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9pN0d5eFpEV1BTMnlaaG9YdHNpY0x0Y3VwbmhETHlEMVpWdjZSMTZwcFNFcDNlU1dhU1hrTHFmSGp6TXFlUEtGSnZYZUhTOVE?oc=5",
+        "title": "현대차證 \"삼전·닉스 주주환원, 반도체 강세장 변수될 것\"",
+        "source": "뉴시스",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE45MWlIVnJiSHdiMThxemRTSG85clc0dERSdHJIdjMxSnNWOWtZMGhKTnY5cUhUX0Z0TVYteDVRTWZ1aGhrejdXWFA4eWNkQS01bzlvQ0czWFNiU3lMeTYxcNIBeEFVX3lxTE5telVfMTJaMmVyNmN6d1hPcmlPR0RvQVNoRjFvRW1ISzV1eno3Z2NiNHBHZzctM2ZKazRZWGFNRGVZTmx0RlFvb0Yyc3FsNDNWSWdqMllvbUpJOW90MjlhZHc1VGIwZHo0eW9oQjRmZHdPdDFHZThlOA?oc=5",
         "date": "2026-08-18"
       },
       {
-        "title": "달아오르는 동탄·분당…'반도체 벨트'서 분양 봇물",
-        "source": "한국경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9SeXpIV3d3anRXSVRRd0Q0RkxBMTNxTWFXVWYxX1dyaTkwU0FYcm1pWE1sWHE5VDVwNEt1SENCNGRvVkxvbkRaenJzR0luWHo3SWx0MG8zYmdGQQ?oc=5",
+        "title": "무디스, 한국 성장률 3.5%로 ‘깜짝’ 상향 “반도체 호황 계속”",
+        "source": "경향신문",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5HMGFpdFVYNnduSGNrTmliQWtyNGp2VlVGcDVKY1pTaVo0UGN3Qjh0ak9PM3J2bC1jLTR5a3pwVnVVWFd2aDhnOEkzVW1UVHVqRzFnbmdMRDByQdIBX0FVX3lxTFBQekxwd0NhY1ZoOC1vZ3lhUFJOZ0RIT3Z5UlZfVi1jclhUbC1pNUtDZ3l4REJHeTgwYllkVFRzc2x4b1ZSOWp0TnhhQWllS21RQUhoWVQydTJ0NWNwUUdn?oc=5",
+        "date": "2026-08-18"
+      },
+      {
+        "title": "무디스, 韓성장률 전망치 2.5→3.5% 상향…\"반도체 사이클, 적어도 내년 중반까지\" - 머니투데이",
+        "source": "머니투데이",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1kZWxWRnlveHA4YTRRTEk5c0NvYTZabEhIbVRFMUU0QjVYa1J6N05qMDZTR01aeThpM1JiU2tmbkFUMGowV0RBSHVfVUduaUI4eXpERDFsc0pjQ2RyVGZObkRpaFNfMkJaQTk40gFwQVVfeXFMT3E4X19uVDVKdlpGRGV1OVdiazJoMXVaLTRGNGMxMUJ1THZIQkJjay04RVNXN2s4SDdsd01IUTQwUjFvNENscm9uQjlka1lzWEpSNTVQYnp1dDlHTWVDSzhyX1FjYjY4NFZHdTVIdTRMcQ?oc=5",
         "date": "2026-08-18"
       }
     ],
@@ -135,20 +135,20 @@
         "date": "2026-08-18"
       },
       {
-        "title": "과기정통부, 국민의 아이디어를 인공지능 서비스로 구현 '모두의 인공지능(AI) 실험실 인공지능(AI) 서비스 경진대회' 개최",
-        "source": "뉴스체인지",
-        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5XbXRQTWFZNzJXQUlTSGpuSGZ4RmV0T2VUZnZlNmdJSjhzQ1dDY1lLYmlXWWVWS3c4RVY5UXdYZzA0cVdmYzRzbTVuWQ?oc=5",
-        "date": "2026-08-18"
-      },
-      {
         "title": "딥페이크 범죄, 경찰 인공지능(AI) 3중 대응으로 끝까지 쫓는다",
         "source": "DWBNEWS",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ZNjBPb0xoWWJGSEtOSld5LTF0ZWtEOWFub3pHOUZ2SlJBX2dSUjZhSS1uTzZYenpZN2JzMWJocU5KU1JXaWpXQ0JmNVZZeFRROFBnWExDNS1BZ3NYbjloSzhnRjY0cUVh?oc=5",
         "date": "2026-08-18"
       },
       {
+        "title": "과기정통부, 국민의 아이디어를 인공지능 서비스로 구현 '모두의 인공지능(AI) 실험실 인공지능(AI) 서비스 경진대회' 개최",
+        "source": "뉴스체인지",
+        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5XbXRQTWFZNzJXQUlTSGpuSGZ4RmV0T2VUZnZlNmdJSjhzQ1dDY1lLYmlXWWVWS3c4RVY5UXdYZzA0cVdmYzRzbTVuWQ?oc=5",
+        "date": "2026-08-18"
+      },
+      {
         "title": "대만, 전국민에 44만원 ‘AI 배당’ 추진…“결실 나눠야”",
-        "source": "hani.co.kr",
+        "source": "한겨레",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9Ic2FaN1hrVXhZQWRUamF4cVlmWGxMbUkwRHJtenBwZzVSd29FV09QbGptWkhvVEFyTkJWRmxjbE0yaFlvMkxqWXRmbFRyREx0RHZBYUZJbjJCSmlhM2gxSEM5N2lfb3Y1ZVNNTg?oc=5",
         "date": "2026-08-18"
       }
@@ -156,7 +156,7 @@
     "에너지": [
       {
         "title": "아이티아이즈, VPP 플랫폼 'EmpoGRID' 출시…재생에너지 전력거래 시장 공략 본격화",
-        "source": "전자신문",
+        "source": "etnews.com",
         "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBoRXRNTHBXUUoxVDFxTlZnQjV2VEYzZFhOMHdCYVRJcnRtb09YNTVCZTMxWFVyb1BkelNEQ3Y4LTc0Y3VoRklvNU5DeVU3QQ?oc=5",
         "date": "2026-08-18"
       },
@@ -180,7 +180,7 @@
       },
       {
         "title": "‘3대 메가 프로젝트’ 전력수요 잠정치 20일 공개한다",
-        "source": "hani.co.kr",
+        "source": "한겨레",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5hUTBxY09wYkFHTE1UVy1aUkMxXzlZUlFpVVdzRUhhSDBJbDdjOHcxenU0VlRxZ1ZRSDFIZ1RyY0RVek1MYWo1TXJ0Vk81T2cxOExYZjhPUDc0TzVacHB3SzAxVlJQd1AzMjRSVw?oc=5",
         "date": "2026-08-16"
       },
@@ -205,15 +205,15 @@
         "date": "2026-08-18"
       },
       {
-        "title": "증시 반등장에도 시들한 금융株…반등 열쇠는 `금리·주주환원`",
-        "source": "매일신문",
-        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE52TDRLRDBXUEgyenlLaUc2OENlTWcxUEZTbExHM2FtOHNLbWZ1NG9Xa0lSTUlmMVNyMDc5d2VOLXRFN09Wc0VqQTgweWdlWkMtSjdlQ29ORUppdlhWZ19nVFdn?oc=5",
-        "date": "2026-08-18"
-      },
-      {
         "title": "삼성·SK하닉 강세에 코스피 7000선 회복",
         "source": "천지일보",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE8xOGIwT3JXVThFcHg2SjNoM0NoREhTWWEwem9rOUExWTluS0s4Zk1PaWh0dTdzODUwSmpSSDZTclBGMVh3eUttR0FJX2JTcXFlams1Z3VKTkpzVjFkTU8tOVFtNV9lRlBtTHc?oc=5",
+        "date": "2026-08-18"
+      },
+      {
+        "title": "증시 반등장에도 시들한 금융株…반등 열쇠는 `금리·주주환원`",
+        "source": "매일신문",
+        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE52TDRLRDBXUEgyenlLaUc2OENlTWcxUEZTbExHM2FtOHNLbWZ1NG9Xa0lSTUlmMVNyMDc5d2VOLXRFN09Wc0VqQTgweWdlWkMtSjdlQ29ORUppdlhWZ19nVFdn?oc=5",
         "date": "2026-08-18"
       },
       {
@@ -300,7 +300,7 @@
       },
       {
         "title": "6월 서울 아파트 분양시장…뜨겁지도 차갑지도 않다",
-        "source": "연합인포맥스",
+        "source": "news.einfomax.co.kr",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1KNUlsa0czRlZwSk04dk11a2ZLVDZDTldzUTN1Uk5IOENtMWREa1Y5Z2R5bTN0cnNFUTlURUNYZzlRbnhtaFlNMGpfNE02LWoyZ3hUM2tzNldCT3h6ZUh3LWFqY3NELWx0Ni15YmhyLXk?oc=5",
         "date": "2026-06-09"
       }
@@ -384,20 +384,20 @@
     "채권·금리": [
       {
         "title": "MUFG \"美 국채금리 상승, 亞 시장에 제한적 영향\"",
-        "source": "연합인포맥스",
+        "source": "news.einfomax.co.kr",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1XeTU5VC1oY0VKbFZPMVI1Y1ViYmlQQ1pCT29ITkRIbU1udVdEWi1EYWwzbHRtU1FnZDduc0VKS1VvX1p6MHNYa1NNYjl5R3h6Y0ZCdGprTUJraWc0c3lfbnRueVRqbnBhd19WLXFEZU4?oc=5",
-        "date": "2026-08-18"
-      },
-      {
-        "title": "국고채 금리 일제히 상승…30년·50년물은 역대 최고치(종합)",
-        "source": "연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YTENOWDAwcm83c2NOeFhtZlYwNGNIWVowNkdkZXdiX1U4ZDZnaXVqUmM1MkJraVRhWnNxc2NPSXhwbEludkZzZ2loT0VTREtZbk1qOW9vcVRRUk0?oc=5",
         "date": "2026-08-18"
       },
       {
         "title": "\"금리 안 올린다며?\"…美 30년물 국채 금리 19년 만에 최고",
         "source": "조선일보",
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONThIQTlfUE9wZ0VLcjlDZVB1ZF9SN294aWtKTXZVXzg1S2pnN3ZtWjhRVUZ1eVlTaTdMajJnbWg0OXRmQ05iSWlBeGdDNnpsNmhzTGlhUDBNc2EyWldFZENZYjNjN2JsZnFjdVEtX2RwbWcwcTlFSlNSeHk3U1dGemxtOERETnRObzVz?oc=5",
+        "date": "2026-08-18"
+      },
+      {
+        "title": "국고채 금리 일제히 상승…30년·50년물은 역대 최고치(종합)",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YTENOWDAwcm83c2NOeFhtZlYwNGNIWVowNkdkZXdiX1U4ZDZnaXVqUmM1MkJraVRhWnNxc2NPSXhwbEludkZzZ2loT0VTREtZbk1qOW9vcVRRUk0?oc=5",
         "date": "2026-08-18"
       },
       {
@@ -422,7 +422,7 @@
     "고용·노동": [
       {
         "title": "전체 취업자 10만명 늘었지만…청년 고용은 ’한파’",
-        "source": "yonhapnewstv.co.kr",
+        "source": "연합뉴스TV",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2RUZ1LWR0b2puelNEMElOSkVJREZiUmlXYWpCaUM3WU1RdEpQa1FFNjhrQ3V2eVZFamZleEVMVXJGRWFJVUNSU2VKRG1MenpxZXgyQUsyd0Rhak9NNy1tYU9RRk9hSTA?oc=5",
         "date": "2026-08-13"
       },
