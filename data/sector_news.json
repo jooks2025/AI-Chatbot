@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T13:46+09:00",
+  "updatedAt": "2026-08-18T14:35+09:00",
   "sectors": {
     "조선": [
       {
@@ -10,7 +10,7 @@
       },
       {
         "title": "지난달 한국 선박 수주 점유율 16%…중국 81%",
-        "source": "news.kbs.co.kr",
+        "source": "KBS 뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xcVFpSlVUU2xZRmN0eEVEZEh5V3hlMU81T0E0UFJrSEdGYzZKWU1GTGxMRVN5Sk41VDBiMFF6XzRhVVBFNEtHN3ZBZ19FSVZmZ3F6Ym0xRVhET1E?oc=5",
         "date": "2026-08-14"
       },
@@ -28,7 +28,7 @@
       },
       {
         "title": "조선업 ‘수주절벽’ 온다는데...두 국책기관 전망 왜 달랐나",
-        "source": "뉴스톱",
+        "source": "newstopkorea.com",
         "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1BTmlQUFU0YW9UckpULU9XUmppeDVKMXp3VGw1TVQ4R0Z6U1dnMVoyOUlGUHV5MS1sXzR0YXYyaTZhcE04bkJyMXp6c0RwMHdXMUEyYVdoZWVLazR2M24xR3hQSnpWREhaZ1F0V0dFcw?oc=5",
         "date": "2026-07-27"
       },
@@ -60,7 +60,7 @@
       },
       {
         "title": "수주 줄고 공사비 오르고…지역 건설업 줄폐업",
-        "source": "news.kbs.co.kr",
+        "source": "KBS 뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8ybDRjNnNRMEpUZWpXbjFaWk4wTV9teF9Zb1ZSTy1jeDRmenkwbFNkWEZRZDJxWnVXSmxmSk9tTXl3NnY3VC1GZFpzemNJcEZqOFNVdDBsLS1hcDA?oc=5",
         "date": "2026-08-16"
       },
@@ -79,39 +79,39 @@
     ],
     "반도체": [
       {
+        "title": "\"미·중 갈등 없었다면... 중국 반도체, 한국 턱밑까지 위협했을 것\" [인터뷰]",
+        "source": "한국일보",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBRMGhfZ2xLMWZLdGpOZHQ4Ynh1dV9GOURTaVhjTGFtektkdVB3ODZNS0FyZ29DTXV6R2dkRUEybC1pSnNSOGNxRXY3eGJBSDNHcUFHcDNETUhMMkItekNaX2ZuTjJISHBxZTBnd2R30gFzQVVfeXFMT2FUUnRpZ1JReUxLX1Y1ZnhPTmxwOXhKaGhjWVJYRkt4cTRnazZ3d1J6b1lJY1Q3TE56cEdkenhjcGxVcUxHMGFWdDRmc3ZxVnUwTk9EWUUxaFpsWk9USXpTUlRsRlQzYk5kZHFWSE5HSC1JZw?oc=5",
+        "date": "2026-08-18"
+      },
+      {
         "title": "반도체 환호에 묻힌 소부장 비명… \"中, 원자재 문턱 높이고 있다\"",
         "source": "조선일보",
         "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPb3J6S0dKNFhGN2x1MEowLUs0UVlLNUZYVGtFR1NKLW9KR1J4ckhwY2Zzd2J0UVdjbkh3My1TVTVDWXFTTU95WlduZWprSWdPZWN0ZmdYR3ZrWEYzc1pMX1hiY2hWWG00VW8zajN4QVllRFU1RzJuUFJLbjNtdHZic29nWWMwb1BIeU1Rc3JaVQ?oc=5",
         "date": "2026-08-18"
       },
       {
-        "title": "뉴욕증시 하락에도 반도체株 강세…마이크론 4%·SK하이닉스 ADR 3%↑",
-        "source": "뉴스1",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE56X2RpMGJyVmhMS2d3U1daekRmNGJyR1FjbjFyeU52N0draWtDdkNsamVQYWhzbXU1NkVCSHRWaGxreXA5WmUxYWFvWm5fUEJwRVkwZ2ZGc09reDYtSm9VU29zQUp2Wk3SAWxBVV95cUxNemNCbGpCWC1fUmp2Z2JqY01YZHd2WXVlRC1SVk5ZX2FsVFRXNTZGV0RhUHM3VGNYX2ZMVUx5aUVvSjFOSXZQTFlhWlNKUm5IcXhsdGhOT29PdnlRMks2ZHNrNUxPLUxwZThhd2k?oc=5",
+        "title": "충북시민단체 \"용인 반도체산단 초고압 송전선로 재검토해야\"",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE50NmZBRXZUS3dHcXN1U0lRZkxvT09zTS03eGN3LXVZUm96Sk1CdlJscWhWWkUwcTBGWVJNNDZDVlVRcDdHUUNPOHZwSDliUHV6NW1mNnpERFJrYU3SAWBBVV95cUxOSjVyS2NkVHJ6cVcxZ0FpQWVKMldTWXJYYjB1VzM4aV8xQTljRG5WRC1xMlFaMGV5WlhVd2t2Sk5zcmpsNXdLNHFmd2dtRURTNkhSS19FZkpieGV6WUJtR2M?oc=5",
         "date": "2026-08-18"
       },
       {
-        "title": "한미반도체, 신규 공장 매입·내년 2분기 양산…\"수요 급증에 대응\" - 머니투데이",
-        "source": "머니투데이",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBYNll3dXRTUERnc29kZnIzc2h5LUx0NEpYeHpRN3Y5N2NXTFYxMEk0X3YwRFNTMnp1elpxTXJrR2Q0N0x2TTA4S2t1Q3lqMmtTMVdpcHVjSE8wZUJjNHpkVGxUUUVabGx6SGh4ZtIBckFVX3lxTE8wSHlsSk9aM2R1Sks0UUVUS3dTM2NmaV82ZkF6Z3RxRExzekhBd3NoTFFPemUtSDJTcC12T2RvSFFfbkJBQ1lfQ2g5cTJqQ0dHcnFta2daQjU3anQ4a1NNRWxZR3NnSmh0ZVZBSVBmOUNSUQ?oc=5",
+        "title": "[특파원 리포트] 중국 반도체 기업의 손자병법",
+        "source": "조선일보",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbHloLW9kM0RVVGVONUJQYmlFejk0Ukg3S05Ha1Z0TmNrS3VwenFSOWY5X0xOMW1uLVE1djVNbktrLXgxME1zZHZxX3hRdEJVV2c3R19OeDljR1hkdG9ZV1lVMlFzZFlBMGtOc3d4cmJxUlJEdlh6WEVZNEVpRnZrUXV5THBPSm8tVmFIa0Z0VERPVExD?oc=5",
+        "date": "2026-08-17"
+      },
+      {
+        "title": "미 의회 \"중국 반도체 안 쓴다 서약해라\"...궁지에 몰린 애플",
+        "source": "YTN",
+        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDV3hPM3Bna2hJSUJ1Uk0yVm5ZX2tHMGczOTNmcDh2MFJaR182WmlIV2xTckdCQXZjcDF5LWRuQTlWUk9VRDNoN1lDZTNUQ2JBQ2JHY19LQy05TlduX0E?oc=5",
         "date": "2026-08-18"
       },
       {
-        "title": "한미반도체, 1300억 투입해 8공장 구축…\"AI 장비 쇼티지 선제 대응\"",
-        "source": "뉴스1",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PR2dwX0l2SGxYdzF6MmpoRDhJRTFXeXZBY25Sb1djSUhyTGFsdG1Zb0RUYzhEdk1aSjFNaVFUNGdMU2Nsc25HYXRYS1kyb05jZWUzeEQ0b1NDYU1ueWNDTTNJanTSAWpBVV95cUxORHRUVmJjbkpNLVhVV2tRQnptQ0lNNDJzQVdqREJUaTROa1ZMOTFCNTV3eEF1TFFtdV9qRm5VeXpwMFAwNVdhcklpcGhmeG8xdURKeEhQZXBfWHdXYmNNNFJaNG1Zb0lpNlNB?oc=5",
-        "date": "2026-08-18"
-      },
-      {
-        "title": "장비 숏티지 해결한다…한미반도체, 1300억 투입해 '8공장' 구축",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE05cEtCVjk3T1o5Yld6aXRLYWNDRTYyRUlZN0VYQnJ6azRoOFVwVjlpcWdiMEJYU3JfV1pkQWU3UjZwYVdvOFRtemVVeEVzSG8?oc=5",
-        "date": "2026-08-18"
-      },
-      {
-        "title": "이은택 KB증권 이사 \"증시 상승, 반도체 '실적 성장'이 관건…금리는 복병\"",
-        "source": "이투데이",
-        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE91MmVaV1l5VjZ2dU50WTh5RUFqSXR6eW1KeVZZT3RzbWstVHNJcG1UaGk3cU5yeF9tRHFfQUNSTkpXdVhlVGwwN1lzX2dvOGdSQThqaA?oc=5",
+        "title": "미국의 '중국 메모리반도체 견제' 의지 재확인, 삼성전자 SK하이닉스 안심하긴 일러",
+        "source": "비즈니스포스트",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1QNkxJVHlUU0RkOUY4Sk1VVmo5UWxpOTJlYlZVZUpxdVVtd0h5cXFkaTVTSEpMRzBuazMwcEd5Z3RDS2tCNE9yd253b0V0UDh3Mm9ZdWVWUUt0TFZrTjhFd25VOXhrelhnS1pNemV3X3JJX1E?oc=5",
         "date": "2026-08-18"
       }
     ],
@@ -124,8 +124,14 @@
       },
       {
         "title": "과기정통부, 국민의 아이디어를 인공지능 서비스로 구현 '모두의 인공지능(AI) 실험실 인공지능(AI) 서비스 경진대회' 개최",
-        "source": "경기남부뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8zWFdqNjdnd1hMM0t0UG5DT2NtcGdWLUc4Yl80YWhhYmJDNDk3cHBteE94a3BBS2FaRWdqWm1Uc0kyTGdKa1pMZ3lyRHg5RlAxb2lDWjhhUS03TnNjbExTRzJn?oc=5",
+        "source": "한국시사경제",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1CNWxvVEtIUVN0WFVyRkdKb0FGNEwtQ2NVMlFxMFRSVHE5ZjVXeW1iVEI2SmtFTDNDVk0xTlNrcHZjNjA5WHVvai1BTXdLRDRjS0FwaFdpSWtFdTZRRExJS2VpRW5sY0ZNQlE?oc=5",
+        "date": "2026-08-18"
+      },
+      {
+        "title": "日정부, 생성형 AI에 “무슨 자료로 배웠나 밝혀라”…오픈AI·구글도 대상",
+        "source": "아시아투데이",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93clY2VWpZVEJfUjBUdW5lWnJUTXVwcXFWLXNnS1ZNXzJKMTdqZnVySUJOZGlWQm84b1NwS3NndTVPdW1FbEJMUUZ2QWwxSFlFTXJUZ3ozMHJZb2o3X25kZWZqN0oxOFVBVkpDMlJB?oc=5",
         "date": "2026-08-18"
       },
       {
@@ -135,21 +141,15 @@
         "date": "2026-08-18"
       },
       {
+        "title": "제천문화관광재단, 구자형 성우와 함께한 인공지능(AI) 오디오북 제작 미디어교육 성료",
+        "source": "중앙매일",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1jOXJMck5jbmp3VlM0TWJYc0dFMmpQb19jTTNuTnRBbktteXR2Zlg5WVhtSnFrOWpaakJWQjlHb3hCdGlPVjVFQlBqQmlCYW5Fb0FWTmRSU2pIMnkzdXBFV1NQcThQUQ?oc=5",
+        "date": "2026-08-18"
+      },
+      {
         "title": "수원시 시민 삶의 변화 인공지능 AI 혁신 '속도 빨라진다'",
         "source": "열린뉴스통신",
         "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8wdkVraDExR01Ha0F5TDJBUk5DQUNoSWtzSklxVFlNakpFUW5ycjBLa3A2Tl95ckhUdExXM01MX24zUTlPVVFoV2l3bnVhcGxLcU16cGJOSzAwLXZNZ281dllZb2VBUQ?oc=5",
-        "date": "2026-08-18"
-      },
-      {
-        "title": "[조간브리핑]\"기계공학 시대 다시 온다\"···피지컬AI가 깨운 하드웨어 경쟁",
-        "source": "hellodd.com",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9tYkFCNEVvenFkWmFYWURPZWRLa3dKWVNHd3EzZXl6RGRxaGZVMHFUa1BxQWM5cGtNZElENGtRUGFwMHp0RjhxWk1wU2otR2ZkY0ZnclBtWm9RR2lOelluZ1ZvZkNZakRMQWc?oc=5",
-        "date": "2026-08-18"
-      },
-      {
-        "title": "서울시·英 임페리얼 칼리지, AI 기술 난제 공동연구 맞손 - 조선비즈",
-        "source": "Chosunbiz",
-        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSmZLeGdMYnc1RF9qRlNXSTM4ZnlLRnZOc1dSLXlxWHpaekdZLTlRT2JhalVfTzJWc0hIcGhXMG5YRm1OTENzeWtCWVJRZlZoOUtTRkJGTEVzQlNfdy1WMzJ4ejJkNEhhZnpVUUp4OUpYZ1V2SmZweFJWTlpxUzhYemstZThIRlZobWfSAZ4BQVVfeXFMUHBXWG1EZ3dEWDdRdDR1alE5SVBTN0k4Y21fVlJzU1FReUcwT2dyaW5ERktJYTVRTUlZb0JUZTYtTlMtcm5fNWQ3N3VyRDlQaTE4RG5PU0d0X2EybHFneUUyTGc2MGhaM29lWk8xbjBkS2hmYkhSQ194VjVJOThvb09zLUFqX0RjTnhqbFZHX0dHOFM2SW1LSkc5bUZXMFE?oc=5",
         "date": "2026-08-18"
       }
     ],
@@ -249,22 +249,22 @@
         "date": "2026-08-18"
       },
       {
+        "title": "셀트리온, 프랑스 ‘지프레’ 인수 후 새 도약 준비 마쳐",
+        "source": "메드월드뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBlTnQwdmVxMFJwSVpDM2VOcGd4dk5YU1NxdEIwTVFCVTQyRU1qNWFiSUVma04zdWwycTB1M0ZnNGh2QjllLWRpLWx2OEV4NVFIb00yYVN5NEw1QXlQeVFYZDZuNV9rd28?oc=5",
+        "date": "2026-08-18"
+      },
+      {
         "title": "[Weekly 제약바이오] 셀트리온·GC메디아이·에스티팜·유한양행·일동제약그룹·종근당바이오 外",
         "source": "오늘경제",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFAzME5YTW9PNkJGQnNtNjUzemlyZzB5NWFCemZUNFRkdGoxbWZicm4xS2VlcWNHRXFsSTRoYjFYRGMxR2doUTFMNnZXV1hCQVRTMDlzbkRXQ054SnNQbWdsMU5iR01rNFI2cThJcUVldkR6Z1E?oc=5",
         "date": "2026-08-18"
       },
       {
-        "title": "동국제약, ‘동국제약과 함께하는 걷기 기부 캠페인’ 진행",
-        "source": "메드월드뉴스",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oMDlnSV8zZDNfTzZoQVM1Vk9GRW03eThfRnY3eEU4OVJZV0tHYkJkY2tYbFZKWUpYcEtablNSbV82bnl5X2FFWjdLcDdWQzdmTDFISXdTWVo2S2ZQcVItaWxQNk5xdUNsUDYzUw?oc=5",
-        "date": "2026-08-18"
-      },
-      {
-        "title": "디지털헬스케어, 식약처 인증 솔루션이 시장 이끈다",
+        "title": "GC녹십자아이메드·GC케어, 의료·검진 기록 통합 관리 기술 특허 취득",
         "source": "ebn.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE10OUJxYlBoMTRMU0xaSjhSZ2sycVRCdzBGZ29LeVJneGtYQWZJbzlYSTc5Ni1LbVplelh6UHNzLVZVOTJIbUFURjZhOElMUVRSNjFuWnYyUTFLbWMtYkE5R1dGR3dEYWhF?oc=5",
-        "date": "2026-08-15"
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9jOGluT2JRZXRnQVVfUzZkdm9yN2s5WU1xMDBmNDlUN1dVeGNpSVc0U1R0M1YzdFRCcjhxSEtmeFZCS0RqekkyeHkxdEp3UlQ0SHNoTFg5d1RvUEtDUm05N3FtMEswYnBr?oc=5",
+        "date": "2026-08-18"
       }
     ],
     "부동산": [
@@ -422,7 +422,7 @@
     "고용·노동": [
       {
         "title": "전체 취업자 10만명 늘었지만…청년 고용은 ’한파’",
-        "source": "yonhapnewstv.co.kr",
+        "source": "연합뉴스TV",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2RUZ1LWR0b2puelNEMElOSkVJREZiUmlXYWpCaUM3WU1RdEpQa1FFNjhrQ3V2eVZFamZleEVMVXJGRWFJVUNSU2VKRG1MenpxZXgyQUsyd0Rhak9NNy1tYU9RRk9hSTA?oc=5",
         "date": "2026-08-13"
       },
@@ -484,7 +484,7 @@
       },
       {
         "title": "iM뱅크, ‘AI 시대 투자 전략’ 주제 재테크 포럼 개최…미래 금융 변화와 자산관리 방향 공유",
-        "source": "브레이크뉴스",
+        "source": "breaknews.com",
         "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5UWll1SjcwOWtYYmVfZTFwM0RKTUhMUFdLVlQxeGxEWUpUQ2lxUGkwTExiVjVhQTJVQjBlRVVlWkRxcXlsRlowag?oc=5",
         "date": "2026-07-29"
       },
@@ -504,7 +504,7 @@
       },
       {
         "title": "“금융 상식 쉽고 재미있게”…한양증권 ‘한양사전’ 콘텐츠 론칭",
-        "source": "mk.co.kr",
+        "source": "매일경제",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5GU3hFZFlITjRQcjd4cHIyWEFuQ0xGQlhkSEpSOV8yVElqZER4UVpIRWtJR001YXNRaExqVWF6UFEzdlprMlFfQzFBNHg0S2FMdXc?oc=5",
         "date": "2026-07-14"
       },
