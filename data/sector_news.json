@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T05:35+09:00",
+  "updatedAt": "2026-08-22T06:02+09:00",
   "sectors": {
     "조선": [
       {
@@ -15,16 +15,16 @@
         "date": "2026-07-27"
       },
       {
-        "title": "현대重·대우조선, 잇딴 수주낭보 조선업 청신호",
-        "source": "스카이데일리",
-        "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE43SjlhYi1kV3gwcFAyOUNjNU9MdlV5b0x5SWg1NTlQbUI5VjU3bVJ0bnI4Q0t1RkQ2RnFRMll3VTFERDU4T2Z2YXRqQlZkdEswYTZZX0ZnRmFaOU1KOXp0bkVYTmUyQ0tNalNsYjhTWmNKMmFvUWlVWjViNWZXQQ?oc=5",
-        "date": "2026-08-18"
-      },
-      {
         "title": "조선업 수주 대박, 영암 경제는 썰물",
         "source": "드림투데이",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9vT2p4RUpDZFBPNHZ0QktkQldfcjUtSUdva3Y1YXIybkZma1c3RXNuZXVGWFRSQTF0M2lFWV9taWtlakszYjVZdHBxOGd2SkFwa2MyN1FaTC1xZUZZbGJJSzQ5TFJsdjE3VGc?oc=5",
         "date": "2026-07-29"
+      },
+      {
+        "title": "현대重·대우조선, 잇딴 수주낭보 조선업 청신호",
+        "source": "스카이데일리",
+        "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE43SjlhYi1kV3gwcFAyOUNjNU9MdlV5b0x5SWg1NTlQbUI5VjU3bVJ0bnI4Q0t1RkQ2RnFRMll3VTFERDU4T2Z2YXRqQlZkdEswYTZZX0ZnRmFaOU1KOXp0bkVYTmUyQ0tNalNsYjhTWmNKMmFvUWlVWjViNWZXQQ?oc=5",
+        "date": "2026-08-18"
       },
       {
         "title": "‘저가 싹쓸이’ 中조선소마저 선별 수주…슬롯 부족에 韓엔 선가 호재 [비즈360]",
@@ -85,15 +85,9 @@
         "date": "2026-08-21"
       },
       {
-        "title": "SK하이닉스 “日 반도체 팹 추진설 확정된 사항 없어”",
-        "source": "IT조선",
-        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBLZ1o2WVU5eW9sQ3FxbG9aSmtyRkFIZ0VwUXhuZm1udEhfdlgtbGlJWGFRbGZ6bUY1OTNRSGhpVU9iQmc1MTk5YzJvc3VwdWhUbjRyRDV4clFQMi05RG01cUJIRXNLc0tUU0ExZGVMSkzSAXRBVV95cUxOZWFJS0ZHX01iWHVFYVBoeEdZN2JoYTF2SXVsdTQwdEo2MW41MF8yNGJ0NUlreXZqOXZEbThkLTQ4dHFTUEtNdVNuOEtBSXJFZnNqVVlIVDV4QTB5MjhZYnpoLTVIV3pEZ1E0a3c4TWpmZkpuVg?oc=5",
-        "date": "2026-08-21"
-      },
-      {
-        "title": "반도체 파고 속 자율 타결 이룬 SK하이닉스…‘함께 미래’ 노사 동행 새 이정표",
-        "source": "동아일보",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPREFzVTlHMkpMdE5ZdmVpWXhnZzczbWVKdExja1BQQ3FyZFhnaDFBdk5EY3RsUThCZzlOZXotY2VIXzdIbGhJT0FrSnBUNXBoeE5BbVl5VVN1eDBEek94RTFLTmc2d0hCLXF2MV95dnRubUlUXzdBb3lwbU9ubG10UEpjUVZLaGkwT1lYU2x30gFmQVVfeXFMTzFQMlhMRjF0Tlg3Mkt3UlMtYTVOYllwWHBwRTJtaWJySWNlM0l5ajdmNHA4MDdKQVhKY202RnpMY0VsckNyZUlkY3g2Ni16SEs0WlFOOUF2c2Fob0hnMWNlVlM1d3N3?oc=5",
+        "title": "SK하이닉스, 광주 이어 美日도 반도체 팹 전방위 신설 검토",
+        "source": "서울경제",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5ObjgtdllWandoUVN6REE4LUV1VTh5NGNHVzRJdTFtd285NVNad1hhMnY2RzRGSG4xTDFXWFAyRHlSVC1LYi1HVWlUUVVNb25zaGc?oc=5",
         "date": "2026-08-21"
       },
       {
@@ -103,15 +97,21 @@
         "date": "2026-08-21"
       },
       {
+        "title": "Anthropic, 전 구글 칩 책임자 영입하며 자체 반도체 개발 추진",
+        "source": "Investing.com 한국어",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9sblBzTjR4LWdrRmYySnpvQUhuZ0RSQXNkVG1BbUJlcnhfTmxvZTBhY1JLS3JWZmpPNHdDd0NZY00tejItRV9BcGs4RGxYdWtlT3Q1aGsxeXZFM3dsNkJidk0zbmNtZHgxRmwzZnhod08?oc=5",
+        "date": "2026-08-22"
+      },
+      {
         "title": "반도체 초호황 세수로 ‘150조+α’ 기금 만든다",
         "source": "동아일보",
         "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WcFhtNGptdWRsM25IM0RpUkdybTNkdmQwTmNuTGhLdENhdmNNRUUyTVhCYnpPZ19yeEwzOEgxQjVrYlhRcVJzd3BpTWQycGExMGNZcnIwNWRWZnUyXzRFOG9hN3QwTW9CUVdUdUFyZU5YN0w0VmfSAWZBVV95cUxQZDZRYWpTQ2h2SjNJdWt6WW1mMi1sVUNFUmwzMC1MM2ZBbDB3MGd0c2VXRWExNTI4Unp4OEh1d0c3dV92cGZJbGM1bmRwVDM4dFlNbl8wcGxfZVQwU1V5R0lGNFhwZEE?oc=5",
         "date": "2026-08-22"
       },
       {
-        "title": "'역대급 반도체 초과세수' 교부금 연동 폐지하고 '미래 대응 기금' 신설",
-        "source": "MBC 뉴스",
-        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1JWkk5MHJKS2JrYlRJRFFoRDBGUDFGdVk5YkZFTU44b3c2TWtXem1oWXVlNjBSODVpLWFSRUZ0WnR4NXZfdXNQUmNCVmZDcnk5Tlk3R1dXU1BGVkRfX0NnMVVFdExqOGp1eHFQSi1rMjNSNzQ4LXV1SNIBeEFVX3lxTFBUM1p4SzR1UXNySURWR3hMNUlRV3pGdGMyMncyNE82MXJ0VU1aamhPa3RpX3Zwc25XYTFBbGp4ZG1jLUM3LTBZTExSMjlldDlXSkRDMDI3WDFIZjFsSHBOMmtZcURKUTVFVkFNVGloWEdFd2xWRllTSQ?oc=5",
+        "title": "반도체 추가 세수로 마련될 미래대응기금, 최소 120조원 가능성",
+        "source": "조선일보",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZTFYaXRCcTJpVjBBRV9xQUVZTk1FcmRZTllhblpKREZnSlllaU1PWEFzYjA2U3FzVzBNWUZhSDB6VlpPRFZOdHU3MlJKR3dmT1hmbmFjUUxMNXFlM0tDQm5mTXRFWGFwZmd4a2Z3MVFPWmdkS1ZtdHRCMTlkZzIzQmdmelpTLXRobVN1czBB?oc=5",
         "date": "2026-08-21"
       }
     ],
@@ -205,16 +205,16 @@
         "date": "2026-08-21"
       },
       {
-        "title": "NH투자증권 “한국금융지주, KDB생명 인수 우협 선정...시너지 창출”",
-        "source": "매일경제 마켓",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93aFZISnU1TGJpNzdpYmN0dFpxSnpWRjlKV0ZGLTV2OFczQmdBS2diZU9GQ0hvMHY2dFRvbEVrY0xYd0xSUTJ6aVV3cGJ4YTRVNFE?oc=5",
-        "date": "2026-08-21"
-      },
-      {
         "title": "[금융투자 상반기 실적]토스증권, 대형사급 이익...해외주식이 99%",
         "source": "비즈워치",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fY1AwV1JwckNWbW9Tbjcyc1duU3BVMjVlT2x1bUFpYXJyVnBHVGpzdU5DZU96Z0loVE1FV2h4NmVMUnVaR3ZfQ2FITTdUUWp0SnNkajR6T3lReXRNUWdoYlc1LWZGcTZJaXc?oc=5",
         "date": "2026-08-20"
+      },
+      {
+        "title": "NH투자증권 “한국금융지주, KDB생명 인수 우협 선정...시너지 창출”",
+        "source": "매일경제 마켓",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93aFZISnU1TGJpNzdpYmN0dFpxSnpWRjlKV0ZGLTV2OFczQmdBS2diZU9GQ0hvMHY2dFRvbEVrY0xYd0xSUTJ6aVV3cGJ4YTRVNFE?oc=5",
+        "date": "2026-08-21"
       },
       {
         "title": "[금융투자 상반기 실적]레버리지가 휩쓴 증시, 증권사 실적은 더 커졌다",
@@ -249,10 +249,10 @@
         "date": "2026-08-21"
       },
       {
-        "title": "휴온스 헬스케어 레전드, 26-27 팀리그 2라운드 전승 우승",
+        "title": "대웅제약, 글로벌 최고 수준 디지털 헬스케어 솔루션 공개",
         "source": "메드월드뉴스",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE13cU5lVmFrTzlSMXI4Z3VtcU9sNFR4QXhGN1NUU1lQV0U3d1pLeWQ4TFBtV0FESmVTYkZNYnVtM3R6ZTVwaWxkOFpxaU12cVlrY21pMGlCNWJ5amxiZk9GRE1DY3NCQUVaNXdJZmRR?oc=5",
-        "date": "2026-08-21"
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sVE42Q1lkNEhZYnZZcUlYeDgxM25kempzTGZoT1p1M3k1ZGNfNnB1YV9pc3oxTHZPZGNYSWFYakZrVGt0ZEpUZGtvbVNpUnZ6d0Q1b241TzcwY3JNQU1GV0VhWS1zZmR4SEZXX21R?oc=5",
+        "date": "2026-08-19"
       },
       {
         "title": "대웅제약, KHF서 디지털헬스 12개사 '얼라이언스' 공개",
@@ -331,9 +331,9 @@
         "date": "2026-08-21"
       },
       {
-        "title": "비트코인 두 달 만에 1억원 넘었다…10만달러 전망 '고개'",
+        "title": "[특징주] 가상자산 관련주, 비트코인 7만달러선 돌파에 장초반 급등",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5BQTJwRUdmVk1iSW5lN0hmU2FMei0wcjVHcTV5Rmtocmp4emw5YmIxN2FXcmphWDNoZUFrZFBvSU54OGtLS0xrdVNOUzA5VlU?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9JVUJQQ25MYWdsVnVCMTlNQXBVSHhVazRnd2hnVjFGckp3RjZSRUIzSDdSV21WWU92RnRFRW5tblV6WU9pUlU1SE91bVNRNXpRWnVWbw?oc=5",
         "date": "2026-08-21"
       },
       {
@@ -351,34 +351,34 @@
         "date": "2026-07-22"
       },
       {
+        "title": "[美관세 위법판결] 세계 경제 불확실성 커졌다…각국 무역합의 '안갯속'",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAxXzFGaW9hMmYtMmlWYVFDUkc1dU5UVUNJZFJ3anh3M2xpOHZrQ19lUFYtb2dlbWVZU2ExLUpIZ0NNTWtrbGZRd0d1Z2tRU00yWS1sYVdWM0x1N2fSAWBBVV95cUxQalFyZzM0eDJnMEt4eWR1alJnQmd6UGltdGFEWXFtLWphd1QtTlRsM0FlVkR4WEZSNlVMX0xFTUpIdDU1cTZfdzZfWW9leXFrUW1MdXVjS2kxYl8yckZmTEs?oc=5",
+        "date": "2026-02-21"
+      },
+      {
         "title": "미중, 무역 관계 관련 대화 강화: 세계 경제에 긍정적인 신호.",
         "source": "Vietnam.vn",
         "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPczB2QnUzVGhFSjlvZ2VzWjI5NUl0ZmtWdTVxWDRsYTBGblZMVjl4MnZaaW5sN1VQNktmaGtmLTE2ejhlUkRtTE93RXJ1dzExQnFoQWNOTEU4WDNTQXhVMUctV0U5N01DcWZLTW1aOUNvbW9OSXhUc3RSVXdYWHRPTm52cmFFcmpTMW1nSXo5Vll4OHlINy1veEQzekU4MHo0ZmNDM3ByLTZRZmdlZG1qc054NlNXaUlxRXlmNTcxdnBzdw?oc=5",
         "date": "2026-08-01"
       },
       {
-        "title": "[이대복의 세계경제 Story] 대마도, 무역과 관세①",
-        "source": "조세금융신문",
-        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBwUlpLbnh2MWN0aEtObmtINjlRbXh5a0RqS3UyckJyUVNCWEptUVFmQkJyWW1XRnJIdlFsQkJjeFNCNWw5ZndJdjJzM1RLMWNwOXdUSjFvN2VrTlBHQ2ZoMFJmTQ?oc=5",
-        "date": "2026-07-21"
+        "title": "'관세왕' 트럼프 청구서 날아온다…세계 경제 살얼음판",
+        "source": "한국경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1tcnZ1TjZQSHduTFp5aERBWkg2ZmZ1STNQZ2ZDcHJhXzVtc2JUd3JXTktpaXNpMTVrQXVtdFFhUUZqN3pOUHlLb3ljdktpd0NfdW5VS0M4RUhydw?oc=5",
+        "date": "2026-01-18"
       },
       {
-        "title": "트럼프의 '해방의 날' 관세 1년 … 세계 경제에서 달라진 4가지",
-        "source": "BBC",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yWHg2YzRIaU82VGdQeC1waDgyZFhFM1F3S1ItMjFnNGpZWk04Mk1USXU5M2RIYk9sYXhCZktMNl95UHJGSFpSQm1mV2p3bmVPU1ptMUR6UjIzRkRH0gFiQVVfeXFMTkhVVUVKZmpnMHNrZnlfMVhuU2hwSXFiYnNvYTFLTXQ2UmZ0a3dRdV9TWmNCVlF4SVgzLWNaT0JMUFdZeURpOHc1bmF3WksxbU1yMm91VTY5dFlBb1Y2M1AxNlE?oc=5",
-        "date": "2026-04-03"
+        "title": "미국이 ‘관세폭탄’ 던지니… 세계도 ‘무역빗장’ 걸었다[트럼프 재집권 1년 美 어디로 가나]",
+        "source": "문화일보",
+        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBLdUV0WGJyRUl1cnNSTzc5bkJOWTFrODByN09QRnhyekNLb2xwY1RpWlpneUgxM0xNTm1nX2dXNEtNaFNmWG9sQzN4Z1pISVdT?oc=5",
+        "date": "2026-01-20"
       },
       {
-        "title": "관세, 석유, 그리고 인공지능: 세계 경제를 위협하는 '완벽한 폭풍'.",
-        "source": "Vietnam.vn",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOSjNtMHBpZGo0WHM0RGQyNUNUMWtVVnF6LTVDUG41Y0g3QjduRGxORFkyemlLX1drUERnT2l2ZjV5TU9ZMURRbS0yNDZtUGdOenhzS2lqQktwQkNRNlhZNGU5VnZDdUd0eDZQRnh3LXJHelA1NmRKZnVJV0c2RFRNelFYOWlCY1hlcmxGMEQyTW9Bb2c?oc=5",
-        "date": "2026-07-27"
-      },
-      {
-        "title": "반기문, 中 보아오포럼서 관세전쟁, 세계경제 전후 최악 위기…亞 협력 강조",
-        "source": "아주경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBYZEx6VWlsT0NTMUpFRm9PZXBmcExrX2pXcmZlaFVDTmt5MGdXNXYySXBQWVZXWFJ3QkM2THFXYV8zVW9ubGpoUUhNb1ZIRVdQdVFkTThtUmhad9IBWEFVX3lxTE5aYzlGakRKbFN4d3RBMTZMVk12VUZjTGt3RkRvVU1uYlNoRWNrSm1uenlTcXZzV2dSVWRMY0RiTm5xYklaOGItUHVQcmw1UDQ4QUNfbzROR0o?oc=5",
-        "date": "2026-03-25"
+        "title": "유엔 “세계 2.7% 성장”…관세 버텼지만 저성장 굳어지는 글로벌 경제",
+        "source": "mstoday.co.kr",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBBSUY0R2dEbjZOeVFPWFBvdDZvWjZhYW1Oc3p0M2huNXJTVi1GRTV4aC1aVzVfV3IxX1N6Zzlld1hRcFFzR1R5TnljTUZBWlpEZDI0MDFTazBvWS11bWx4eThJbTdJNzV1bDYxMw?oc=5",
+        "date": "2026-01-09"
       }
     ],
     "채권·금리": [
@@ -395,15 +395,15 @@
         "date": "2026-08-18"
       },
       {
+        "title": "[뉴욕채권] 국채가 이틀째↓…바이백 후폭풍 속 약달러發 기대 인플레↑",
+        "source": "KB Think",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9kREVKMVJSdjcxMTNuTkdMMlZGZFZGSm5xZ0dIR2RQcVpTSlR6Y3kyZDFETVlsRnJUaFNWQmtOQ3JPSEZ6QmwxR19La2Uzb0QxQW4tazcyeURaTUZjVnIzWFhHUklFN0UyU2ViUVh3QjhBQQ?oc=5",
+        "date": "2026-08-22"
+      },
+      {
         "title": "美 국채금리 잡을 베선트의 추가 카드는",
         "source": "연합인포맥스",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1qOGRxdkRsTTA4SU15M0k4VTd4X202ZlUtZDNJVmVYcnRoejE3OEZxYnc2bmgydWIxeVBUTTczR2oxUzVMOUNFN0FSYVlORDFlVTU0dE56cmZuT0RCTmxZcW8yRkFMV3RuUldfNW1LOTI?oc=5",
-        "date": "2026-08-21"
-      },
-      {
-        "title": "[채권-마감] 약세 스티프닝…外人 장기 매도·미래기금 영향 주시",
-        "source": "KB Think",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9xQkdGOC1JblkzU09vZVNqSWRvYnZYVjhHSUptM3hwNUxVMWFlMndoMzVBQ3BuQmNVY3F2MWhOZG9nUzQ4RDFPOG9NM2t3dG5MOFlvQmtidndkSHRkMkczeFQ2TU9uMXdUWHdMNEUwN2ladw?oc=5",
         "date": "2026-08-21"
       },
       {
@@ -413,10 +413,10 @@
         "date": "2026-08-21"
       },
       {
-        "title": "채권 금리 고공 행진, 미 재무부 “국채 매입”…“단기 처방 불과”",
-        "source": "KBS 뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5fRENncmY3Z1JhdllQWTl1UVpNOHQta3hwdWdjNU91OFpGSDdxdE41ZV84Z3N0djNRNHQwd3diNHU0Vy02bGlqQ0d2VTlQRWpCV2JsakNRVEZNbDg5S0M0WXFSUnc?oc=5",
-        "date": "2026-08-20"
+        "title": "AI 채권 발행 폭탄에 투자자 한계 직면…금리 비상",
+        "source": "글로벌이코노믹",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOV0lPNE92YlhCTUFBQ3JUbE5tREtsMW9EUUNudVNrcDZOM3lScTMwZ0lEYzZ3SWpQemxWaFZDMG1RbXBLUlN1R0oyOHlDc2VIcC1vYW1SakdVcE84cFhVOXd1VmJ2LWRGWURQWGtmUnFRS2VxTlZoQ3ZqSjdHbXU1MW5hYUxteld3?oc=5",
+        "date": "2026-08-22"
       }
     ],
     "고용·노동": [
