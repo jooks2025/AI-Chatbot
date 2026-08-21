@@ -1,24 +1,12 @@
 {
-  "updatedAt": "2026-08-22T04:00+09:00",
+  "updatedAt": "2026-08-22T04:39+09:00",
   "sectors": {
     "조선": [
       {
         "title": "신조선 수주잔량, 4억 GT 돌파",
         "source": "해양통신",
-        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9vSENlNGlXcVZVd2duR1RiY1lCRHBmQ2FkLUFZTEVwaVpwajBLQVBBS3pTQzdmVTFXQlp1SnMweEVUMTl0Y0NGS0dkWE1lV3kxd1hQT1hJdzhuZjh5T2xwdGZDa29LZw?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9oNmhrOWhKeld0bHpjWUVHdWpfd1hpUTE1b1U1ajRKSmJWYzZNQm5HcUZTRlNZeFBscE9ZeW9ScVJ6Z0tLM0lSazRMVEpVZ3RvU3BteDZaV0dSXzVscDhSUA?oc=5",
         "date": "2026-08-21"
-      },
-      {
-        "title": "조선업 ‘수주절벽’ 온다는데...두 국책기관 전망 왜 달랐나",
-        "source": "뉴스톱",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1BTmlQUFU0YW9UckpULU9XUmppeDVKMXp3VGw1TVQ4R0Z6U1dnMVoyOUlGUHV5MS1sXzR0YXYyaTZhcE04bkJyMXp6c0RwMHdXMUEyYVdoZWVLazR2M24xR3hQSnpWREhaZ1F0V0dFcw?oc=5",
-        "date": "2026-07-27"
-      },
-      {
-        "title": "현대重·대우조선, 잇딴 수주낭보 조선업 청신호",
-        "source": "스카이데일리",
-        "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE43SjlhYi1kV3gwcFAyOUNjNU9MdlV5b0x5SWg1NTlQbUI5VjU3bVJ0bnI4Q0t1RkQ2RnFRMll3VTFERDU4T2Z2YXRqQlZkdEswYTZZX0ZnRmFaOU1KOXp0bkVYTmUyQ0tNalNsYjhTWmNKMmFvUWlVWjViNWZXQQ?oc=5",
-        "date": "2026-08-18"
       },
       {
         "title": "조선업 수주 대박, 영암 경제는 썰물",
@@ -27,10 +15,22 @@
         "date": "2026-07-29"
       },
       {
+        "title": "조선업 ‘수주절벽’ 온다는데...두 국책기관 전망 왜 달랐나",
+        "source": "뉴스톱",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1BTmlQUFU0YW9UckpULU9XUmppeDVKMXp3VGw1TVQ4R0Z6U1dnMVoyOUlGUHV5MS1sXzR0YXYyaTZhcE04bkJyMXp6c0RwMHdXMUEyYVdoZWVLazR2M24xR3hQSnpWREhaZ1F0V0dFcw?oc=5",
+        "date": "2026-07-27"
+      },
+      {
         "title": "‘저가 싹쓸이’ 中조선소마저 선별 수주…슬롯 부족에 韓엔 선가 호재 [비즈360]",
         "source": "헤럴드경제",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5UallGRlBvbXdRMTJUSlVhRGx5V3V4bWxDWHpJc096Q0JhWmxhZ1V4QmxuZG5YSzhfcjczdDgwcVV1Q1Q2cFh6bkIwbjB2ZHdrcTlwYVlB?oc=5",
         "date": "2026-08-11"
+      },
+      {
+        "title": "현대重·대우조선, 잇딴 수주낭보 조선업 청신호",
+        "source": "스카이데일리",
+        "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE43SjlhYi1kV3gwcFAyOUNjNU9MdlV5b0x5SWg1NTlQbUI5VjU3bVJ0bnI4Q0t1RkQ2RnFRMll3VTFERDU4T2Z2YXRqQlZkdEswYTZZX0ZnRmFaOU1KOXp0bkVYTmUyQ0tNalNsYjhTWmNKMmFvUWlVWjViNWZXQQ?oc=5",
+        "date": "2026-08-18"
       },
       {
         "title": "지난달 한국 선박 수주 점유율 16%…중국 81%",
@@ -91,28 +91,28 @@
         "date": "2026-08-21"
       },
       {
-        "title": "반도체 파고 속 자율 타결 이룬 SK하이닉스…‘함께 미래’ 노사 동행 새 이정표",
-        "source": "동아일보",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPREFzVTlHMkpMdE5ZdmVpWXhnZzczbWVKdExja1BQQ3FyZFhnaDFBdk5EY3RsUThCZzlOZXotY2VIXzdIbGhJT0FrSnBUNXBoeE5BbVl5VVN1eDBEek94RTFLTmc2d0hCLXF2MV95dnRubUlUXzdBb3lwbU9ubG10UEpjUVZLaGkwT1lYU2x30gFmQVVfeXFMTzFQMlhMRjF0Tlg3Mkt3UlMtYTVOYllwWHBwRTJtaWJySWNlM0l5ajdmNHA4MDdKQVhKY202RnpMY0VsckNyZUlkY3g2Ni16SEs0WlFOOUF2c2Fob0hnMWNlVlM1d3N3?oc=5",
-        "date": "2026-08-21"
-      },
-      {
         "title": "국내 반도체 장비업계 '방긋'...삼성·SK 증설에 수주잔고 2배 급증",
         "source": "지디넷코리아",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9vM0p3WG9fNE1CZ0dma0ZIZTNTNjZjWHo5bGJZSkNSWjAxdTVwWjdOUUlhSTNOQ0Y5aXhEVXZ4SnZRbE9SQ3ZHejZfZU9GM1BwYzZzT1JR?oc=5",
         "date": "2026-08-21"
       },
       {
-        "title": "'반도체 투톱' 주주환원 통했다…코스피 6% 급등",
-        "source": "한국경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBWT1hmMTVYcHVWaDZwOGtqbi0yZ2JXT1oxVkhYakVsX2VXeGczLUppMjRGb3pJRjRRMHREYlhmWnBzUUxmTmE1NWRqSmtlejVOWjdGZGRpUEEyQQ?oc=5",
-        "date": "2026-08-20"
+        "title": "반도체 100조 세수…‘기금’ 만들어 푼다",
+        "source": "문화일보",
+        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBBNHJMMnNMY3VHekJ1RXU1bXBvaFk5OEJsZWlQMll3NmpoMHZwYmNUeTFDd0syQVhjTFhBOF9IN0FkUy1lUVZuTjBFRl8tZFBy?oc=5",
+        "date": "2026-08-21"
       },
       {
-        "title": "삼성전자, 주주환원 '새 역사'…반도체 초호황 과실 국민과 나눈다",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE81ak5SbXBEbmNHSlhTQnh0aU82LWFDT3dJZDNpcE4yZjNCN1kwV19EUzdNcGE2RUE5UXRoekpvY2FFS2szMXR3d25jbW9jeTQ?oc=5",
+        "title": "반도체 추가 세수로 마련될 미래대응기금, 최소 120조원 가능성",
+        "source": "조선일보",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZTFYaXRCcTJpVjBBRV9xQUVZTk1FcmRZTllhblpKREZnSlllaU1PWEFzYjA2U3FzVzBNWUZhSDB6VlpPRFZOdHU3MlJKR3dmT1hmbmFjUUxMNXFlM0tDQm5mTXRFWGFwZmd4a2Z3MVFPWmdkS1ZtdHRCMTlkZzIzQmdmelpTLXRobVN1czBB?oc=5",
         "date": "2026-08-21"
+      },
+      {
+        "title": "반도체 초호황 세수로 ‘150조+α’ 기금 만든다",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE05UV9mMHRZaXhDaF9yV2twVWdVUnZWU3BaelQtZ0QyLUVhQm5KMUVJazhRNnNpQktQRjZNWHkwdy1RT2t0dkNhdXlpY214UVE?oc=5",
+        "date": "2026-08-22"
       }
     ],
     "AI": [
@@ -307,9 +307,9 @@
     ],
     "코인·가상자산": [
       {
-        "title": "[특징주] 가상자산 관련주, 비트코인 7만달러선 돌파에 급등(종합)",
-        "source": "매일경제 마켓",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9zb29nbnljTVRHRnJyYXRvMXFXeWN4WjZBbmdMME1XYVdKMmIxQ0JFc01BMVhyQTlISHlEZXBnbkJJY3dFcjN3dWtrcXlRTEZvdmc?oc=5",
+        "title": "비트코인 다시 1억원 돌파…미 규제완화 기대감에 공매도 청산까지",
+        "source": "경향신문",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9PZ01zTkY3c29mb1FXMkJxZ241bjFvcENMQWtXeHlna2ZGSzIxcWVkTVl3dEVIU0wtLW5ZalVPNUZqel81UnZ5RUFGLW9lZWxZSE5SaFhWay1BUdIBX0FVX3lxTFB3VDYxUFV2eUFwdkZ3UmM5WXlVNlBKSi0wZVRqbnVRWjFyMmtJN2E5VmJGdndWenBkQVF2S1c5N3A3NXF6M1hVV1EzZ3laRWdyYUdHdERMT2kyRDhzakUw?oc=5",
         "date": "2026-08-21"
       },
       {
@@ -331,15 +331,15 @@
         "date": "2026-08-21"
       },
       {
-        "title": "비트코인 다시 1억원 돌파…미 규제완화 기대감에 공매도 청산까지",
-        "source": "경향신문",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9PZ01zTkY3c29mb1FXMkJxZ241bjFvcENMQWtXeHlna2ZGSzIxcWVkTVl3dEVIU0wtLW5ZalVPNUZqel81UnZ5RUFGLW9lZWxZSE5SaFhWay1BUdIBX0FVX3lxTFB3VDYxUFV2eUFwdkZ3UmM5WXlVNlBKSi0wZVRqbnVRWjFyMmtJN2E5VmJGdndWenBkQVF2S1c5N3A3NXF6M1hVV1EzZ3laRWdyYUdHdERMT2kyRDhzakUw?oc=5",
+        "title": "[특징주] 가상자산 관련주, 비트코인 7만달러선 돌파에 장초반 급등",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9JVUJQQ25MYWdsVnVCMTlNQXBVSHhVazRnd2hnVjFGckp3RjZSRUIzSDdSV21WWU92RnRFRW5tblV6WU9pUlU1SE91bVNRNXpRWnVWbw?oc=5",
         "date": "2026-08-21"
       },
       {
-        "title": "비트코인 두 달 만에 1억원 넘었다…10만달러 전망 '고개'",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5BQTJwRUdmVk1iSW5lN0hmU2FMei0wcjVHcTV5Rmtocmp4emw5YmIxN2FXcmphWDNoZUFrZFBvSU54OGtLS0xrdVNOUzA5VlU?oc=5",
+        "title": "두 달 만에 비트코인 1억원 돌파...가상자산 관련주 나란히 급등",
+        "source": "파이낸셜뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5xVFV2TWhrUVQ5dW84Yng1SU5iZHVIeDVtVk41WVJybEdPUFNGV3Y2QXQ1VjB3WFF5dkRlTHBrT1lsNFBvdXljTmR6WXQ5Y0dzSVF3NU85aWRQdw?oc=5",
         "date": "2026-08-21"
       }
     ],
@@ -408,15 +408,15 @@
       },
       {
         "title": "국고채 금리 일제히 상승…다음주 금통위 경계감(종합)",
-        "source": "매일경제 마켓",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBKNkFZTWV6WVlQMkNES3E2cTdtSE5LcS01bklBTmNxMDUtbDNyWk82dVZTTV82aUFqeWw5akprUTVxUXhBSDcxeUIwUHVVLVhyekE?oc=5",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1FcFBBZDBheC16b0F1U21HUEZuNG9LMU5wWVlTZ3hNWV9jWTdRajJ0azBnQUR1b3pxbjNlVVNUQXhLcWp4WG5MYkllTzRWRWs5cmRkT2JQSzYzMEU?oc=5",
         "date": "2026-08-21"
       },
       {
-        "title": "\"AI 채권 올해 이미 280조 원\"…실질금리 상승 압력",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5XX1dULWpTTUFfYTk0WWtlOEwwYU5fRGZmVDUyMjlIY0VzRWhMVnlMRndGRGp1WTF5ZjVRLWFrc0RpV0NmYWc?oc=5",
-        "date": "2026-08-21"
+        "title": "채권 금리 고공 행진, 미 재무부 “국채 매입”…“단기 처방 불과”",
+        "source": "KBS 뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5fRENncmY3Z1JhdllQWTl1UVpNOHQta3hwdWdjNU91OFpGSDdxdE41ZV84Z3N0djNRNHQwd3diNHU0Vy02bGlqQ0d2VTlQRWpCV2JsakNRVEZNbDg5S0M0WXFSUnc?oc=5",
+        "date": "2026-08-20"
       }
     ],
     "고용·노동": [
