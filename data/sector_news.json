@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T21:56+09:00",
+  "updatedAt": "2026-08-22T22:37+09:00",
   "sectors": {
     "조선": [
       {
@@ -79,16 +79,16 @@
     ],
     "반도체": [
       {
+        "title": "삼전 비반도체 \"우리도 1000주 달라\"…현대차는 10년 만에 파업",
+        "source": "JTBC",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5QckRGUVBSOElaajZRVkFRbzFiNFk2aG4zR2Y0UW5aYWhLT3d3WlFRSFJRZUtGQjAxNlpKekJoUmZzUGdTQTQ3OHZ3UjJIekdiTUtOaw?oc=5",
+        "date": "2026-08-21"
+      },
+      {
         "title": "[단독] SK하이닉스, 일본에 반도체 공장 짓는다…미국 압박 거세질 듯",
         "source": "한겨레",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBLTTR1WWtiMFBVejJncXhuZnVyazhJcjhYajZyV1RmTW5KS0lNaml6cXZxMlRRSWdGemZONGJlMXU5cDN6d1lFTE12dkZFSnJhaHVpY2xsV3JETndEVUJ6eDNoOHdoTU1EWlE?oc=5",
         "date": "2026-08-21"
-      },
-      {
-        "title": "광주 이어 일본?… 곳곳에서 한국 메모리 ‘팹’을 탐낸다 [반도체 투자 리포트]",
-        "source": "세계일보",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9LNVlCYnY5M3dTVFJiXzhGVENRMUROLTM4YlBxWTBvUnVpWkt4X1NWWTVfS0FHUDZQMWc4WkFfSV9tUUR2amlsbjUxcWgyVWp5aXo3ckxjTmnSAVRBVV95cUxQVW8tNTRBWDJFcVQ2OURIQmRTeVR2WkEwRDJ3UU5zR01WNHdRYTdnV2xXUmRCNVVvUmQ2VWhkOGhObmp3NG1TWW16dlhQSElXTUhkMGo?oc=5",
-        "date": "2026-08-22"
       },
       {
         "title": "한국거래소, 하이닉스에 '日 반도체 공장' 보도 조회공시 요구",
@@ -97,22 +97,22 @@
         "date": "2026-08-21"
       },
       {
-        "title": "국내 반도체 장비업계 '방긋'...삼성·SK 증설에 수주잔고 2배 급증",
-        "source": "지디넷코리아",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9vM0p3WG9fNE1CZ0dma0ZIZTNTNjZjWHo5bGJZSkNSWjAxdTVwWjdOUUlhSTNOQ0Y5aXhEVXZ4SnZRbE9SQ3ZHejZfZU9GM1BwYzZzT1JR?oc=5",
-        "date": "2026-08-21"
-      },
-      {
-        "title": "GIST-삼성-MIT, Ru에 탄소원자 5개 첨가로 반도체 배선 \"저항 혁명\"",
+        "title": "광주 이어 일본?… 곳곳에서 한국 메모리 ‘팹’을 탐낸다 [반도체 투자 리포트]",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5MX3RVbEJJcTI5ZVNfTUVLY0pWTnloLU9xVWkyQnA3WnlfekVKSjk3b1AxT0xSRm1ZMExYSkVpbWd0TlNqMEh4Sk5tMnhlVEk?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtaGF2TlFxRWhsRklQQWtSQnpxZFIwM0tmZ1lZUFhVN3hWMzZrajhYaUs0OXFQV0VNZ3lIMVpiUUZsbVZ0VDk4bUI4VVBvd0U?oc=5",
         "date": "2026-08-22"
       },
       {
-        "title": "삼전 비반도체 \"우리도 1000주 달라\"…현대차는 10년 만에 파업",
-        "source": "JTBC",
-        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5QckRGUVBSOElaajZRVkFRbzFiNFk2aG4zR2Y0UW5aYWhLT3d3WlFRSFJRZUtGQjAxNlpKekJoUmZzUGdTQTQ3OHZ3UjJIekdiTUtOaw?oc=5",
-        "date": "2026-08-21"
+        "title": "GIST-삼성-MIT, Ru에 탄소원자 5개 첨가로 반도체 배선 \"저항 혁명\"",
+        "source": "지디넷코리아",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5nbVZieGF2RmFUdHNjVVRlbWxnTVJIUXpYRUVWWHV6Uk9xWU1DREM1ekNhUE1RQ05KZlUxbUc4UDBTRTg0MXN5a2JrLWFpRldmcGMyQXh3?oc=5",
+        "date": "2026-08-22"
+      },
+      {
+        "title": "역대급 ‘2조달러 IPO’ 추진 앤트로픽…데이터센터·반도체·전력확보 과제",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBPZUI4MW9saGJjLWNCbTNiY1FCc1hDTklfOE4tTktqNWotWVA2SHRZVW4waVlEbVNncEx2RmxoSTlBMHVjVTZlNHFXdlR0dVE?oc=5",
+        "date": "2026-08-22"
       }
     ],
     "AI": [
@@ -307,22 +307,10 @@
     ],
     "코인·가상자산": [
       {
-        "title": "비트코인 다시 1억원 돌파…미 규제완화 기대감에 공매도 청산까지",
-        "source": "경향신문",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9PZ01zTkY3c29mb1FXMkJxZ241bjFvcENMQWtXeHlna2ZGSzIxcWVkTVl3dEVIU0wtLW5ZalVPNUZqel81UnZ5RUFGLW9lZWxZSE5SaFhWay1BUdIBX0FVX3lxTFB3VDYxUFV2eUFwdkZ3UmM5WXlVNlBKSi0wZVRqbnVRWjFyMmtJN2E5VmJGdndWenBkQVF2S1c5N3A3NXF6M1hVV1EzZ3laRWdyYUdHdERMT2kyRDhzakUw?oc=5",
+        "title": "비트코인, 규제완화법 청신호에 7만불 돌파…역대2위 공매도청산",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBKMWExYnU5ajJuYko3bU8wazZJRGMtcEJZQmk0YTN3eERGcFhkTDc4NTdpMkZhMmM0X29TMmZfcV81QnpoMXpKOXZONU1xbkxCMGdpb245aTQzQXPSAWBBVV95cUxPbHRxTU5wdHM5eUlrY21FQ1duUndEeFJweWdWRjA3Y21WdXlYYmJMeTZENXRuY2pwT3VZMS1NTmVQbHl0WnFjc0cxTFgzc1hNTDZ5ZlA0alU5ZTVzSV80UkI?oc=5",
         "date": "2026-08-21"
-      },
-      {
-        "title": "“비트코인 구조대 드디어 오시나요”…공매도 청산에 1억원 재돌파",
-        "source": "매일경제 마켓",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE80TUczeFp4MXJBLWM1NGRGOGJNbENFUHJTSWRXY2N2ZEtuT1NJZi1Qa215VG1PNzViWHl6OWhXX3lrMzlCT19hdExmNXE0NW5waXc?oc=5",
-        "date": "2026-08-21"
-      },
-      {
-        "title": "비트코인, 두 달 만에 '1억원' 탈환···공매도 청산에 규제완화 기대감 영향",
-        "source": "네이트",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1ubURYQmpCNHZqUE5NdVJaSGRYYUZULU8tM3NqaWNPd01LUzFYX2N6dTJva3R2ZTRPUF95QWswS3pTV3RzVktRakF0VnFvcWtKY0Q0?oc=5",
-        "date": "2026-08-22"
       },
       {
         "title": "비트코인 1억 돌파…비트플래닛 등 가상자산株 동반 급등",
@@ -341,6 +329,18 @@
         "source": "마켓인",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBUdi0zUEJ3OGE4dEQ1d1JqYjFnRUdSTm1KNmQzVFlobXdYRDV5eFVyUkQyZ1I0MU1sZExuaUFnMEZUSnB0eDByOEFXME1aSGtDMUZPNmI3ZjBoREx3cjI4X0ZXaWFIWTRhNWRuemZta29kQXM?oc=5",
         "date": "2026-08-22"
+      },
+      {
+        "title": "SEC와 맞섰던 리플, 새 가상자산 태스크포스 합류…XRP 두 자릿수 급등",
+        "source": "Investing.com 한국어",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5JR3ByVVpiTlg4WHdVQ1RrWjhBMXdUOUMyVDdNU0h0RXRFTXVKLXdUSVBmcGQ3b2xMY2lUaTBURWplQ1E0YlV4ajNRRVUxTVJZWmlVaXZIdFUzSF9RaVY5Zk1KdGkyYmdaNWs3d1I3LTdlTDA?oc=5",
+        "date": "2026-08-20"
+      },
+      {
+        "title": "[특징주] 가상자산 관련주, 비트코인 7만달러선 돌파에 장초반 급등",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE85X2RJT0JDdGdyc0lyX1ZsVkYwY2k1eFRlaXdHczAyTXFIRnNSY3czZXZad1lsbk1sX2RKZ0NwV2NOMEkwb2JRcGtoZDh3NnM?oc=5",
+        "date": "2026-08-21"
       }
     ],
     "세계경제": [
