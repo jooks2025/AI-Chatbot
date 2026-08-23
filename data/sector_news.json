@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T19:30+09:00",
+  "updatedAt": "2026-08-23T19:55+09:00",
   "sectors": {
     "조선": [
       {
@@ -79,27 +79,9 @@
     ],
     "반도체": [
       {
-        "title": "삼성전자, 3분기에만 30조 현금배당… 반도체 투자심리 회복 주목",
-        "source": "동아일보",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE85VkhNWE9tS1FpSmpIRERQakRXRy1fMHZrd1gtc29nRkEwMUt5TDc5TEdOT21uaHpTNXNudVdEbjRpX0xOWm4tM2Z6NW5OM3otVVFmSEx0c0tXVEp6OG9GSDY0RXpDa09GdlBpVWg0ZE9mYV9oeXfSAWZBVV95cUxPdEJLSDNoLUZBVDRMSlN0bkZzeFFCS1RpTml0bHNTaHcwcmNJY244MUlTUkZ0cVR1Rk5rZzlURldWNDBFejZaUVlDX2JWdGF5MVN4M3ZfQ2E2U1dZLVVCbUd0VWFhNWc?oc=5",
-        "date": "2026-08-22"
-      },
-      {
         "title": "\"삼성 뼈아픈 상황 될 수도\"…반도체 전문가 경고한 이유 [강경주의 테크X]",
         "source": "한국경제",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE55dUpqWWZKdDJ5eUxPZ2praDQzSkY5ZkFmbmdmZ2FIY29PWFBUV1U2RVRSTnUtZ3BkbGNQbnJoY0NXNUhOcVNSZThWZmJhVGNUNmctLWVYWjNOZw?oc=5",
-        "date": "2026-08-23"
-      },
-      {
-        "title": "삼성·SK '50% 환원'인데…미국 반도체사는 왜 100%?",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1QVllrYU9GODM4M0lYZ01sSTlzX2NwYlpWRW03ZGpHQlBaV2gtc2xUQzhlRW0ya1AxMnU1ZUJDaURmSlUzQVkya0RzbUpLSUU?oc=5",
-        "date": "2026-08-23"
-      },
-      {
-        "title": "전남광주, 지진에도 멈추지 않는 '반도체'…공장 넘어 전력·물류 안전망 갖춰야",
-        "source": "광주in",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5MYjh5dE45UkFKNDBKVHA1cGotSHZ1QmUxMUg0YkN6alpWaXlvT2dRYUhwWTN3NFNBT1U1cG8zRVpIRFhFMmtVVk90QjBJSFdiV2JPY1JmMzVlNmNweGlHcnIwX0NsY25kX0Fpag?oc=5",
         "date": "2026-08-23"
       },
       {
@@ -109,10 +91,28 @@
         "date": "2026-08-21"
       },
       {
-        "title": "광주 이어 일본?… 곳곳에서 한국 메모리 ‘팹’을 탐낸다 [반도체 투자 리포트]",
+        "title": "반도체·석유제품 동시 부진… 인천 수출 증가세 0.3% 둔화",
+        "source": "경인일보",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5sT20tWmQwQnFaeEtFTXpCQXRVLTZMYm1zYzRCRTI4anYtZDFWdnB3R2pwZVZ1VVBCOURIaEdIMWNKRjhiWHJPaWVQbV84cFBhT3c?oc=5",
+        "date": "2026-08-23"
+      },
+      {
+        "title": "반도체 수출 3배 폭증…8월 1~20일 수출 역대 최대",
+        "source": "경향신문",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1kWW9RZUkyUzB0Z1dJRmZVZmJwdnMtXzVtSHFSZlllb3RrNm5WUkQzcDJmY0xKd3ZUeVh2NHVNT2Mzby1ETnFFc004bFJfSloxb2RSU3J4TW9CQdIBX0FVX3lxTE5kenQ1QVJDaXVORS10S2dHdW9Qa2VLdld3aGhVMk5WZV9HdTNacGVSTFVmZURmWDd0SDc1NWdsU05FNk8zSXU4V1lXNlptN3RreFJqQnpHN1pPMVdsRFBJ?oc=5",
+        "date": "2026-08-21"
+      },
+      {
+        "title": "라면·의료기기·메모리반도체…다양한 효자품목에 원주 수출 '역대 최대'",
+        "source": "뉴스1",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9RNmZnUzV6TDdSNXlrMURFck91Mzg3N0pVZ2VYMUtqOGlJZHRhTm05TEZ1TF9wYW1JcTNsc0ZYZW05eC0yYmlBbVpleUVCZi1EWDE5d9IBWkFVX3lxTE5NdjdYS3c4VzhtcHFGTXI4NFh6WHRvdnBNZ3k3aVJxSXJVcGU1T0VhTHdyeDlCdFlRdXg4ZHNHdnYxRFVwb0dUNWN6alJwNUprWG5KTXFLSzVBdw?oc=5",
+        "date": "2026-08-23"
+      },
+      {
+        "title": "반도체 팹 품은 서남권 꿈꾼다…전남광주 경쟁력은 ‘물·전기·땅’",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1pR0M4MERpN1BGLWkxUzRqQUgzQThaUTNUSWdEd2FockMtT3l2TF9vcFhDdjIyZWNiMG5XTGthM05hZGlsUnc?oc=5",
-        "date": "2026-08-22"
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE02Q0Vsb0tBZHNrRTNHZU1aQkVUbTZlZHV1eDBRc09wUXlGaEd2WVV2ODhvYWtLR3d4OWxQYkJwV1E3MWFHSElrcEhOWmVHa3c?oc=5",
+        "date": "2026-08-23"
       }
     ],
     "AI": [
@@ -135,15 +135,15 @@
         "date": "2026-08-23"
       },
       {
-        "title": "AI 챗봇, 인간 토론 챔피언보다 설득 잘한다",
-        "source": "동아사이언스",
-        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE13UHhJcGMyZjJXYmw3TzdYNGpwVG5taFRQb2EyTVdZLTFxeDBfNVM2T3BadUpXc210M0tOWHhzTWdEV2N4N2dHWkxmdU8yMFdhWWF3dA?oc=5",
-        "date": "2026-08-23"
-      },
-      {
         "title": "오픈AI, 최고급 'GPT-5.6 솔' 가격 한시 인하…3개월간 20%↓",
         "source": "전자신문",
         "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5FWG9WMkdEbHlTb3JPWWx1bWgwT2wzZWtmWFV1MjNya1ZxUmktOTV0MU9mWWJKRXVqakpEb3dVaWpONjVCQjZaNG9hdjhxQQ?oc=5",
+        "date": "2026-08-23"
+      },
+      {
+        "title": "AI 챗봇, 인간 토론 챔피언보다 설득 잘한다",
+        "source": "동아사이언스",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE13UHhJcGMyZjJXYmw3TzdYNGpwVG5taFRQb2EyTVdZLTFxeDBfNVM2T3BadUpXc210M0tOWHhzTWdEV2N4N2dHWkxmdU8yMFdhWWF3dA?oc=5",
         "date": "2026-08-23"
       },
       {
@@ -217,16 +217,16 @@
         "date": "2026-08-21"
       },
       {
-        "title": "빠르게 늘어나는 퇴직연금…채권시장 새 수급처 될까",
-        "source": "보험매일",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB4NzdfMlNzdDVMVmlBc0gwZGViQjdpSEg2MWJBVGVRbXNmcUhER3RyalBuM1g2VHY0dGxaQ1ZnU0FUcDd2Rl9BS3BwYUJfZDNueDdBREJTX3ZocUhqNThDYVpGOVFSRUVz?oc=5",
-        "date": "2026-08-23"
-      },
-      {
         "title": "NH투자증권 “한국금융지주, KDB생명 인수 우협 선정...시너지 창출”",
         "source": "매일경제 마켓",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93aFZISnU1TGJpNzdpYmN0dFpxSnpWRjlKV0ZGLTV2OFczQmdBS2diZU9GQ0hvMHY2dFRvbEVrY0xYd0xSUTJ6aVV3cGJ4YTRVNFE?oc=5",
         "date": "2026-08-21"
+      },
+      {
+        "title": "빠르게 늘어나는 퇴직연금…채권시장 새 수급처 될까",
+        "source": "보험매일",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB4NzdfMlNzdDVMVmlBc0gwZGViQjdpSEg2MWJBVGVRbXNmcUhER3RyalBuM1g2VHY0dGxaQ1ZnU0FUcDd2Rl9BS3BwYUJfZDNueDdBREJTX3ZocUhqNThDYVpGOVFSRUVz?oc=5",
+        "date": "2026-08-23"
       }
     ],
     "헬스케어": [
@@ -407,16 +407,16 @@
         "date": "2026-08-21"
       },
       {
-        "title": "한은 '백투백 인상' 하나…美국채 5.3%에 채권시장 긴장",
-        "source": "뉴스투데이",
-        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBqZEZFMUFZSV9IbEY0Q3ZWVHhmdDgwTERnbGt3ajBpRWxjcGdmbzliMTlad0NqRmJKVU9Sb0Zzb0pncllqSFpkbzlLV0lCcWxlOTJIQjNNVk1qdWJzUnc?oc=5",
-        "date": "2026-08-23"
-      },
-      {
         "title": "채권 금리 고공 행진, 미 재무부 “국채 매입”…“단기 처방 불과”",
         "source": "KBS 뉴스",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5fRENncmY3Z1JhdllQWTl1UVpNOHQta3hwdWdjNU91OFpGSDdxdE41ZV84Z3N0djNRNHQwd3diNHU0Vy02bGlqQ0d2VTlQRWpCV2JsakNRVEZNbDg5S0M0WXFSUnc?oc=5",
         "date": "2026-08-20"
+      },
+      {
+        "title": "한은 '백투백 인상' 하나…美국채 5.3%에 채권시장 긴장",
+        "source": "뉴스투데이",
+        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBqZEZFMUFZSV9IbEY0Q3ZWVHhmdDgwTERnbGt3ajBpRWxjcGdmbzliMTlad0NqRmJKVU9Sb0Zzb0pncllqSFpkbzlLV0lCcWxlOTJIQjNNVk1qdWJzUnc?oc=5",
+        "date": "2026-08-23"
       }
     ],
     "고용·노동": [
