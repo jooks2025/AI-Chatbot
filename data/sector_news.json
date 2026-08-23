@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T04:58+09:00",
+  "updatedAt": "2026-08-24T05:33+09:00",
   "sectors": {
     "조선": [
       {
@@ -79,21 +79,21 @@
     ],
     "반도체": [
       {
-        "title": "삼성전자, 3분기에만 30조 현금배당… 반도체 투자심리 회복 주목",
-        "source": "동아일보",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE85VkhNWE9tS1FpSmpIRERQakRXRy1fMHZrd1gtc29nRkEwMUt5TDc5TEdOT21uaHpTNXNudVdEbjRpX0xOWm4tM2Z6NW5OM3otVVFmSEx0c0tXVEp6OG9GSDY0RXpDa09GdlBpVWg0ZE9mYV9oeXfSAWZBVV95cUxPdEJLSDNoLUZBVDRMSlN0bkZzeFFCS1RpTml0bHNTaHcwcmNJY244MUlTUkZ0cVR1Rk5rZzlURldWNDBFejZaUVlDX2JWdGF5MVN4M3ZfQ2E2U1dZLVVCbUd0VWFhNWc?oc=5",
-        "date": "2026-08-22"
-      },
-      {
-        "title": "\"삼성 뼈아픈 상황 될 수도\"…반도체 전문가 경고한 이유 [강경주의 테크X]",
-        "source": "한국경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE55dUpqWWZKdDJ5eUxPZ2praDQzSkY5ZkFmbmdmZ2FIY29PWFBUV1U2RVRSTnUtZ3BkbGNQbnJoY0NXNUhOcVNSZThWZmJhVGNUNmctLWVYWjNOZw?oc=5",
-        "date": "2026-08-23"
+        "title": "110조 다음은...삼성 FCF 50% 환원 주목 [K반도체 150조의 승부]",
+        "source": "이투데이",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9Ccy05a00tOWVpRFdDVV9aTFlxMVZfNEFzaUNPcTRSYjU4akRmbDJPWVZzN0ZsU3NFYmkwdy01V2dybk53S2JhR2lYemU4YVBUa3FNUA?oc=5",
+        "date": "2026-08-24"
       },
       {
         "title": "삼성·SK '50% 환원'인데…미국 반도체사는 왜 100%?",
         "source": "v.daum.net",
         "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1QVllrYU9GODM4M0lYZ01sSTlzX2NwYlpWRW03ZGpHQlBaV2gtc2xUQzhlRW0ya1AxMnU1ZUJDaURmSlUzQVkya0RzbUpLSUU?oc=5",
+        "date": "2026-08-23"
+      },
+      {
+        "title": "\"삼성 뼈아픈 상황 될 수도\"…반도체 전문가 경고한 이유 [강경주의 테크X]",
+        "source": "한국경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE55dUpqWWZKdDJ5eUxPZ2praDQzSkY5ZkFmbmdmZ2FIY29PWFBUV1U2RVRSTnUtZ3BkbGNQbnJoY0NXNUhOcVNSZThWZmJhVGNUNmctLWVYWjNOZw?oc=5",
         "date": "2026-08-23"
       },
       {
@@ -103,9 +103,9 @@
         "date": "2026-08-23"
       },
       {
-        "title": "‘반도체 사이클’ 꺼지면 위기···미래대응기금, 재원 지속성과 운용 투명성 과제",
+        "title": "'800조＋α' 슈퍼예산 곧 발표…반도체發 세수 호조 타고 투자 늘린다",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBwVEZCX2V0YklQNndlNV8zYkx3V2hIbXdKZTliTVNxc3hGQkI0ZDl2MlJKazNWOF95emhkVC1adVJOc214WlRNSktGM1JPUkk?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFAtZ3R4TC13cExYT2pONTEtVG5aOU9DUnhNOHU1MlQwOUJqRzZoRjNvRm9JYkNrdzJfTDhER0lfYmhPT0FRZXc?oc=5",
         "date": "2026-08-23"
       },
       {
@@ -116,6 +116,12 @@
       }
     ],
     "AI": [
+      {
+        "title": "설계된 불안, AI 업무 자동화 [이서윤의 인공지능&인권지능]",
+        "source": "한겨레",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB0R3Z2WFVGZ0c1alROaWdJZEZlSzl4RmF6NGc0U0p1NmsyckREVjdNUVdOZGYxZ3VtR19mNEtkTmJUcVljV015d2pPb19qdjN3QmVfSVpMQlF6T2NLaU9BY0RTRVE2QQ?oc=5",
+        "date": "2026-08-24"
+      },
       {
         "title": "학교 파고든 AI···전북 “생기부 활용 전면 배제”",
         "source": "경향신문",
@@ -129,6 +135,12 @@
         "date": "2026-08-24"
       },
       {
+        "title": "주별 규제 안된다더니…오픈AI, 캘리포니아에 AI규제 강화 요구",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5DRUpiTGRJaEJCeXZSRTNFak43RVNlOXFsWXFkQVV6SkJQZGNrR25GZDA1dDl2UnB5SUFJNExaOXlDVHhhVTlpTlZ2TGZyUFYyMDV1TzU3dWpCZW_SAWBBVV95cUxNcnRMTGpGYUtIMl9qcWFMV2JORk5jdXRBQ3JTb0lIZEJIT3VpOFRQWURETkY3MHhYbi1WeTNVYlg4UXlSd3Vvay1HMUEyS2hlWFJjYzdiOXhKRkVWMWJpbjM?oc=5",
+        "date": "2026-08-24"
+      },
+      {
         "title": "중국은 실생활 경험을 통해 어린이들이 인공지능에 더 가까워질 수 있도록 돕고 있습니다.",
         "source": "Vietnam.vn",
         "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMnpGRUNBOHgtYlQ3OWRQeFY2VnNUSnp0cEI2b0RINUVFamdCcktNQnlvOFY1Q29oWTNicWlfblNHVW9LUnpHQlprQS1wd1k0QWgxUWNqemI4NXJzbUdZdTFpN19NcVZob0JIU2phWFUxcnJkaW14T2RwTVZIbmJ2TVVnNWJQNnhLQVo1anctbFNzaEk?oc=5",
@@ -139,25 +151,25 @@
         "source": "한국방송뉴스",
         "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9VTmZSelBFOFJHZWNRUS1Fa3VpQWRLTmZBUFRycjFrc0VTZ3J0R1R3RklaZzFXRjJIS2pETmdyWUs0dG55RFZyS1BhUk5XeUEyQ0JOY3lFNVdjYlhVa3c?oc=5",
         "date": "2026-08-24"
-      },
-      {
-        "title": "AI여비몬·업무자동화시스템 이어 ‘AI분석도우미’ 자체 개발 전남광주통합특별시, ‘인공지능·데이터 행정 혁신’은 계속된다",
-        "source": "일등방송",
-        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdHlzajdxY3lJdUxxVC1wQXM4eVcxQ3NXa2dLOFdpM0xMWDZhNk1jYzRlNy02TE56U1ZwWmpmLWNTMVo3WHVpOTlma09uUXpVbEtTUHo1OVhYQmRnTDk4SmNmUUtBZ3dndUoxV0JXOEUzVlZrcEdLWUU2VUQtN0xGdWJZN3ZSSDFPUmpHOUVibFBMMnF6NzRUdVM3amxyeEk?oc=5",
-        "date": "2026-08-23"
-      },
-      {
-        "title": "공교육 파고든 인공지능, '만능 열쇠' 될 수 있을까",
-        "source": "대한민국교육신문",
-        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE40N2lyT0ZNRXl3Zl8xMTdkWlJ3WHBTbzdJVVFvTGFhaUpEMG5MdE42ZXZHVGpFOEFNMWQ2OGtRdmtPS1dOYnM2Z253TmpoMFZGUWZiS2FaVUZ0VzM3Q3RMUUxGdw?oc=5",
-        "date": "2026-08-24"
       }
     ],
     "에너지": [
       {
+        "title": "메가특구發 전력수요 급증 … 원전 19기 생산량 추가로 필요",
+        "source": "매일경제",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9yQVNGU3ZWN0NQRno2RVJLMTY0dkhqRmtSUzB2WG1TV1dqQXpCTnBUNWZjejdBTXFKSXd6bGZVVWUwQzhfblcwbkJ0UFRzc05aVnZVZw?oc=5",
+        "date": "2026-08-20"
+      },
+      {
         "title": "\"멕시코 1년 치 전기를 버렸다고?\"…친환경 1위 중국의 황당한 역설[시사쇼]",
         "source": "v.daum.net",
         "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBMWTJKN2JEQlFYa3dzTm5JMWtFLXo1NzlGVWU4V290LUxQdExBV1ZSSVptZHNnUVotbHI5NFpxZkthWlAtNEE?oc=5",
+        "date": "2026-08-23"
+      },
+      {
+        "title": "애써 늘린 재생에너지 버려져…‘전력망 문제’ 중국서 해법 찾는다",
+        "source": "한겨레",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE4xTzVSYmR2QlJVNDJzb2RqRFQ0Sk8zU2MyMlB0RmxLVzRNYmM2eWtmYk82NVNVQUJTS2NTeWpYdVBKSndZOVQ5LWpmaHRyNHpwRDZ6ZlFLeC15RDY0ZWJkSElycG1xS1hUU09Cdjh4SV9sUQ?oc=5",
         "date": "2026-08-23"
       },
       {
@@ -173,21 +185,9 @@
         "date": "2026-08-22"
       },
       {
-        "title": "애써 늘린 재생에너지 버려져…‘전력망 문제’ 중국서 해법 찾는다",
-        "source": "한겨레",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE4xTzVSYmR2QlJVNDJzb2RqRFQ0Sk8zU2MyMlB0RmxLVzRNYmM2eWtmYk82NVNVQUJTS2NTeWpYdVBKSndZOVQ5LWpmaHRyNHpwRDZ6ZlFLeC15RDY0ZWJkSElycG1xS1hUU09Cdjh4SV9sUQ?oc=5",
-        "date": "2026-08-23"
-      },
-      {
         "title": "27GW 전력 공백 어떻게 메우나…원전·SMR·재생에너지 믹스 관건",
         "source": "뉴스핌",
         "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1Ca3RtdWZzYVVTLUZwbEVFSDQ0N0J4eFN3VGZxU25NS1BVY19MU0t2M0tGMjJYNXVwSlhKMGhYMmhUcEFkZzdOVElSaENnVzVsV2pWSFItX1lUdHpE?oc=5",
-        "date": "2026-08-21"
-      },
-      {
-        "title": "메가 프로젝트가 바꾼 전력수요 전망…2040년 최대전력 165GW",
-        "source": "데일리한국",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5jYmtYRVU5QXJSQ2JDbGJqdlNhT3VOVUxzd0dDeG1SM2p4MkFyNk01X3dKM2xPLXhUOHJKcURUdnprb2FvRTZFR3A4TGNwMjg1Vm5FcFpqUWZ3RjFTV0k0ckV3QmlYQ0w0LVQ3eTY5MNIBc0FVX3lxTE00MVF2aWUybEZGc2NzRjdCSmp3dlFkNEc5cjdRNU1jR2lxaWFVX1NhRHRCOERqbk1aTUowVlRtMm9yOXRNQVliN3pyaDhXMkZZNl95WVpvS1V4Uzd4RFAyT2xCSlp2U2g2YThzZHcyMDlQWUE?oc=5",
         "date": "2026-08-21"
       }
     ],
@@ -211,16 +211,16 @@
         "date": "2026-08-20"
       },
       {
-        "title": "증시 불안에 안전자산으로…달러·금·예금으로 몰렸다",
-        "source": "남도일보",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4tZGpCU1h1UGdFVUlkdEE5djBTTGJSSWtTYkhPY2x3a282aXpMenRvR3BsbjlHX21xTzNiSE9XbzBzejZqYl81N1JzWnVhX0tZemJPc0h4dlF5bUJiYVA1VzZUM1IxZXcxTTMzT9IBcEFVX3lxTE04UVNLMENEc0NzWG4yRHJ3MDd1bHhiX1RyX1lsR1Z4VGtzVkllMlRtb00yU0tPU3ZPQlFyR3JyQ2hKZHZ6clNvWDNtdldDWkpyVk9idklZNmhfdGI4OXZCLUpNeFJ4Uzc0bm5adV9CQTU?oc=5",
-        "date": "2026-08-23"
-      },
-      {
         "title": "키움증권, 고등학생 금융경제 교육 '키움드리머 6기' 시작 - 머니투데이",
         "source": "머니투데이",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Vd3FPVVNxQzE1NS1yN1NXWWJIVXJ4bEtmWkx6X05NaU0xMFV4R2VYb251LWRLci1wOGZXNTVtYVBoLS1QbFd1NWFxVUwtSFZRaFd6SWFkZlppRGJPWEdOaUhRektjaVBr0gFuQVVfeXFMUF9hLVZMallWNHpMT2FNXzJfOXBuV0t5YUhHZjVwekM3RzBZeXlySktJdFVZakR6Vjl5NnlzSjYtZE0xVXNpbWRRMlBGcmN5cmtJR0NONHB6ZnRtSlo0aUJaYkhMNVNWMGJvNk55LUE?oc=5",
         "date": "2026-08-21"
+      },
+      {
+        "title": "증시 불안에 안전자산으로…달러·금·예금으로 몰렸다",
+        "source": "남도일보",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4tZGpCU1h1UGdFVUlkdEE5djBTTGJSSWtTYkhPY2x3a282aXpMenRvR3BsbjlHX21xTzNiSE9XbzBzejZqYl81N1JzWnVhX0tZemJPc0h4dlF5bUJiYVA1VzZUM1IxZXcxTTMzT9IBcEFVX3lxTE04UVNLMENEc0NzWG4yRHJ3MDd1bHhiX1RyX1lsR1Z4VGtzVkllMlRtb00yU0tPU3ZPQlFyR3JyQ2hKZHZ6clNvWDNtdldDWkpyVk9idklZNmhfdGI4OXZCLUpNeFJ4Uzc0bm5adV9CQTU?oc=5",
+        "date": "2026-08-23"
       },
       {
         "title": "NH투자증권 “한국금융지주, KDB생명 인수 우협 선정...시너지 창출”",
@@ -389,6 +389,12 @@
         "date": "2026-08-23"
       },
       {
+        "title": "AI가 보내온 ‘채권발작’ 청구서 … 누가, 무엇으로 갚나",
+        "source": "매일경제",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBmeWExcENwTUl0YkJ5aG05Mm9jcmtjcWctdVJ6S1pCYk80Nkt5cE42M1FaNVd5cndqSFI4UjZxT2RCdHp3UVhSYkZfNUZ3YWZXMkE?oc=5",
+        "date": "2026-08-24"
+      },
+      {
         "title": "[김종인] 미국 장기 국채금리 급등…원인과 전망은",
         "source": "지디넷코리아",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1LSTVlaUFuNG9EUTRrSVZUMFdMLUFmTlRrY2JkRUxlSHk2a0VkQUlleVZzYTFsdV84aG8yVGRVay0xX2tXYjJTLVQyelJQY3RzMVVTQ1dB?oc=5",
@@ -411,12 +417,6 @@
         "source": "네이트",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE40ZVNDR0p5dWlJdVg2VEtaNmVvU3l4ZVV2M0Vja0lUOFUzREhoMGpfbHpaRFpKNm1OZnBOLURKc0RIU1Z5cm5vd2tJZV83amtlYkFoRGRFZlVDcG0tMkZnVTdEQUw1SFJBeXc?oc=5",
         "date": "2026-08-24"
-      },
-      {
-        "title": "채권 금리 고공 행진, 미 재무부 “국채 매입”…“단기 처방 불과”",
-        "source": "KBS 뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBZcEhaQnR2M2ZDQkE5emFtbE5GUFlwTHRlSXdpOVpUeFJzejNORWZWOGRiMVVaY3N3M0ZtaFNUQW1ob040R2R0c2MzUTEtUFczWUlxdFBoN29IWkU?oc=5",
-        "date": "2026-08-20"
       }
     ],
     "고용·노동": [
