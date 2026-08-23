@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T14:35+09:00",
+  "updatedAt": "2026-08-23T15:03+09:00",
   "sectors": {
     "조선": [
       {
@@ -53,15 +53,9 @@
         "date": "2026-08-19"
       },
       {
-        "title": "위기의 건설업… 5년간 한계기업 약 3배 ‘폭증’",
-        "source": "한국건설신문",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE91U0ZlZzF5RHdfcUJJTDFqTWFzV2xBaERhdVAwN3FhTC1aVXduaG43Q1Q0LWhSWWxqU1FUdC1iTkNaOHgtYXFQSVpvZEFub2gwR0IxbGFSNURMSEpEYnNWRnJ5bnJjQU9IRUFF?oc=5",
-        "date": "2026-08-19"
-      },
-      {
         "title": "[같이경제] ‘침체의 늪’ 건설업…지역 건설 생태계 ‘흔들’",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBrejU3NlFXZEJsOXhxNVNPYnMxdVdnRXZfdXo5UXFua0dLSmJDUTVCc2I3Nk01QkIwRF9oRTM2ZWRwTUxMUmc?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE05Mk9VWng4cXZWdTcza0dOZ2xpLUZFY29EV2JBemZYeGZMbnJDUjhyeE5VUTlGeFI4d1NxZWdETHkyNDcyVzNtTG05QkJZR3c?oc=5",
         "date": "2026-08-20"
       },
       {
@@ -75,9 +69,21 @@
         "source": "아이뉴스24",
         "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5QdFBIX3FjdU9xUmw3RHZSdEtFbGJnOXo1M0VwWXhWOXFIOHBZZW5aMHFHZzJoMThCWDRicWZlcFF4SUI0aGVkeFVWUQ?oc=5",
         "date": "2026-08-20"
+      },
+      {
+        "title": "수주 줄고 공사비 오르고…지역 건설업 줄폐업",
+        "source": "KBS 뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1KcmF3eHpVa3MwMF9hbmlxLWF3bEU5UGtBRmxnUFU2MncxSnBIU0oyLXluS0NxdmNRX2JhcUt5SXJrZUtxYktkUXJBb2MyTnVtUlJsaWR2QzVCeG5MSlZYdmwxRzQzQQ?oc=5",
+        "date": "2026-08-17"
       }
     ],
     "반도체": [
+      {
+        "title": "SK하이닉스 “일본 반도체 공장 건설 추진 ‘미확정’···다양한 방안 검토 중”",
+        "source": "경향신문",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBhMVdWVy1xUEpTTGI4aHY1bVZPTzhsNnRhWVplT0loSGloV1lmX2dlRjU0Z2Njc29HeXQ2YWVkYXM3ZFgzSGljRUsyeEFQcEs1ZHlnQ3doMnZDZ9IBX0FVX3lxTFBtalZ4VWlxVmhuMzlfRlc1ZFdYcTRJZjE3QzRkeHVvVnN6bmRCNEd5WDUyNDFzRkt6bHFkVUlhQjNpUU9pUVl4V0kyWmViZHVwYnlkbm9IZXFtSFBSVHR3?oc=5",
+        "date": "2026-08-21"
+      },
       {
         "title": "[단독] SK하이닉스, 일본에 반도체 공장 짓는다…미국 압박 거세질 듯",
         "source": "한겨레",
@@ -91,27 +97,21 @@
         "date": "2026-08-22"
       },
       {
-        "title": "SK하이닉스 “일본 반도체 공장 건설 추진 ‘미확정’···다양한 방안 검토 중”",
-        "source": "경향신문",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBhMVdWVy1xUEpTTGI4aHY1bVZPTzhsNnRhWVplT0loSGloV1lmX2dlRjU0Z2Njc29HeXQ2YWVkYXM3ZFgzSGljRUsyeEFQcEs1ZHlnQ3doMnZDZ9IBX0FVX3lxTFBtalZ4VWlxVmhuMzlfRlc1ZFdYcTRJZjE3QzRkeHVvVnN6bmRCNEd5WDUyNDFzRkt6bHFkVUlhQjNpUU9pUVl4V0kyWmViZHVwYnlkbm9IZXFtSFBSVHR3?oc=5",
-        "date": "2026-08-21"
-      },
-      {
         "title": "삼전 비반도체 \"우리도 1000주 달라\"…현대차는 10년 만에 파업",
         "source": "JTBC",
         "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5QckRGUVBSOElaajZRVkFRbzFiNFk2aG4zR2Y0UW5aYWhLT3d3WlFRSFJRZUtGQjAxNlpKekJoUmZzUGdTQTQ3OHZ3UjJIekdiTUtOaw?oc=5",
         "date": "2026-08-21"
       },
       {
-        "title": "김용범, 광주 반도체 부지 방문 예정…국가산단 확대 주목(종합)",
-        "source": "연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1WWGNDXzVaS1ZIVm9DakhORS1faG5QSko4T2lFNkVXaHlRX0dxV2twaGVTaVZKZzdRM0dDTWRGeU5fYXVraXUySkwxVzIxZ0kwZUliNlB0ZUZxeVHSAWBBVV95cUxPMy1CdDhybHhuUGZUNzBhSklKODVZTFRWcEdZeGpEWk9abm13S0JqSjJvTEVOSUlGVDBrYy04YjE4X2p6dUtyYUxXa0stdG9qVjJYV0NpVXlHWVRIdHZKZGE?oc=5",
-        "date": "2026-08-21"
+        "title": "낸드메모리 ETF도 나온다...영역 넓히는 AI반도체 ETF - 머니투데이",
+        "source": "머니투데이",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ENERucnRVbGlnWi13dmI2OHhUUFBBX3JkdE5FNnpOaEdqOEI1OGtWdU5qQXk1ZTNTakZodTRqcWdUMldhUUhPTk1VVG9kVGZXa3VDZFdHdWpaRHBzTDl2bkRUczZrVUxL0gFuQVVfeXFMTmZSVTF5WUhMRnNpSi04THVqbjlOVE5PX2ROQ19tS3Z1dU5Qc1BsN252ZjNPTlJHN3doZGhpNWh1M0NvQkZ2alhWa3c2U2Fxb3dzZm1wcWx1TnFSV0Vkb2VBdHpWUF80S1lCWjRteUE?oc=5",
+        "date": "2026-08-23"
       },
       {
-        "title": "전남광주 반도체 팹 유치 본격화…“용수·전력·부지가 경쟁력”",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1GTURrZ0Y5eUFid0hEemhLTUNkakVwMXJFbEQ2MHp4NE5oMm9UNnlBR21fb3VzeG8xaGM0RWZ2Sk5DNUdvcWo2T2FOYmUtREU?oc=5",
+        "title": "\"삼성 뼈아픈 상황 될 수도\"…반도체 전문가 경고한 이유 [강경주의 테크X]",
+        "source": "한국경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE55dUpqWWZKdDJ5eUxPZ2praDQzSkY5ZkFmbmdmZ2FIY29PWFBUV1U2RVRSTnUtZ3BkbGNQbnJoY0NXNUhOcVNSZThWZmJhVGNUNmctLWVYWjNOZw?oc=5",
         "date": "2026-08-23"
       }
     ],
@@ -167,7 +167,7 @@
         "date": "2026-08-21"
       },
       {
-        "title": "멕시코 1년치 전력 그대로 버린 中 태양광 발전소[시사쇼]",
+        "title": "\"멕시코 1년 치 전기를 버렸다고?\"…친환경 1위 중국의 황당한 역설[시사쇼]",
         "source": "v.daum.net",
         "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoQ1FEYWlIeEtiRGpodmdQdkxLQVd4SnVrSE1GRzVQMEo0Vm52NzRlY1FvSVQySElyN0I4YzZVUmdzMVU5XzJBcjVSaDZhMVk?oc=5",
         "date": "2026-08-23"
@@ -261,10 +261,10 @@
         "date": "2026-08-19"
       },
       {
-        "title": "일동제약, 나인앤컴퍼니와 뷰티·헬스케어 합작법인 설립 MOU 체결",
-        "source": "팜뉴스",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9KV2JqVWZVQzQwR0c2SVpQVndYZVVzbUpIOE9XbW9uUUp3dTZnSzZNMUs3aVQ2LWJQWU9QNDFub2V3TnZGQmw2anNtWFJQcUtLdWtjdVhpQzg3c2NNTnhrQzBDX0FiQXZXb3BjdQ?oc=5",
-        "date": "2026-08-20"
+        "title": "“보조 수단 넘어선 디지털 헬스케어, 의료제도 개편에 적극 활용해야” [건강한겨레]",
+        "source": "한겨레",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Kb2oxOHlwUmpzYV9ULXN4OWNEVlFWOXh5V0t0WEhmRVFETnduYmVfZTJsZC0xUzVSWFVyQTNCck9VQnlrbm1IaTNwbFZYa1RHSDl2eldnSDQ1MWNoRDd6SWIyek1FYlZW?oc=5",
+        "date": "2026-08-21"
       }
     ],
     "부동산": [
@@ -313,10 +313,10 @@
         "date": "2026-08-21"
       },
       {
-        "title": "가상자산株, 비트코인 급등·가상자산 법안 기대에 주가 13%↑",
-        "source": "마켓인",
-        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9PcEdobUktWUE4c0NpR0dIMVJISmV0NzMxY0VsOWxtR2VIdk8ybnUwQWRqaFhFNTR1TWFsMGp5dk1ERGpBZEhuZEhqTEQtbVZlbm5VZkEtUVgxeHVuZFBlVm5pSzFVUXJQTVRJc3ljUmh6RmM?oc=5",
-        "date": "2026-08-22"
+        "title": "트럼프 한마디에 살아난 비트코인…9월 美 가상자산법이 다음 분수령",
+        "source": "전자신문",
+        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9oVkp5TWYwNENoWmV3N0M5U19JeXJZM0ZrWXdtenh6QWJVaVVEdS01OS1lVzJiZU4xY2RZMXlqTDY5NWU4WU02LWoydHE3QQ?oc=5",
+        "date": "2026-08-23"
       },
       {
         "title": "법인 가상자산 계정 6천개 넘어…두나무 제친 빗썸, 과반 육박",
@@ -383,9 +383,9 @@
     ],
     "채권·금리": [
       {
-        "title": "美국채금리 급등 못 잡은 베선트…\"채권시장에 교육당해\"",
-        "source": "서울경제TV",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB3WUkzSTJrWTFneWdCM190Q19tY3ltMXBRSE5ybFpJdHJTSUdjcjFiM0ZiaXZ5eGNCMWs1RWttd2ZfVExHLXY0dk9kSm1SS3kxZjlXaXhRYm1nSmdvcEh4MVpSTV8?oc=5",
+        "title": "국채금리 급등 '대증요법'으로 눌러보려다 '교육당한' 美재무",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ieGRJdWtJakxmVHpmS2lkeElwaE1QZElUOHhnSFZlSklvako2S00tVEk2WTJneWZEazVnQ3p6RlliYUZhX1pvckgxNlU4TG55Q29aRzg3RXduWGvSAWBBVV95cUxNcHVDR1c5VnNSQ3ZoVjFUQ0tIRm1sZHBaWDMzblNpTWVsLUR4dTZ6Z29IVy1VQmRyTWZJMXh5U0pidmdMTXJjYVl6MzVScDFHb3pXN05TOE05SEoxTm5DOTg?oc=5",
         "date": "2026-08-23"
       },
       {
