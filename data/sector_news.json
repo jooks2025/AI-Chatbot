@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T02:37+09:00",
+  "updatedAt": "2026-08-24T02:58+09:00",
   "sectors": {
     "조선": [
       {
@@ -7,12 +7,6 @@
         "source": "해양통신",
         "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9vSENlNGlXcVZVd2duR1RiY1lCRHBmQ2FkLUFZTEVwaVpwajBLQVBBS3pTQzdmVTFXQlp1SnMweEVUMTl0Y0NGS0dkWE1lV3kxd1hQT1hJdzhuZjh5T2xwdGZDa29LZw?oc=5",
         "date": "2026-08-21"
-      },
-      {
-        "title": "조선업 ‘수주절벽’ 온다는데...두 국책기관 전망 왜 달랐나",
-        "source": "뉴스톱",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1BTmlQUFU0YW9UckpULU9XUmppeDVKMXp3VGw1TVQ4R0Z6U1dnMVoyOUlGUHV5MS1sXzR0YXYyaTZhcE04bkJyMXp6c0RwMHdXMUEyYVdoZWVLazR2M24xR3hQSnpWREhaZ1F0V0dFcw?oc=5",
-        "date": "2026-07-27"
       },
       {
         "title": "지난달 한국 선박 수주 점유율 16%…중국 81%",
@@ -37,6 +31,12 @@
         "source": "연합뉴스TV",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9YbXRBX1B1NUFqLVNmVHhlbEExOVhDYmx2c19BMlJmRW16dWlkUDlGRGN6NGMxNXFqSmVlNjNVY183Rkl2c1dRbHFISFBIQ1JMUVBudFQ2QW1zSXBzd3NkcGFZNUc3U1k?oc=5",
         "date": "2026-04-14"
+      },
+      {
+        "title": "中 조선업, 7월 글로벌 선박 수주 81% 차지",
+        "source": "스틸데일리",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9sTEtKNTl5QUZLVXpCSENsSnBkdENVWUdCOEhkZGNBWDVGT1VoWXV5cVEtd2RQekgwSGhzNGl1V3BwYm5pNWRRRmRCeVJvOWV2djF1dHh1ZlhCNVp5NHhOekgzWG5mWHNQRm1JRnpmMjfSAXRBVV95cUxQaEptc2JSMWU5TmdEVFpGT3huclYwWDFHcER3SDJSdkd4VDlxZkw0ekd0MnpzSUZ5YnNaM0NHcnlWdUhtTXN5Z0k3aXFCWXdRWGY4dzlBd3BYcHk4TGptSmZ3ak5wVldScndWZUhfTi1DR3RybA?oc=5",
+        "date": "2026-08-14"
       }
     ],
     "건설": [
@@ -123,6 +123,12 @@
         "date": "2026-08-23"
       },
       {
+        "title": "소버린 AI 추진할수록 엔비디아 종속 심화...대안은?",
+        "source": "YTN",
+        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBSWmdOVElEc0R4VS1xd2ZESk9aLWV4RjRBd2FaY3dZZXpfZDZTUWJ0NDJFMUVOSmYzY2RMNGlGaFdyRTJvbkhxRWZ0RFp6eFBkRHU2RlRXNXh3T29rWHc?oc=5",
+        "date": "2026-08-24"
+      },
+      {
         "title": "AI여비몬·업무자동화시스템 이어 ‘AI분석도우미’ 자체 개발 전남광주통합특별시, ‘인공지능·데이터 행정 혁신’은 계속된다",
         "source": "일등방송",
         "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdHlzajdxY3lJdUxxVC1wQXM4eVcxQ3NXa2dLOFdpM0xMWDZhNk1jYzRlNy02TE56U1ZwWmpmLWNTMVo3WHVpOTlma09uUXpVbEtTUHo1OVhYQmRnTDk4SmNmUUtBZ3dndUoxV0JXOEUzVlZrcEdLWUU2VUQtN0xGdWJZN3ZSSDFPUmpHOUVibFBMMnF6NzRUdVM3amxyeEk?oc=5",
@@ -145,25 +151,19 @@
         "source": "전자신문",
         "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5FWG9WMkdEbHlTb3JPWWx1bWgwT2wzZWtmWFV1MjNya1ZxUmktOTV0MU9mWWJKRXVqakpEb3dVaWpONjVCQjZaNG9hdjhxQQ?oc=5",
         "date": "2026-08-23"
-      },
-      {
-        "title": "“인공지능 활용 따뜻한 복지충남 만든다”",
-        "source": "한국방송뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB1aWxmYVZsMDlfT1RBNWtKSmxlVjIweTU5cmpuN01NMkRwUDdyMXpaRzdFQ1VLdm1oc28tTEdQREVGQlJZUUFKWTZJN2NXaFNMNDJRMUZQVlBJQ0xXcGN5dw?oc=5",
-        "date": "2026-08-24"
       }
     ],
     "에너지": [
       {
-        "title": "‘2040년 전력수요’ 넉달새 2680만kW 늘어 “재생에너지만으론 역부족”",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB6WWlNeTdIQXpzZ0dPay1pc3dUbEZKeWlEQzB1bzZNTEpud200MExkZ3FoUHdqSWwtWjYzNW4wakpUVnZBQnA1QnlsUm1DZGc?oc=5",
-        "date": "2026-08-21"
+        "title": "“연료 확보만으로는 부족”…전기화 시대 ‘전력안보’ 부상",
+        "source": "데일리한국",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBMVVJseDhUeWZrQWM2dURpOTF4TFczSmZaRHVkRVJBcC14aWtxY09qaTVyRDI4SU1qY1JrU1VhZHhJX3Q1cUpGbHNQNHA1ZFFVY1EzNjlkcEVSS3J0d2lxbWVxTWphREEyTnBRa3hHNNIBc0FVX3lxTE9RdUVQTllMc2pUdGVPRkJuVTM5WXp3czBVLUhDUjF1ZXZ4RFMyb25BOENEWFFVVDJGVm5nci1OeXRZTVZuVFVFRWFkalBrdEFHVlNkcDRYTDdPVVkzYjRneW9FZFBhX1RQS3A1YTk5NVYwaVk?oc=5",
+        "date": "2026-08-22"
       },
       {
         "title": "\"멕시코 1년 치 전기를 버렸다고?\"…친환경 1위 중국의 황당한 역설[시사쇼]",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoQ1FEYWlIeEtiRGpodmdQdkxLQVd4SnVrSE1GRzVQMEo0Vm52NzRlY1FvSVQySElyN0I4YzZVUmdzMVU5XzJBcjVSaDZhMVk?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBMWTJKN2JEQlFYa3dzTm5JMWtFLXo1NzlGVWU4V290LUxQdExBV1ZSSVptZHNnUVotbHI5NFpxZkthWlAtNEE?oc=5",
         "date": "2026-08-23"
       },
       {
@@ -407,16 +407,16 @@
         "date": "2026-08-21"
       },
       {
+        "title": "채권 금리 고공 행진, 미 재무부 “국채 매입”…“단기 처방 불과”",
+        "source": "KBS 뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBZcEhaQnR2M2ZDQkE5emFtbE5GUFlwTHRlSXdpOVpUeFJzejNORWZWOGRiMVVaY3N3M0ZtaFNUQW1ob040R2R0c2MzUTEtUFczWUlxdFBoN29IWkU?oc=5",
+        "date": "2026-08-20"
+      },
+      {
         "title": "글로벌 증시 강타한 미 국채 금리 쇼크, 전문가 \"美, 역사상 최악의 인플레 시작됐다\"",
         "source": "YTN",
         "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1xRVdJQjdRaV9zOEFRMXpGblo1NVpHc2tUeHhIb3NNODNwZTRmbWhFSDYwSDlWcU9xWUd5bUFlRGd4THhGcHZyR1lnUTA0NlV3OUxPTTV4cU51RG9aMnc?oc=5",
         "date": "2026-08-19"
-      },
-      {
-        "title": "한은 '백투백 인상' 하나…美국채 5.3%에 채권시장 긴장",
-        "source": "뉴스투데이",
-        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBqZEZFMUFZSV9IbEY0Q3ZWVHhmdDgwTERnbGt3ajBpRWxjcGdmbzliMTlad0NqRmJKVU9Sb0Zzb0pncllqSFpkbzlLV0lCcWxlOTJIQjNNVk1qdWJzUnc?oc=5",
-        "date": "2026-08-23"
       }
     ],
     "고용·노동": [
@@ -489,10 +489,10 @@
         "date": "2026-03-25"
       },
       {
-        "title": "ISA·연금저축·IRP…절세계좌가 자산관리 판 바꿨다",
-        "source": "중기이코노미",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1YZ1dldkQwVTV2VU93aVZMUUFILVNGdWdzd0U4N3E4M2NRU2VERkpjd2pQQVlwa3JtOFpUUUlRcGFsVGlzaDlxdXhFQjJxTmlQRTJqVjd2WjBxTnJwVDhLR3h1aG9nS0g2NUE?oc=5",
-        "date": "2026-06-29"
+        "title": "[비바100] 챗GPT가 바꾸는 재테크…AI 자산관리 시장 2035년 200조 시대",
+        "source": "브릿지경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LSkRXVDlmbzJWdHJJTi1kdGxuSVJHQTg2dkhUUWY3UGVmRmpvaXZVVDkyRXNhaldUSE5pT3NVZjl1RDVpR2ZHaV9RaktkNXZHZVB4YWRfWUdDQQ?oc=5",
+        "date": "2026-07-23"
       }
     ],
     "쉬운 경제": [
