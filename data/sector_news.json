@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T19:55+09:00",
+  "updatedAt": "2026-08-23T20:26+09:00",
   "sectors": {
     "조선": [
       {
@@ -85,6 +85,18 @@
         "date": "2026-08-23"
       },
       {
+        "title": "삼성·SK '50% 환원'인데…미국 반도체사는 왜 100%?",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1QVllrYU9GODM4M0lYZ01sSTlzX2NwYlpWRW03ZGpHQlBaV2gtc2xUQzhlRW0ya1AxMnU1ZUJDaURmSlUzQVkya0RzbUpLSUU?oc=5",
+        "date": "2026-08-23"
+      },
+      {
+        "title": "‘HBM 묶어 파는’ 삼성 파운드리, TSMC 틈새 뚫고 흑자 시동",
+        "source": "IT조선",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EMmxiS0xwVXY2cFVsVlFXOXVIRExMcGRhRXhuUUpfbXVnZHJDTTFxX1IwYkJHV3BMSjRLNmhueUViUzFQcE9adlVrNG5GSUZQZWQyRGJaTUhHMmg2aVpISFN4a2Z5Y3dIWURaV2FpVmjSAXRBVV95cUxPMG9TemRUQmdxVUxBblAwdzEzanAzMWRGU0hmVXlUVHR0VXVsWVdjSFU0R3VSbGRzOHF4Rnd4cktXSk5VMmY5cEJZdjI5elZiOXpuNzVYSFJUNzhyYzNrcEU5aTVhVWJfVTY5WVJtUmI1WVlHcg?oc=5",
+        "date": "2026-08-23"
+      },
+      {
         "title": "[단독] SK하이닉스, 일본에 반도체 공장 짓는다…미국 압박 거세질 듯",
         "source": "한겨레",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBLTTR1WWtiMFBVejJncXhuZnVyazhJcjhYajZyV1RmTW5KS0lNaml6cXZxMlRRSWdGemZONGJlMXU5cDN6d1lFTE12dkZFSnJhaHVpY2xsV3JETndEVUJ6eDNoOHdoTU1EWlE?oc=5",
@@ -97,21 +109,9 @@
         "date": "2026-08-23"
       },
       {
-        "title": "반도체 수출 3배 폭증…8월 1~20일 수출 역대 최대",
-        "source": "경향신문",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1kWW9RZUkyUzB0Z1dJRmZVZmJwdnMtXzVtSHFSZlllb3RrNm5WUkQzcDJmY0xKd3ZUeVh2NHVNT2Mzby1ETnFFc004bFJfSloxb2RSU3J4TW9CQdIBX0FVX3lxTE5kenQ1QVJDaXVORS10S2dHdW9Qa2VLdld3aGhVMk5WZV9HdTNacGVSTFVmZURmWDd0SDc1NWdsU05FNk8zSXU4V1lXNlptN3RreFJqQnpHN1pPMVdsRFBJ?oc=5",
-        "date": "2026-08-21"
-      },
-      {
         "title": "라면·의료기기·메모리반도체…다양한 효자품목에 원주 수출 '역대 최대'",
         "source": "뉴스1",
         "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9RNmZnUzV6TDdSNXlrMURFck91Mzg3N0pVZ2VYMUtqOGlJZHRhTm05TEZ1TF9wYW1JcTNsc0ZYZW05eC0yYmlBbVpleUVCZi1EWDE5d9IBWkFVX3lxTE5NdjdYS3c4VzhtcHFGTXI4NFh6WHRvdnBNZ3k3aVJxSXJVcGU1T0VhTHdyeDlCdFlRdXg4ZHNHdnYxRFVwb0dUNWN6alJwNUprWG5KTXFLSzVBdw?oc=5",
-        "date": "2026-08-23"
-      },
-      {
-        "title": "반도체 팹 품은 서남권 꿈꾼다…전남광주 경쟁력은 ‘물·전기·땅’",
-        "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE02Q0Vsb0tBZHNrRTNHZU1aQkVUbTZlZHV1eDBRc09wUXlGaEd2WVV2ODhvYWtLR3d4OWxQYkJwV1E3MWFHSElrcEhOWmVHa3c?oc=5",
         "date": "2026-08-23"
       }
     ],
@@ -269,28 +269,22 @@
     ],
     "부동산": [
       {
-        "title": "세종 5-1생활권 합강동 아파트 분양에 도움 되는 주요 시설",
-        "source": "메트로세종",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9NcENlQ2NQQjVfODBVSDBSbTc2b2NmNlBZVGRjeWtTMXB4OUV2ODJTbHItSmkzdUFqekNrQnFCWWhXR0dLS01hQTI5cFRua0syQXljWUF3YnpIeEVjclRxRHRySXQ5ekpLZ3cw0gFvQVVfeXFMUHlxeEU1a3VOTlg5aEUybGhfQmdYTVhfLW9XOG0zUFRRWDdQT3gyY2kzbXNldlBHdW9PcTlrUTR4N212Q0RlZlRYWUVaVUk2WnZiMlFabHB6X1RxTWVGcXR0Z3ZkTHlyTGdkazFUblZR?oc=5",
-        "date": "2026-08-20"
-      },
-      {
         "title": "8월 경기도 아파트 분양 예정 물량 1만626가구",
         "source": "기호일보",
         "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1aNjRnS3gzQ2tkS1IzWlVpYm02LUJfMjU1blV2S1doWWlFcHE5Q0Z0VGJRSzVmdHZMTGtxTTQxZy1aOWFwTTB2T3FnakxYTmVOSzFsSGd3eWp6RWJPWDN2M2oxSWN3QzMta2Vqck5qUQ?oc=5",
         "date": "2026-08-03"
       },
       {
-        "title": "아파트 분양시 발코니 확장에 끼워팔기 못한다",
-        "source": "스트레이트뉴스",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9zbzVYX3pFdk8waHYzdm1Qdk45LVNWemEySC1zLTN1Ql9IQ3ZFRWZ0MUp4cXdWOVRNSUltRjhzZ1h4emk5T3hsaVBrV3ZIZHBNYWlWcmQ4MkZJYmR6Rlp0eUw2eDQwWGZoamwtbGVqeVZjQdIBdkFVX3lxTE11YVkxWkFlbnVXUmo4eXpqQi1NUDc2UUk1U0lpdXZGWVg1a05aYUtKZUI3dllsZXI5OEM4bFNTNl8waXcya2R5UWFteGtDQlJTbEh5MExreTF6cE9DSkJCdC1BX3dZM2dadjVTejk4clQ4dkNtc0E?oc=5",
-        "date": "2026-08-03"
+        "title": "세종 5-1생활권 합강동 아파트 분양에 도움 되는 주요 시설",
+        "source": "메트로세종",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9NcENlQ2NQQjVfODBVSDBSbTc2b2NmNlBZVGRjeWtTMXB4OUV2ODJTbHItSmkzdUFqekNrQnFCWWhXR0dLS01hQTI5cFRua0syQXljWUF3YnpIeEVjclRxRHRySXQ5ekpLZ3cw0gFvQVVfeXFMUHlxeEU1a3VOTlg5aEUybGhfQmdYTVhfLW9XOG0zUFRRWDdQT3gyY2kzbXNldlBHdW9PcTlrUTR4N212Q0RlZlRYWUVaVUk2WnZiMlFabHB6X1RxTWVGcXR0Z3ZkTHlyTGdkazFUblZR?oc=5",
+        "date": "2026-08-20"
       },
       {
-        "title": "충청권 아파트 분양경기 희비…대전 개선·충북 회복·충남 뒷걸음",
-        "source": "cctoday.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1WS0pjaTBXTnZTYnI5N24xQWZuWkI5aXlSSnBNRVdRNk9VVm10ZG9hdEp3R0didURzUzZBZ1k0Z001Ykw5dXlEamJ1WjZVTlFYMU5Rd3dHc2RjNlhKT0FRRF9EdDRHVjNCeGQ0SDBn?oc=5",
-        "date": "2026-08-07"
+        "title": "[올앳부동산]아파트 분양 후 가격 떨어지면 정부가 다시 사준다는데···당신은 구매하겠습니까?",
+        "source": "경향신문",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9jcmlwYmtMWkQxN3BNWl8xOW96QzZ3bnhnb1Q3b2dxRGxGNFZ4NW5vZmNNb2tXbkpPYllyRkV2MnE0SklIaHl3MGN1SWttUENZbkxxeENQTWdxQdIBX0FVX3lxTFBXVF9fOHRFRU5Qaldld0J5MGdRN2E0QVJ1LUxSMC1BaXdtTGZBQTBjSG5acEVPeE9yU2xNMEJGZGdfS0s0OFV2THFyZkhJTGZfMDRISXJuNU4tSHZZd0tB?oc=5",
+        "date": "2026-01-19"
       },
       {
         "title": "호치민시 아파트 분양시장, 고금리 장기화·높은 가격에 ‘꽁꽁’…수급 미스매치 심화",
@@ -303,6 +297,12 @@
         "source": "연합인포맥스",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1KNUlsa0czRlZwSk04dk11a2ZLVDZDTldzUTN1Uk5IOENtMWREa1Y5Z2R5bTN0cnNFUTlURUNYZzlRbnhtaFlNMGpfNE02LWoyZ3hUM2tzNldCT3h6ZUh3LWFqY3NELWx0Ni15YmhyLXk?oc=5",
         "date": "2026-06-09"
+      },
+      {
+        "title": "[부동산캘린더] 내주 경기 화성 동탄2 공공분양 등 2천가구 공급",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IeHJjX2NxQ2lsX0tLVms0Mlh4c2NTQnNPUXRZYmdyU2hZMDdLZzFoUGhhOHYtYjh0Y0dvc3c4LXRBbzVHNmV2eE5RamdIVWNhbmZobEVSTTJuQU0?oc=5",
+        "date": "2026-06-06"
       }
     ],
     "코인·가상자산": [
