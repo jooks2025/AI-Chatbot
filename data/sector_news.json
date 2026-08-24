@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T20:35+09:00",
+  "updatedAt": "2026-08-24T21:03+09:00",
   "sectors": {
     "조선": [
       {
@@ -103,9 +103,9 @@
         "date": "2026-08-24"
       },
       {
-        "title": "호남권 반도체 클러스터 범시민추진위 출범",
-        "source": "연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wN2ZuQ3FZeklPYlJPMFppc25EX1pUd1VKUWdlTHU3WFFZQml1ZnZQdlBkZFdFZXBkNU0zd2pLSENxT01HbGRVd0FxMUJfeHZoN0EyS1FSWG9lRmfSAWBBVV95cUxNbEU0ZGg3MXdpbjRBUlkydU1rQ0FKOHVmN25kZXlydFFjYy1FeWxTWjd1dU1JQ2M0cUtvSHBKN2Vsd0FKaUNjdWc3SFhVYWRxcVhKSXBxOExsS0d0YVJpUm0?oc=5",
+        "title": "'호남 반도체 클러스터 성공 지원'…전남광주 범시민추진위 출범",
+        "source": "뉴시스",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE41VmRXbk9uazlYUlJGaURxSldDenJBNlN1R0E2bENGM0FVVlJENWxqbVlXdngwWnF0NkJ3Q0YyU04yLWYwWElxQTlhNW1SaFA4ZGpuSHNzLXE1NURNbjhFedIBeEFVX3lxTFBIemx5aWgyZVhXWlRtaWVDOWRYYzNObV9Rd2pINzg1V2ZSZkdTMUNOdU1PRnc0ZHNGRjhnZUhZcUw5cHpoWW9faUJ6elZ0ZVp1aU5fWkZHdm9HbTRqZlM0WVY2QmFxTWJkM2w3UnZsTmhOV1lSMGlURw?oc=5",
         "date": "2026-08-24"
       },
       {
@@ -116,6 +116,12 @@
       }
     ],
     "AI": [
+      {
+        "title": "[통일로에서] 인공지능(AI)시티의 주인은 누구인가",
+        "source": "스트레이트뉴스",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5xSlZKTEptXzhOTXFSZzlhbUh0cWRqQmdtc293b1N4LWxnSEZvR2E0ZFVMc01Xa3daZFlOX0hfTHhicS1kWVBBZDRRLVM3eVNmOUI2NllaSWM4YjdwUGlSaV9rZVhuN25XQkdhU1l3S1lTX0VNM1FF0gF3QVVfeXFMTnFKVkpMSm1fOE5NcVJnOWFtSHRxZGpCZ21zb3dvU3gtbGdIRm9HYTRkVUxzTVdrd1pkWU5fSF9MeGJxLWRZUEFkNFEtUzd5U2Y5QjY2WVpJYzhiN3BQaVJpX2tlWG43bldCR2FTWXdLWVNfRU0zUUU?oc=5",
+        "date": "2026-08-24"
+      },
       {
         "title": "춘천시 첫 AI 기본계획 윤곽⋯생활·산업·행정 전반에 접목",
         "source": "v.daum.net",
@@ -144,12 +150,6 @@
         "title": "인류가 함께 누리는 AI로… ‘인공지능 윤리원칙’ 제정",
         "source": "브릿지경제",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzOEJFUExrNGtLY2FjVEExWVBCVUJ6dkx5aW9leVFVNVpNeWRHYjExdzJvNlBBbGlOUm01NmRUV1prQ3hyMEcxeHNBT0kzeWV4Z0Q1MUU2TDlCZw?oc=5",
-        "date": "2026-08-24"
-      },
-      {
-        "title": "전남광주특별시, 뇌과학자 장동선 박사 초청 인공지능(AI) 특강",
-        "source": "국토일보",
-        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE83UDQyb2Q5MG52c1FxR1I2MGVqRzFLLVotQ3ZrYldBV29lRUowRlpHdldkQzdMU25VN2NjTXc1ay1TQ2FWdXU5WVVGbWJYcGdZMWE0MUw4WEZFSGRjV3YxdzlsTQ?oc=5",
         "date": "2026-08-24"
       }
     ],
@@ -261,30 +261,18 @@
         "date": "2026-08-24"
       },
       {
-        "title": "이지메디컴, ISM Korea와 헬스케어 SCM 전문인력 육성 추진",
-        "source": "비즈월드",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9qeTNjanpsVTJCVm0tV0NSLWVNUm43R2NuRUdPNmNRcDRzTk9qOUZxSDlCMldHT0pvWGpKdm1hZ183TkticWF1bk1FazRuNXAyR2MyM1ZlX0k1ZlB5NGt6VUJVcm1CaF9veUE?oc=5",
+        "title": "[제약바이오 트렌드] 뉴메코, 보툴리눔 톡신 제제 ‘뉴럭스’ 파나마 품목허가 획득 外",
+        "source": "베이비뉴스",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBXQXBGMXhYYkwtMnRxcXVmVXRxMjZxQjVlZzc0LXJyOGV0S001RXdIaE5YcUkwSmVVMWRHX1FYb091cHFKLWRhQWVVVmpRMnlTMGRvQU1vZW9OQ3RnWWJzRkYtRzFGTVI4aWt0bA?oc=5",
         "date": "2026-08-24"
       }
     ],
     "부동산": [
       {
-        "title": "세종 5-1생활권 합강동 아파트 분양에 도움 되는 주요 시설",
-        "source": "메트로세종",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9NcENlQ2NQQjVfODBVSDBSbTc2b2NmNlBZVGRjeWtTMXB4OUV2ODJTbHItSmkzdUFqekNrQnFCWWhXR0dLS01hQTI5cFRua0syQXljWUF3YnpIeEVjclRxRHRySXQ5ekpLZ3cw0gFvQVVfeXFMUHlxeEU1a3VOTlg5aEUybGhfQmdYTVhfLW9XOG0zUFRRWDdQT3gyY2kzbXNldlBHdW9PcTlrUTR4N212Q0RlZlRYWUVaVUk2WnZiMlFabHB6X1RxTWVGcXR0Z3ZkTHlyTGdkazFUblZR?oc=5",
-        "date": "2026-08-20"
-      },
-      {
-        "title": "아파트 분양시 발코니 확장에 끼워팔기 못한다",
-        "source": "스트레이트뉴스",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9zbzVYX3pFdk8waHYzdm1Qdk45LVNWemEySC1zLTN1Ql9IQ3ZFRWZ0MUp4cXdWOVRNSUltRjhzZ1h4emk5T3hsaVBrV3ZIZHBNYWlWcmQ4MkZJYmR6Rlp0eUw2eDQwWGZoamwtbGVqeVZjQdIBdkFVX3lxTE11YVkxWkFlbnVXUmo4eXpqQi1NUDc2UUk1U0lpdXZGWVg1a05aYUtKZUI3dllsZXI5OEM4bFNTNl8waXcya2R5UWFteGtDQlJTbEh5MExreTF6cE9DSkJCdC1BX3dZM2dadjVTejk4clQ4dkNtc0E?oc=5",
-        "date": "2026-08-03"
-      },
-      {
-        "title": "충청권 아파트 분양경기 희비…대전 개선·충북 회복·충남 뒷걸음",
-        "source": "cctoday.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1WS0pjaTBXTnZTYnI5N24xQWZuWkI5aXlSSnBNRVdRNk9VVm10ZG9hdEp3R0didURzUzZBZ1k0Z001Ykw5dXlEamJ1WjZVTlFYMU5Rd3dHc2RjNlhKT0FRRF9EdDRHVjNCeGQ0SDBn?oc=5",
-        "date": "2026-08-07"
+        "title": "[올앳부동산]아파트 분양 후 가격 떨어지면 정부가 다시 사준다는데···당신은 구매하겠습니까?",
+        "source": "경향신문",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9jcmlwYmtMWkQxN3BNWl8xOW96QzZ3bnhnb1Q3b2dxRGxGNFZ4NW5vZmNNb2tXbkpPYllyRkV2MnE0SklIaHl3MGN1SWttUENZbkxxeENQTWdxQdIBX0FVX3lxTFBXVF9fOHRFRU5Qaldld0J5MGdRN2E0QVJ1LUxSMC1BaXdtTGZBQTBjSG5acEVPeE9yU2xNMEJGZGdfS0s0OFV2THFyZkhJTGZfMDRISXJuNU4tSHZZd0tB?oc=5",
+        "date": "2026-01-19"
       },
       {
         "title": "호치민시 아파트 분양시장, 고금리 장기화·높은 가격에 ‘꽁꽁’…수급 미스매치 심화",
@@ -303,20 +291,32 @@
         "source": "연합뉴스",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IeHJjX2NxQ2lsX0tLVms0Mlh4c2NTQnNPUXRZYmdyU2hZMDdLZzFoUGhhOHYtYjh0Y0dvc3c4LXRBbzVHNmV2eE5RamdIVWNhbmZobEVSTTJuQU0?oc=5",
         "date": "2026-06-06"
+      },
+      {
+        "title": "아파트 분양시 발코니 확장에 끼워팔기 못한다",
+        "source": "스트레이트뉴스",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9zbzVYX3pFdk8waHYzdm1Qdk45LVNWemEySC1zLTN1Ql9IQ3ZFRWZ0MUp4cXdWOVRNSUltRjhzZ1h4emk5T3hsaVBrV3ZIZHBNYWlWcmQ4MkZJYmR6Rlp0eUw2eDQwWGZoamwtbGVqeVZjQdIBdkFVX3lxTE11YVkxWkFlbnVXUmo4eXpqQi1NUDc2UUk1U0lpdXZGWVg1a05aYUtKZUI3dllsZXI5OEM4bFNTNl8waXcya2R5UWFteGtDQlJTbEh5MExreTF6cE9DSkJCdC1BX3dZM2dadjVTejk4clQ4dkNtc0E?oc=5",
+        "date": "2026-08-03"
+      },
+      {
+        "title": "[AI 부동산 투데이] 아파트 분양 늘어도 분양가 부담...실수요는 ′고민′",
+        "source": "뉴스핌",
+        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE54QXFqbXNJQjdXb1BpblhpTk52a0J3YnZFMnVGWEtzR1I0aXFLWXZ2dk1zWFUzWHdrRjJBbzNVaDZTMHNYUkdfMlg0ZndwcEt5VTh5eEVhdzJCbHhr?oc=5",
+        "date": "2026-05-08"
       }
     ],
     "코인·가상자산": [
-      {
-        "title": "비트코인, 10개월만에 다시 강세장?...일주일 새 23% 급등",
-        "source": "조선일보",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPVm42emw2czhNY3dIVDU4cXVjV3Q0eG1RNDZpa1RReWhMMHpLcGZwT1dnbk9PSzNJQmIxVWFuQnRsd0h2ZU9yRTdSVFV0UzVaM3gtNjBHVmpuQmpDX0c1YWdJSGxNZkNJTnp1aFg0THdKaEs2OFlObTRCdEZSVnlXYw?oc=5",
-        "date": "2026-08-24"
-      },
       {
         "title": "美 규제완화 훈풍…비트코인 기지개",
         "source": "전자신문",
         "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9oVkp5TWYwNENoWmV3N0M5U19JeXJZM0ZrWXdtenh6QWJVaVVEdS01OS1lVzJiZU4xY2RZMXlqTDY5NWU4WU02LWoydHE3QQ?oc=5",
         "date": "2026-08-23"
+      },
+      {
+        "title": "비트코인 1억 돌파…비트플래닛 등 가상자산株 동반 급등",
+        "source": "뉴시스",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VanJZalpNaHRqc3FkNzkxX1BxVERFbnF6UmsxaWY3RmNvUGxMQ29pQ3BEVkllNVhHcG9VU3N0RTFtdW1EVXVTczlVV24yMUl2b0NhbDczYzB2UU16bkNPeNIBeEFVX3lxTE1hNHdDOTNIUG12Vk5jdFd5ODNBa01IR3hjb211NWFjcU03UFJUSG56bm5fQ2hFazZjMGJ5RWtEb3U2S3FubXpqU3dJLUgzanhLSmpwVlhtME92azRfWWRWWDhZYVY0a1U1MU1QQmlzdFU1T1BWeGlQLQ?oc=5",
+        "date": "2026-08-21"
       },
       {
         "title": "비트코인 급등에 가상자산 거래소 모처럼 활기…거래량 급증",
@@ -325,9 +325,9 @@
         "date": "2026-08-24"
       },
       {
-        "title": "미 국채發 유동성 훈풍에 비트코인 1억 재탈환…가상자산株 강세",
+        "title": "[기업이슈] 비트코인 7만 달러 선 돌파에…가상자산 관련주 일제히 '폭등'",
         "source": "v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9aSTRQMHBuVmxLYkhOdVhJaEZCQlJnZEdwMURIc0s0bzRnbjhRaUlLVkVHUk00LUVTQTczcnlVejg1akhMaFM2LXQtV19BTTQ?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqSzRyYm1icUxkV3h5YTRlQ2pTQlVmdlVJM2ZYYUlyY2dKTU5tZ2J1cmRmalp0Mm9uR0dMNFMyRU9kRnVBRU5QUkNQUTJ6Zmc?oc=5",
         "date": "2026-08-24"
       },
       {
@@ -471,12 +471,6 @@
         "date": "2026-08-23"
       },
       {
-        "title": "iM뱅크, 제7회 재테크 포럼 개최…AI 시대 투자 전략 제시",
-        "source": "kyongbuk.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB1TkI5QUFMZzBEejhsdEQ4WUNtSWo1dXpiS2VsS0FyWGh1cmZJMHNldVBNdXRyS2Q4dG9vTFZ4bC01ZUd1ZzNSdU9qVy1udURSRi1hTlR0eFUzVm1mR0dvVnJEUV95OGtkNTAyd0IwRQ?oc=5",
-        "date": "2026-07-29"
-      },
-      {
         "title": "﻿'국민 재테크 상품'의 귀환…ELS 투자의 A to Z",
         "source": "한국경제",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE15OU5Id0Z1RUZHVHdvT2dUX044NmVCLS0xNWdoZ3dtQ0xNNkVrS2lzdlFweGFuNGZYMHBFMS1BQ2hMQWluQWRDM29FY3J2MjdjOWwxTWg5NW1KZw?oc=5",
@@ -489,10 +483,16 @@
         "date": "2026-07-29"
       },
       {
-        "title": "“자산 형성은 습관과 원칙의 결과…복리의 임계점 돌파해야”",
-        "source": "정보통신신문",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9iakJ4WlZqM3ZjQkhKOG95MUpnZDI2NjBBcm9lVm5wMGpWNGJ2M0tIak9scWNrYVREVkJ3cm9lSXhaQ3hONjJqRnRKeTZnMTJWUHNGaEtnbDhwWjJ5SEp5TUZaODVOZnQ30gFsQVVfeXFMT2VtdWE2ZUFZVnM3NXhWM3A4aTM3MU9DaERCb2pXTktrQjNhc1RpZ2NxVHlTY09zRkhkcldicnlYVkstM2taU3RSMHRCenNFQmFKejdsZDE1ZU1PMjQwWkczNkp6QUJfUVZKT3Ny?oc=5",
-        "date": "2026-08-10"
+        "title": "[100세시대 재테크]자산관리의 '3가지 균형'을 잡아라",
+        "source": "아시아경제",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9rM2F4VEVuZV85WjhmTmxBN25yM1AxNTJTZW56WU9nQkR5T0xXSXBMZmp2bTFHbkQ1bC0yNUhINnpaWkF4a1lQS3ZWN3NlelIwdEl1ZE1lYVN5MnJzZkpPLQ?oc=5",
+        "date": "2026-03-25"
+      },
+      {
+        "title": "[비바100] 챗GPT가 바꾸는 재테크…AI 자산관리 시장 2035년 200조 시대",
+        "source": "브릿지경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LSkRXVDlmbzJWdHJJTi1kdGxuSVJHQTg2dkhUUWY3UGVmRmpvaXZVVDkyRXNhaldUSE5pT3NVZjl1RDVpR2ZHaV9RaktkNXZHZVB4YWRfWUdDQQ?oc=5",
+        "date": "2026-07-23"
       }
     ],
     "쉬운 경제": [
