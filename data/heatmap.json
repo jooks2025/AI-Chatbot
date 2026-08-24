@@ -8,19 +8,19 @@
         {
           "ticker": "NVDA",
           "name": "엔비디아",
-          "change": -2.3,
+          "change": -2.4,
           "weight": 2
         },
         {
           "ticker": "GOOGL",
           "name": "알파벳",
-          "change": 1.2,
+          "change": 1.1,
           "weight": 2
         },
         {
           "ticker": "AAPL",
           "name": "애플",
-          "change": 0.8,
+          "change": 0.7,
           "weight": 2
         },
         {
@@ -32,19 +32,19 @@
         {
           "ticker": "AMZN",
           "name": "아마존",
-          "change": 1.5,
+          "change": 1.2,
           "weight": 1
         },
         {
           "ticker": "META",
           "name": "메타",
-          "change": 1.6,
+          "change": 1.8,
           "weight": 1
         },
         {
           "ticker": "TSLA",
           "name": "테슬라",
-          "change": -2.3,
+          "change": -3.9,
           "weight": 1
         }
       ]
@@ -55,13 +55,13 @@
         {
           "ticker": "TSM",
           "name": "TSMC",
-          "change": -2.1,
+          "change": -1.8,
           "weight": 2
         },
         {
           "ticker": "MU",
           "name": "마이크론",
-          "change": -5.1,
+          "change": -5.3,
           "weight": 1
         },
         {
@@ -78,13 +78,13 @@
         {
           "ticker": "IWM",
           "name": "러셀2000",
-          "change": -0.7,
+          "change": -0.6,
           "weight": 1
         },
         {
           "ticker": "QQQ",
           "name": "나스닥100",
-          "change": -0.7,
+          "change": -0.8,
           "weight": 1
         },
         {
@@ -107,19 +107,19 @@
         {
           "ticker": "XLE",
           "name": "에너지",
-          "change": -1.1,
+          "change": -0.9,
           "weight": 1
         },
         {
           "ticker": "XLI",
           "name": "산업재",
-          "change": -0.8,
+          "change": -0.9,
           "weight": 1
         },
         {
           "ticker": "XLV",
           "name": "헬스케어",
-          "change": -0.2,
+          "change": 0.1,
           "weight": 1
         },
         {
@@ -136,7 +136,7 @@
         {
           "ticker": "PLTR",
           "name": "팔란티어",
-          "change": -1.1,
+          "change": -1.9,
           "weight": 1
         }
       ]
