@@ -101,13 +101,13 @@
         {
           "ticker": "XLK",
           "name": "기술",
-          "change": 1.0,
+          "change": 0.9,
           "weight": 1
         },
         {
           "ticker": "XLE",
           "name": "에너지",
-          "change": -1.6,
+          "change": -1.7,
           "weight": 1
         },
         {
@@ -125,7 +125,7 @@
         {
           "ticker": "XLF",
           "name": "금융",
-          "change": 0.1,
+          "change": 0.2,
           "weight": 1
         }
       ]
