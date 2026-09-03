@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T20:38+09:00",
+  "updatedAt": "2026-09-04T00:13+09:00",
   "sectors": {
     "조선": [
       {
@@ -15,16 +15,16 @@
         "date": "2026-09-03"
       },
       {
-        "title": "한화오션, 대만 양밍해운과 선박 9척 계약…이틀간 2조원 수주",
-        "source": "speconomy.com",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5PM2tiSmNMb0Z4R3lmUW1LZDFuaXp1UUZJUXBjVTFWQjM2X1hvVmYwNEhvdWVDX0F4ZUVXRTZZTkZ4d3M1b1BWbFVKbW9BQk1KYzBROXc0MjVYRU5KQlBjbUNOalZCN2lKdVVEYQ?oc=5",
-        "date": "2026-09-03"
-      },
-      {
         "title": "한투證 “조선업 전기료 인하 효과 미미…수주 모멘텀 삼성중공업 주목”",
         "source": "이투데이",
         "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB5dlpNU1NEWE5KM1NsYUxBWTMtbG0zRk1uVmpvbURadXA5QUZ3ZkJubUl1ZjB1UmM3aEp6UGw3VnpxY0pUR3YwcUE4Nk5fU1FGQktLdA?oc=5",
         "date": "2026-08-31"
+      },
+      {
+        "title": "전남서남권 제조업 신규수주 ‘뚝’",
+        "source": "드림투데이",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBuN2hBZjRZbmdsakZPWnViZEN0UXcxSUpCZmplb01vOXhrSnl5TGV0UlAxeHEwdy1oblRNV1J4UVJhMm1IeVU1d1JINjFhcy1QLWpDdktTNnI0dVloeXFTemFCTzdNN2pO?oc=5",
+        "date": "2026-09-02"
       },
       {
         "title": "[중국 특징주] 중국선박공업 자회사, 1.4조원 대형 수주…'조선업 호황 본격화'",
@@ -33,17 +33,23 @@
         "date": "2026-09-03"
       },
       {
-        "title": "전남서남권 제조업 신규수주 ‘뚝’",
-        "source": "드림투데이",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBuN2hBZjRZbmdsakZPWnViZEN0UXcxSUpCZmplb01vOXhrSnl5TGV0UlAxeHEwdy1oblRNV1J4UVJhMm1IeVU1d1JINjFhcy1QLWpDdktTNnI0dVloeXFTemFCTzdNN2pO?oc=5",
-        "date": "2026-09-02"
+        "title": "조선업 ‘수주절벽’ 온다는데...두 국책기관 전망 왜 달랐나",
+        "source": "newstopkorea.com",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1BTmlQUFU0YW9UckpULU9XUmppeDVKMXp3VGw1TVQ4R0Z6U1dnMVoyOUlGUHV5MS1sXzR0YXYyaTZhcE04bkJyMXp6c0RwMHdXMUEyYVdoZWVLazR2M24xR3hQSnpWREhaZ1F0V0dFcw?oc=5",
+        "date": "2026-07-27"
       }
     ],
     "건설": [
       {
         "title": "대구신보, 건설업에 300억 특별보증…업체당 최대 2억",
-        "source": "뉴스1",
+        "source": "news1.kr",
         "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5OdHBRUFRnVnZWUjZTQmNETnl6ZFRpUUw0Q0F1QUxVOV9SeDVMYk9HUUc0VXRyWjNESW1RVHZPMXktcW84bkxJbldENjBDdnpaMEJEVDdkLWJBb3daNkE00gFkQVVfeXFMTmRFSXI0cnBONmIxRnRfdzJrX3ZHbWhUVUZSenJKazhibFlJSF92QmtmZTBUYnpZMFVWUS01aEhjR183YUltbUhTY1I4ZFBhcnpzeWhDZThWWkpQMDhkWlMxQmpEUA?oc=5",
+        "date": "2026-09-03"
+      },
+      {
+        "title": "정상 줄고 위험 늘고...건설업 신용도 악화일로",
+        "source": "dnews.co.kr",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0yd1BBRXZMOUZIODBlZzFpSjRnN05vb3NqWFcwZzdTZ1ZPU3pZMDliREpMWFIyaU0wWFhxWFhaTXpTVmplaXFrSDNpVGxRYTB0NFB5Z1gtNml2aTROX05YTlFINkU4U1BQNjlQSW9FcVJGd2sy?oc=5",
         "date": "2026-09-03"
       },
       {
@@ -53,27 +59,21 @@
         "date": "2026-09-01"
       },
       {
-        "title": "[절벽 앞 건설산업]③ 사라진 일자리...건설의‘고용 없는 반등’",
-        "source": "대한경제",
-        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBwZThYUEpWZE5paHFONUM5UnRuVlFwNHY2Wk8wRVVrcGdKeG9Dc196UmVMa080bVdYSzNBSC14bzBtRmZ4UTBWLS1iZ2l4NFRRNGFfMHpWTk9vZVNtNDljcDFkWDZjM1JtMF9sbHZIeHZJNmc?oc=5",
-        "date": "2026-08-31"
-      },
-      {
-        "title": "윤학수 전문건설협 회장 \"종합-전문 건설업 시장 개방, 부실공사 위험만 키워\"",
-        "source": "네이트",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE41LUozeFVaOXRYSFNRSFZfLWhjWTVpWGpCd21yX1pJMV9kZHNLTC1JRXBGdmREb3ZVamhPa0RDZFdwTUQwLVgyMXctdzF3OGJoZUxJ?oc=5",
-        "date": "2026-09-01"
-      },
-      {
         "title": "하반기 건설업 일평균 임금 28만2737원…전년比 1.40%↑",
         "source": "더팩트",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1tQjhrMnRTUjZ6SmFidWFoRDU4YlZISldIUWp3UHZyaTVJUU91TE1KTzZKY3RsaHV1TDNTcDBvV2RMOUh3NHpnbkNBcUlLNVlZVUxzTDlmbGNwUdIBVEFVX3lxTE9sNVFxcF9MZnpUeC13SjJSQ1VTM3RlMlFhSkYxSkV2LVhpcHJiQTBJYkk0ODQ4bmNTVzMtOUNXVkdJUzFCOVJLVUVsSWEyWWthelZqRw?oc=5",
         "date": "2026-09-01"
       },
       {
-        "title": "건설업 일평균 임금 28만2737원… 상승률 ‘10년 만에 최저’",
-        "source": "국토일보",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zN2w5MDcyMU1IcGI1VkRzV2oydmQ4STYyd1N0d1pDMTgxclBBcmdFRGZxbUJBNGtzU3VTaHZTN2ppZEN4dzE5XzFSeHloV2NqZnNzLXZmN3pzaXgtb3F4enNvUno?oc=5",
+        "title": "대구신보, 건설업 특별보증 300억원 공급…업체당 최대 2억원",
+        "source": "경북매일",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9iSTAzdXBlODFIN3NXMVljcUsxRkJMMlZUTE1xU0VoMjhFdHNCTk1rb1ZSUUU5UHl3SW9kZHVfQVB2cWhKLS1ZbG1MUFFuWE1YNng3SW90RkRJQQ?oc=5",
+        "date": "2026-09-02"
+      },
+      {
+        "title": "하반기 건설업 평균 임금 1.4%↑…3년 연속 상승률 둔화",
+        "source": "v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5nX2VGYUc2UEZWWG9YSmp3aUFfbkZySHJTMXdFaElpUGdjT3dRU203Y3hncUhJRElGS2JtWHBxWF84UXlmZzF0U2ZnLTRaNUE?oc=5",
         "date": "2026-09-01"
       }
     ],
@@ -156,13 +156,13 @@
     "에너지": [
       {
         "title": "“전력, 선제적 독립변수…국가경쟁력 위한 투자”",
-        "source": "electimes.com",
+        "source": "전기신문",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA5Wi10NGpqVUd1WVJ0S1ZYUXhXUE43QmI0ZWtxeEtjTWV1aW04OW1BSEtZT0pfRG5nTlhmbk1qTEYtQW8xbGVqS0gtRHRyOUYwMFhWWktXNG9yM2YzWmRYVEN5SkdWQzAwS19Dd9IBcEFVX3lxTFB0R0ZYQmhWS3A4NmZNeVRIU3pnOTV1U3Fsa1F4dnpTLWxoQlJmZk9ST3o4WVNvdV83UzNkUmV2WjU2YVY2YWczOE5rZ3pYUDdKUFZaWlBCTlIyR3BkaGY5NExIRHVKTTZNZGNnTXoxREw?oc=5",
         "date": "2026-09-02"
       },
       {
         "title": "경기연구원, 용인 반도체 전력 수요 대응 '경기도 에너지 고속도로' 제안",
-        "source": "전자신문",
+        "source": "etnews.com",
         "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE94QlFzTkM3d2NnUlNMeG9DOGdudDhGUUI5TlV0bGJpOWRpekxVVzhESE5HU1kzdE83a1pfdEhJOE1SS3JELUJTeHdiZi1Xdw?oc=5",
         "date": "2026-09-03"
       },
@@ -174,15 +174,15 @@
       },
       {
         "title": "남부발전, PPA 중개플랫폼 활용 재생에너지 전력구매 지원",
-        "source": "newscj.com",
+        "source": "천지일보",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE53X1N5Tm9EeGJXUkdUNFk2ZldQcDFDSmFJWVJjZmxiYlhSZkNxS19SLVU5eU9QbkZ4LXZRejkxRUVZeWo3V2FSb0tRR1FISUVTcTVmTWExTzVEUEJuOWNkclFwWkJ6eWRUa3c?oc=5",
         "date": "2026-09-02"
       },
       {
-        "title": "데이터센터 전력수요 급증…미 에너지 비용 압박 커진다",
-        "source": "한국경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE43UmhnMkVpQ3pMOWxoYTJEZW9BbkFPNUJQRmNpb2JnZ2ZldFpIUGtKaVUtOWp1ak9nZTFpYkk5NUhLaEkzSU5lYVVESlR2RkY3WFFLeDQ0WDltZw?oc=5",
-        "date": "2026-09-02"
+        "title": "전력거래소, 스마트그리드협회와 분산자원 확대 협력한다",
+        "source": "에너지데일리",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE0taU91SUZGeDlPV3RsbkpOOTZhZElqZVFOSUNtQXhNS0JFVWxfdDJWTmNaWE9YMEZQbzcwbWZvX1pjOFRManp0QldQRE5iYmJGYkdmQXlPVC1OOFUxckhsZXQtcTliQ2Y0YS1iS1JZeTdqQQ?oc=5",
+        "date": "2026-09-03"
       },
       {
         "title": "[재생에너지 리셋] SK이터닉스, 재생e발전 개발 넘어 ‘전력 플랫폼 기업’으로",
@@ -231,16 +231,22 @@
     ],
     "헬스케어": [
       {
+        "title": "\"제약·바이오 DX·AX 종합상사 되겠다\"…제이앤피메디의 승부수",
+        "source": "메디파나뉴스",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE41RVlVZEFuWXBLVlZ4ZUN1b0FrOEZERlFRcDZTbm1SV2lfRldMWTUwaFVFemFTM3ZIbDVJcDBHRmtMR1NSWVQ0d2p5RUFzMEdYTXJYVi1nQ3NqbEVLRVZKT0hNZXZIQ2pUbjdV?oc=5",
+        "date": "2026-09-02"
+      },
+      {
         "title": "헥토그룹, 제10회 'HECTO&' 임직원 헌혈 캠페인 전개",
         "source": "팜뉴스",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE92OFVoVlVEZUVYcTE0Z2xFcGZmX2Q5bmJaa1NRQVNpaUsyWlFRRmJqcmJfUjhnMHpTakNNUmphZkRfS2dOZjdDdTBhSDlLam14Qy13QkZ3RTlzWjR2eDU0VGZoYkY4d2lEdUxHTQ?oc=5",
         "date": "2026-09-03"
       },
       {
-        "title": "\"제약·바이오 DX·AX 종합상사 되겠다\"…제이앤피메디의 승부수",
-        "source": "메디파나뉴스",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE41RVlVZEFuWXBLVlZ4ZUN1b0FrOEZERlFRcDZTbm1SV2lfRldMWTUwaFVFemFTM3ZIbDVJcDBHRmtMR1NSWVQ0d2p5RUFzMEdYTXJYVi1nQ3NqbEVLRVZKT0hNZXZIQ2pUbjdV?oc=5",
-        "date": "2026-09-02"
+        "title": "한국화이자제약, ‘블루 리즌(Blue Reasons)’ 캠페인 전개",
+        "source": "메드월드뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16VXVwR3k4RHl0b0xBWm96eks4UmZPOTJHUFp3SzU3bDJpZ1Vka0FscjZJdHg4ZmFfZXV4d1pDanhmSk5ja0JmZkxoMGpudDVza1VYN0JWU1g2bkpxU2hhUlp4RzRlM2M?oc=5",
+        "date": "2026-09-03"
       },
       {
         "title": "효소에 SOD·커큐민까지…제약·바이오, '한 포' 복합화 경쟁",
@@ -249,22 +255,16 @@
         "date": "2026-09-02"
       },
       {
-        "title": "신약부터 의료기기까지… K바이오헬스 혁신 주역 12곳 선정 [서울바이오헬스대상]",
-        "source": "서울Pn",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBlZm1VRnFCdTNIVU5FSnZTT2NQdWdmVXBfbkJNTmN1Z1J5cWNxSXZlbnNEVmNDT1FxUmQ0SGUtUm82RkJyTUotNEVNUGZJclk5WkpRSmJMZTY2RUVEakNlNU1KUU11aU1WN2NUMzN3?oc=5",
-        "date": "2026-08-30"
-      },
-      {
         "title": "복지부 2027년 예산 149조…지역필수의료 1.2조 투입",
         "source": "데일리팜",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE93Tm9pWDlrZ0taQURsc2xrVW9kSktJcmtGVDRYTGNIVnlaOWpaTkt2Y3lKRTk4VWJwc0ZHaVlOTV9udG16R05lckhmQ0h5TFBwTWdiUDl3?oc=5",
         "date": "2026-09-01"
       },
       {
-        "title": "동아에스티, 웨어러블 환자 모니터링 앞세워 스마트병원 공략",
-        "source": "메디칼업저버",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBTclBEYVVnVWJ0OGNGX1hBaFRjVVRwOGN2cXI3R0dFMEZzLUo2R3ZTaXNPdGFYdlpKTlFtR2hjckFvQjYzVzNBcWRRZGY4MURET21aa29HRHM2Vl9sTHVyc0pWWE5hNmF4RExR?oc=5",
-        "date": "2026-09-01"
+        "title": "신약부터 의료기기까지… K바이오헬스 혁신 주역 12곳 선정 [서울바이오헬스대상]",
+        "source": "서울Pn",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBlZm1VRnFCdTNIVU5FSnZTT2NQdWdmVXBfbkJNTmN1Z1J5cWNxSXZlbnNEVmNDT1FxUmQ0SGUtUm82RkJyTUotNEVNUGZJclk5WkpRSmJMZTY2RUVEakNlNU1KUU11aU1WN2NUMzN3?oc=5",
+        "date": "2026-08-30"
       }
     ],
     "부동산": [
@@ -396,14 +396,8 @@
       },
       {
         "title": "日국채금리 3% 준대도 \"누가 사나\"…채권시장 '떨어지는 칼날' 공포",
-        "source": "뉴스1",
+        "source": "news1.kr",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBLSEk1OUh0UkxmRVg3bXI5T1BhbF9sVkxUTFBrczMzTE5ZLWx1NlgzRmJoMFpMakgzMUNTOGxSazNLTV9XdG8yUFRsNFBEdTNzMGh5T1h5Mk05eU9RQXRZN2pWWW1GZE3SAWxBVV95cUxNMzVINlNJYk5ZRy1RY0hwZFVZT1ZpZUNfaXZPaURzQnNaMVVUUEFNU2pyREswOTNxNGg2aV9xMHlaVmpkUDJiSFhxSnlDTHRoNGxMWWVHdThPWGJGazBLbWZwTFNqbXdSYWpHY2E?oc=5",
-        "date": "2026-09-03"
-      },
-      {
-        "title": "맥쿼리 \"채권 공급 과잉이 美금리 끌어올려…AI 투자도 한몫\"",
-        "source": "KB Think",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1xclNqRWZwMXh6VUVxZkwzRjBvRnZIUElIZXAwLWozTGctckxfN0E5TkFkZFRmWVBmYWo5Zi1oT3Y0MW56T3hITFZZNlZydFl6TEhZNVByaUNCTG1hYzBUTUtVdnhleE0zZ0l2bGtNS0lIUQ?oc=5",
         "date": "2026-09-03"
       },
       {
@@ -413,19 +407,19 @@
         "date": "2026-09-03"
       },
       {
-        "title": "美 10년물 금리 장중 4.82%…채권 매도세에 34개월만에 최고치",
-        "source": "연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5waUJYLUZRQjJJT3hNT1J5RVZDTUxfQVpxVlhHWER4Q2ZvSzM4SHNydmptWVlSYmFtb083X0QxSi1WdjZtUEM0SEpmaHZKQWJ6NV9hQ1hLV0I1bU3SAWBBVV95cUxPR3kzN01wR0U4Z1JVRzBNeGhLSVl6ZXN3Z0hzTExoT29ud1dzN3hzTk4yaVRvRGlEbU8xUUxoWkN6cEdZWlV6ZVN5UENpSnRtbW5tQXBUam1BR3lTcHU1cjk?oc=5",
+        "title": "맥쿼리 \"채권 공급 과잉이 美금리 끌어올려…AI 투자도 한몫\"",
+        "source": "KB Think",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1xclNqRWZwMXh6VUVxZkwzRjBvRnZIUElIZXAwLWozTGctckxfN0E5TkFkZFRmWVBmYWo5Zi1oT3Y0MW56T3hITFZZNlZydFl6TEhZNVByaUNCTG1hYzBUTUtVdnhleE0zZ0l2bGtNS0lIUQ?oc=5",
+        "date": "2026-09-03"
+      },
+      {
+        "title": "日 국채금리 30년 만에 3% … 높아진 금리에 해외채권 사던 일본 자금 줄었다",
+        "source": "newdaily.co.kr",
+        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1VRnlWeElWYWh3d1N4NGpXbVZxN2YwLXZWZk93S3pOWGxaWGxUZmQ5MDhUR3hZNnNTRi1OaXZIWmdBYXhwd0gwYnA0dHVzWXcwcFl3aFdzMkp3emhhR2NnRGNFemM1dWFGQnM5UUdxa3R3UmJYZ0ZHWFVwVdIBgAFBVV95cUxOb2pQSG9uSjhvNTlRRkx2NHdETFVDbTBsRVFqWkYxNWZ5THlsMVExcE12T3BLb1hwSGlhOTMtNFBwTmFhRkFoZnhZYUpLUl9Hc3JnQUJNQWNxV0tfSVZTZ0VnT1lzVzNBYXM4V3RQWXdxN2N0NW55VkFrQ0VwcnJycw?oc=5",
         "date": "2026-09-03"
       }
     ],
     "고용·노동": [
-      {
-        "title": "7월 취업자 10.8만명↑…청년 실업률은 4년 만에 최고",
-        "source": "브릿지경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9TN05IYWxRMEhTUzBVbGYxcnJYellTSWNfZ0wyMHZhOE5wSGpIWU1aM0sxVjhCTW5wLVppeVA4ZlVEYWhNb25OSWs4SUtlQ1o0SllwSEx6YVc2UQ?oc=5",
-        "date": "2026-08-12"
-      },
       {
         "title": "취업자 늘었다는데 청년은 ‘한겨울’…대구 청년실업률 9.9%",
         "source": "v.daum.net",
@@ -443,6 +437,12 @@
         "source": "경향신문",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9GY1pNSXZhX2VqRnhTcUthTnZDeFFaWFEwWi1VRXIzTGlraFJCZWJOMTZrZ1hkcEdJQjMyNnYyQUUxVlBOc2xkWjVnMGNyczBaN3hRbWRGM29WUdIBX0FVX3lxTFBqWUFsa3JNTXJKYzFFMUlGZkItcnd5YTR0SlhSM1piMzRQem5md3BhWVY0YWRiTnJIcnk4NHU4dnhEakl3cUxqUW1WS0pBLVhPUy1KYVNTYjF3czJpaVlr?oc=5",
         "date": "2026-08-12"
+      },
+      {
+        "title": "대도시 고용 상황도 악화…관악구 228개 시군구 중 실업률 1위 - 머니투데이",
+        "source": "머니투데이",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE40MndnV01zS1lXVjIwQ3ZiSnBRNkZEYVRicm9kUGZveldSZWZXckRld004cHBQR2NROXFnRmxod3NpV25lb3lyLVNTX1lETGxiejdjRXUwUTVpRnJwR1FJdjNWWV9OWUF0SDVr0gFwQVVfeXFMTzBGYkJDQWJRX3VJdlg0VThJNWxFbFJ5UjA3UVpzY09MMklLY3FwTF82YjEwOTFoOFBRYl9FNFQyYklBdXItRm05MTRpY3Q2UXlDWWNkd2JkZldfX0J4Q2RrM1FyTjdOWWJhdGlhQmFQWQ?oc=5",
+        "date": "2026-08-20"
       },
       {
         "title": "[종합] 청년 취업자 45개월째 감소…실업률은 7월 기준 4년 만에 최고",
@@ -498,7 +498,7 @@
     "쉬운 경제": [
       {
         "title": "거제시민자치대학, 이진우 삼프로TV 부대표 초청",
-        "source": "gibnews.kr",
+        "source": "GIB 거제인터넷방송",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9laUUzOExhOGNpZ2hqejdlT3A2dVhqZG1kNUVtckhwTGczQXdZaEtrSHZ0czd0eXIzeWJsYldYNF9oODBqaUxkU1pRMUx4OHc2YTctc09rMnVFVHczMURPNXBPTEdqNHc?oc=5",
         "date": "2026-08-28"
       },
@@ -522,7 +522,7 @@
       },
       {
         "title": "[신간] 33개 IT 키워드로 엮은 '디지털 경제를 쉽게 읽는 책'",
-        "source": "지디넷코리아",
+        "source": "zdnet.co.kr",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB0bzNjNk53a2Z2bm5oYWIwWVZPWlpUYWJVZ3Q5UlB1MXd0M25NWFdLMlRiOXhmVUtOSFNYR0RxSlhyU0VXdExRVXhGY3R6Z2QzbDdpUWt3?oc=5",
         "date": "2022-08-22"
       },
