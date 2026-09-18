@@ -1,20 +1,32 @@
 {
-  "updatedAt": "2026-09-18T07:15+09:00",
+  "updatedAt": "2026-09-18T09:28+09:00",
   "posts": [
     {
-      "id": "auto-금리·통화정책-9267021587",
-      "title": "한미 금리차 1%p로 확대…한은 연내 추가인상 가능성 커져",
-      "source": "한겨레",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1WTUVCdjZ3OFA3eW92Q3NEcGVsOGZzS0RTMjNkZnZwZWJWYkEta3Bkb1hxaUlBVThEbVdUNXpnR2lYS0ViQnE4MFh0N1pTLXZYYjd2Q0NWNXl0R0NIRmhyRnlyVTNmSkEwTnUxNFVGQmtjdw?oc=5",
-      "category": "금리·통화정책",
+      "id": "auto-증시-500967722",
+      "title": "“외국인 코스피 사고, 코스닥 팔았다”…국내주식 올해 첫 ‘순매수’",
+      "source": "매일경제 마켓",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB2dDIzVDV2dElYZnAzbmppRTVJMWtWSks1ZjFQcjRkR3BtTFBXWlFvdzJTM3lCVFBHWnNNM081ZkhFblBhUjgyR1VTT0FlUTV5MlE?oc=5",
+      "category": "증시",
       "level": "기본",
-      "impact": "금리가 움직이면 대출이자·예금이자, 그리고 주식·부동산까지 함께 출렁여요.",
+      "impact": "내 주식·펀드·퇴직연금 수익률에 바로 영향을 줘요.",
       "date": "2026-09-18",
-      "summary": "중앙은행(한국은행·미국 연준)의 금리 결정과 그 배경을 다루는 뉴스예요.\n💡 금리가 움직이면 대출이자·예금이자, 그리고 주식·부동산까지 함께 출렁여요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
+      "summary": "국내외 주식시장이 오르내린 이유와 흐름을 짚어주는 뉴스예요.\n💡 내 주식·펀드·퇴직연금 수익률에 바로 영향을 줘요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
       "auto": true
     },
     {
-      "id": "auto-반도체-5310469259",
+      "id": "auto-환율-9448623583",
+      "title": "환율 13.6원 급등… 강달러-고유가 겹쳐 수입물가 비상등",
+      "source": "donga.com",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE05dHowZ3Y0VDFFTDhFcF9lMllTZXk2WkJ0VG9TdWoyQUxBTTFKMXN0WlhYaWV1ZzJ6RnhzY1pEdkxObjlJR3F4bHJ5VWU5RG81aDdnVzFuX2FyeGtSM3dHbS1zUDRpdnRGaXN1MGxqXzhkSVY5V0HSAWZBVV95cUxPenZ1cmo2NVpIOHJrdWttOHdMaFZkTU5Hd015eGRTYjQzQkRVcjZINVdsNGZ5cWp0ejdoX21RcmVGdVBldjlRc25ISF9UakJ0M09NelRqcm10LWxkQ0NiekI5OExJckE?oc=5",
+      "category": "환율",
+      "level": "기본",
+      "impact": "환율이 오르면 해외직구·여행 경비와 수입 물가가 같이 올라가요.",
+      "date": "2026-09-18",
+      "summary": "원/달러 등 환율 변동과 배경을 다루는 뉴스예요. 수출입·물가와 밀접해요.\n💡 환율이 오르면 해외직구·여행 경비와 수입 물가가 같이 올라가요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
+      "auto": true
+    },
+    {
+      "id": "auto-반도체-7967911116",
       "title": "반도체 독주 끝나나 했더니… 코스피와 삼전·하닉 동조화 ‘역대급’ - 조선비즈",
       "source": "Chosunbiz",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVXpoNXF5RkxGdzBRZVdTeHFJZmJwV1VqaGZsVjZqSEllQnF5TFZRYmx1MXVtMWt2bEZSREhib0xES0NRcWxvTC1jd3NtR1VSZm95SXFTZ0t3X01NNmZ1ZXdpNGh2UE1UM0hWVVNLa21lTEhzUjg5Q0oxeTJGNmpwenZHaEFsWEVO0gGcAUFVX3lxTE13M2NMSGdFaFVvdkU0WUE3RlZPMlNVWmJKUS1VMnJOTlBiejZURFRjZjdLNmxKVE91TmpYNjNITjNKeWJqT0UxN1E3VjRmRHkxWGdGb0xCalJodi1UQmdUbm90Z2FPT1psY1lZOHF1UjA5b1pFNS16RGFaQi1IdTlfNmtqQW5FTmNIUm9LS0JyQzB4aUpnZl9TQlBrSQ?oc=5",
@@ -26,10 +38,22 @@
       "auto": true
     },
     {
-      "id": "auto-AI·기술-4874760901",
-      "title": "\"AI, 우리 모두를 죽일 잠재력 있어… 이를 피할 시간 얼마 남지 않았다\"",
-      "source": "조선일보",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZVFJWV9FSTFFS2pSVnhDZWtsdWtMYnNEaVBpSUdSZHhnbTF1cEVjY1ltWVBXT1QzTk1PQTZjLUEwcG5iTmhGR0RWUDNOUV95Z2laclI0T2RYR2ltYjIzdm83SVpMZjRyYlNGMUxLQ0Q1MnVtTUZYMTJZX0UyMk9UT2t1Yw?oc=5",
+      "id": "auto-반도체-6616388695",
+      "title": "美 반도체 훈풍…삼성전자·SK하이닉스 프리마켓 3% 상승",
+      "source": "뉴스1",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9tNV9vTmdHaC0ta0l4SG5UWlZRS09wMEU5dVIzMDZxRGdwc0NFWFZHWTBORHhKSmNWM2h3UG5jSUo0V0NkM1JkTjRWcVlhUXF1RzI2OFdncklwaVM1Rmxv0gFkQVVfeXFMTVFQWjBGNjNiaVNmUmU0aF9Ham1UMkxHZHNmZDk5czRUUEFMdFZVckQzdWZLYWgzcUdZNjNySTZjWFlaSE8ySWpzUy1HLXBRYk9XcGprZkhKU2VHUFFsSDlRVnF0aQ?oc=5",
+      "category": "반도체",
+      "level": "기본",
+      "impact": "한국 경제의 기둥 산업이라 수출·고용·증시 전반에 파급돼요.",
+      "date": "2026-09-18",
+      "summary": "AI·스마트폰의 핵심인 반도체 산업 소식이에요. 한국 수출의 큰 축이에요.\n💡 한국 경제의 기둥 산업이라 수출·고용·증시 전반에 파급돼요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
+      "auto": true
+    },
+    {
+      "id": "auto-AI·기술-5180334039",
+      "title": "빅테크 AI 투자, 2028년까지 계속된다…관건은 '수익화 속도'",
+      "source": "ebn.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBfQU11eE1ZVXdlcUtUQjJjMHp2Wkw0Y3RYSzFobHVjdjlHcDVJTm5OcHlRLUJxRFhsYXZ4dmtCOTg0LW5PeHVFSEkwQjYyZ3dNM0Zna2J6dUVBLVdiNUFLSGhzMDVCTWls?oc=5",
       "category": "AI·기술",
       "level": "기본",
       "impact": "관련 기업 주가와 일자리 지형, 서비스 이용 방식까지 바꿔요.",
@@ -38,10 +62,22 @@
       "auto": true
     },
     {
-      "id": "auto-코인·가상자산-7429674627",
-      "title": "\"클래리티법 막히자 6200억 빠져\"…비트코인 ETF 석 달 만에 '최악'",
-      "source": "newsis.com",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5WNDBZU1Zqekd3T1RSTTJsTC03dFpUN1FoeEJyMW5hcnBHS0hLSDBtWmtUNy1yRl9udUs4NXI2eVktSGFlZkt4RTFnUTFPX1dmRlJ5MERKU2hna09rT0hKatIBeEFVX3lxTE5qYTNteG5YNVdoUG90cVNUX2w5WFhheDFDLUN4SEJYbEJnNi1fNUVVbzhLcTBPQXlpUnNXenBDZWdKMEtOalF3eE94V0NJR3NDUDl4VW9DSjBSZGFFMDkzbllkU1ZLc3NFY1hhR2ttQnJJS3QtN2U5cA?oc=5",
+      "id": "auto-AI·기술-9155118827",
+      "title": "[AI 속도 논쟁②] 빅테크가 정한 AI 안전 기준…스타트업 추격 막을까",
+      "source": "지디넷코리아",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE12QnFjZ1lqNXRWcUh3QW9fNFZFUEF5VTZzZnVpYjRDaEdCazFLUG9HMkNwQm0tVF9UbTVFWGFaVWIzWlY0b1Z0WFRvU3VoWmdOclM3OC13?oc=5",
+      "category": "AI·기술",
+      "level": "기본",
+      "impact": "관련 기업 주가와 일자리 지형, 서비스 이용 방식까지 바꿔요.",
+      "date": "2026-09-18",
+      "summary": "인공지능과 기술 기업 관련 뉴스예요. 투자·일자리 트렌드와 연결돼요.\n💡 관련 기업 주가와 일자리 지형, 서비스 이용 방식까지 바꿔요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
+      "auto": true
+    },
+    {
+      "id": "auto-코인·가상자산-3917545807",
+      "title": "[08:35 가상자산] 비트코인, 美 규제완화 기대에 상승",
+      "source": "신아일보",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5MVElHZnp1Nl9ibTdHY2djQ0ZXZDc5d0pzakVWc3JIU1JEUm5kTGk2d3NMQVEtS2tELXNKZVFuZHlZMjFoWkp3Q2ZWbV96VVdEWDVIWFR4SEVlZVdSSzVNLWxDUTk4dUhCOHVPd3FTM1U?oc=5",
       "category": "코인·가상자산",
       "level": "기본",
       "impact": "변동성이 커요 — 투자한다면 감당 가능한 범위인지 꼭 확인하세요.",
@@ -50,7 +86,19 @@
       "auto": true
     },
     {
-      "id": "auto-거시경제-5090830695",
+      "id": "auto-코인·가상자산-7858048115",
+      "title": "\"클래리티법 막히자 6200억 빠져\"…비트코인 ETF 석 달 만에 '최악'",
+      "source": "뉴시스",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5qYTNteG5YNVdoUG90cVNUX2w5WFhheDFDLUN4SEJYbEJnNi1fNUVVbzhLcTBPQXlpUnNXenBDZWdKMEtOalF3eE94V0NJR3NDUDl4VW9DSjBSZGFFMDkzbllkU1ZLc3NFY1hhR2ttQnJJS3QtN2U5cNIBeEFVX3lxTE5qYTNteG5YNVdoUG90cVNUX2w5WFhheDFDLUN4SEJYbEJnNi1fNUVVbzhLcTBPQXlpUnNXenBDZWdKMEtOalF3eE94V0NJR3NDUDl4VW9DSjBSZGFFMDkzbllkU1ZLc3NFY1hhR2ttQnJJS3QtN2U5cA?oc=5",
+      "category": "코인·가상자산",
+      "level": "기본",
+      "impact": "변동성이 커요 — 투자한다면 감당 가능한 범위인지 꼭 확인하세요.",
+      "date": "2026-09-18",
+      "summary": "비트코인 등 디지털 자산 시세와 이슈를 다루는 뉴스예요.\n💡 변동성이 커요 — 투자한다면 감당 가능한 범위인지 꼭 확인하세요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
+      "auto": true
+    },
+    {
+      "id": "auto-거시경제-7357810525",
       "title": "2027년 경제 성장 시나리오는 무엇인가요?",
       "source": "Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4tSFlLQUktTHNyVkNLUUhlc05iNkxoSmtiV2tCMFF6cTJfQXotdmlZdkxzdXRlU0FzSWtHSUs1ZC1QTEhZUWlpdHhnX01MY1AxaWxBOXNaOEppR2w1YU9fYWRaX1J1SzUtNUNWN1FCaU1zT2JRMXl5cnlsMA?oc=5",
@@ -62,7 +110,7 @@
       "auto": true
     },
     {
-      "id": "auto-금리·통화정책-6792832410",
+      "id": "auto-금리·통화정책-7973280115",
       "title": "미 금리 올리자 환율 급등...한은, 연내 인상 나설까?",
       "source": "YTN",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE84NXpxTDZkbm5vMG9NM3Z3WHRpSTZYZ1NvcWdQNGdoVWNOYUpZQmxxNFNnVzhrMGVJeEU4WHpqXzloamhOLTNoUVJlZ3ZCbE9DUm5iWWttMGhjaUFCZ3c?oc=5",
@@ -74,7 +122,19 @@
       "auto": true
     },
     {
-      "id": "auto-환율-9546684402",
+      "id": "auto-금리·통화정책-2923472708",
+      "title": "미국 기준금리 인상‥한국은행 \"각별한 경계감으로 금융·외환시장 점검\"",
+      "source": "MBC 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9yWWpmcEFKaHBXV1FucFlGa0FyR2xHdnV3NVRSaE1GZEJ4QjUwNkkwNzk1a1lkdE5yU3pMWndCN1BtZGxPWFF1eTVJVDN2Wkd5b1VVLVJVTmlfVHFVODBKR2MySUdCSXNmTGJhMVZwa1g1dlY20gF0QVVfeXFMTXBua2ZLbjRaLTlrT1BYcHhpODJrQ3NDc2hJVVFVUkZWdmhMSk9OdmpaWkVFeDNpNE52YmktTHVXbHd6M3ZMS3VudG5CeU0wd2p2d3o1dnM4ZFlBdDRRODhEZXZwOWxaQlBZT3NxTndBWE1oMlY?oc=5",
+      "category": "금리·통화정책",
+      "level": "기본",
+      "impact": "금리가 움직이면 대출이자·예금이자, 그리고 주식·부동산까지 함께 출렁여요.",
+      "date": "2026-09-17",
+      "summary": "중앙은행(한국은행·미국 연준)의 금리 결정과 그 배경을 다루는 뉴스예요.\n💡 금리가 움직이면 대출이자·예금이자, 그리고 주식·부동산까지 함께 출렁여요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
+      "auto": true
+    },
+    {
+      "id": "auto-환율-8100756580",
       "title": "미 긴축 기조에…원/달러 환율 3주만에 1,380원대로(종합)",
       "source": "연합뉴스",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9kZk5Kd0xNQ2VuVmJFbFNaV2s3STA3VUQwRGJWWHBEeHZUWTZjeEkwNVRDTzhOZV9MN0YzaDM4bjNubldxQkd4Z3RQaE50S0xnWXI4aHpzT0h1SU3SAWBBVV95cUxQMzJELXlaTG9FejRESHhSUEhxRnpKVm5raTltQW1Ed1llMEg1blJGUVJKOUM2TGxpUFNfQS1BTmdwMHpGN3hzQ0lSX0JmQUF0YmJuSXBKRjYtekpQU2Jqbzg?oc=5",
@@ -86,55 +146,7 @@
       "auto": true
     },
     {
-      "id": "auto-환율-7668631332",
-      "title": "[속보] 원·달러 환율, 13.6원 오른 1382.2원… 3주 만에 1380원대 복귀 - 조선비즈",
-      "source": "Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcDhXT2JmYVVUVjZ1SnpYdGtuNmxEcTllNTFfWFFPSmwxYUduVDJBcW1mWV9LbjFPNFZPdEp5ckpLXzZvT21hQ0lBSFZpaHA0N1U0MHpKMEFaMVNFd0FmYmRoS0l1U0t2SDVFUVVmVU1kRmhHcWJhUG03Wl9RUkx3VjNRdDhyZ9IBmgFBVV95cUxQMFRaTVRNUzdPUFpiSDc0ZXNXQkVadFJBdHdDNElfSFNYS3NtcFhCMWxwSy1mZmtPcVlkSTFUYXZnQmtjc0h0Nnl0cU9rYWVIdEhkX3Jybk9OZktWQnpNZVhfZDlVTDctYTdBblV4eVpnUjNLMXNHSTM3bmRsd3o2NDhnTDdUN1JkenJBMDFvQzNUT041ZDA1LURn?oc=5",
-      "category": "환율",
-      "level": "기본",
-      "impact": "환율이 오르면 해외직구·여행 경비와 수입 물가가 같이 올라가요.",
-      "date": "2026-09-17",
-      "summary": "원/달러 등 환율 변동과 배경을 다루는 뉴스예요. 수출입·물가와 밀접해요.\n💡 환율이 오르면 해외직구·여행 경비와 수입 물가가 같이 올라가요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
-      "auto": true
-    },
-    {
-      "id": "auto-반도체-2026534103",
-      "title": "메모리반도체 공급 부족 미국에서 '안보 문제'로 부각, SK하이닉스 삼성전자에 정책 변수 커져",
-      "source": "비즈니스포스트",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE04TjhMLXV2cVhCMnQ2aFZnQ2UzcHZrZ1FzekhQRUV1alhobUxSMnF3WjNzUE1kdlZoZFJtY2NSeGJOV25uSjFiMi1aXy04QW9uVWF6S05nWXBRdnAwSV95d2piV0hQTDRSanRhU0M4X1pKcTg?oc=5",
-      "category": "반도체",
-      "level": "기본",
-      "impact": "한국 경제의 기둥 산업이라 수출·고용·증시 전반에 파급돼요.",
-      "date": "2026-09-17",
-      "summary": "AI·스마트폰의 핵심인 반도체 산업 소식이에요. 한국 수출의 큰 축이에요.\n💡 한국 경제의 기둥 산업이라 수출·고용·증시 전반에 파급돼요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
-      "auto": true
-    },
-    {
-      "id": "auto-AI·기술-960646981",
-      "title": "미국 금리인상에 빅테크 AI 투자시계 안갯속, 삼성전자·SK하이닉스 메모리 수요 변화 '촉각'",
-      "source": "비즈니스포스트",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9UNUNFbVFESFd0X2ZUMFBnNmZ0YXVlX0VNZlVYOVg0aXhCT3FZSWhyVXZlUDExc0d5dThObmJiTkgySm1DN3FaY3pqTF9ucjRNdEpEQ0c1LW5LQms1bzlMUVl1Q1I5OUNkcHZvZ0NzZVRsb28?oc=5",
-      "category": "AI·기술",
-      "level": "기본",
-      "impact": "관련 기업 주가와 일자리 지형, 서비스 이용 방식까지 바꿔요.",
-      "date": "2026-09-17",
-      "summary": "인공지능과 기술 기업 관련 뉴스예요. 투자·일자리 트렌드와 연결돼요.\n💡 관련 기업 주가와 일자리 지형, 서비스 이용 방식까지 바꿔요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
-      "auto": true
-    },
-    {
-      "id": "auto-코인·가상자산-772792611",
-      "title": "美 클래러티법 부결에 비트코인 2.8%↓…서클·코인베이스 급락",
-      "source": "연합뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE55LWszdmRsRVFweTVTYllMU1EyWFNyZDF2QWI4NElmQjdOOHlQU3FRZGNTMlk5d25BNV9RWUIyeFJrbV9qcVNWWFIyWGhwVXNab2Iydl83ZGQ4WFVSSkt2SNIBYEFVX3lxTE55LWszdmRsRVFweTVTYllMU1EyWFNyZDF2QWI4NElmQjdOOHlQU3FRZGNTMlk5d25BNV9RWUIyeFJrbV9qcVNWWFIyWGhwVXNab2Iydl83ZGQ4WFVSSkt2SA?oc=5",
-      "category": "코인·가상자산",
-      "level": "기본",
-      "impact": "변동성이 커요 — 투자한다면 감당 가능한 범위인지 꼭 확인하세요.",
-      "date": "2026-09-16",
-      "summary": "비트코인 등 디지털 자산 시세와 이슈를 다루는 뉴스예요.\n💡 변동성이 커요 — 투자한다면 감당 가능한 범위인지 꼭 확인하세요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
-      "auto": true
-    },
-    {
-      "id": "auto-고용·노동-9407537262",
+      "id": "auto-고용·노동-9614625491",
       "title": "영국, 실업률 4.9% 버텼지만…임금·구인 둔화에 고용시장 ‘냉기’",
       "source": "스페셜경제",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5QV2lyOGNzeEcyQzdkSnBLMjBnYXRuMFRkU0ZQaTlSM0stUFdnRnU1WkJ6VGVHcmhjS0VRRHZ1czloakFseVJMXzVvS21IMlJ0S2ZDNUlOXzV4QnRybVVJUTNaVlJOVFlRY0lrZg?oc=5",
@@ -146,21 +158,9 @@
       "auto": true
     },
     {
-      "id": "auto-증시-3991356621",
-      "title": "‘6천피’에 갇힌 코스피, 코스닥 2거래 연속 하락…강원 상장사 주가 출렁",
-      "source": "강원일보",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jX08yTFl2b18zRWhBTm4xVDBfUy1tajdBNW84NUh4SHhLbTctb3VhUzVVVUg1TmJ4aVFKQjNVMWZQMW0taWxJYU1naG1UQkpJbFBRTmJzbWJpN1U?oc=5",
-      "category": "증시",
-      "level": "기본",
-      "impact": "내 주식·펀드·퇴직연금 수익률에 바로 영향을 줘요.",
-      "date": "2026-09-15",
-      "summary": "국내외 주식시장이 오르내린 이유와 흐름을 짚어주는 뉴스예요.\n💡 내 주식·펀드·퇴직연금 수익률에 바로 영향을 줘요.\n자세한 내용은 아래 '원문 보기'에서 확인하세요.",
-      "auto": true
-    },
-    {
-      "id": "auto-고용·노동-2787499320",
+      "id": "auto-고용·노동-7117159882",
       "title": "英 5~7월 실업률 4.9% 유지…\"임금 상승세 둔화·구인 4년 만에 최저\"",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBiYldhVm9JWHpTZzRDQWFweG5DSjhwXy1UYzBUbHBLUlZBVF93ZWNUZHVPZ2ZBMm9YNjJnd0pEX3VTUnJuZ3JDYk02VW9ldjR6SFljWDZVb2NKVGp2Yld3b9IBeEFVX3lxTE04c0MybUZuY295LTNXN2czUnQyRmtxS2JEcnhlaWNvRGNMaWFaQUZwUllTZThUT08yTVg3cU9BX0FZOVZDc3hZY3lweWxVMU1ib0xBLXdLTEhNTzFfenNuWkUwLWt0aUpqUzNWODVkNTlFSk03Q0R0NA?oc=5",
       "category": "고용·노동",
       "level": "기본",
@@ -170,7 +170,7 @@
       "auto": true
     },
     {
-      "id": "auto-부동산-5759206739",
+      "id": "auto-부동산-6372506405",
       "title": "강남 꺾이고 강북 뛰었다…역세권·중저가 대단지가 집값 견인",
       "source": "한국주택경제신문",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1OZzh5T2VHNnBWYWlYeDRuaHBfRDBreHNNdlhfNXVwRy0tWVE4Q0VHSDRuUjc0VVQ3WnFLMk1kTHc4QlpGb3VvN3N4T3dRRnZQd3o1akRjZFl0NGhxNEpDeTlKS0xxV0Yx?oc=5",
@@ -182,9 +182,9 @@
       "auto": true
     },
     {
-      "id": "auto-증시-3782522490",
+      "id": "auto-증시-8548282177",
       "title": "“퇴근하고도 주식 산다”…14일부터 코스피·코스닥 밤 8시까지 거래",
-      "source": "weekly.chosun.com",
+      "source": "주간조선",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5jc2dOel9hV0dNX2stVDNGQWRsOVk0aFVKQk53RFZ1WFVJdGpKcXlnSW1tNkhqSGVFdlN1SzRybUdKZktnV2tqb1doZHVOWkJQaVdhT25nZEtoTzZ2dUVyRVN5dEpBUm81bUHSAW5BVV95cUxQNlNhUFJFWHlOTUt6aWlhM0VTVU5qTUo5WkJsd1FXR0ZCM2RkLTZiTkdmNWRtRWtwVi1NUk84TlcybVVXVGZTVHc4V0hmSHRQY2QtbWdyeVVxNGRKUTNFZjZoYnVGRk11NkxfeDhTZw?oc=5",
       "category": "증시",
       "level": "기본",
@@ -194,7 +194,7 @@
       "auto": true
     },
     {
-      "id": "auto-부동산-6686211973",
+      "id": "auto-부동산-5086449236",
       "title": "[팔도부동산]집값 오른 양산, 분양 아파트에도 볕들까",
       "source": "비즈워치",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBuRUN4aFJvV2FPSE5PWE8xNlpjY1VCMktvNnBRdWVlSFpBRFNpcU52VXF2djlRSWdBVlFkbzlKWDhlUUpRYWpfT0dHSHJMOXRFdjRPUTZEaFl1MU9ycjF2S18wN1lZZmFGYkwySlBvSl8?oc=5",
@@ -206,9 +206,9 @@
       "auto": true
     },
     {
-      "id": "auto-거시경제-4554311745",
+      "id": "auto-거시경제-1055132746",
       "title": "멕시코 2분기 1.4% 경제성장…1분기 역성장서 반등",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5BY3dPTFFqWFNkZW1YRFJNWUdVMkdfWERaMFE5UHpTd2ZtVzRCNDRGRFpiR25HVnoyallfamQ4bW1LamhXaVdZUjQxaWNhRU44cENZOURyaDAyUkFDYTA0X9IBeEFVX3lxTE9RU18xb1VKekVHdl85c284enJsTUNwa2tPcmlTSEJEdF9RQm84STdaNURia3ZUcTlYcXZlQXdYRklxSHdubExySjVaQ21JS3U5V3Y0RUg5WndITWIwY1A5OE9nZGhWVDVobmdsUXpTLW5FY3BUTzJpUA?oc=5",
       "category": "거시경제",
       "level": "기본",
@@ -218,7 +218,7 @@
       "auto": true
     },
     {
-      "id": "auto-재테크-218409879",
+      "id": "auto-재테크-5913464638",
       "title": "재테크 통장 ISA '대개편'…최적의 절세 전략은?",
       "source": "메트로신문",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBOSVRUT1F0Qm8yMlRWeGoxTVpvd3ZQbEJud0hIRG45b1ZRb1loRXNhUVJWSFBoeXpXdzJSZDBYdGlReEUyLVprV3dMNW9pZkp2Z0UyWmExVXRnLXZBdXN2Rw?oc=5",
@@ -230,9 +230,9 @@
       "auto": true
     },
     {
-      "id": "auto-재테크-2955553760",
+      "id": "auto-재테크-2163338385",
       "title": "ISA·연금저축·IRP…절세계좌가 자산관리 판 바꿨다",
-      "source": "중기이코노미",
+      "source": "junggi.co.kr",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1YZ1dldkQwVTV2VU93aVZMUUFILVNGdWdzd0U4N3E4M2NRU2VERkpjd2pQQVlwa3JtOFpUUUlRcGFsVGlzaDlxdXhFQjJxTmlQRTJqVjd2WjBxTnJwVDhLR3h1aG9nS0g2NUE?oc=5",
       "category": "재테크",
       "level": "왕초보",
