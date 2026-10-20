@@ -1,11 +1,17 @@
 {
-  "updatedAt": "2026-10-20T22:02+09:00",
+  "updatedAt": "2026-10-21T02:59+09:00",
   "sectors": {
     "조선": [
       {
         "title": "'선투자 vs 선금융' 갈등에 발 묶인 한화 필리조선소…수주 물량 축소 리스크 우려",
         "source": "더구루",
         "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1VUmVhRDJHUzRwYUZhUk44Z2RSVEpYeHRmUUNYUVc4SE44dFQzenNJMWlsWFpVb0J5SkFPUFdwclVSWlBQc3E2YWpmeHc5RG0xRUlMMFB2Vk5oeUtaUHNOSjlhWQ?oc=5",
+        "date": "2026-10-20"
+      },
+      {
+        "title": "韓 첫 대미 투자서 조선업 빠진 이유…\"美, 장기 발주 계획 내놔야\"",
+        "source": "마켓인",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5SVzNxSkdtaWQwblFJNTN5U1hDR0lST1hNd1EyT0pneWpBZEp4WkhRVEJFOUR6VDM5anhmVU40RTU2LU1xWV9ybk84Uk5pSHNLalVITTdja2FLaFQyNHhnUVlMNTJUWXpLcW9xTk9hZDBtS0U?oc=5",
         "date": "2026-10-20"
       },
       {
@@ -31,12 +37,6 @@
         "source": "https://www.moneystorm.kr/",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBMT1lQRVF2aHVMMjh2R1VieWcwZEpVZjdzX1MxTmFRRXJMdlhnSmZRY2hPSUhDMGFWYlk0Xzg5TmJVUDY3UTlPTEo0STVnWm9UakY2OTg2S3pvYXQ5dTZHdHVndnVDbmJFVWc?oc=5",
         "date": "2026-10-20"
-      },
-      {
-        "title": "수주 점유율 76% vs 15%⋯ K-조선, 고부가 선박마저 中 사정권",
-        "source": "브릿지경제",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1mUzZkOVRzMy04THlnRldneTBTVjhHdldlZDgtMkhCSGVpUFU3d3B4UjBoMGZNVDBuY2tJcEZ5cEZoV0NLLW9LN2hHMUo5YkF4dUx3YmxxN0xGQQ?oc=5",
-        "date": "2026-10-15"
       }
     ],
     "건설": [
@@ -65,16 +65,16 @@
         "date": "2026-10-19"
       },
       {
-        "title": "[사설] 잇따른 지역 건설업 우대 정책, 기업도 분발해야",
-        "source": "영남일보",
-        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1NbUpoVXVzN1lGREJMNncyY2NQQjQ0MXlCa3dvcEwwU3pSU0J5ZmY4b3hEVWkxM2xWZUw2VHUtN21kclQyUWZtNHNUa3Buc1hMejZsZ0tGNWNxNkY3TDdaY1U2bw?oc=5",
+        "title": "건설 사고사망자 감소, ‘착시효과’",
+        "source": "매일일보",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBGbktsNmxFS1dodGwzTzlWMDRmQ2pQcy1mX3p1dUxtUHpYdVFUMzZ2Rk9qUVBVY0tmNHZHU1pPVVdaYW5mZDdfeE5Mb3U2VEpPV0NsdDJjekdzcTVLY25uOWxQcVM?oc=5",
         "date": "2026-10-20"
       },
       {
-        "title": "[기획] 주택 신속 공급 의지 밝힌 정부, 건설안전도 확인해야",
-        "source": "매일일보",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1MR3lMOWJJVVJNelUxUXJ1aVIzN0xweHpRVjdMN1ZJT1VPQ1NxOUUxWGZWQmFLcTN6dWIydDYzeGYwRklYY3V4YjFiZ0dRQmhUS0tpcDYyQ2lUMDRidFhaNVpHcTk?oc=5",
-        "date": "2026-10-20"
+        "title": "반도체 축포 뒤 건설 일자리 13만개 증발…李정부엔 ‘건설’ 없다",
+        "source": "대한경제",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1OdjhqR2FIOHdOa09UbGtTaEI3N1Q5emhTa1g5TFZubXhVMmJPVXhGUXhxTUVfNlNJSEwxN0pkSGhvVGVjZ05FQURRYjNlSUdCVVdsQ2pQZnNpQzJpRlpNR01kSTVCSGhOUWxoVDNyNWJVSDZK?oc=5",
+        "date": "2026-10-19"
       }
     ],
     "반도체": [
@@ -85,47 +85,47 @@
         "date": "2026-10-20"
       },
       {
-        "title": "삼전닉스 겨냥한 머스크에 반박 나왔다…\"반도체 가격은 시장이 결정\"",
-        "source": "이데일리",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPLTAwVl8zdnBYd0plM01Jem4yMl9YeVpwc2ZvQzNRYjFTVVQtekNqX2RXOXlhRk1kSkNUcUhZUW1aYjBDa3ZXTi1QMzVtX3FWdUJTQXpuYnIwSmpNYWJJM0VET0tuRlNnYUsxWG96NlN5Zm5CWXp6S0pFSmt5NEZRbA?oc=5",
+        "title": "韓 반도체 저격수 된 머스크…中 메모리 띄우고 삼전닉스 흔드는 속셈?",
+        "source": "전자신문",
+        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE45Um5QZjBUYzBLd0VnSWFodkc4THkwMDg0cTdDeS16aHBSZjQzYjliaGwxa0Vqa3BIdV95bnVYa1FfVHkzT1c0ckhVWGx5dw?oc=5",
         "date": "2026-10-19"
       },
       {
-        "title": "중국 CXMT 가파른 성장은 메모리반도체 업황에 긍정 신호, 삼성전자 SK하이닉스에 영향 주목",
-        "source": "비즈니스포스트",
-        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9IMFVkeE9KZVR3c3FaQzFDaktvX0F1TkZ3RkJEc2lwYXVxXy1zeXhscWlPU1NZY2RSdEl1VEQxYWFqbkZ4YVNPODdrVG1IUUF4WW9lRUNrSk9ydGtBRHlFMEp0cWxzeE9sNG5rb2ZXU0NNaEE?oc=5",
+        "title": "\"갈취 수준\" 삼전닉스 겨냥한 머스크…전문가는 정면반박",
+        "source": "한국경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ZVlp2aFRUbFFSTWl6Ylp1VmRsRjR2WjhSV3JTSkVlNXpCalRRRlBMbUY0VkV5X3VxRTdLNzBRYkdENTdQejVTQkJOaWhiSHQyd2VseVFhYzhxZw?oc=5",
+        "date": "2026-10-19"
+      },
+      {
+        "title": "호남 반도체 1350조, 한미 갈등 부르나",
+        "source": "IT조선",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1aYzFUalR3NHFSclpBSHczUThoaG5qaGxEMGhtbVBwUVEwWmVJNzlRaE9pR3pQaUxHUngyUUU2TDZKa2ZQQzdGalNJNU5sbThyMG9YOHdENDFxMDI0TXBoX0dmZjQwZU02Qi05X0ZadFLSAXRBVV95cUxOdkhCemdGdzMyLTc2blc5eG42V2R3UEZuUk5IY3FxdUJncU5rQjJHaE1HQkUxcnIyUGgyUFNiMmJBSWN0REgtbmdSUlVaeVd5WkFvVDJEVTVmNTNmMUVoN1NEVkRlajYyMjNKRE9RSmVjVmFYQw?oc=5",
         "date": "2026-10-20"
       },
       {
-        "title": "\"韓반도체, 안보 카드 되려면 日소부장 잡아야\"",
-        "source": "조선일보",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQc1FQMklWZ1JLY2JnRzBhUXRaNnpNUzh0eDdHVUU2VVJYQ0VjdXRwWWdkcFVOTDVxeHFUeHFaM0tLdmlzZ2dMeFhORTcta05CNzlmNUw1LUZ6dDN4SGJJN1gydXhqdW1sWUhoY0pMcEtLaGQ3cnJPRFJSLVJON0JaV0dXNm9kdTI5ejJFd0xB?oc=5",
-        "date": "2026-10-20"
+        "title": "\"변동성이 곧 기회!\" 지수, 반도체 레버리지 투자로 올해 실현수익 1.8억원 만든 40대 파이어족[싱글파이어]",
+        "source": "머니투데이",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5ES0dZRV9iQlhhYVRFYTBYeWRtWUlNZDJLYng5SnFSdWlpUzlteUxsaTB6dUlzQnFYZ0RXb2Y2a2s2ZWE4SXVfTTZhVmVRVGM5WVVV?oc=5",
+        "date": "2026-10-21"
       },
       {
-        "title": "광주 공군 3개 대대 예천·서산으로...반도체 착공 '탄력'",
-        "source": "KBC광주방송",
-        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE15ZEJ3TEtvUDN3V2lXUlB3N3E2MFF5Y0tXTFhuNlJmYmdYUUdrS0Y2WXdNY0EwMXBXSnJ0WHc3anhfS2M1eWFwWTU4S1hMV0xZd2d3SXp2VzgzYXZndUVxNTVR?oc=5",
-        "date": "2026-10-20"
-      },
-      {
-        "title": "주민 삶터·산림 훼손 ‘모르쇠’…용인 반도체 산단 ‘속도전’",
-        "source": "경향신문",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBNM0NLUXljaXFNSm1XckVLdVVYRlExSjBFN2VHWExrYkU2cEhSbTJqWmNyUXJqckNteUFCT2c0ODhEd2hibXVsSGJsOFBYLTRMeDJvSlZ0enh3QdIBX0FVX3lxTE1pc05VUUNNczFpQWFnWVBLVXhzRFBYdldDdHJEeEc5Vnp4T1FxS0J0UjFLMV81Nnp0T2tBcFZYdkRabTY0MlhsNktqY2xNdi1wNVk1MVJPX2tsX0RtOHpr?oc=5",
-        "date": "2026-10-20"
+        "title": "\"반도체 급락했다고 끝난 게 아니다\"…증권가가 본 다음 주도주는",
+        "source": "뉴시스",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB3Sk05UEFubmJ3bDgxS0hnZVFiVm95RnFFcWFEWnBEUW1GR0RhV0xPNGlndEZrYlBnaHZjWXZ6M1ZpSDJUdmNQVHhxWURHMGQyM0wyXzcySXJ0NEFUVnVKQdIBeEFVX3lxTFBlZFNRR0VXY01TbDYwd0lHUVdIUmExVDA1X05vZGFKbHp2MkdXcFBHN3A1VEFWcF9Na0VLTk1uaWphTnRGOVpkZjNmNFp1d0Z1N2FVc2R5RklCNWZLTF9zUXdVODZHaUljY3hIZ1MtYzBORmZwU0poZw?oc=5",
+        "date": "2026-10-21"
       }
     ],
     "AI": [
       {
-        "title": "“AI가 코드를 작성한다, 개발자는 무엇을 해야 할까?”…카네기멜런대·마이크로소프트, AI 시대 엔지니어 육성 나서",
-        "source": "인공지능신문",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1wTXNGdnFhWUFUMi1tVGVmN19Dd0V3aDBOUF9xTjZGRWJlbDYxcmM2b3VMOFR6WExpS2JTaVRuRFY5Wkp2Qm56TjRFbldjQmdqLXhSQl8za1dpUFRsdXJ1UnhjQk8xY00?oc=5",
-        "date": "2026-10-18"
-      },
-      {
         "title": "AI가 만든 가짜 생물 사진에 과학계 '발칵'",
         "source": "DongA Science",
         "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03N19PdjdBRlRrQVFtSlVlMWdab29IdnNBVXF6Qzd4OGREaWFSa3hjdUdrUUdrNG5LaFdaY3BkVmdWcUpwaFNEVnNZOXk0WE91aXZUUA?oc=5",
+        "date": "2026-10-18"
+      },
+      {
+        "title": "“AI가 코드를 작성한다, 개발자는 무엇을 해야 할까?”…카네기멜런대·마이크로소프트, AI 시대 엔지니어 육성 나서",
+        "source": "인공지능신문",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1wTXNGdnFhWUFUMi1tVGVmN19Dd0V3aDBOUF9xTjZGRWJlbDYxcmM2b3VMOFR6WExpS2JTaVRuRFY5Wkp2Qm56TjRFbldjQmdqLXhSQl8za1dpUFRsdXJ1UnhjQk8xY00?oc=5",
         "date": "2026-10-18"
       },
       {
@@ -141,15 +141,15 @@
         "date": "2026-10-19"
       },
       {
-        "title": "남양주시, 인공지능(AI) 행정업무 활용 확산...업무혁신",
-        "source": "데일리안",
-        "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPNXM2b3NOc0pvZ3FqT291WnRIaU1qN01RRExPWElVWS16SkFvdFBFY1VXUE9DTnYyUmpZbm9CSDRFUXBwRmUxU0FRX1ItLUgtUEZ0blpuRC1SekV2Wi0ySHphSEVWampUNlFGUkJ4M21tVnoyd0hZMmtpZDZkMW82NmoxZmx1bWVobk9fY0I4MkRPYk9NUmpXZWdjTnd0SE5tNFUzZjZJSWZLZVhaNGRwdGZfR1AwQTZwY1BVSWxIWjY5dzNNSS00MHVVZ2Fkc1BWRUZ6czFnbkVQMU55V3dVX2JWZ0ZaN0p6SlJINXAxa1pfaXp0MDNHa2JYaThnanZUdHEyZ1Zwdlo0Tk1Z?oc=5",
-        "date": "2026-10-19"
-      },
-      {
         "title": "[단독] AI가 만든 세계에서 ‘소수자’는 지워진다",
         "source": "한겨레",
         "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9iX0tOa3VFZkxrMW5PSkhqXzhiTTJleXVYaHlZMlpOVmw5VGFrVXFyalItTlhWa1dwTFo0b1FieTNSMjNtOEdDeGozTWZETHdCZ2VkOEhGWVBWenBUdlNnRDUtNkdYbWxodDEtamFqaHo1UQ?oc=5",
+        "date": "2026-10-19"
+      },
+      {
+        "title": "남양주시, 인공지능(AI) 행정업무 활용 확산...업무혁신",
+        "source": "데일리안",
+        "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPNXM2b3NOc0pvZ3FqT291WnRIaU1qN01RRExPWElVWS16SkFvdFBFY1VXUE9DTnYyUmpZbm9CSDRFUXBwRmUxU0FRX1ItLUgtUEZ0blpuRC1SekV2Wi0ySHphSEVWampUNlFGUkJ4M21tVnoyd0hZMmtpZDZkMW82NmoxZmx1bWVobk9fY0I4MkRPYk9NUmpXZWdjTnd0SE5tNFUzZjZJSWZLZVhaNGRwdGZfR1AwQTZwY1BVSWxIWjY5dzNNSS00MHVVZ2Fkc1BWRUZ6czFnbkVQMU55V3dVX2JWZ0ZaN0p6SlJINXAxa1pfaXp0MDNHa2JYaThnanZUdHEyZ1Zwdlo0Tk1Z?oc=5",
         "date": "2026-10-19"
       }
     ],
@@ -173,9 +173,9 @@
         "date": "2026-10-20"
       },
       {
-        "title": "동서발전 '제주 전력저장발전소' 현장에 기후위원회 소속 의원들 찾았다",
-        "source": "에너지데일리",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5oRTJ2Y1VfZW1acjJEbFNVdzRQcGpadDdoWVlUWTM1ckdUVTFjQkJHWmhPc0FuNTVhRmFRMllOdDh6dkE2cEs0M0UtTHRZdnJURW1mWGt4ai1zS1cwWTRTOFFVQXdueFVvMDlZd1hKejEwZw?oc=5",
+        "title": "기후노동위, 동서발전 ‘전력저장’ 현장 제주 BESS 찾았다",
+        "source": "전기신문",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5mLUs1T2MxcVdXZUxKdENsMGRpclpNX3F3dmpkMUFHaGhha2ZObndySkdsWHhVYUJucTdDZXpONzhaa3J0T3ZWV1B5TFZQWTJjNzdubkJiU09kaFFOVkpmZlpHX25UWEZRcGZB0gFwQVVfeXFMUGlsQVFGc2ZFQnVQeDJYQndZVU5GNk56RzRHcGRCbWxMaHpYZ2ZaUkpTY0lSRGt0dVVWRlRtd0I0dXRYSzlPdmpCSnJZVDN6Y2RycHlBOWNQRUhVVlFaelZLZHZxNDR4ajBodGFiTnFzcA?oc=5",
         "date": "2026-10-20"
       },
       {
@@ -185,23 +185,17 @@
         "date": "2026-10-19"
       },
       {
-        "title": "AI 데이터센터 전력 대응, 美는 유니콘 나오는데 韓은 장벽에 멈칫",
-        "source": "전기신문",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBzaFdFM3N5UEZtcUZ0M0dWWERtRjZMYUs4b3B4SXI3WmhrMDVxYmJUcG96blpabUlOTzhMckNkLW5ORXl4X1pOdnVSVVFlRWJjVm5tcWYtelljdjhCNkNJdmRvVWdoY0RhYy1XaNIBcEFVX3lxTE9GRURTOTVlaV91cC1EZUs4ektYTWNmWERwMnMwZkZtdVNGQU50NnNRVHRYaUR4cGI1QkZtRmYtR21GdTc2R0pXcUlkQWZvSEZCNlVCanozSWFFcmtyVjJybnI4M3p4ZUx4dGdqSk1yX3Q?oc=5",
+        "title": "SK이터닉스, 이천·파주 연료전지 발전 돌입…수도권 전력 수요 대응",
+        "source": "지디넷코리아",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBLLUc5bFJ3bjNqaFk1WG5Qb2t5M1RNNnhsc0FzbUItYTlCZGloc0JFcTkwWEFJQUgwZEdJREswQnpsS1hmU0wyMFV4enhxenU4UkhzN1ZR?oc=5",
         "date": "2026-10-20"
       }
     ],
     "금융": [
       {
-        "title": "실적발표 앞둔 은행株, 증시 급락에도 '꿋꿋'",
-        "source": "글로벌이코노믹",
-        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZEJLLUI4aVpEZ2hPdHI0d1hWaFk0RmpDdXlaczdJU0dkc1N5MkhuWTZpQlpteGlWSDA5TDdDaUw5U1lMNmNPUGt2OENXRlVLeGZuQVUxbk9XRm1fWWFhd2o5YTVXbnRjMmVaMzNnYXo2aGZER2xiaHdtS3NZUndtLThHbkxjS1NH?oc=5",
-        "date": "2026-10-20"
-      },
-      {
-        "title": "외국인·기관 동반 매도세에 코스피 3.73% 하락 마감",
-        "source": "천지일보",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1rLXRHUmExd192Z1ZUSVRSVWEtWTUtNGlXdnFWNmx5SjY2UkRVS1JFaVZMejUxREVNU1M1c2JjU0JRSDNZSWJzaUs5R0pYc2tQT3NUSmUtOXRhT2tHUTdIUUZBbk0xWWhrVWc?oc=5",
+        "title": "금융당국 \"솔리다임 중복상장\" 경고…국내 주식시장 영향은?",
+        "source": "연합뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB1YlNUQ2lCWVA2aUFzWTRJVnY3ZXhDYVdpN21vclhaQzJvZmdlMG9CQWNzbFBWMThZb0N3U254Z0tBa3VFckNuOFc1QW81S0t3RzJYZmw4bXBiQkHSAWBBVV95cUxQeWpvS2RZMEVqdHI4ZTdLa1RDQmFzYlM3QUdSZnJlY0otVnI3T2N6OGpxN2dWLTZ4ZmF4aWhDWFJXV1RlaEV4WlFPdVREUGhQM010NC1qaE9KbTNBdDBHTkc?oc=5",
         "date": "2026-10-20"
       },
       {
@@ -217,15 +211,21 @@
         "date": "2026-10-16"
       },
       {
+        "title": "실적발표 앞둔 은행株, 증시 급락에도 '꿋꿋'",
+        "source": "글로벌이코노믹",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZEJLLUI4aVpEZ2hPdHI0d1hWaFk0RmpDdXlaczdJU0dkc1N5MkhuWTZpQlpteGlWSDA5TDdDaUw5U1lMNmNPUGt2OENXRlVLeGZuQVUxbk9XRm1fWWFhd2o5YTVXbnRjMmVaMzNnYXo2aGZER2xiaHdtS3NZUndtLThHbkxjS1NH?oc=5",
+        "date": "2026-10-20"
+      },
+      {
         "title": "금융당국, 증시 긴급 점검회의…\"과도하게 반응\"",
         "source": "연합뉴스TV",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBuYm9FemhUdkhHVGd5RERla0QxREMxdTRmUHFnOVc5dXAzS05icWVwSksxRFduLVY5OUJTM196OTVHS0JCdHp3ZlFwZWtLSUQyWXVxRWF6RklDaW5XNlZVbUJnSlhfWmM?oc=5",
         "date": "2026-10-15"
       },
       {
-        "title": "대신증권 유튜브 ‘대신TV’, 누적 조회수 1억회 돌파",
-        "source": "매일일보",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE82b1dRdG5vdU9ZdG1WQUw2bWZ5cHg0YmtDc3dQT0RhTlhHV2JIZVlDakpQTU9yZTJIcER6cnp6WFdrQlZtaDRSOEVwYjA3OS1TV05SbV9GY0haSHNuY1M2NmtWU24?oc=5",
+        "title": "외국인·기관 동반 매도세에 코스피 3.73% 하락 마감",
+        "source": "천지일보",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1rLXRHUmExd192Z1ZUSVRSVWEtWTUtNGlXdnFWNmx5SjY2UkRVS1JFaVZMejUxREVNU1M1c2JjU0JRSDNZSWJzaUs5R0pYc2tQT3NUSmUtOXRhT2tHUTdIUUZBbk0xWWhrVWc?oc=5",
         "date": "2026-10-20"
       }
     ],
@@ -281,9 +281,21 @@
         "date": "2026-10-19"
       },
       {
+        "title": "베트남 하노이시, 아파트 분양시장 ‘꽁꽁’…3분기 흡수율 31% 불과",
+        "source": "인사이드비나",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrdUlBMVc4REI5ZjlYbjFnMGdLUS10RVhZUmlkZEl2WWpxQ1BPcEppekJPbjNfcHJONHNZZUR3OURPcFlCQ0N2V3RqRHNNc0ljNW13ajRBNTZFaDkwS1p6c1J4YktPeXE2M3pHYw?oc=5",
+        "date": "2026-10-13"
+      },
+      {
         "title": "[주간분양] 이주 분양 아파트 중 순위 내 마감 '없음'",
         "source": "신아일보",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB2SHdKdmZPUElZZzd1aktyUHdHeXhmbS1YQ29ZaVJIa1dYcFB5MXRmbFB2eFUwdk8tMDczX2JQdnJETnpUVF9XWFlBMmNjZ0FIMGF6eXQwU1RrdnBYRjNPNTJ0c3dnZTFtRHBsbG5pZDM?oc=5",
+        "date": "2026-10-17"
+      },
+      {
+        "title": "다음 주 전국 대규모 아파트 분양, 수도권·지방 청약 열기 뜨겁다",
+        "source": "공감신문",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5nT2I0RXlRU1N6NlBNcE1FeTNWa01sUHE0UTQ2UWVzU1hNZTV0OHZPdEY3Nl9WVzRQUjl5a2V2TGRETmxxNEs0RldZV0ZzV1kyMGVlcXU5R2xmTExZSGR6TDdmZS1nQWNF?oc=5",
         "date": "2026-10-17"
       },
       {
@@ -291,27 +303,9 @@
         "source": "핀포인트뉴스",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9FYnllTjZmZ1NxVlpQOV9RU2twUWU4cWVpSi01OUI1T0xDdWUyZDNNWHEyZWZGNldCMlhzSllSbVg0d3RDM01JSFJEVGpxS0U0MVJIYlh0ZmtncVU5WG04dVdSQ0pmNml2ekNoVjROTmdkMFXSAXdBVV95cUxQMVIyZXFWQ0Y0YjRVQ2VXbGYzeVhQQXdmeHE0RjFBQmgtRXNOTVBsZjBoVlVtQVMzV0xseldXWm1kcXcwRk9aZGVHQW01X1FHWkxkTzB3aVd4UFUyRmlhdGl1NHdhUWZvRnZWalc2ejYtWVNaTmNkdw?oc=5",
         "date": "2026-10-18"
-      },
-      {
-        "title": "베트남 하노이시, 아파트 분양시장 ‘꽁꽁’…3분기 흡수율 31% 불과",
-        "source": "인사이드비나",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrdUlBMVc4REI5ZjlYbjFnMGdLUS10RVhZUmlkZEl2WWpxQ1BPcEppekJPbjNfcHJONHNZZUR3OURPcFlCQ0N2V3RqRHNNc0ljNW13ajRBNTZFaDkwS1p6c1J4YktPeXE2M3pHYw?oc=5",
-        "date": "2026-10-13"
-      },
-      {
-        "title": "다음 주 전국 대규모 아파트 분양, 수도권·지방 청약 열기 뜨겁다",
-        "source": "공감신문",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5nT2I0RXlRU1N6NlBNcE1FeTNWa01sUHE0UTQ2UWVzU1hNZTV0OHZPdEY3Nl9WVzRQUjl5a2V2TGRETmxxNEs0RldZV0ZzV1kyMGVlcXU5R2xmTExZSGR6TDdmZS1nQWNF?oc=5",
-        "date": "2026-10-17"
       }
     ],
     "코인·가상자산": [
-      {
-        "title": "\"비트코인 반등에도 연내 10만달러 돌파 어려워\"",
-        "source": "연합인포맥스",
-        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82NHJBTnJxcks3QlF0ZE1ZRU41cEJyM0FtbWM3VDBLOW92YThfZ2dKd2hmT0JzTHQyQldOWDVYVXN6WFpmWWNndWEtSjBNUUEtOHVleFZIUXBsd0l1OFN3Wmd3QU5DNl9qdl9sMlBGQ00?oc=5",
-        "date": "2026-10-19"
-      },
       {
         "title": "AI株 '줍줍' 가상자산 '주춤'…비트코인, 1억1000만원선 지켜",
         "source": "뉴시스",
@@ -319,10 +313,10 @@
         "date": "2026-10-20"
       },
       {
-        "title": "[코인뉴스] 비트코인 부진…이더리움은 더 빠진다",
-        "source": "데일리안",
-        "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPeXhER1ZzT09fRWRFcmFGalBLOVVrSXViWkJJb1Z0V1Vydmg4aG9DUjJCOUowV0RKYVZ4SjBHX3F3Z1pSWUQ3TEQzeGlBNnEyT1FrLWotYTJRMXNZTFVYVUVOMXNuVVNBSUp0UjhVemh1T1BUUmF6OWRaMi1UR1RmeS1fOWQ4Z3JZQm1LS1FqVldpcVc3WVhHcGZkLUY5NW5zN0hFRXJDamYtWlVUUXFnc1psRGZMTk9CM2lXSEgtRU94TUdkMkFyNlZIeWM5SzEyam5ZNGRUV0FoQmMxUU0td0haNkRZUnVZTWhBWU1wd2hfNlNzaFZmZnhOMjBMV183Y1Z2d0FsakNYMWlGeDl0M0ZnMTRpQ1hGV3lnbHBQUnh0M0E?oc=5",
-        "date": "2026-10-20"
+        "title": "\"비트코인 반등에도 연내 10만달러 돌파 어려워\"",
+        "source": "연합인포맥스",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82NHJBTnJxcks3QlF0ZE1ZRU41cEJyM0FtbWM3VDBLOW92YThfZ2dKd2hmT0JzTHQyQldOWDVYVXN6WFpmWWNndWEtSjBNUUEtOHVleFZIUXBsd0l1OFN3Wmd3QU5DNl9qdl9sMlBGQ00?oc=5",
+        "date": "2026-10-19"
       },
       {
         "title": "비트코인 1억 950만 원선 소폭 하락… 깃코인·칼데라 거래량 폭등 중",
@@ -341,6 +335,12 @@
         "source": "톱스타뉴스",
         "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1nU2REUDNUbGFXb1I5Tnk5WnltbWtxT0xJRno4NDVNM01Jcy1HblFGTU9NUUd1V3VEbmlFQlh0enV6WEhoZTVJcVlZSzdydlRpZHFkTWFseTJSckROSmpNTmdUa2Q3NFRKYmk1ZUI2T3dNdw?oc=5",
         "date": "2026-10-20"
+      },
+      {
+        "title": "프랑스, 가상자산→스테이블코인 교환에 과세 추진…\"2027년 시행 목표\"",
+        "source": "블루밍비트",
+        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5hNjdPdzBrMkdBZHNYdlY5aVB1ZXpVcDFyeC1ob2hYeWJjNHpFTENNamdaamUxOHUwWnFWUGYzRTNaM05Ta0llbkF2ZHpEYjdG?oc=5",
+        "date": "2026-10-19"
       }
     ],
     "세계경제": [
@@ -375,23 +375,17 @@
         "date": "2026-07-28"
       },
       {
-        "title": "중국 \"미국과 동등한 규모로 각자 중시하는 제품 관세 인하 합의\"",
-        "source": "조선일보",
-        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNjRHVV9YQXNDNDU1RFNjenBWeVh0Q2JHdXM3Y2pkbllheW9GVk95QnNrdWJ5MXozRGlPdGZQXy1oaERtZ0tiMTVPLXRFZVhHdkVyWjNhRlhQUG1ydkE4ZUxLVFpzZjRBd2hUNzZ4Rnp1S0p4UjRKR0Nla3ZUUVE1YlgxbVRKTEVCcUFvZ3VjZ2xWX1F5MXdZSWFzdFdwdw?oc=5",
-        "date": "2026-05-16"
+        "title": "[이대복의 세계경제 Story] 조선-대마도 간 무역과 관세⓷",
+        "source": "조세금융신문",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBzYjAxRDVWZVhXekdFQ1lwMFpGMDVhcGd3VjlySUxMa0dkcWtVa0tzbFFBQ09KeGFDQ2Q1U0pEN2hLZUY1UzVmUmRpUW9WQlZUX2dSVjNyS2RCMzdnWkpxRDBvWk9GUQ?oc=5",
+        "date": "2026-09-14"
       }
     ],
     "채권·금리": [
       {
         "title": "[채권-마감] 금리 하락…반도체주 하락에 안전 선호 심리",
-        "source": "KB Think",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5UX0tMVmdvYkZTNjlOMzlQaHVEVjU3RnplRjdmd0UxZUM3U1BnNFplbjdyTnNCdzhDZmtmVDc2V1pkUWpMbHNkVjl2MzVkZ2diNnJGVl9Ha2hoWGplTm9ocUhYakNtdkVlSjljb1BhN18wQQ?oc=5",
-        "date": "2026-10-20"
-      },
-      {
-        "title": "日 국채금리 하락…고금리 매력·위험회피에 매수세 유입",
         "source": "연합인포맥스",
-        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1uMlUxTzg5MDQ1RTdwR1c5NjhvUTFwT0FJYUdBYTBFNDJMV3g3WVhqd2txU1RnZWQ5cU5rZTNKREZ6UTVtV3VrR0lfeVZRaUN3dW5XV1AtYWZ6S0F5RkZvVzVkeXhnMkJuNThlWjhlSy0?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5tMWpweEZabld1N3l0Qy1ZOHVOcG9RY1JFSWxvMTNBVnNjcFhJdXhtZUxmMHBSRVZpTzJVTVpoNFplOUd3QzBIbWJXMWU3bmJMaHBvcWc3YWRkWElNWG95UkFfLTRieXNPX21WeVRjSFI?oc=5",
         "date": "2026-10-20"
       },
       {
@@ -401,15 +395,21 @@
         "date": "2026-10-20"
       },
       {
-        "title": "[채권/외환] 美 국채 금리·달러 동반 상승…AI주 반등에 시장 분위기 반전",
-        "source": "뉴스핌",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE93bmZGcjR1R3FKZ2VoM2dqdldzQkRBN0VHMmtEZGlMLVBsc1FZUTVYNHBpcE1hVk1EYkpydDR4bnJlQjRvay1nM2NsVXdjYUp5TUZVenpvRjBoSmRw?oc=5",
+        "title": "\"채권 매도세 양상이 바뀌었다\"…수치로 나타난 몇 가지 근거들",
+        "source": "KB Think",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE12ZmlRZ1Zsa0NlMW1sNWRfQ1czUVBhS1NvNnJSd1VocWszTEtUa2d2VlFPcm5iSlVacFBudUdHTDVWSmc1UzBlRV9nMGhtYVdORGxNVG1leFQ1dmRERUFjbFNUemU0OGlJZlVRU0hBZ0Fadw?oc=5",
         "date": "2026-10-20"
       },
       {
         "title": "채권전문가 93% “10월 금통위 기준금리 동결”…금리 하락 전망 확대",
         "source": "브릿지경제",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ncFZRVDRHTFZHRHNReFkwMkxZR3JxRnhRdG50QUttcEVtTkRvOGRHUjZBUnZDWHh0UHZKbXlBeXZ4ZVRBVXBCVEJxV1VtaGdqRG05ZTcxcnJnQQ?oc=5",
+        "date": "2026-10-20"
+      },
+      {
+        "title": "[채권/외환] 美 국채 금리·달러 동반 상승…AI주 반등에 시장 분위기 반전",
+        "source": "뉴스핌",
+        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE93bmZGcjR1R3FKZ2VoM2dqdldzQkRBN0VHMmtEZGlMLVBsc1FZUTVYNHBpcE1hVk1EYkpydDR4bnJlQjRvay1nM2NsVXdjYUp5TUZVenpvRjBoSmRw?oc=5",
         "date": "2026-10-20"
       },
       {
@@ -483,16 +483,16 @@
         "date": "2026-09-29"
       },
       {
-        "title": "\"불확실성 시대, 머니 무브의 방향은?\"... ‘2026 동아재테크쇼’ 개최",
-        "source": "시사뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9oc0REa0xxQnU5NjQ4VC1xazRYVjNLYWI4ZG5tRm41dm5uQm9nRWpDSUQwbThaRUFEeWNrdWNNa25nS2hwYk02VThYOFJiZzdqZnFKY2JST05IeDJaZm5CSnY0TQ?oc=5",
-        "date": "2026-10-02"
-      },
-      {
         "title": "[100세시대 재테크]자산관리의 골든타임, 2030세대",
         "source": "아시아경제",
         "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5zZ3NYam9NOG85c1JETWdkQWtCU2trWXo5MUJ3N2FIS2xtX19DRVZUVmRZRGVrX3JsZDVRdDE5MmpvdzkyejNEVjJ2X0lxaEFMUHBkc2hIUXM2T1E2YXFWdw?oc=5",
         "date": "2026-09-16"
+      },
+      {
+        "title": "\"불확실성 시대, 머니 무브의 방향은?\"... ‘2026 동아재테크쇼’ 개최",
+        "source": "시사뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9oc0REa0xxQnU5NjQ4VC1xazRYVjNLYWI4ZG5tRm41dm5uQm9nRWpDSUQwbThaRUFEeWNrdWNNa25nS2hwYk02VThYOFJiZzdqZnFKY2JST05IeDJaZm5CSnY0TQ?oc=5",
+        "date": "2026-10-02"
       }
     ],
     "쉬운 경제": [
@@ -527,10 +527,10 @@
         "date": "2025-06-23"
       },
       {
-        "title": "“혼자지만 경제관리는 꼼꼼하게”… 서울시, 1인가구 경제교육 실시",
-        "source": "분야별정보",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBEZU9sUGtnOV9LWGhoUGt6bHBvSmQtOW9aeEtXOXY0SDVvR0IwdkxuOG15OU1fV3NKS25BeVVncDZQUEJTcnk1cVJueTNXa21MeWJVa2pfMDFQaHhQ?oc=5",
-        "date": "2025-04-09"
+        "title": "이것만은 꼭! 알아야 할 초등 경제 상식",
+        "source": "채널예스",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1fM1lRNGloUFhWVmFmNDl1VmNWdUVtSkhHa3E1bThRQk5LejlyNExfR2FHUERRazB6eTN6b0VqTHRGMzYxLWR0V3NKQ2k5RHg2VTdHeA?oc=5",
+        "date": "2023-10-24"
       }
     ]
   }
